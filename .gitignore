@@ -103,4 +103,7 @@ tests/output/
 tests/temp/
 
 # Documentation builds
-docs/build/ 
+docs/build/
+
+# Node modules (global)
+node_modules/
