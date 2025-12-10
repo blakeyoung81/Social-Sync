@@ -1,0 +1,2040 @@
+#!/usr/bin/env python3
+import os
+import subprocess
+import shutil
+import numpy as np  # Add missing numpy import
+# Ensure you have installed openai-whisper: pip install openai-whisper
+# Ensure you have ffmpeg installed and in your PATH for Whisper and direct calls.
+# For Whisper, you might also need rust if installing from source or on some systems.
+import whisper 
+# Ensure you have installed moviepy: pip install moviepy
+from moviepy.editor import VideoFileClip, AudioFileClip, CompositeVideoClip, concatenate_videoclips, ColorClip, TextClip, AudioClip, ImageClip, concatenate_audioclips, CompositeAudioClip
+from moviepy.video.tools.subtitles import SubtitlesClip
+from moviepy.config import change_settings
+from moviepy.video import fx as vfx
+
+# Configure ImageMagick for MoviePy (will be logged later after logging is setup)
+try:
+    change_settings({"IMAGEMAGICK_BINARY": "/opt/homebrew/bin/convert"})
+    IMAGEMAGICK_CONFIGURED = True
+except Exception as e:
+    IMAGEMAGICK_CONFIGURED = False
+    IMAGEMAGICK_ERROR = str(e)
+import argparse # NEW IMPORT
+import sys # NEW IMPORT
+import openai
+import shlex
+import random
+import logging # Added for better logging
+from pathlib import Path # Added for path management
+import re # For regex in loudnorm parsing and ASS patching
+import json # For loudnorm parsing
+import tempfile
+from .utils import get_video_duration, get_audio_bitrate, get_video_bitrate, get_frame_rate
+from .sound_effects import SoundEffects
+import uuid
+import ffmpeg
+import torch
+
+# NEW: Import VoiceFixer
+try:
+    from voicefixer import VoiceFixer
+    VOICEFIXER_AVAILABLE = True
+except ImportError:
+    VOICEFIXER_AVAILABLE = False
+    VoiceFixer = None
+
+from moviepy.editor import (
+    VideoFileClip,
+    AudioFileClip,
+    CompositeVideoClip,
+    TextClip,
+    AudioClip,
+    ImageClip,
+    CompositeAudioClip,
+    VideoFileClip,
+    AudioFileClip,
+    CompositeVideoClip,
+    TextClip,
+    AudioClip,
+    ImageClip,
+    CompositeAudioClip
+)
+from typing import Optional
+
+# Conditional import for speechbrain
+try:
+    from speechbrain.inference.separation import SepformerSeparation
+    SPEECHBRAIN_AVAILABLE = True
+except ImportError:
+    SPEECHBRAIN_AVAILABLE = False
+    SepformerSeparation = None
+
+# Configuration from new config system
+from .config import (
+    OPENAI_API_KEY,
+    PEXELS_API_KEY,
+    PIXABAY_API_KEY,
+    SOURCE_MOVIES_DIR,
+    BASE_OUTPUT_DIR,
+    ASSETS_DIR,
+    TEMP_IMAGES_DIR, # For subtitle correction temp files if any
+    OUTRO_DIR_1080x1920,
+    OUTRO_DIR_1920x1080,
+    LOG_LEVEL,
+    LOG_FORMAT
+)
+from .pixabay_music import PixabayMusicManager
+
+# Pexels API import for intelligent B-roll
+try:
+    from pexels_api import API as PexelsAPI
+except ImportError:
+    PexelsAPI = None
+
+# Requests for direct API calls
+import requests
+
+# Setup logger for this module
+logger = logging.getLogger(__name__)
+
+"""
+CRITICAL VIDEO DURATION PRESERVATION FIX:
+==========================================
+This file contains multiple fixes to ensure that the final video duration ALWAYS matches
+the main speech content (after silence removal), and is NEVER shortened by overlay elements
+like B-roll clips, background music, sound effects, or generated images.
+
+KEY PRINCIPLE: The speech content determines video length, overlays adapt to it.
+
+All CompositeVideoClip creations now explicitly call .set_duration(main_clip.duration)
+to prevent MoviePy from using the duration of overlay clips instead of the main video.
+
+This ensures that speaker content is never cut off prematurely by any processing step.
+
+Fixed functions:
+- create_comprehensive_multimedia_video() 
+- insert_broll_clips()
+- insert_smart_broll_clips()
+- add_topic_card()
+- add_colorful_frame()
+- add_daily_question_logo()
+"""
+
+# Log ImageMagick configuration result
+if 'IMAGEMAGICK_CONFIGURED' in globals():
+    if IMAGEMAGICK_CONFIGURED:
+        logger.info("  [Config] ImageMagick path configured for MoviePy")
+    else:
+        logger.warning(f"  [Config] Could not configure ImageMagick path: {IMAGEMAGICK_ERROR}")
+
+def send_step_progress(step: str, progress: int, total: int, message: str = ""):
+    """Send step progress to frontend in JSON format."""
+    percentage = int((progress / total) * 100) if total > 0 else 0
+    progress_data = {
+        "step": step,
+        "message": message,
+        "percentage": percentage,
+        "current_step": progress,
+        "total_steps": total
+    }
+    # The frontend expects a 'PROGRESS:' prefix followed by a JSON string
+    print(f"PROGRESS:{json.dumps(progress_data)}")
+    logger.info(f"📊 [{progress}/{total}] {step}: {message} ({percentage}%)")
+
+# BasicConfig should ideally be called once at the application entry point.
+# If other modules also call it, it might lead to unexpected behavior or no effect after the first call.
+# For now, we'll leave it, but consider moving to a central logging setup later.
+logging.basicConfig(level=LOG_LEVEL, format=LOG_FORMAT)
+
+# --- Configuration (Now derived from args or defaults if needed) ---
+# These will be set in main based on the output directory base
+EDITED_VIDEOS_DIR = None
+TEMP_PROCESSING_DIR = None
+PROCESSED_ORIGINALS_DIR = None
+
+# --- Configuration ---
+# Assuming your script is in 'Youtube Uploader' and 'Movies' is at the same level or one level up.
+# Adjust these paths if your structure is different.
+WORKSPACE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+print(f"Source Movies Directory: {SOURCE_MOVIES_DIR}")
+
+# --- Helper Functions (Adapted Logging and Paths) ---
+
+def print_section_header(title):
+    """Prints a formatted section header to the console."""
+    border = "=" * 70
+    logger.info(border)
+    logger.info(f"===== {title.upper()} ".ljust(69, "="))
+    logger.info(border)
+
+def _run_ffmpeg_command(command, operation_name="FFmpeg operation"):
+    """Runs an FFmpeg command using subprocess and logs verbosely."""
+    logger.info(f"    [{operation_name}] Executing: {' '.join(shlex.quote(str(c)) for c in command)}")
+    try:
+        process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, universal_newlines=True)
+        stderr_output = ""
+        for line in process.stderr:
+            stderr_output += line
+            logger.debug(f"      [{operation_name} stderr] {line.strip()}")
+        process.wait()
+        if process.returncode == 0:
+            logger.info(f"    [{operation_name}] Command successful.")
+            return True
+        else:
+            logger.error(f"    [{operation_name}] Command failed with exit code {process.returncode}.")
+            logger.error(f"    [{operation_name} Full stderr]:\n{stderr_output}")
+            return False
+    except FileNotFoundError:
+        logger.error(f"    [{operation_name}] Error: 'ffmpeg' command not found. Ensure FFmpeg is installed and in your PATH.")
+        return False
+    except Exception as e:
+        logger.error(f"    [{operation_name}] An error occurred: {e}", exc_info=True)
+        return False
+
+def enhance_audio_with_voicefixer(audio_path: str, output_path: str) -> Optional[str]:
+    """
+    Enhances audio using the VoiceFixer library.
+    This function requires audio to be in mono WAV format.
+    """
+    if not VOICEFIXER_AVAILABLE:
+        logger.error("  [VoiceFixer] VoiceFixer library not found. Please install it to use this feature.")
+        return None
+
+    logger.info("🎙️ [VoiceFixer] Starting audio enhancement...")
+    
+    try:
+        input_path = Path(audio_path)
+        temp_dir = Path(tempfile.gettempdir())
+        
+        # 1. Convert audio to mono 44100Hz WAV for VoiceFixer
+        converted_wav_path = temp_dir / f"vf_input_{uuid.uuid4()}.wav"
+        logger.info(f"  [VoiceFixer] Converting audio to mono WAV at 44.1kHz: {converted_wav_path}")
+        (
+            ffmpeg
+            .input(str(input_path))
+            .output(str(converted_wav_path), ac=1, ar=44100)
+            .overwrite_output()
+            .run(capture_stdout=True, capture_stderr=True)
+        )
+        logger.info("  [VoiceFixer] Conversion successful.")
+
+        # 2. Initialize VoiceFixer and enhance the audio
+        logger.info("  [VoiceFixer] Initializing VoiceFixer model (may download on first use)...")
+        vf = VoiceFixer()
+        
+        logger.info(f"  [VoiceFixer] Running enhancement. Input: {converted_wav_path}, Output: {output_path}")
+        vf.restore(input=str(converted_wav_path), output=str(output_path), mode=1)
+        
+        logger.info(f"🎙️ [VoiceFixer] Enhancement complete. Enhanced file at: {output_path}")
+        return str(output_path)
+
+    except Exception as e:
+        logger.error(f"  [VoiceFixer] An error occurred during enhancement: {e}")
+        if hasattr(e, 'stderr') and e.stderr:
+            logger.error(f"  [VoiceFixer] FFmpeg/VoiceFixer stderr: {e.stderr.decode()}")
+        logger.warning("  [VoiceFixer] Enhancement failed. Will proceed with the previous audio.")
+        return None
+
+def enhance_audio(audio_path: str, use_ffmpeg: bool, use_ai: bool, use_voicefixer: bool) -> str:
+    """
+    Enhances audio using various methods based on provided flags.
+    The priority is VoiceFixer > FFmpeg.
+    """
+    logger.info(f"🔊 [AUDIO] Starting audio enhancement - FFmpeg: {use_ffmpeg}, AI: {use_ai}, VoiceFixer: {use_voicefixer}")
+    
+    if not use_ffmpeg and not use_ai and not use_voicefixer:
+        logger.info("🔊 [AUDIO] No enhancement requested, skipping")
+        return audio_path
+        
+    current_audio_path = Path(audio_path)
+    temp_dir = Path(tempfile.gettempdir())
+    
+    # Highest priority: VoiceFixer
+    if use_voicefixer:
+        vf_output_path = temp_dir / f"vf_enhanced_{uuid.uuid4()}.wav"
+        enhanced_path = enhance_audio_with_voicefixer(str(current_audio_path), str(vf_output_path))
+        if enhanced_path:
+            # If voicefixer succeeds, we consider the audio fully processed.
+            return enhanced_path
+        else:
+            logger.warning("  [Audio Pipeline] VoiceFixer enhancement failed. Falling back to other methods if enabled.")
+
+    if use_ffmpeg:
+        logger.info("🔊 [AUDIO] Applying FFmpeg two-pass loudness normalization...")
+        
+        try:
+            # First Pass: Analyze audio to get loudnorm stats
+            logger.info("    [FFmpeg Loudnorm] Running Pass 1 (Analysis)...")
+            pass1_output = (
+                ffmpeg
+                .input(str(current_audio_path))
+                .output('-', format='null', af='loudnorm=I=-16:TP=-1.5:LRA=11:print_format=json')
+                .run(capture_stdout=True, capture_stderr=True)
+            )
+            
+            # Extract stats from stderr
+            stats_str = pass1_output[1].decode('utf-8')
+            stats_json_str = stats_str[stats_str.find('{'):stats_str.rfind('}') + 1]
+            stats = json.loads(stats_json_str)
+            logger.info(f"    [FFmpeg Loudnorm] Analysis complete. Stats: {stats}")
+
+            # Second Pass: Apply loudnorm filter with measured stats
+            logger.info("    [FFmpeg Loudnorm] Running Pass 2 (Normalization)...")
+            ffmpeg_output_path = temp_dir / f"ffmpeg_enhanced_{uuid.uuid4()}.aac"
+            (
+                ffmpeg
+                .input(str(current_audio_path))
+                .output(
+                    str(ffmpeg_output_path),
+                    af=f"loudnorm=I=-16:TP=-1.5:LRA=11:measured_I={stats['input_i']}:measured_LRA={stats['input_lra']}:measured_tp={stats['input_tp']}:measured_thresh={stats['input_thresh']}:offset={stats['target_offset']}",
+                    ar='44100'
+                )
+                .overwrite_output()
+                .run(capture_stdout=True, capture_stderr=True)
+            )
+            
+            logger.info(f"    [FFmpeg Loudnorm] Normalization successful. Output: {ffmpeg_output_path}")
+            current_audio_path = ffmpeg_output_path
+            
+        except Exception as e:
+            logger.error(f"    [FFmpeg Loudnorm] Error during FFmpeg audio enhancement: {e}")
+            if hasattr(e, 'stderr') and e.stderr:
+                logger.error(f"    [FFmpeg Loudnorm] FFmpeg stderr: {e.stderr.decode()}")
+            logger.warning("    [FFmpeg Loudnorm] Enhancement failed. Continuing with original audio.")
+
+    if use_ai:
+        # This section is currently a placeholder for future AI denoising models.
+        # The previous speechbrain implementation was removed due to issues.
+        logger.info("🔊 [AUDIO] AI denoiser option is enabled but no model is currently implemented.")
+        pass
+
+    return str(current_audio_path)
+
+def get_video_duration(video_path: Path) -> float:
+    """Gets the duration of a video file using a direct FFprobe call."""
+    # This is a fallback/utility function. The main logic uses MoviePy's duration.
+    try:
+        result = ffmpeg.probe(str(video_path))
+        return float(result['format']['duration'])
+    except ffmpeg.Error as e:
+        logger.error(f"Error getting duration for {video_path}: {e.stderr}")
+        return 0.0 # Return 0 if duration can't be found
+    except Exception as e:
+        logger.error(f"An unexpected error occurred while getting duration: {e}")
+        return 0.0
+
+def _format_time_srt(time_seconds: float) -> str:
+    """Converts seconds to SRT time format (HH:MM:SS,ms)."""
+    millisec = int((time_seconds - int(time_seconds)) * 1000)
+    minutes, seconds = divmod(int(time_seconds), 60)
+    hours, minutes = divmod(minutes, 60)
+    return f"{hours:02d}:{minutes:02d}:{seconds:02d},{millisec:03d}"
+
+def transcribe_video_whisper(video_path: Path, output_srt_path: Path, model_name="small") -> bool:
+    """Transcribes video using Whisper and saves as an SRT file."""
+    logger.info(f"  [Whisper] Transcribing video: {video_path} with model '{model_name}'")
+    try:
+        model = whisper.load_model(model_name)
+        result = model.transcribe(str(video_path), verbose=True) # verbose=True for progress
+        
+        with open(output_srt_path, "w", encoding="utf-8") as srt_file:
+            for i, segment in enumerate(result["segments"]):
+                start_time = _format_time_srt(segment['start'])
+                end_time = _format_time_srt(segment['end'])
+                text = segment['text'].strip()
+                srt_file.write(f"{i + 1}\n")
+                srt_file.write(f"{start_time} --> {end_time}\n")
+                srt_file.write(f"{text}\n\n")
+        
+        logger.info(f"  [Whisper] Transcription successful. SRT saved to: {output_srt_path}")
+        return True
+    except Exception as e:
+        logger.error(f"  [Whisper] Transcription failed: {e}", exc_info=True)
+        return False
+
+def correct_subtitles_with_gpt4o(srt_path: Path, topic: str, model_name="gpt-4o-mini", openai_api_key: str = None) -> bool:
+    """Corrects punctuation and grammar in an SRT file using GPT-4o."""
+    if not openai_api_key:
+        logger.error("  [GPT Correct] OpenAI API key not provided. Skipping subtitle correction.")
+        return False
+        
+    logger.info(f"  [GPT Correct] Correcting subtitles in '{srt_path.name}' using '{model_name}'...")
+    
+    try:
+        with open(srt_path, 'r', encoding='utf-8') as f:
+            original_content = f.read()
+
+        client = openai.OpenAI(api_key=openai_api_key)
+        
+        # This prompt is designed to be robust and keep the SRT format intact
+        prompt = f"""
+        Correct the grammar and punctuation of the following SRT subtitles for a video about "{topic}". 
+        Do not translate. Do not add or remove any text.
+        Maintain the SRT format with timestamps and numbering exactly as it is.
+        Only correct the text portion of each subtitle block.
+
+        Original SRT:
+        {original_content}
+        """
+
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        
+        corrected_content = response.choices[0].message.content.strip()
+        
+        # Basic validation to ensure the format wasn't destroyed
+        if "-->" not in corrected_content:
+            logger.error("  [GPT Correct] Correction failed: The model returned content that is not in SRT format.")
+            return False
+
+        with open(srt_path, 'w', encoding='utf-8') as f:
+            f.write(corrected_content)
+            
+        logger.info("  [GPT Correct] Subtitle correction successful.")
+        return True
+    except Exception as e: 
+        logger.error(f"  [GPT Correct] An error occurred during subtitle correction: {e}", exc_info=True)
+        return False
+
+def find_key_moments_with_gpt(transcript_text: str, video_topic: str = "general", openai_api_key: str = None) -> dict:
+    """
+    Analyzes a transcript with GPT to find key moments for B-roll and important keywords for sound effects.
+    """
+    if not openai_api_key:
+        logger.error("  [GPT Analysis] OpenAI API key not provided. Skipping key moment analysis.")
+        return {"highlights": [], "keywords": []}
+
+    logger.info("  [GPT Analysis] Finding key moments and keywords for B-roll and sound effects...")
+
+    prompt = f"""
+    Analyze the following transcript from a video about "{video_topic}". 
+    Your task is to identify two things:
+    1.  Three to five key highlight moments or phrases that would be good to emphasize with a stylized subtitle. These should be short, impactful quotes from the text.
+    2.  A list of 8-12 important, single keywords from the text that would be interesting to pair with a subtle sound effect when spoken. Choose words that are action-oriented, descriptive, or significant to the topic.
+
+    Provide the output in JSON format with two keys: "highlights" and "keywords".
+    "highlights" should be a list of strings.
+    "keywords" should be a list of strings.
+
+    Example output:
+    {{
+        "highlights": ["This is a major breakthrough", "The results were astonishing"],
+        "keywords": ["discover", "powerful", "secret", "unlock", "journey", "challenge", "transform", "magic"]
+    }}
+    
+    Transcript:
+    ---
+    {transcript_text}
+    ---
+    """
+    
+    try:
+        client = openai.OpenAI(api_key=openai_api_key)
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            response_format={"type": "json_object"},
+            messages=[
+                {"role": "system", "content": "You are an expert video editor's assistant. Your task is to analyze transcripts to find engaging moments."},
+                {"role": "user", "content": prompt}
+            ]
+        )
+        analysis_result = json.loads(response.choices[0].message.content)
+        logger.info(f"  [GPT Analysis] Successfully found {len(analysis_result.get('highlights', []))} highlights and {len(analysis_result.get('keywords', []))} keywords.")
+        return analysis_result
+    except Exception as e:
+        logger.error(f"  [GPT Analysis] Failed to analyze transcript with GPT: {e}")
+        return {"highlights": [], "keywords": []}
+
+
+def convert_srt_to_ass_with_highlights(srt_path: Path, ass_path: Path, key_moments: list[str], highlight_style: str) -> bool:
+    """
+    Converts SRT to ASS format and applies a highlight style to key moments.
+    This version uses a simpler regex-based approach for highlighting.
+    """
+    logger.info(f"  [Subtitles] Converting SRT to ASS and highlighting key moments with style: {highlight_style}")
+
+    # Define ASS styles
+    styles = {
+        'yellow': "{Style=Default,PrimaryColour=&H00FFFF,Bold=1}", # Yellow
+        'green': "{Style=Default,PrimaryColour=&H00FF00,Bold=1}",  # Green
+        'pop': "{Style=Default,Fontsize=30,PrimaryColour=&HFFFFFF,OutlineColour=&H000000,Bold=1,Shadow=1,BackColour=&H80000000,BorderStyle=1,Outline=2}"
+    }
+    selected_style_tag = styles.get(highlight_style, styles['yellow'])
+
+    try:
+        # Step 1: Use FFmpeg to perform a robust SRT -> ASS conversion
+        temp_ass_path = ass_path.with_suffix('.temp.ass')
+        command = [
+            'ffmpeg', '-i', str(srt_path), str(temp_ass_path), '-y'
+        ]
+        if not _run_ffmpeg_command(command, "SRT to ASS Conversion"):
+             raise Exception("FFmpeg SRT to ASS conversion failed")
+
+        # Step 2: Read the FFmpeg-generated ASS file and apply highlights
+        with open(temp_ass_path, 'r', encoding='utf-8') as f:
+            ass_content = f.readlines()
+
+        processed_lines = []
+        for line in ass_content:
+            if line.startswith("Dialogue:"):
+                parts = line.split(',')
+                text_part = parts[-1]
+                
+                # Apply highlight style to all key moments found in the text
+                for moment in key_moments:
+                    # Escape regex special characters in the moment text
+                    safe_moment = re.escape(moment)
+                    # Use a case-insensitive regex to find and replace
+                    text_part = re.sub(f"({safe_moment})", f"{selected_style_tag}\\1{{\\r}}", text_part, flags=re.IGNORECASE)
+
+                processed_lines.append(','.join(parts[:-1] + [text_part]))
+            else:
+                processed_lines.append(line)
+        
+        with open(ass_path, 'w', encoding='utf-8') as f:
+            f.writelines(processed_lines)
+            
+        logger.info("  [Subtitles] Successfully converted to ASS and applied highlights.")
+        # Clean up temp file
+        os.remove(temp_ass_path)
+        return True
+    except Exception as e:
+        logger.error(f"  [Subtitles] Failed to convert SRT to ASS with highlights: {e}", exc_info=True)
+        if 'temp_ass_path' in locals() and os.path.exists(temp_ass_path):
+            os.remove(temp_ass_path)
+        return False
+
+
+def burn_subtitles_ffmpeg(video_path: Path, subtitle_path: Path, output_path: Path, font_size: int = 8) -> bool:
+    """
+    Burns subtitles into the video using FFmpeg. Handles both SRT and ASS formats.
+    """
+    logger.info(f"  [Subtitles] Burning subtitles from {subtitle_path.name} into {video_path.name}...")
+    subtitle_filter = f"subtitles='{subtitle_path.as_posix()}'"
+    
+    if subtitle_path.suffix.lower() == '.ass':
+        subtitle_filter = f"ass='{subtitle_path.as_posix()}'"
+    
+    command = [
+        'ffmpeg', '-i', str(video_path),
+        '-vf', subtitle_filter,
+        '-c:v', 'libx264', '-crf', '23', '-preset', 'medium',
+        '-c:a', 'aac', '-b:a', '192k',
+        '-y', str(output_path)
+    ]
+    return _run_ffmpeg_command(command, "Subtitle Burn-in")
+
+
+def add_outro_ffmpeg(video_path: Path, output_path: Path) -> bool:
+    """
+    Adds a randomly selected outro to the end of the video using FFmpeg's concat demuxer.
+    This is generally more reliable and faster than MoviePy for simple appends.
+    """
+    logger.info("  [Outro] Adding outro to video...")
+    
+    try:
+        # Determine video dimensions to select the correct outro directory
+        clip = VideoFileClip(str(video_path))
+        width, height = clip.size
+        clip.close()
+        
+        outro_dir = OUTRO_DIR_1080x1920 if height > width else OUTRO_DIR_1920x1080
+        if not outro_dir or not os.path.isdir(outro_dir):
+            logger.warning(f"  [Outro] Directory not found or not configured: {outro_dir}. Skipping.")
+            return False # Not a failure, just skipping
+            
+        outros = [os.path.join(outro_dir, f) for f in os.listdir(outro_dir) if f.endswith(('.mp4', '.mov', '.avi'))]
+        if not outros:
+            logger.warning(f"  [Outro] No outro videos found in {outro_dir}. Skipping.")
+            return False
+
+        selected_outro = random.choice(outros)
+        logger.info(f"  [Outro] Selected outro: {selected_outro}")
+
+        # Create a temporary file list for ffmpeg's concat demuxer
+        temp_dir = Path(tempfile.gettempdir())
+        file_list_path = temp_dir / f"concat_{uuid.uuid4()}.txt"
+        
+        with open(file_list_path, 'w') as f:
+            # Note: file paths need to be properly escaped/quoted for ffmpeg
+            f.write(f"file '{os.path.abspath(video_path)}'\n")
+            f.write(f"file '{os.path.abspath(selected_outro)}'\n")
+
+        command = [
+            'ffmpeg',
+            '-f', 'concat',
+            '-safe', '0', # Necessary because we are using absolute paths
+            '-i', str(file_list_path),
+            '-c', 'copy', # Re-muxes instead of re-encoding, much faster
+            '-y', str(output_path)
+        ]
+
+        success = _run_ffmpeg_command(command, "Outro Addition")
+        os.remove(file_list_path) # Clean up the temp file
+        return success
+        
+    except Exception as e:
+        logger.error(f"  [Outro] An error occurred while adding the outro: {e}", exc_info=True)
+        if 'file_list_path' in locals() and os.path.exists(file_list_path):
+            os.remove(file_list_path)
+        return False
+
+
+def add_topic_card(video_path: Path, output_path: Path, topic: str, card_duration: float = 3.0, style: str = 'medical', position: str = 'top') -> bool:
+    """
+    Adds a topic card overlay to the beginning of the video using MoviePy.
+    """
+    logger.info(f"  [Topic Card] Adding topic card: '{topic}'")
+    
+    try:
+        main_clip = VideoFileClip(str(video_path))
+        width, height = main_clip.size
+        
+        # --- Sizing Logic ---
+        # Vertical video (e.g., Shorts)
+        if height > width:
+            font_size = int(height * 0.08) # 8% of height
+            card_height = int(height * 0.25) # 25% of screen height
+            y_pos = int(height * 0.1) # Position from top
+        # Horizontal video
+        else:
+            font_size = int(height * 0.15) # 15% of height
+            card_height = int(height * 0.4)
+            y_pos = int(height * 0.15)
+            
+        # --- Style Logic ---
+        if style == 'medical':
+            bg_color = (240, 248, 255) # AliceBlue
+            text_color = '#003366' # Dark Blue
+            font = 'Arial-Bold'
+        elif style == 'tech':
+            bg_color = (25, 25, 40) # Dark Navy
+            text_color = '#00FF00' # Bright Green (like a terminal)
+            font = 'Courier-Bold'
+        else: # Default/fallback style
+            bg_color = (0, 0, 0)
+            text_color = 'white'
+            font = 'Arial-Bold'
+            
+        # Create the text clip
+        text_clip = TextClip(
+            topic,
+            fontsize=font_size,
+            color=text_color,
+            font=font,
+            size=(width * 0.9, None), # 90% width, auto height
+            method='caption' # Wraps text automatically
+        )
+
+        # Create a background for the text
+        text_bg_clip = ColorClip(
+            size=(width, text_clip.h + 20), # Add 20px padding
+            color=bg_color
+        ).set_opacity(0.8)
+
+        # Composite the text onto its background
+        card = CompositeVideoClip([text_bg_clip, text_clip.set_position('center')])
+        card = card.set_duration(card_duration).set_pos(('center', y_pos))
+
+        # Composite the card onto the main video
+        final_clip = CompositeVideoClip([main_clip, card])
+        
+        # CRITICAL: Preserve original video duration
+        final_clip = final_clip.set_duration(main_clip.duration)
+        
+        temp_dir = Path(tempfile.gettempdir())
+        final_clip.write_videofile(
+            str(output_path), 
+            codec='libx264', 
+            audio_codec='aac',
+            ffmpeg_params=['-avoid_negative_ts', 'make_zero']
+        )
+        
+        main_clip.close()
+        logger.info("  [Topic Card] Topic card added successfully.")
+        return True
+    except Exception as e:
+        logger.error(f"  [Topic Card] Failed to add topic card: {e}", exc_info=True)
+        return False
+
+
+def add_colorful_frame(video_path: Path, output_path: Path, frame_style: str = 'rainbow') -> bool:
+    """Adds a colorful, animated frame to the video using MoviePy."""
+    logger.info(f"  [Frame] Adding '{frame_style}' frame...")
+    
+    try:
+        main_clip = VideoFileClip(str(video_path))
+        w, h = main_clip.size
+        
+        # Define frame styles
+        if frame_style == 'rainbow':
+            # Create a function to generate a rainbow color over time
+            def color_func(t):
+                # Simple rainbow effect by cycling through HSV color space
+                hue = (t * 50) % 360 # Speed of color change
+                # Convert HSV to RGB, requires colorsys module
+                import colorsys
+                rgb_float = colorsys.hsv_to_rgb(hue / 360.0, 1.0, 1.0)
+                return tuple(int(c * 255) for c in rgb_float)
+
+        elif frame_style == 'techno_pulse':
+             # Pulsing between two tech-like colors (e.g., cyan and magenta)
+            def color_func(t):
+                import numpy as np
+                # Sine wave to smoothly transition between colors
+                pulse = (np.sin(t * 2 * np.pi) + 1) / 2 # 1 Hz pulse, normalized to 0-1
+                color1 = np.array([0, 255, 255]) # Cyan
+                color2 = np.array([255, 0, 255]) # Magenta
+                final_color = color1 * (1 - pulse) + color2 * pulse
+                return tuple(final_color.astype(int))
+        else:
+            logger.warning(f"  [Frame] Unknown frame style '{frame_style}'. Defaulting to no frame.")
+            return False # Not a failure, just skipping
+
+        # Create the frame by resizing the main clip and placing it on a colored background
+        frame_thickness = int(max(w, h) * 0.01) # 1% of the largest dimension
+        
+        # The background will be the frame itself
+        background_clip = ColorClip(size=(w, h), color=(0,0,0)).set_duration(main_clip.duration)
+        
+        # Animate the background color
+        animated_bg = background_clip.fl_image(lambda img: np.array(color_func(background_clip.get_frame(0))))
+
+        # Place the original video, slightly smaller, onto the animated background
+        final_clip = CompositeVideoClip([
+            animated_bg,
+            main_clip.resize(lambda t: (w - 2*frame_thickness, h - 2*frame_thickness)).set_position('center')
+        ])
+
+        # CRITICAL: Preserve original video duration
+        final_clip = final_clip.set_duration(main_clip.duration)
+        
+        temp_dir = Path(tempfile.gettempdir())
+        final_clip.write_videofile(
+            str(output_path),
+            codec='libx264',
+            audio_codec='aac',
+            ffmpeg_params=['-avoid_negative_ts', 'make_zero']
+        )
+
+        main_clip.close()
+        logger.info("  [Frame] Frame added successfully.")
+        return True
+    except Exception as e:
+        logger.error(f"  [Frame] Failed to add frame: {e}", exc_info=True)
+        return False
+
+
+def add_daily_question_logo(video_path: Path, output_path: Path, logo_duration: float = 2.0, position: str = 'top-right') -> bool:
+    """Flashes a 'Daily Question' logo on the video."""
+    logger.info("  [Logo] Flashing 'Daily Question' logo...")
+    
+    try:
+        main_clip = VideoFileClip(str(video_path))
+        w, h = main_clip.size
+        
+        # Logo asset path
+        logo_path = ASSETS_DIR / 'daily_question_logo.png'
+        if not logo_path.exists():
+            logger.warning(f"  [Logo] Logo asset not found at {logo_path}. Skipping.")
+            return False
+        
+        # --- Sizing and Positioning ---
+        logo_width = int(w * 0.4) # 40% of video width
+
+        # Position logic
+        if position == 'top-right':
+            pos = ('right', 'top')
+        elif position == 'top-left':
+            pos = ('left', 'top')
+        elif position == 'center':
+            pos = ('center', 'center')
+        else:
+            pos = ('right', 'top') # Default
+            
+        logo_clip = (ImageClip(str(logo_path))
+                     .set_duration(logo_duration)
+                     .resize(width=logo_width)
+                     .set_pos(pos)
+                     .crossfadein(0.5)
+                     .crossfadeout(0.5))
+        
+        # The logo will appear after a 1-second delay
+        logo_clip = logo_clip.set_start(1.0)
+        
+        final_clip = CompositeVideoClip([main_clip, logo_clip])
+        
+        # CRITICAL: Preserve original video duration
+        final_clip = final_clip.set_duration(main_clip.duration)
+        
+        temp_dir = Path(tempfile.gettempdir())
+        final_clip.write_videofile(
+            str(output_path),
+            codec='libx264',
+            audio_codec='aac',
+            ffmpeg_params=['-avoid_negative_ts', 'make_zero']
+        )
+        
+        main_clip.close()
+        logger.info("  [Logo] Logo added successfully.")
+        return True
+    except Exception as e:
+        logger.error(f"  [Logo] Failed to add logo: {e}", exc_info=True)
+        return False
+
+
+def get_broll_keywords_with_gpt(transcript_text: str, openai_api_key: str = None) -> list[str]:
+    """Analyzes a transcript with GPT to extract keywords for B-roll footage."""
+    if not openai_api_key:
+        logger.error("  [GPT B-roll] OpenAI API key not provided. Skipping B-roll keyword extraction.")
+        return []
+
+    logger.info("  [GPT B-roll] Analyzing transcript for B-roll keywords...")
+
+    prompt = f"""
+    Based on the following video transcript, identify 5-7 distinct, visually representable keywords or short phrases.
+    These will be used to search for B-roll video clips.
+    Focus on nouns, objects, and key concepts. Avoid abstract ideas unless they are central to the theme.
+    Return a simple comma-separated list of these keywords.
+    
+    Example:
+    'cancer cells, medical research, laboratory, DNA sequence, microscope'
+
+    Transcript:
+    ---
+    {transcript_text}
+    ---
+    Keywords:
+    """
+
+    try:
+        client = openai.OpenAI(api_key=openai_api_key)
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": "You are an assistant helping a video editor find relevant B-roll footage."},
+                {"role": "user", "content": prompt}
+            ]
+        )
+        keywords_str = response.choices[0].message.content
+        keywords = [k.strip() for k in keywords_str.split(',') if k.strip()]
+        logger.info(f"  [GPT B-roll] Extracted keywords: {keywords}")
+        return keywords
+    except Exception as e:
+        logger.error(f"  [GPT B-roll] Failed to get B-roll keywords from GPT: {e}", exc_info=True)
+        return []
+
+def calculate_smart_broll_settings(video_duration: float) -> tuple[int, float]:
+    """
+    Calculates the number and duration of B-roll clips based on video length.
+    - Aim for roughly 20-25% B-roll coverage.
+    - Clips should be between 3-5 seconds.
+    """
+    target_coverage = video_duration * 0.25 # 25% coverage
+    
+    # Simple logic: use 4-second clips and calculate how many are needed
+    clip_duration = 4.0
+    num_clips = int(target_coverage // clip_duration)
+    
+    # Ensure at least one clip for very short videos, and cap it reasonably
+    if video_duration > 10 and num_clips == 0:
+        num_clips = 1
+    elif num_clips > 15: # Cap at 15 clips to avoid being overwhelming
+        num_clips = 15
+        
+    logger.info(f"  [B-roll Settings] Smart settings calculated for {video_duration:.1f}s video: {num_clips} clips, {clip_duration}s duration.")
+    return num_clips, clip_duration
+
+
+def search_and_download_broll(keywords: list, output_dir: Path, num_clips: int = 5, pexels_api_key: str = None) -> list:
+    """Searches for and downloads B-roll clips from Pexels."""
+    if not pexels_api_key:
+        logger.error("  [Pexels] Pexels API key not provided. Skipping B-roll download.")
+        return []
+    if PexelsAPI is None:
+        logger.error("  [Pexels] Pexels API library not found. Please install 'pexels-api'.")
+        return []
+    
+    logger.info(f"  [Pexels] Searching for {num_clips} B-roll clips with keywords: {keywords}")
+    
+    api = PexelsAPI(pexels_api_key)
+    downloaded_files = []
+    
+    # We need 'num_clips' in total, so we'll try to get a few for each keyword
+    clips_per_keyword = (num_clips // len(keywords)) + 1 if keywords else 0
+    
+    for keyword in keywords:
+        if len(downloaded_files) >= num_clips:
+            break
+            
+        logger.info(f"    [Pexels] Searching for '{keyword}'...")
+        try:
+            # Search for videos
+            api.search_videos(keyword, page=1, per_page=clips_per_keyword)
+            videos = api.get_videos()
+            
+            if not videos:
+                logger.warning(f"    [Pexels] No results found for '{keyword}'.")
+                continue
+
+            for video in videos:
+                if len(downloaded_files) >= num_clips:
+                    break
+                
+                # Find a suitable video file (prefer lower resolution for speed)
+                video_file = None
+                for vf in video.video_files:
+                    # Prefer HD-ready resolution if available
+                    if vf.height >= 720 and vf.height < 1080:
+                        video_file = vf
+                        break
+                if not video_file:
+                    # Fallback to the first available file if no ideal one is found
+                    video_file = video.video_files[0] if video.video_files else None
+
+                if video_file:
+                    file_path = output_dir / f"broll_{keyword.replace(' ', '_')}_{video.id}.mp4"
+                    logger.info(f"      [Pexels] Downloading clip {video.id} to {file_path}...")
+                    
+                    # Download the video
+                    response = requests.get(video_file.link, stream=True)
+                    response.raise_for_status()
+                    with open(file_path, 'wb') as f:
+                        for chunk in response.iter_content(chunk_size=8192):
+                            f.write(chunk)
+                
+                    downloaded_files.append(str(file_path))
+                    logger.info(f"      [Pexels] Download complete.")
+        except Exception as e:
+            logger.error(f"    [Pexels] Failed to download B-roll for '{keyword}': {e}", exc_info=True)
+            
+    return downloaded_files
+
+
+def insert_broll_clips(
+    video_path: Path, 
+    transcript_path: Path, 
+    broll_clip_count: int, 
+    broll_clip_duration: float, 
+    openai_api_key: str = None, 
+    pexels_api_key: str = None,
+    transition_style: str = 'fade',  # Add transition style parameter
+    use_smart_settings: bool = True  # New parameter for smart settings
+) -> Path:
+    """
+    Identifies keywords, downloads B-roll, and inserts it into the main video.
+    """
+    logger.info("  [B-roll] Starting B-roll insertion process...")
+    temp_dir = Path(tempfile.gettempdir())
+    broll_download_dir = temp_dir / 'broll_downloads'
+    broll_download_dir.mkdir(exist_ok=True)
+    
+    try:
+        main_clip = VideoFileClip(str(video_path))
+        
+        # Determine number and duration of clips
+        if use_smart_settings:
+            num_clips, clip_duration = calculate_smart_broll_settings(main_clip.duration)
+        else:
+            num_clips, clip_duration = broll_clip_count, broll_clip_duration
+
+        # Get keywords from transcript
+        with open(transcript_path, 'r', encoding='utf-8') as f:
+            transcript_text = f.read()
+        keywords = get_broll_keywords_with_gpt(transcript_text, openai_api_key)
+        
+        if not keywords:
+            logger.warning("  [B-roll] No keywords extracted. Skipping B-roll insertion.")
+            return video_path
+        
+        # Download clips
+        broll_files = search_and_download_broll(keywords, broll_download_dir, num_clips, pexels_api_key)
+        if not broll_files:
+            logger.warning("  [B-roll] No B-roll clips were downloaded. Skipping insertion.")
+            return video_path
+        
+        # Distribute clips evenly throughout the video
+        interval = main_clip.duration / (len(broll_files) + 1)
+        
+        broll_clips_to_insert = []
+        for i, broll_file in enumerate(broll_files):
+            start_time = (i + 1) * interval
+            
+            broll_clip = (VideoFileClip(broll_file)
+                          .set_duration(clip_duration)
+                          .resize(main_clip.size)) # Ensure B-roll matches main video size
+
+            # Apply transition
+            if transition_style == 'fade':
+                broll_clip = broll_clip.crossfadein(0.5).crossfadeout(0.5)
+                # Adjust duration to account for transition
+                broll_clip = broll_clip.set_duration(clip_duration - 1)
+
+            broll_clip = broll_clip.set_start(start_time)
+            broll_clips_to_insert.append(broll_clip)
+
+        # Composite everything together
+        final_clip = CompositeVideoClip([main_clip] + broll_clips_to_insert)
+        
+        # CRITICAL: Preserve original video duration
+        final_clip = final_clip.set_duration(main_clip.duration)
+        
+        output_path = temp_dir / f"broll_inserted_{uuid.uuid4()}{video_path.suffix}"
+        final_clip.write_videofile(
+            str(output_path), 
+            codec='libx264',
+            audio_codec='aac',
+            ffmpeg_params=['-avoid_negative_ts', 'make_zero']
+        )
+        
+        # Clean up downloaded B-roll
+        shutil.rmtree(broll_download_dir)
+        logger.info("  [B-roll] B-roll inserted successfully.")
+        return output_path
+    
+    except Exception as e:
+        logger.error(f"  [B-roll] An error occurred during B-roll insertion: {e}", exc_info=True)
+        if 'broll_download_dir' in locals() and broll_download_dir.exists():
+            shutil.rmtree(broll_download_dir)
+        return video_path
+
+
+def apply_dynamic_zoom(video_path: Path, output_path: Path, intensity: str = 'subtle', frequency: str = 'medium') -> bool:
+    """
+    Applies a subtle, dynamic zoom (Ken Burns effect) to the video.
+    """
+    logger.info(f"  [Zoom] Applying dynamic zoom (intensity: {intensity}, frequency: {frequency})...")
+    
+    try:
+        main_clip = VideoFileClip(str(video_path))
+        
+        # --- Parameter Mapping ---
+        intensity_map = {'subtle': 1.05, 'medium': 1.1, 'strong': 1.15} # Zoom factor
+        frequency_map = {'slow': 0.05, 'medium': 0.1, 'fast': 0.2} # Cycles per second
+        
+        zoom_intensity = intensity_map.get(intensity, 1.05)
+        zoom_frequency = frequency_map.get(frequency, 0.1)
+
+        # --- Effect Logic ---
+        # This function will be applied to each frame of the clip
+        def zoom_effect(get_frame, t):
+            import numpy as np
+            from PIL import Image
+            frame = get_frame(t)
+            
+            # Use a sine wave for smooth zooming in and out
+            # The 't * 2 * pi * frequency' part controls the speed of the zoom cycle
+            # The '+ 1 / 2' part shifts the wave to be in the [0, 1] range
+            progress = (np.sin(t * 2 * np.pi * zoom_frequency) + 1) / 2
+            
+            # The current zoom level interpolates between 1 (no zoom) and max_zoom
+            current_zoom = 1 + (zoom_intensity - 1) * progress
+            
+            # Apply the zoom using numpy/PIL instead of moviepy vfx
+            h, w, _ = frame.shape
+            new_h = int(h * current_zoom)
+            new_w = int(w * current_zoom)
+            
+            # Convert frame to PIL Image for resizing
+            frame_pil = Image.fromarray(frame.astype('uint8'))
+            zoomed_pil = frame_pil.resize((new_w, new_h), Image.LANCZOS)
+            zoomed_frame = np.array(zoomed_pil)
+            
+            # Center the zoomed frame
+            if current_zoom > 1:
+                # Crop center for zoom in
+                x_pos = (new_w - w) // 2
+                y_pos = (new_h - h) // 2
+                return zoomed_frame[y_pos:y_pos+h, x_pos:x_pos+w]
+            else:
+                # Pad for zoom out (shouldn't happen with our settings but safety)
+                return zoomed_frame
+
+        final_clip = main_clip.fl(zoom_effect)
+
+        # CRITICAL: Preserve original video duration
+        final_clip = final_clip.set_duration(main_clip.duration)
+        
+        temp_dir = Path(tempfile.gettempdir())
+        final_clip.write_videofile(
+            str(output_path), 
+            codec='libx264',
+            audio_codec='aac',
+            ffmpeg_params=['-avoid_negative_ts', 'make_zero']
+        )
+        
+        main_clip.close()
+        logger.info("  [Zoom] Dynamic zoom applied successfully.")
+        return True
+    except Exception as e:
+        logger.error(f"  [Zoom] Failed to apply dynamic zoom: {e}", exc_info=True)
+        return False
+
+
+def add_background_music(video_path: Path, output_path: Path, music_track: str = 'none', video_topic: str = 'general', 
+                        speech_volume: float = 1.0, music_volume: float = 0.15, 
+                        fade_in_duration: float = 1.0, fade_out_duration: float = 1.0) -> bool:
+    """
+    Adds background music to the video, with independent volume controls and optional smart selection.
+    """
+    if music_track == 'none':
+        logger.info("  [Music] No background music requested. Skipping.")
+        return False # Not a failure, just skipped.
+
+    logger.info("  [Music] Adding background music...")
+
+    try:
+        main_clip = VideoFileClip(str(video_path))
+        
+        # --- Music Selection ---
+        if music_track == 'smart':
+            logger.info("    [Music] Using 'smart' selection based on topic...")
+            music_manager = PixabayMusicManager(api_key=PIXABAY_API_KEY)
+            selected_music_path = music_manager.get_smart_background_music(main_clip.duration, video_topic)
+            if not selected_music_path:
+                logger.warning("    [Music] Smart selection failed to find a track. Skipping music addition.")
+                return False
+        elif music_track == 'random_local':
+            logger.info("    [Music] Using 'random_local' selection...")
+            music_manager = PixabayMusicManager(api_key=None) # No API key needed for local
+            selected_music_path = music_manager.get_smart_background_music(main_clip.duration, 'general')
+            if not selected_music_path:
+                logger.warning("    [Music] No local music tracks found. Skipping music addition.")
+                return False
+        else:
+            # Assume it's a direct path
+            selected_music_path = Path(music_track)
+            if not selected_music_path.exists():
+                logger.error(f"    [Music] Provided music track not found: {selected_music_path}. Skipping.")
+                return False
+
+        logger.info(f"    [Music] Selected track: {selected_music_path}")
+        
+        # --- Audio Mixing ---
+        music_clip = AudioFileClip(str(selected_music_path))
+
+                # Normalize music to prevent it from being too loud, then apply volume
+        # We use af=acompressor to level the audio out, making it more consistent.
+        # Then, we apply the final volume adjustment.
+        music_clip = music_clip.volumex(music_volume)
+
+        # If music is shorter than video, loop it
+        if music_clip.duration < main_clip.duration:
+            music_clip = music_clip.fx(vfx.loop, duration=main_clip.duration)
+        else:
+            # If music is longer, trim it
+            music_clip = music_clip.set_duration(main_clip.duration)
+
+        # Apply fade in and fade out to the music
+        music_clip = music_clip.audio_fadein(fade_in_duration).audio_fadeout(fade_out_duration)
+
+        # Get original audio from the main video and adjust its volume
+        original_audio = main_clip.audio.volumex(speech_volume)
+        
+        # Combine the original audio with the background music
+        composite_audio = CompositeAudioClip([original_audio, music_clip])
+        main_clip.audio = composite_audio
+        
+        # CRITICAL: Preserve original video duration
+        main_clip = main_clip.set_duration(main_clip.duration)
+        
+        temp_dir = Path(tempfile.gettempdir())
+        main_clip.write_videofile(
+            str(output_path),
+            codec='libx264',
+            audio_codec='aac',
+            ffmpeg_params=['-avoid_negative_ts', 'make_zero']
+        )
+        
+        main_clip.close()
+        logger.info("  [Music] Background music added successfully.")
+        return True
+        
+    except Exception as e:
+        logger.error(f"  [Music] Failed to add background music: {e}", exc_info=True)
+        return False
+
+
+def add_sound_effects(video_clip: VideoFileClip, transcript_path: Optional[Path], effect_pack: str, important_keywords: list = None, effect_duration: float = 0.3, transition_timings: list = None) -> VideoFileClip:
+    """
+    Adds sound effects to the video.
+    
+    If `transition_timings` are provided, it adds effects at those specific times.
+    Otherwise, if a `transcript_path` and `important_keywords` are provided, it syncs effects to spoken words.
+    """
+    logger.info(f"  [Sound FX] Adding sound effects from pack: '{effect_pack}'")
+    
+    if not transition_timings and not (transcript_path and important_keywords):
+        logger.info("  [Sound FX] No timings or keywords provided. Skipping.")
+        return video_clip
+
+    try:
+        se = SoundEffects(assets_dir=ASSETS_DIR)
+        
+        effect_times = []
+        if transition_timings:
+            logger.info(f"    [Sound FX] Using {len(transition_timings)} provided transition timings.")
+            effect_times = transition_timings
+            # Use a specific effect for transitions
+            effect_pack = 'swoosh' 
+        else:
+            logger.info("    [Sound FX] Syncing effects to keywords in transcript...")
+            if not transcript_path.exists():
+                logger.error("    [Sound FX] Transcript file not found. Cannot sync to keywords.")
+                return video_clip
+                
+            # Parse SRT to find when keywords are spoken
+            with open(transcript_path, 'r', encoding='utf-8') as f:
+                srt_content = f.read()
+
+            for keyword in important_keywords:
+                # Use regex to find the keyword and its timestamp
+                # Pattern matches a subtitle block containing the keyword
+                pattern = re.compile(
+                    r'\d+\n(\d{2}:\d{2}:\d{2},\d{3}) --> .*?\n.*?\b' + re.escape(keyword) + r'\b', 
+                    re.IGNORECASE | re.DOTALL
+                )
+                match = pattern.search(srt_content)
+                if match:
+                    start_time_str = match.group(1)
+                    effect_times.append(_parse_srt_time(start_time_str))
+
+        if not effect_times:
+            logger.info("    [Sound FX] No valid times found for effects. Skipping.")
+            return video_clip
+            
+        logger.info(f"    [Sound FX] Found {len(effect_times)} points to add effects.")
+        
+        # Get the sound effects for the selected pack
+        effects_to_use = se.get_effects(effect_pack, len(effect_times))
+        if not effects_to_use:
+            logger.warning(f"    [Sound FX] No sound effects found in pack '{effect_pack}'. Skipping.")
+            return video_clip
+
+        # Add the effects to the main audio
+        original_audio = video_clip.audio
+        sfx_clips = []
+        for i, time_sec in enumerate(effect_times):
+            sfx_clip = AudioFileClip(str(effects_to_use[i % len(effects_to_use)]))
+            sfx_clip = sfx_clip.set_start(time_sec).set_duration(effect_duration)
+            sfx_clips.append(sfx_clip)
+
+        final_audio = CompositeAudioClip([original_audio] + sfx_clips)
+        video_clip.audio = final_audio
+
+        logger.info("  [Sound FX] Sound effects added to audio track.")
+        return video_clip
+
+    except Exception as e:
+        logger.error(f"  [Sound FX] Failed to add sound effects: {e}", exc_info=True)
+        return video_clip
+
+
+def _parse_srt_time(time_str: str) -> float:
+    """Converts an SRT time string (HH:MM:SS,ms) to seconds."""
+    parts = time_str.replace(',', ':').split(':')
+    return int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2]) + int(parts[3]) / 1000
+
+def remove_silence_robust(video_path: Path, output_path: Path, silence_threshold: str, silence_duration: float) -> bool:
+    """
+    Removes silent sections from a video using a robust two-pass ffmpeg method.
+    Pass 1: Use 'silencedetect' to find silent segments.
+    Pass 2: Use 'trim' and 'concat' filters to build a new video with silent parts removed.
+    This ensures both video and audio streams are kept in sync.
+    """
+    logger.info("  [Silence Removal] Starting robust silence removal...")
+
+    # Pass 1: Detect silence
+    logger.info("    Pass 1: Detecting silent segments...")
+    # Note: ffmpeg's silencedetect uses 'noise' for threshold.
+    detect_command = [
+        'ffmpeg', '-i', str(video_path),
+        '-af', f"silencedetect=noise={silence_threshold}:d={silence_duration}",
+        '-f', 'null', '-'
+    ]
+    
+    try:
+        # We expect a non-zero exit code if silences are found, so we don't use check=True here.
+        result = subprocess.run(detect_command, capture_output=True, text=True)
+        stderr_output = result.stderr
+    except FileNotFoundError:
+        logger.error("    'ffmpeg' command not found. Ensure FFmpeg is installed and in your PATH.")
+        return False
+
+    # Parse silence timings from ffmpeg stderr
+    silence_starts = re.findall(r'silence_start: (\d+\.?\d*)', stderr_output)
+    silence_ends = re.findall(r'silence_end: (\d+\.?\d*)', stderr_output)
+
+    if not silence_starts:
+        logger.info("    No silence detected. Copying original video as is.")
+        shutil.copy(video_path, output_path)
+        return True
+
+    # Get total video duration
+    try:
+        duration = get_video_duration(video_path)
+        if not duration:
+            logger.error("    Could not determine video duration.")
+            return False
+    except Exception as e:
+        logger.error(f"    Error getting video duration: {e}")
+        return False
+
+    # Create a list of non-silent segments to keep
+    non_silent_segments = []
+    last_end = 0.0
+    
+    # It's possible for silencedetect to find a start but not an end if silence is at the very end.
+    # We'll iterate through the minimum of starts and ends found.
+    for i in range(len(silence_ends)):
+        start_time = float(silence_starts[i])
+        end_time = float(silence_ends[i])
+        
+        # Keep the segment before this silence
+        if start_time > last_end:
+            non_silent_segments.append((last_end, start_time))
+        last_end = end_time
+
+    # Keep the final segment after the last silence
+    if last_end < duration:
+        non_silent_segments.append((last_end, duration))
+
+    if not non_silent_segments:
+        logger.warning("    Silence detection resulted in no video content. Skipping removal.")
+        # Copy original file to not break the chain
+        shutil.copy(video_path, output_path)
+        return True
+    
+    logger.info(f"    Found {len(non_silent_segments)} non-silent segments to concatenate.")
+
+    # Pass 2: Create filtergraph and run ffmpeg to build the new video
+    logger.info("    Pass 2: Building video from non-silent segments...")
+    filter_complex = []
+    for i, (start, end) in enumerate(non_silent_segments):
+        filter_complex.append(f"[0:v]trim=start={start}:end={end},setpts=PTS-STARTPTS[v{i}]")
+        filter_complex.append(f"[0:a]atrim=start={start}:end={end},asetpts=PTS-STARTPTS[a{i}]")
+
+    concat_video_streams = "".join(f"[v{i}]" for i in range(len(non_silent_segments)))
+    concat_audio_streams = "".join(f"[a{i}]" for i in range(len(non_silent_segments)))
+    
+    filter_complex.append(f"{concat_video_streams}concat=n={len(non_silent_segments)}:v=1[outv]")
+    filter_complex.append(f"{concat_audio_streams}concat=n={len(non_silent_segments)}:a=1[outa]")
+
+    filter_graph = ";".join(filter_complex)
+
+    trim_command = [
+        'ffmpeg', '-i', str(video_path),
+        '-filter_complex', filter_graph,
+        '-map', '[outv]', '-map', '[outa]',
+        '-vsync', 'vfr', # Use variable frame rate to handle potential timestamp issues
+        '-y', str(output_path)
+    ]
+
+    return _run_ffmpeg_command(trim_command, "Silence Trimming")
+
+
+def process_video(
+    input_file_path: Path, 
+    output_dir_base: Path,
+    video_topic: str = "general",
+    skip_audio: bool = False,
+    skip_silence: bool = False,
+    skip_transcription: bool = False,
+    skip_gpt_correct: bool = False,
+    skip_subtitle_burn: bool = False,
+    skip_outro: bool = False,
+    skip_broll: bool = False,
+    skip_ai_highlights: bool = False,
+    skip_multimedia_analysis: bool = False,
+    skip_image_generation: bool = False,
+    skip_topic_card: bool = False,
+    skip_frame: bool = False,
+    skip_flash_logo: bool = False,
+    skip_dynamic_zoom: bool = False,
+    skip_background_music: bool = False,
+    skip_sound_effects: bool = False,
+    whisper_model: str = 'small',
+    use_ffmpeg_enhance: bool = False,
+    use_ai_denoiser: bool = False,
+    use_voicefixer: bool = False, # NEW: Add VoiceFixer option
+    broll_clip_count: int = 5,
+    broll_clip_duration: float = 4.0,
+    broll_transition_style: str = 'fade',
+    zoom_intensity: str = 'subtle',
+    zoom_frequency: str = 'medium',
+    music_track: str = 'smart',
+    music_speech_volume: float = 1.0,
+    music_background_volume: float = 0.045,
+    music_fade_in_duration: float = 1.0,
+    music_fade_out_duration: float = 1.0,
+    sound_effect_pack: str = 'basic-pops',
+    sound_effect_duration: float = 0.3,
+    gpt_model: str = 'gpt-4o-mini',
+    highlight_style: str = 'yellow',
+    silence_threshold: str = "-30dB",
+    silence_duration: float = 0.5,
+    subtitle_font_size: int = 8,
+    openai_api_key: str = None,
+    pexels_api_key: str = None,
+    # New configurable AI prompts
+    topic_detection_prompt: str = '',
+    multimedia_analysis_prompt: str = '',
+    image_generation_prompt: str = '',
+    gpt_prompt_configs: dict = None,
+    **kwargs
+) -> Path | None:
+    """
+    The main video processing pipeline.
+    This function orchestrates all the steps from audio enhancement to final output.
+    """
+    global EDITED_VIDEOS_DIR, TEMP_PROCESSING_DIR, PROCESSED_ORIGINALS_DIR
+    
+    # --- Setup paths and directories ---
+    EDITED_VIDEOS_DIR = output_dir_base / 'edited_videos'
+    TEMP_PROCESSING_DIR = output_dir_base / 'temp_processing'
+    PROCESSED_ORIGINALS_DIR = output_dir_base / 'processed_originals'
+    
+    for d in [EDITED_VIDEOS_DIR, TEMP_PROCESSING_DIR, PROCESSED_ORIGINALS_DIR]:
+        d.mkdir(parents=True, exist_ok=True)
+
+    temp_dir = Path(tempfile.gettempdir())
+    
+    filename = input_file_path.name
+    
+    # --- Step Counter ---
+    total_steps = 20 # Approximate number of steps for progress tracking
+    current_step = 0
+    def get_step():
+        nonlocal current_step
+        current_step += 1
+        return current_step
+        
+    logger.info(f"🚀 Starting processing for: {filename}")
+    
+    current_step_path = str(input_file_path) # Start with the original file path
+    
+    send_step_progress("Initial Setup", get_step(), total_steps, "Preparing environment...")
+
+    # --- Step: Audio Enhancement (with multiple options) ---
+    if not skip_audio:
+        print_section_header("Audio Enhancement")
+        send_step_progress("Audio Enhancement", get_step(), total_steps, "Improving audio quality...")
+        enhanced_audio_path = enhance_audio(
+            audio_path=current_step_path,
+                use_ffmpeg=use_ffmpeg_enhance,
+            use_ai=use_ai_denoiser,
+            use_voicefixer=use_voicefixer
+        )
+        if enhanced_audio_path != current_step_path:
+            # If enhancement happened, the result is an audio file.
+            # We need to combine it back with the original video.
+            logger.info(f"  Re-combining enhanced audio with original video...")
+            original_video = VideoFileClip(current_step_path)
+            enhanced_audio_clip = AudioFileClip(enhanced_audio_path)
+            
+            # Simple duration matching - just trim to video length if needed
+            if enhanced_audio_clip.duration > original_video.duration:
+                enhanced_audio_clip = enhanced_audio_clip.subclip(0, original_video.duration)
+            
+            # Set the enhanced audio to the video
+            final_clip = original_video.set_audio(enhanced_audio_clip)
+            
+            enhanced_video_path = temp_dir / f"audio_enhanced_{uuid.uuid4()}{input_file_path.suffix}"
+            
+            final_clip.write_videofile(
+                str(enhanced_video_path), 
+                codec='libx264', 
+                audio_codec='aac'
+            )
+            current_step_path = str(enhanced_video_path)
+            logger.info(f"    Combined enhanced audio with video. New path: {current_step_path}")
+            else:
+            logger.info("    Audio enhancement skipped or failed, using original audio.")
+        
+    # --- Step: Remove Silence ---
+        if not skip_silence:
+        print_section_header("Silence Removal")
+        send_step_progress("Silence Removal", get_step(), total_steps, "Trimming silent parts...")
+        silence_removed_path = TEMP_PROCESSING_DIR / f"silence_removed_{filename}"
+        
+        if remove_silence_robust(
+            video_path=Path(current_step_path),
+            output_path=silence_removed_path,
+            silence_threshold=silence_threshold,
+            silence_duration=silence_duration
+        ):
+            current_step_path = str(silence_removed_path)
+            logger.info(f"  Robust silence removal successful. New path: {current_step_path}")
+        else:
+            logger.warning("  Robust silence removal failed. Continuing with original clip.")
+
+    # After this point, the audio and video duration is set for the rest of the process
+    # Any new clips must have their duration explicitly set to this.
+    master_clip_for_duration = VideoFileClip(current_step_path)
+    final_video_duration = master_clip_for_duration.duration
+    master_clip_for_duration.close()
+    
+    # --- Step: Transcription ---
+    transcript_path = None
+    transcript_text = ""
+    if not skip_transcription:
+        print_section_header("Transcription")
+        send_step_progress("Transcription", get_step(), total_steps, f"Transcribing with Whisper ({whisper_model})...")
+        transcript_path = TEMP_PROCESSING_DIR / f"{input_file_path.stem}.srt"
+        if transcribe_video_whisper(Path(current_step_path), transcript_path, model_name=whisper_model):
+            # Read transcript for next steps
+            with open(transcript_path, 'r', encoding='utf-8') as f:
+                transcript_text = f.read()
+            logger.info("  Transcription successful.")
+                else:
+            logger.warning("  Transcription failed. Some features will be skipped.")
+            skip_gpt_correct = skip_ai_highlights = skip_multimedia_analysis = True # Can't do these without a transcript
+            else:
+        # If we skip transcription, we must skip all dependent steps
+        skip_gpt_correct = skip_ai_highlights = skip_multimedia_analysis = True
+        
+    # --- Step: Auto-Detect Video Topic ---
+    detected_topic = video_topic
+    if transcript_text and gpt_prompt_configs and gpt_prompt_configs.get('topic_detection', {}).get('enabled', False):
+        print_section_header("Detect Video Topic")
+        send_step_progress("Detect Topic", get_step(), total_steps, "Using GPT to detect topic...")
+        custom_prompt = gpt_prompt_configs['topic_detection'].get('prompt', '')
+        detected_topic = detect_video_topic_with_gpt(transcript_text, openai_api_key, custom_prompt) or video_topic
+        logger.info(f"  Detected Topic: {detected_topic}")
+
+    # --- Step: GPT Subtitle Correction ---
+    if not skip_gpt_correct and transcript_path:
+        print_section_header("GPT Subtitle Correction")
+        send_step_progress("GPT Correction", get_step(), total_steps, "Correcting subtitles with GPT...")
+        correct_subtitles_with_gpt4o(transcript_path, detected_topic, gpt_model, openai_api_key)
+
+    # --- Step: Comprehensive Multimedia Generation ---
+    transition_timings_for_sfx = []
+    if not skip_multimedia_analysis and transcript_text:
+        print_section_header("Comprehensive Multimedia Generation")
+        send_step_progress("Multimedia Analysis", get_step(), total_steps, "Analyzing for B-Roll & Images...")
+        
+        multimedia_analysis_prompt = gpt_prompt_configs.get('multimedia_analysis', {}).get('prompt', '') if gpt_prompt_configs else ''
+        image_generation_prompt = gpt_prompt_configs.get('image_generation', {}).get('prompt', '') if gpt_prompt_configs else ''
+        
+        multimedia_video_path, transition_timings_for_sfx = create_comprehensive_multimedia_video(
+            video_path=Path(current_step_path),
+            transcript_path=transcript_path,
+            detected_topic=detected_topic,
+                openai_api_key=openai_api_key,
+                pexels_api_key=pexels_api_key,
+            transition_style=broll_transition_style,
+            multimedia_analysis_prompt=multimedia_analysis_prompt,
+            image_generation_prompt=image_generation_prompt,
+            skip_image_gen=skip_image_generation # Pass the skip flag
+        )
+        if multimedia_video_path:
+            current_step_path = str(multimedia_video_path)
+            logger.info("  Comprehensive multimedia generation successful.")
+            else:
+            logger.warning("  Comprehensive multimedia generation failed. Continuing with previous video.")
+    
+    # --- Step: AI-Powered Highlights and Keywords ---
+    key_moments = {"highlights": [], "keywords": []}
+    if not skip_ai_highlights and transcript_text:
+        print_section_header("AI Highlight Analysis")
+        send_step_progress("AI Highlights", get_step(), total_steps, "Finding key moments with GPT...")
+        key_moments = find_key_moments_with_gpt(transcript_text, detected_topic, openai_api_key)
+
+    # --- Step: Convert to ASS and Burn Subtitles ---
+    # We now create a composite clip to add sound effects before burning subtitles
+    final_clip_for_subtitles = VideoFileClip(current_step_path)
+    
+    # --- Step: Sound Effects ---
+        if not skip_sound_effects:
+        print_section_header("Sound Effects")
+        send_step_progress("Sound Effects", get_step(), total_steps, f"Adding '{sound_effect_pack}' effects...")
+        final_clip_for_subtitles = add_sound_effects(
+            final_clip_for_subtitles,
+            transcript_path,
+            sound_effect_pack,
+            key_moments.get('keywords', []),
+            sound_effect_duration,
+            transition_timings=transition_timings_for_sfx
+        )
+
+    # --- Step: Subtitle Burn-in ---
+    if not skip_subtitle_burn and transcript_path:
+        print_section_header("Subtitle Burn-in")
+        send_step_progress("Subtitle Burn-in", get_step(), total_steps, "Applying subtitles...")
+        
+        ass_path = TEMP_PROCESSING_DIR / f"{input_file_path.stem}.ass"
+        
+        # Convert SRT to ASS with highlights
+        convert_srt_to_ass_with_highlights(transcript_path, ass_path, key_moments.get('highlights', []), highlight_style)
+
+        # Write the clip with sound effects to a temp file before burning subs
+        temp_sfx_video_path = temp_dir / f"sfx_video_{uuid.uuid4()}.mp4"
+        final_clip_for_subtitles.write_videofile(str(temp_sfx_video_path), codec='libx264', audio_codec='aac')
+        
+        # Now burn the ASS file into this new video
+        subtitled_video_path = TEMP_PROCESSING_DIR / f"subtitled_{filename}"
+        if burn_subtitles_ffmpeg(temp_sfx_video_path, ass_path, subtitled_video_path, font_size=subtitle_font_size):
+            current_step_path = str(subtitled_video_path)
+            logger.info("  Subtitles burned in successfully.")
+            else:
+            logger.warning("  Subtitle burn-in failed. Continuing without subtitles.")
+            # If burn-in fails, we still need to use the video with sound effects
+            current_step_path = str(temp_sfx_video_path)
+    else:
+        # If not burning subtitles, we still need to output the clip with sound effects
+        if not skip_sound_effects:
+            temp_sfx_video_path = temp_dir / f"sfx_video_{uuid.uuid4()}.mp4"
+            final_clip_for_subtitles.write_videofile(str(temp_sfx_video_path), codec='libx264', audio_codec='aac')
+            current_step_path = str(temp_sfx_video_path)
+
+    # --- Visual-Only Effects (Applied to the final subtitled video) ---
+    
+    # Step: Topic Card
+        if not skip_topic_card:
+        print_section_header("Topic Card")
+            send_step_progress("Topic Card", get_step(), total_steps, "Adding topic card...")
+        card_output_path = temp_dir / f"card_{uuid.uuid4()}_{filename}"
+        if add_topic_card(Path(current_step_path), card_output_path, detected_topic):
+            current_step_path = str(card_output_path)
+            
+    # Step: Colorful Frame
+        if not skip_frame:
+        print_section_header("Colorful Frame")
+        send_step_progress("Frame", get_step(), total_steps, "Adding animated frame...")
+        frame_output_path = temp_dir / f"frame_{uuid.uuid4()}_{filename}"
+        if add_colorful_frame(Path(current_step_path), frame_output_path):
+            current_step_path = str(frame_output_path)
+            
+    # Step: Daily Question Logo
+        if not skip_flash_logo:
+        print_section_header("Flash Logo")
+        send_step_progress("Logo", get_step(), total_steps, "Adding logo...")
+        logo_output_path = temp_dir / f"logo_{uuid.uuid4()}_{filename}"
+        if add_daily_question_logo(Path(current_step_path), logo_output_path):
+            current_step_path = str(logo_output_path)
+
+    # Step: Dynamic Zoom
+    if not skip_dynamic_zoom:
+        print_section_header("Dynamic Zoom")
+        send_step_progress("Dynamic Zoom", get_step(), total_steps, "Applying Ken Burns effect...")
+        zoom_output_path = temp_dir / f"zoom_{uuid.uuid4()}_{filename}"
+        if apply_dynamic_zoom(Path(current_step_path), zoom_output_path, zoom_intensity, zoom_frequency):
+            current_step_path = str(zoom_output_path)
+            
+    # Step: Background Music
+    if not skip_background_music:
+        print_section_header("Background Music")
+        send_step_progress("Background Music", get_step(), total_steps, f"Adding music ({music_track})...")
+        music_output_path = temp_dir / f"music_{uuid.uuid4()}_{filename}"
+        if add_background_music(
+            Path(current_step_path), music_output_path, music_track, detected_topic,
+            music_speech_volume, music_background_volume,
+            music_fade_in_duration, music_fade_out_duration
+        ):
+            current_step_path = str(music_output_path)
+
+    # --- Finalization ---
+    
+    # Step: Add Outro
+    final_video_path = EDITED_VIDEOS_DIR / f"final_{filename}"
+        if not skip_outro:
+        print_section_header("Outro")
+            send_step_progress("Outro", get_step(), total_steps, "Adding outro...")
+        if add_outro_ffmpeg(Path(current_step_path), final_video_path):
+            logger.info("  Outro added successfully.")
+            else:
+            logger.warning("  Failed to add outro. Saving without it.")
+            shutil.copy(current_step_path, final_video_path)
+    else:
+        # If skipping outro, just copy the last processed step to the final output
+        shutil.copy(current_step_path, final_video_path)
+        
+    # Move original to processed folder
+    shutil.move(str(input_file_path), str(PROCESSED_ORIGINALS_DIR / filename))
+    
+    # Cleanup temporary processing files for this video
+    # We can be more aggressive here if needed
+    
+    send_step_progress("Complete", total_steps, total_steps, "Processing finished!")
+    print_section_header("Processing Complete")
+    logger.info(f"✅ Final video saved to: {final_video_path}")
+    
+    return final_video_path
+
+
+def analyze_transcript_for_broll_with_gpt(transcript_text: str, video_duration: float, openai_api_key: str = None) -> list[dict]:
+    """
+    Analyzes a transcript to suggest specific B-roll clips with timings.
+    Returns a list of dictionaries, e.g., [{'time': 15.5, 'duration': 5, 'query': 'circuit board'}, ...].
+    """
+    if not openai_api_key:
+        logger.error("  [GPT B-roll] OpenAI API key missing.")
+        return []
+
+    logger.info("  [GPT B-roll] Analyzing transcript for smart B-roll suggestions...")
+    prompt = f"""
+    As a video editor, analyze this transcript for a video that is {video_duration:.1f} seconds long. 
+    Identify 5-7 key moments where B-roll would be effective. For each moment, provide:
+    1. A precise 'time' in seconds (float) where the B-roll should START.
+    2. A suggested 'duration' in seconds (int) for the clip (between 4 and 6 seconds).
+    3. A concise 'query' (2-3 words) for searching stock video sites like Pexels.
+
+    Return this as a JSON array of objects.
+
+    Example:
+    [
+      {{"time": 22.5, "duration": 5, "query": "doctor examining x-ray"}},
+      {{"time": 58.0, "duration": 4, "query": "researcher in lab"}}
+    ]
+
+    Transcript:
+    ---
+    {transcript_text}
+    ---
+    """
+    try:
+        client = openai.OpenAI(api_key=openai_api_key)
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            response_format={"type": "json_object"},
+            messages=[
+                {"role": "system", "content": "You are an expert video editor's assistant."},
+                {"role": "user", "content": prompt}
+            ]
+        )
+        suggestions = json.loads(response.choices[0].message.content)
+        # Validate that the response is a list
+        if not isinstance(suggestions, list):
+            logger.warning("  [GPT B-roll] GPT did not return a list of suggestions.")
+            return []
+            
+        logger.info(f"  [GPT B-roll] Got {len(suggestions)} B-roll suggestions.")
+        return suggestions
+    except Exception as e:
+        logger.error(f"  [GPT B-roll] Error analyzing transcript for B-roll: {e}")
+        return []
+
+
+def search_and_download_smart_broll(broll_suggestions: list, output_dir: Path, pexels_api_key: str = None) -> list[dict]:
+    """
+    Downloads B-roll clips based on GPT suggestions.
+    Returns the suggestions list with a 'path' key added to each successful download.
+    """
+    if not pexels_api_key or PexelsAPI is None:
+        logger.error("  [Pexels] Pexels API key or library not available. Skipping B-roll download.")
+        return []
+
+    logger.info(f"  [Pexels] Downloading {len(broll_suggestions)} smart B-roll clips...")
+    api = PexelsAPI(pexels_api_key)
+    successful_downloads = []
+
+    for item in broll_suggestions:
+        query = item.get('query')
+        if not query:
+            continue
+
+        logger.info(f"    [Pexels] Searching for '{query}'...")
+        try:
+            api.search_videos(query, page=1, per_page=1)
+            videos = api.get_videos()
+            if not videos:
+                logger.warning(f"    [Pexels] No results for '{query}'.")
+                continue
+
+            video = videos[0]
+            # Find a suitable resolution
+            video_file = next((vf for vf in video.video_files if 720 <= vf.height < 1080), video.video_files[0])
+
+            if video_file:
+                file_path = output_dir / f"broll_{query.replace(' ', '_')}_{video.id}.mp4"
+                logger.info(f"      [Pexels] Downloading clip {video.id} to {file_path}...")
+                response = requests.get(video_file.link, stream=True)
+                response.raise_for_status()
+                with open(file_path, 'wb') as f:
+                    for chunk in response.iter_content(chunk_size=8192):
+                        f.write(chunk)
+                
+                item['path'] = str(file_path)
+                successful_downloads.append(item)
+                logger.info("      [Pexels] Download complete.")
+        except Exception as e:
+            logger.error(f"    [Pexels] Failed to download B-roll for '{query}': {e}")
+
+    return successful_downloads
+
+
+def insert_smart_broll_clips(
+    video_path: Path, 
+    transcript_path: Path, 
+    openai_api_key: str = None, 
+    pexels_api_key: str = None,
+    transition_style: str = 'fade'
+) -> Path:
+    """
+    DEPRECATED/REPLACED by comprehensive multimedia generation.
+    This function remains for potential standalone use or fallback.
+    """
+    logger.warning("  [B-roll] `insert_smart_broll_clips` is deprecated. Use `create_comprehensive_multimedia_video`.")
+    return video_path
+
+
+def detect_video_topic_with_gpt(transcript_text: str, openai_api_key: str = None, custom_prompt: str = None) -> str:
+    """
+    Detects the main topic of the video from its transcript using GPT.
+    """
+    if not openai_api_key:
+        logger.error("  [GPT Topic] OpenAI API key not provided.")
+        return ""
+
+    logger.info("  [GPT Topic] Detecting video topic from transcript...")
+    
+    # Use a custom prompt if provided, otherwise use a default
+    prompt = custom_prompt or f"""
+    Analyze the following transcript and determine the primary topic.
+    The topic should be concise, 2-4 words maximum (e.g., "Medical Technology", "Space Exploration", "Quantum Physics").
+
+    Transcript:
+    ---
+    {transcript_text}
+    ---
+    Topic:
+    """
+
+    try:
+        client = openai.OpenAI(api_key=openai_api_key)
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": "You are an expert in summarizing and categorizing content."},
+                {"role": "user", "content": prompt}
+            ]
+        )
+        topic = response.choices[0].message.content.strip()
+        logger.info(f"  [GPT Topic] Detected topic: {topic}")
+        return topic
+    except Exception as e:
+        logger.error(f"  [GPT Topic] Error detecting topic: {e}")
+        return ""
+
+
+def analyze_transcript_for_multimedia_with_gpt(transcript_text: str, video_duration: float, detected_topic: str, openai_api_key: str = None, custom_prompt: str = None) -> dict:
+    """
+    Analyzes a transcript to suggest B-roll clips and generated images with timings.
+    """
+    if not openai_api_key:
+        logger.error("  [GPT Multimedia] OpenAI API key missing.")
+        return {"b_roll": [], "generated_images": []}
+
+    logger.info("  [GPT Multimedia] Analyzing transcript for B-roll and image suggestions...")
+
+    prompt = custom_prompt or f"""
+    As a creative video producer for a video about "{detected_topic}" that is {video_duration:.1f} seconds long, your job is to plan visual elements.
+    Analyze the transcript below and suggest two types of visuals:
+    1.  'b_roll': Identify 3-5 key moments perfect for B-roll. Provide a precise 'time' (in seconds) to start, a 'duration' (4-6 seconds), and a 'search_query' for Pexels.
+    2.  'generated_images': Identify 2-3 concepts that are too abstract or specific for stock footage. For each, provide a 'time' to show the image, a 'duration' (4-5 seconds), and a 'dalle_prompt' for DALL-E 3 to create a photorealistic, 16:9 cinematic image.
+
+    Return a single JSON object with 'b_roll' and 'generated_images' as keys.
+
+    Example JSON output:
+    {{
+      "b_roll": [
+        {{ "time": 10.2, "duration": 5, "search_query": "futuristic city skyline" }},
+        {{ "time": 25.8, "duration": 4, "search_query": "scientists in modern lab" }}
+      ],
+      "generated_images": [
+        {{ "time": 40.1, "duration": 4, "dalle_prompt": "A photorealistic image of a human brain with glowing neural pathways, representing artificial intelligence." }}
+      ]
+    }}
+
+    Transcript:
+    ---
+    {transcript_text}
+    ---
+    """
+    try:
+        client = openai.OpenAI(api_key=openai_api_key)
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            response_format={"type": "json_object"},
+            messages=[
+                {"role": "system", "content": "You are an expert video producer planning visual elements."},
+                {"role": "user", "content": prompt}
+            ]
+        )
+        suggestions = json.loads(response.choices[0].message.content)
+        logger.info(f"  [GPT Multimedia] Got {len(suggestions.get('b_roll', []))} B-roll and {len(suggestions.get('generated_images', []))} image suggestions.")
+        return suggestions
+    except Exception as e:
+        logger.error(f"  [GPT Multimedia] Error analyzing transcript for multimedia: {e}")
+        return {"b_roll": [], "generated_images": []}
+
+
+def generate_image_with_dalle(image_description: str, detected_topic: str, openai_api_key: str = None, custom_prompt: str = None) -> Optional[Path]:
+    """
+    Generates an image using DALL-E 3 based on a description and saves it.
+    """
+    if not openai_api_key:
+        logger.error("  [DALL-E] OpenAI API key missing. Skipping image generation.")
+        return None
+
+    logger.info(f"  [DALL-E] Generating image for prompt: '{image_description}'")
+
+    # The custom prompt can be a template string with placeholders
+    final_prompt = custom_prompt or "A photorealistic, 16:9 cinematic image of: {description}. The image should be suitable for a video about {topic}."
+    
+    formatted_prompt = final_prompt.format(description=image_description, topic=detected_topic)
+
+    try:
+        client = openai.OpenAI(api_key=openai_api_key)
+        response = client.images.generate(
+            model="dall-e-3",
+            prompt=formatted_prompt,
+            n=1,
+            size="1792x1024",  # Closest to 16:9 aspect ratio available
+            quality="standard",
+            response_format="url"
+        )
+        image_url = response.data[0].url
+        
+        # Download the image
+        image_response = requests.get(image_url, stream=True)
+        image_response.raise_for_status()
+        
+        # Save to a temporary file
+        temp_dir = Path(tempfile.gettempdir())
+        output_path = temp_dir / f"dalle_{uuid.uuid4()}.png"
+        
+        with open(output_path, 'wb') as f:
+            for chunk in image_response.iter_content(chunk_size=8192):
+                f.write(chunk)
+        
+        logger.info(f"  [DALL-E] Image generated and saved to {output_path}")
+        return output_path
+    except Exception as e:
+        logger.error(f"  [DALL-E] Failed to generate or download image: {e}")
+        return None
+
+
+def create_comprehensive_multimedia_video(
+    video_path: Path, 
+    transcript_path: Path, 
+    detected_topic: str,
+    openai_api_key: str = None, 
+    pexels_api_key: str = None,
+    transition_style: str = 'fade',
+    multimedia_analysis_prompt: str = '',
+    image_generation_prompt: str = '',
+    skip_image_gen: bool = False
+) -> tuple[Optional[Path], list]:
+    """
+    A comprehensive function to analyze, fetch, generate, and insert multimedia elements.
+    Returns the path to the new video and a list of transition timings for sound effects.
+    """
+    logger.info("  [Multimedia] Starting comprehensive multimedia generation...")
+    temp_dir = Path(tempfile.gettempdir())
+    multimedia_download_dir = temp_dir / 'multimedia_downloads'
+    multimedia_download_dir.mkdir(exist_ok=True)
+    
+    transition_timings = []
+
+    try:
+        main_clip = VideoFileClip(str(video_path))
+        
+        with open(transcript_path, 'r', encoding='utf-8') as f:
+            transcript_text = f.read()
+            
+        suggestions = analyze_transcript_for_multimedia_with_gpt(
+            transcript_text, main_clip.duration, detected_topic, openai_api_key, multimedia_analysis_prompt
+        )
+        
+        b_roll_suggestions = suggestions.get('b_roll', [])
+        image_suggestions = suggestions.get('generated_images', [])
+        
+        # Download all suggested media
+        successful_b_roll = search_and_download_smart_broll(b_roll_suggestions, multimedia_download_dir, pexels_api_key)
+        
+        generated_images = []
+        if not skip_image_gen:
+            for item in image_suggestions:
+                dalle_prompt = item.get('dalle_prompt')
+                if dalle_prompt:
+                    image_path = generate_image_with_dalle(dalle_prompt, detected_topic, openai_api_key, image_generation_prompt)
+                    if image_path:
+                        item['path'] = str(image_path)
+                        generated_images.append(item)
+        else:
+            logger.info("  [Multimedia] Skipping DALL-E image generation as requested.")
+
+        all_media = successful_b_roll + generated_images
+        
+        if not all_media:
+            logger.warning("  [Multimedia] No B-roll or images were sourced. Skipping insertion.")
+            return None, []
+            
+        # Create MoviePy clips for all sourced media
+        media_clips_to_insert = []
+        for item in all_media:
+            start_time = item.get('time', 0)
+            duration = item.get('duration', 4)
+            path = item.get('path')
+
+            if not path: continue
+            
+            is_image = path.endswith('.png')
+            
+            if is_image:
+                clip = ImageClip(path).set_duration(duration)
+            else: # is video
+                clip = VideoFileClip(path).set_duration(duration)
+            
+            # --- Sizing and Positioning ---
+            # Smart positioning: only use top 2/3 of the screen for overlays
+            target_h = int(main_clip.h * (2/3))
+            clip = clip.resize(height=target_h)
+            
+            # Position at the top of the frame
+            clip = clip.set_position(('center', 'top'))
+
+            # Apply transition and set start time
+            if transition_style == 'fade':
+                # Fade the clip in and out
+                clip = clip.crossfadein(0.5).crossfadeout(0.5)
+                # Set a shorter duration to account for the fade.
+                clip = clip.set_duration(duration - 1)
+                # Record transition start time for potential sound effects
+                transition_timings.append(start_time)
+
+            clip = clip.set_start(start_time)
+            media_clips_to_insert.append(clip)
+            
+        # Composite everything together
+        final_clip = CompositeVideoClip([main_clip] + media_clips_to_insert)
+        
+        # CRITICAL: Preserve original video duration
+        final_clip = final_clip.set_duration(main_clip.duration)
+        
+        output_path = temp_dir / f"multimedia_inserted_{uuid.uuid4()}{video_path.suffix}"
+        final_clip.write_videofile(
+            str(output_path),
+            codec='libx264',
+            audio_codec='aac',
+            ffmpeg_params=['-avoid_negative_ts', 'make_zero']
+        )
+        
+        shutil.rmtree(multimedia_download_dir)
+        logger.info("  [Multimedia] Comprehensive multimedia inserted successfully.")
+        return output_path, transition_timings
+        
+    except Exception as e:
+        logger.error(f"  [Multimedia] An error occurred during multimedia insertion: {e}", exc_info=True)
+        if 'multimedia_download_dir' in locals() and multimedia_download_dir.exists():
+            shutil.rmtree(multimedia_download_dir)
+        return None, []
+
+
+# End of video_processing.py

@@ -1,0 +1,2186 @@
+{
+  "success": true,
+  "segments": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 2.48,
+      "startTime": "00:00:00,000",
+      "endTime": "00:00:02,480",
+      "text": "Prolonged paralysis after you give him seasonal choline.",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " Prolonged",
+          "start": 0,
+          "end": 0.76,
+          "confidence": 0.7075880020856857
+        },
+        {
+          "text": " paralysis",
+          "start": 0.76,
+          "end": 1.08,
+          "confidence": 0.9445978403091431
+        },
+        {
+          "text": " after",
+          "start": 1.08,
+          "end": 1.44,
+          "confidence": 0.8426606059074402
+        },
+        {
+          "text": " you",
+          "start": 1.44,
+          "end": 1.56,
+          "confidence": 0.8761709928512573
+        },
+        {
+          "text": " give",
+          "start": 1.56,
+          "end": 1.68,
+          "confidence": 0.9655835032463074
+        },
+        {
+          "text": " him",
+          "start": 1.68,
+          "end": 1.76,
+          "confidence": 0.697536051273346
+        },
+        {
+          "text": " seasonal",
+          "start": 1.76,
+          "end": 2,
+          "confidence": 0.11880483478307724
+        },
+        {
+          "text": " choline.",
+          "start": 2,
+          "end": 2.48,
+          "confidence": 0.7976215779781342
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 2.7,
+      "end": 5.18,
+      "startTime": "00:00:02,700",
+      "endTime": "00:00:05,180",
+      "text": "So that's going to be your pseudo colon esterase deficiency.",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " So",
+          "start": 2.7,
+          "end": 3.08,
+          "confidence": 0.6178827285766602
+        },
+        {
+          "text": " that's",
+          "start": 3.08,
+          "end": 3.18,
+          "confidence": 0.9655730426311493
+        },
+        {
+          "text": " going",
+          "start": 3.18,
+          "end": 3.28,
+          "confidence": 0.7599719166755676
+        },
+        {
+          "text": " to",
+          "start": 3.28,
+          "end": 3.36,
+          "confidence": 0.9987082481384277
+        },
+        {
+          "text": " be",
+          "start": 3.36,
+          "end": 3.48,
+          "confidence": 0.9944057464599609
+        },
+        {
+          "text": " your",
+          "start": 3.48,
+          "end": 3.7,
+          "confidence": 0.9201189875602722
+        },
+        {
+          "text": " pseudo",
+          "start": 3.7,
+          "end": 4.08,
+          "confidence": 0.8445767164230347
+        },
+        {
+          "text": " colon",
+          "start": 4.08,
+          "end": 4.42,
+          "confidence": 0.8900048136711121
+        },
+        {
+          "text": " esterase",
+          "start": 4.42,
+          "end": 4.78,
+          "confidence": 0.2500983079274495
+        },
+        {
+          "text": " deficiency.",
+          "start": 4.78,
+          "end": 5.18,
+          "confidence": 0.9945876598358154
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 5.54,
+      "end": 7.92,
+      "startTime": "00:00:05,540",
+      "endTime": "00:00:07,920",
+      "text": "It's the inability to metabolize the drug.",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " It's",
+          "start": 5.54,
+          "end": 5.88,
+          "confidence": 0.9942644834518433
+        },
+        {
+          "text": " the",
+          "start": 5.88,
+          "end": 6.04,
+          "confidence": 0.9984613656997681
+        },
+        {
+          "text": " inability",
+          "start": 6.04,
+          "end": 6.54,
+          "confidence": 0.9969825148582458
+        },
+        {
+          "text": " to",
+          "start": 6.54,
+          "end": 6.98,
+          "confidence": 0.997998058795929
+        },
+        {
+          "text": " metabolize",
+          "start": 6.98,
+          "end": 7.54,
+          "confidence": 0.993828535079956
+        },
+        {
+          "text": " the",
+          "start": 7.54,
+          "end": 7.68,
+          "confidence": 0.9952552914619446
+        },
+        {
+          "text": " drug.",
+          "start": 7.68,
+          "end": 7.92,
+          "confidence": 0.9957740902900696
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 9.160000000000004,
+      "end": 11.18,
+      "startTime": "00:00:09,160",
+      "endTime": "00:00:11,180",
+      "text": "So somebody's got paralysis after surgery,",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " So",
+          "start": 9.160000000000004,
+          "end": 9.72,
+          "confidence": 0.918745756149292
+        },
+        {
+          "text": " somebody's",
+          "start": 9.72,
+          "end": 10,
+          "confidence": 0.9397018253803253
+        },
+        {
+          "text": " got",
+          "start": 10,
+          "end": 10.14,
+          "confidence": 0.9948490262031555
+        },
+        {
+          "text": " paralysis",
+          "start": 10.14,
+          "end": 10.5,
+          "confidence": 0.984265923500061
+        },
+        {
+          "text": " after",
+          "start": 10.5,
+          "end": 10.8,
+          "confidence": 0.9759090542793274
+        },
+        {
+          "text": " surgery,",
+          "start": 10.8,
+          "end": 11.18,
+          "confidence": 0.998461127281189
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "start": 11.56,
+      "end": 12.68,
+      "startTime": "00:00:11,560",
+      "endTime": "00:00:12,680",
+      "text": "family history of delayed emergence,",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " family",
+          "start": 11.56,
+          "end": 11.76,
+          "confidence": 0.987250566482544
+        },
+        {
+          "text": " history",
+          "start": 11.76,
+          "end": 11.98,
+          "confidence": 0.9923393726348877
+        },
+        {
+          "text": " of",
+          "start": 11.98,
+          "end": 12.08,
+          "confidence": 0.9584482908248901
+        },
+        {
+          "text": " delayed",
+          "start": 12.08,
+          "end": 12.32,
+          "confidence": 0.9898159503936768
+        },
+        {
+          "text": " emergence,",
+          "start": 12.32,
+          "end": 12.68,
+          "confidence": 0.9530665874481201
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "start": 13.1,
+      "end": 13.6,
+      "startTime": "00:00:13,100",
+      "endTime": "00:00:13,600",
+      "text": "seasonal choline.",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " seasonal",
+          "start": 13.1,
+          "end": 13.2,
+          "confidence": 0.6245158910751343
+        },
+        {
+          "text": " choline.",
+          "start": 13.2,
+          "end": 13.6,
+          "confidence": 0.941886693239212
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "start": 15.000000000000007,
+      "end": 17.64,
+      "startTime": "00:00:15,000",
+      "endTime": "00:00:17,640",
+      "text": "So depolarizing the neuromuscular junction rapidly",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " So",
+          "start": 15.000000000000007,
+          "end": 15.560000000000004,
+          "confidence": 0.9575057029724121
+        },
+        {
+          "text": " depolarizing",
+          "start": 15.560000000000004,
+          "end": 16.12,
+          "confidence": 0.899942934513092
+        },
+        {
+          "text": " the",
+          "start": 16.12,
+          "end": 16.38,
+          "confidence": 0.9842974543571472
+        },
+        {
+          "text": " neuromuscular",
+          "start": 16.38,
+          "end": 16.88,
+          "confidence": 0.9411941468715668
+        },
+        {
+          "text": " junction",
+          "start": 16.88,
+          "end": 17.2,
+          "confidence": 0.9422370195388794
+        },
+        {
+          "text": " rapidly",
+          "start": 17.2,
+          "end": 17.64,
+          "confidence": 0.8933200240135193
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "start": 17.64,
+      "end": 19.58,
+      "startTime": "00:00:17,640",
+      "endTime": "00:00:19,580",
+      "text": "degradated by your pseudo colon esterase.",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " degradated",
+          "start": 17.64,
+          "end": 18.18,
+          "confidence": 0.7344430088996887
+        },
+        {
+          "text": " by",
+          "start": 18.18,
+          "end": 18.44,
+          "confidence": 0.9817251563072205
+        },
+        {
+          "text": " your",
+          "start": 18.44,
+          "end": 18.6,
+          "confidence": 0.9185566902160645
+        },
+        {
+          "text": " pseudo",
+          "start": 18.6,
+          "end": 18.88,
+          "confidence": 0.9350385665893555
+        },
+        {
+          "text": " colon",
+          "start": 18.88,
+          "end": 19.16,
+          "confidence": 0.9215661883354187
+        },
+        {
+          "text": " esterase.",
+          "start": 19.16,
+          "end": 19.58,
+          "confidence": 0.9339437484741211
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "start": 19.86,
+      "end": 23.14,
+      "startTime": "00:00:19,860",
+      "endTime": "00:00:23,140",
+      "text": "So what happens is your seasonal choline normally wears off,",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " So",
+          "start": 19.86,
+          "end": 19.92,
+          "confidence": 0.9904090166091919
+        },
+        {
+          "text": " what",
+          "start": 19.92,
+          "end": 20.52,
+          "confidence": 0.9641799926757812
+        },
+        {
+          "text": " happens",
+          "start": 20.52,
+          "end": 20.8,
+          "confidence": 0.9983727931976318
+        },
+        {
+          "text": " is",
+          "start": 20.8,
+          "end": 20.98,
+          "confidence": 0.9832637906074524
+        },
+        {
+          "text": " your",
+          "start": 20.98,
+          "end": 21.16,
+          "confidence": 0.9814940690994263
+        },
+        {
+          "text": " seasonal",
+          "start": 21.16,
+          "end": 21.8,
+          "confidence": 0.6453129053115845
+        },
+        {
+          "text": " choline",
+          "start": 21.8,
+          "end": 22.22,
+          "confidence": 0.9710718095302582
+        },
+        {
+          "text": " normally",
+          "start": 22.22,
+          "end": 22.56,
+          "confidence": 0.9980775117874146
+        },
+        {
+          "text": " wears",
+          "start": 22.56,
+          "end": 22.84,
+          "confidence": 0.9945960640907288
+        },
+        {
+          "text": " off,",
+          "start": 22.84,
+          "end": 23.14,
+          "confidence": 0.9977327585220337
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "start": 23.18,
+      "end": 24.98,
+      "startTime": "00:00:23,180",
+      "endTime": "00:00:24,980",
+      "text": "but if it's deficient in this deficiency,",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " but",
+          "start": 23.18,
+          "end": 23.34,
+          "confidence": 0.9977557063102722
+        },
+        {
+          "text": " if",
+          "start": 23.34,
+          "end": 23.58,
+          "confidence": 0.9942481517791748
+        },
+        {
+          "text": " it's",
+          "start": 23.58,
+          "end": 23.78,
+          "confidence": 0.9956056475639343
+        },
+        {
+          "text": " deficient",
+          "start": 23.78,
+          "end": 24.32,
+          "confidence": 0.994085818529129
+        },
+        {
+          "text": " in",
+          "start": 24.32,
+          "end": 24.48,
+          "confidence": 0.8194480538368225
+        },
+        {
+          "text": " this",
+          "start": 24.48,
+          "end": 24.6,
+          "confidence": 0.9904950857162476
+        },
+        {
+          "text": " deficiency,",
+          "start": 24.6,
+          "end": 24.98,
+          "confidence": 0.9963979721069336
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "start": 24.98,
+      "end": 26.66,
+      "startTime": "00:00:24,980",
+      "endTime": "00:00:26,660",
+      "text": "it'll linger and so you're going to be",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " it'll",
+          "start": 24.98,
+          "end": 25.74,
+          "confidence": 0.9147320687770844
+        },
+        {
+          "text": " linger",
+          "start": 25.74,
+          "end": 25.98,
+          "confidence": 0.9981940388679504
+        },
+        {
+          "text": " and",
+          "start": 25.98,
+          "end": 26.14,
+          "confidence": 0.17489564418792725
+        },
+        {
+          "text": " so",
+          "start": 26.14,
+          "end": 26.24,
+          "confidence": 0.9893082976341248
+        },
+        {
+          "text": " you're",
+          "start": 26.24,
+          "end": 26.38,
+          "confidence": 0.9949255883693695
+        },
+        {
+          "text": " going",
+          "start": 26.38,
+          "end": 26.5,
+          "confidence": 0.9383159279823303
+        },
+        {
+          "text": " to",
+          "start": 26.5,
+          "end": 26.54,
+          "confidence": 0.998715877532959
+        },
+        {
+          "text": " be",
+          "start": 26.54,
+          "end": 26.66,
+          "confidence": 0.9941489696502686
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "start": 26.66,
+      "end": 28.48,
+      "startTime": "00:00:26,660",
+      "endTime": "00:00:28,480",
+      "text": "paralyzed for a very, very long time.",
+      "confidence": -0.25942138886787525,
+      "words": [
+        {
+          "text": " paralyzed",
+          "start": 26.66,
+          "end": 27.34,
+          "confidence": 0.9899075031280518
+        },
+        {
+          "text": " for",
+          "start": 27.34,
+          "end": 27.68,
+          "confidence": 0.9939017295837402
+        },
+        {
+          "text": " a",
+          "start": 27.68,
+          "end": 27.78,
+          "confidence": 0.9834463000297546
+        },
+        {
+          "text": " very,",
+          "start": 27.78,
+          "end": 27.92,
+          "confidence": 0.9990425705909729
+        },
+        {
+          "text": " very",
+          "start": 27.94,
+          "end": 28.08,
+          "confidence": 0.9984532594680786
+        },
+        {
+          "text": " long",
+          "start": 28.08,
+          "end": 28.24,
+          "confidence": 0.9860196113586426
+        },
+        {
+          "text": " time.",
+          "start": 28.24,
+          "end": 28.48,
+          "confidence": 0.9982981085777283
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "start": 28.48,
+      "end": 30.84,
+      "startTime": "00:00:28,480",
+      "endTime": "00:00:30,840",
+      "text": "So it's going to be associated with this BCHE gene",
+      "confidence": -0.28944601014603016,
+      "words": [
+        {
+          "text": " So",
+          "start": 28.48,
+          "end": 28.68,
+          "confidence": 0.5357629656791687
+        },
+        {
+          "text": " it's",
+          "start": 28.68,
+          "end": 28.8,
+          "confidence": 0.9451401233673096
+        },
+        {
+          "text": " going",
+          "start": 28.8,
+          "end": 28.9,
+          "confidence": 0.8502221703529358
+        },
+        {
+          "text": " to",
+          "start": 28.9,
+          "end": 28.96,
+          "confidence": 0.9982290863990784
+        },
+        {
+          "text": " be",
+          "start": 28.96,
+          "end": 29.04,
+          "confidence": 0.9969567060470581
+        },
+        {
+          "text": " associated",
+          "start": 29.04,
+          "end": 29.26,
+          "confidence": 0.783484697341919
+        },
+        {
+          "text": " with",
+          "start": 29.26,
+          "end": 29.46,
+          "confidence": 0.9980291724205017
+        },
+        {
+          "text": " this",
+          "start": 29.46,
+          "end": 29.6,
+          "confidence": 0.9554781317710876
+        },
+        {
+          "text": " BCHE",
+          "start": 29.6,
+          "end": 30.6,
+          "confidence": 0.39368265867233276
+        },
+        {
+          "text": " gene",
+          "start": 30.6,
+          "end": 30.84,
+          "confidence": 0.9702715873718262
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "start": 30.84,
+      "end": 35.28,
+      "startTime": "00:00:30,840",
+      "endTime": "00:00:35,280",
+      "text": "mutation, which decreases your pseudo colon esterase activity.",
+      "confidence": -0.28944601014603016,
+      "words": [
+        {
+          "text": " mutation,",
+          "start": 30.84,
+          "end": 31.18,
+          "confidence": 0.9962025284767151
+        },
+        {
+          "text": " which",
+          "start": 31.4,
+          "end": 32.72,
+          "confidence": 0.9974610805511475
+        },
+        {
+          "text": " decreases",
+          "start": 32.72,
+          "end": 33.2,
+          "confidence": 0.9868665933609009
+        },
+        {
+          "text": " your",
+          "start": 33.2,
+          "end": 33.4,
+          "confidence": 0.988129734992981
+        },
+        {
+          "text": " pseudo",
+          "start": 33.4,
+          "end": 33.56,
+          "confidence": 0.3989536166191101
+        },
+        {
+          "text": " colon",
+          "start": 33.56,
+          "end": 33.8,
+          "confidence": 0.42672425508499146
+        },
+        {
+          "text": " esterase",
+          "start": 33.8,
+          "end": 34.3,
+          "confidence": 0.4161011278629303
+        },
+        {
+          "text": " activity.",
+          "start": 34.3,
+          "end": 35.28,
+          "confidence": 0.9949448704719543
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "start": 38.16,
+      "end": 39.12,
+      "startTime": "00:00:38,160",
+      "endTime": "00:00:39,120",
+      "text": "All right.",
+      "confidence": -0.28944601014603016,
+      "words": [
+        {
+          "text": " All",
+          "start": 38.16,
+          "end": 38.64,
+          "confidence": 0.6745351552963257
+        },
+        {
+          "text": " right.",
+          "start": 38.64,
+          "end": 39.12,
+          "confidence": 0.9963933825492859
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "start": 39.18,
+      "end": 42.34,
+      "startTime": "00:00:39,180",
+      "endTime": "00:00:42,340",
+      "text": "So the key features are going to be",
+      "confidence": -0.28944601014603016,
+      "words": [
+        {
+          "text": " So",
+          "start": 39.18,
+          "end": 39.24,
+          "confidence": 0.9856929779052734
+        },
+        {
+          "text": " the",
+          "start": 39.24,
+          "end": 39.34,
+          "confidence": 0.9904943108558655
+        },
+        {
+          "text": " key",
+          "start": 39.34,
+          "end": 39.48,
+          "confidence": 0.9987198114395142
+        },
+        {
+          "text": " features",
+          "start": 39.48,
+          "end": 39.78,
+          "confidence": 0.9981175661087036
+        },
+        {
+          "text": " are",
+          "start": 39.78,
+          "end": 40.1,
+          "confidence": 0.9977719187736511
+        },
+        {
+          "text": " going",
+          "start": 40.1,
+          "end": 40.24,
+          "confidence": 0.9991798996925354
+        },
+        {
+          "text": " to",
+          "start": 40.24,
+          "end": 40.38,
+          "confidence": 0.9991024732589722
+        },
+        {
+          "text": " be",
+          "start": 40.38,
+          "end": 42.34,
+          "confidence": 0.9969395399093628
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "start": 45.879999999999995,
+      "end": 48.38,
+      "startTime": "00:00:45,880",
+      "endTime": "00:00:48,380",
+      "text": "seasonal choline for intubation, genetic defect,",
+      "confidence": -0.28944601014603016,
+      "words": [
+        {
+          "text": " seasonal",
+          "start": 45.879999999999995,
+          "end": 46.36,
+          "confidence": 0.018840400502085686
+        },
+        {
+          "text": " choline",
+          "start": 46.36,
+          "end": 46.68,
+          "confidence": 0.4460999071598053
+        },
+        {
+          "text": " for",
+          "start": 46.68,
+          "end": 46.82,
+          "confidence": 0.8070079684257507
+        },
+        {
+          "text": " intubation,",
+          "start": 46.82,
+          "end": 47.18,
+          "confidence": 0.9516315658887228
+        },
+        {
+          "text": " genetic",
+          "start": 47.42,
+          "end": 47.74,
+          "confidence": 0.9902746677398682
+        },
+        {
+          "text": " defect,",
+          "start": 47.74,
+          "end": 48.38,
+          "confidence": 0.9795401096343994
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "start": 50.06,
+      "end": 51.88,
+      "startTime": "00:00:50,060",
+      "endTime": "00:00:51,880",
+      "text": "greater than 10 minute post-hergery paralysis.",
+      "confidence": -0.28944601014603016,
+      "words": [
+        {
+          "text": " greater",
+          "start": 50.06,
+          "end": 50.54,
+          "confidence": 0.9934294819831848
+        },
+        {
+          "text": " than",
+          "start": 50.54,
+          "end": 50.68,
+          "confidence": 0.9992534518241882
+        },
+        {
+          "text": " 10",
+          "start": 50.68,
+          "end": 50.88,
+          "confidence": 0.9475504159927368
+        },
+        {
+          "text": " minute",
+          "start": 50.88,
+          "end": 51,
+          "confidence": 0.8254600167274475
+        },
+        {
+          "text": " post",
+          "start": 51,
+          "end": 51.22,
+          "confidence": 0.88318932056427
+        },
+        {
+          "text": "-hergery",
+          "start": 51.22,
+          "end": 51.52,
+          "confidence": 0.45094403127829236
+        },
+        {
+          "text": " paralysis.",
+          "start": 51.52,
+          "end": 51.88,
+          "confidence": 0.9846492409706116
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "start": 53.06,
+      "end": 53.92,
+      "startTime": "00:00:53,060",
+      "endTime": "00:00:53,920",
+      "text": "Here's our question.",
+      "confidence": -0.28944601014603016,
+      "words": [
+        {
+          "text": " Here's",
+          "start": 53.06,
+          "end": 53.54,
+          "confidence": 0.9928808212280273
+        },
+        {
+          "text": " our",
+          "start": 53.54,
+          "end": 53.62,
+          "confidence": 0.9608011841773987
+        },
+        {
+          "text": " question.",
+          "start": 53.62,
+          "end": 53.92,
+          "confidence": 0.9965426325798035
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "start": 54.34,
+      "end": 55.26,
+      "startTime": "00:00:54,340",
+      "endTime": "00:00:55,260",
+      "text": "She's got all those things.",
+      "confidence": -0.28944601014603016,
+      "words": [
+        {
+          "text": " She's",
+          "start": 54.34,
+          "end": 54.52,
+          "confidence": 0.9894750416278839
+        },
+        {
+          "text": " got",
+          "start": 54.52,
+          "end": 54.66,
+          "confidence": 0.9970470070838928
+        },
+        {
+          "text": " all",
+          "start": 54.66,
+          "end": 54.8,
+          "confidence": 0.9964486360549927
+        },
+        {
+          "text": " those",
+          "start": 54.8,
+          "end": 54.96,
+          "confidence": 0.9797439575195312
+        },
+        {
+          "text": " things.",
+          "start": 54.96,
+          "end": 55.26,
+          "confidence": 0.9988192915916443
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "start": 55.94,
+      "end": 58.66,
+      "startTime": "00:00:55,940",
+      "endTime": "00:00:58,660",
+      "text": "Sister similar, failstory gene after several hours.",
+      "confidence": -0.30977471950834834,
+      "words": [
+        {
+          "text": " Sister",
+          "start": 55.86,
+          "end": 56.16,
+          "confidence": 0.0022916453890502453
+        },
+        {
+          "text": " similar,",
+          "start": 56.16,
+          "end": 56.54,
+          "confidence": 0.5211464762687683
+        },
+        {
+          "text": " failstory",
+          "start": 57.2,
+          "end": 57.66,
+          "confidence": 0.5813920001188914
+        },
+        {
+          "text": " gene",
+          "start": 57.66,
+          "end": 57.9,
+          "confidence": 0.0004121985984966159
+        },
+        {
+          "text": " after",
+          "start": 57.9,
+          "end": 58.12,
+          "confidence": 0.9671825170516968
+        },
+        {
+          "text": " several",
+          "start": 58.12,
+          "end": 58.36,
+          "confidence": 0.9954208731651306
+        },
+        {
+          "text": " hours.",
+          "start": 58.36,
+          "end": 58.66,
+          "confidence": 0.9972503781318665
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "start": 60.06,
+      "end": 67.76,
+      "startTime": "00:01:00,060",
+      "endTime": "00:01:07,760",
+      "text": "The enzyme that's deficient, butyrolocholine esterase,",
+      "confidence": -0.30977471950834834,
+      "words": [
+        {
+          "text": " The",
+          "start": 60.06,
+          "end": 60.66,
+          "confidence": 0.9677416086196899
+        },
+        {
+          "text": " enzyme",
+          "start": 60.66,
+          "end": 60.86,
+          "confidence": 0.9984448552131653
+        },
+        {
+          "text": " that's",
+          "start": 60.86,
+          "end": 61.1,
+          "confidence": 0.9391880333423615
+        },
+        {
+          "text": " deficient,",
+          "start": 61.1,
+          "end": 63.1,
+          "confidence": 0.9769465625286102
+        },
+        {
+          "text": " butyrolocholine",
+          "start": 66.58,
+          "end": 67.16,
+          "confidence": 0.5389383360743523
+        },
+        {
+          "text": " esterase,",
+          "start": 67.16,
+          "end": 67.76,
+          "confidence": 0.4724937230348587
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "start": 68.66,
+      "end": 72.08,
+      "startTime": "00:01:08,660",
+      "endTime": "00:01:12,080",
+      "text": "that normally degrades the seasonal choline in the plasma.",
+      "confidence": -0.30977471950834834,
+      "words": [
+        {
+          "text": " that",
+          "start": 68.66,
+          "end": 69.08,
+          "confidence": 0.9905533194541931
+        },
+        {
+          "text": " normally",
+          "start": 69.08,
+          "end": 69.44,
+          "confidence": 0.9896740913391113
+        },
+        {
+          "text": " degrades",
+          "start": 69.44,
+          "end": 70.82,
+          "confidence": 0.977026104927063
+        },
+        {
+          "text": " the",
+          "start": 70.82,
+          "end": 71.08,
+          "confidence": 0.9789775609970093
+        },
+        {
+          "text": " seasonal",
+          "start": 71.08,
+          "end": 71.26,
+          "confidence": 0.1674508899450302
+        },
+        {
+          "text": " choline",
+          "start": 71.26,
+          "end": 71.56,
+          "confidence": 0.6644971370697021
+        },
+        {
+          "text": " in",
+          "start": 71.56,
+          "end": 71.74,
+          "confidence": 0.3506866991519928
+        },
+        {
+          "text": " the",
+          "start": 71.74,
+          "end": 71.78,
+          "confidence": 0.9954873919487
+        },
+        {
+          "text": " plasma.",
+          "start": 71.78,
+          "end": 72.08,
+          "confidence": 0.9975886344909668
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "start": 73.78,
+      "end": 76.78,
+      "startTime": "00:01:13,780",
+      "endTime": "00:01:16,780",
+      "text": "And so if it's deficient, then you have prolonged stuff.",
+      "confidence": -0.30977471950834834,
+      "words": [
+        {
+          "text": " And",
+          "start": 73.78,
+          "end": 74.16,
+          "confidence": 0.5650305151939392
+        },
+        {
+          "text": " so",
+          "start": 74.16,
+          "end": 74.22,
+          "confidence": 0.9913654327392578
+        },
+        {
+          "text": " if",
+          "start": 74.22,
+          "end": 74.3,
+          "confidence": 0.8831624388694763
+        },
+        {
+          "text": " it's",
+          "start": 74.3,
+          "end": 74.4,
+          "confidence": 0.9932235181331635
+        },
+        {
+          "text": " deficient,",
+          "start": 74.4,
+          "end": 75.04,
+          "confidence": 0.991879791021347
+        },
+        {
+          "text": " then",
+          "start": 75.28,
+          "end": 75.94,
+          "confidence": 0.9904097318649292
+        },
+        {
+          "text": " you",
+          "start": 75.94,
+          "end": 76.02,
+          "confidence": 0.9836534261703491
+        },
+        {
+          "text": " have",
+          "start": 76.02,
+          "end": 76.1,
+          "confidence": 0.8224913477897644
+        },
+        {
+          "text": " prolonged",
+          "start": 76.1,
+          "end": 76.38,
+          "confidence": 0.9807274341583252
+        },
+        {
+          "text": " stuff.",
+          "start": 76.38,
+          "end": 76.78,
+          "confidence": 0.997582197189331
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "start": 77.74,
+      "end": 78.42,
+      "startTime": "00:01:17,740",
+      "endTime": "00:01:18,420",
+      "text": "It's going to be prolonged.",
+      "confidence": -0.30977471950834834,
+      "words": [
+        {
+          "text": " It's",
+          "start": 77.74,
+          "end": 77.86,
+          "confidence": 0.9781624674797058
+        },
+        {
+          "text": " going",
+          "start": 77.86,
+          "end": 77.96,
+          "confidence": 0.3441442549228668
+        },
+        {
+          "text": " to",
+          "start": 77.96,
+          "end": 77.98,
+          "confidence": 0.9963915944099426
+        },
+        {
+          "text": " be",
+          "start": 77.98,
+          "end": 78.06,
+          "confidence": 0.9917669892311096
+        },
+        {
+          "text": " prolonged.",
+          "start": 78.06,
+          "end": 78.42,
+          "confidence": 0.9980033040046692
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "start": 79.02,
+      "end": 81.94,
+      "startTime": "00:01:19,020",
+      "endTime": "00:01:21,940",
+      "text": "Aseolocoline esterase, that works in the synaptic cleft.",
+      "confidence": -0.30977471950834834,
+      "words": [
+        {
+          "text": " Aseolocoline",
+          "start": 79.02,
+          "end": 79.52,
+          "confidence": 0.23145138770341872
+        },
+        {
+          "text": " esterase,",
+          "start": 79.52,
+          "end": 80.06,
+          "confidence": 0.9868895014127096
+        },
+        {
+          "text": " that",
+          "start": 80.4,
+          "end": 80.9,
+          "confidence": 0.995009183883667
+        },
+        {
+          "text": " works",
+          "start": 80.9,
+          "end": 81.08,
+          "confidence": 0.9942448735237122
+        },
+        {
+          "text": " in",
+          "start": 81.08,
+          "end": 81.2,
+          "confidence": 0.9798393845558167
+        },
+        {
+          "text": " the",
+          "start": 81.2,
+          "end": 81.28,
+          "confidence": 0.8651303052902222
+        },
+        {
+          "text": " synaptic",
+          "start": 81.28,
+          "end": 81.62,
+          "confidence": 0.9632166624069214
+        },
+        {
+          "text": " cleft.",
+          "start": 81.62,
+          "end": 81.94,
+          "confidence": 0.7701117992401123
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "start": 82.02,
+      "end": 83.62,
+      "startTime": "00:01:22,020",
+      "endTime": "00:01:23,620",
+      "text": "It's not responsible for the seasonal choline breakdown,",
+      "confidence": -0.30977471950834834,
+      "words": [
+        {
+          "text": " It's",
+          "start": 82.02,
+          "end": 82.08,
+          "confidence": 0.9902706742286682
+        },
+        {
+          "text": " not",
+          "start": 82.08,
+          "end": 82.18,
+          "confidence": 0.9986072182655334
+        },
+        {
+          "text": " responsible",
+          "start": 82.18,
+          "end": 82.52,
+          "confidence": 0.9984342455863953
+        },
+        {
+          "text": " for",
+          "start": 82.52,
+          "end": 82.68,
+          "confidence": 0.9977478384971619
+        },
+        {
+          "text": " the",
+          "start": 82.68,
+          "end": 82.76,
+          "confidence": 0.9805001020431519
+        },
+        {
+          "text": " seasonal",
+          "start": 82.76,
+          "end": 82.98,
+          "confidence": 0.9474484324455261
+        },
+        {
+          "text": " choline",
+          "start": 82.98,
+          "end": 83.3,
+          "confidence": 0.9909625351428986
+        },
+        {
+          "text": " breakdown,",
+          "start": 83.3,
+          "end": 83.62,
+          "confidence": 0.9808945059776306
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "start": 83.8,
+      "end": 84.38,
+      "startTime": "00:01:23,800",
+      "endTime": "00:01:24,380",
+      "text": "though, different.",
+      "confidence": -0.30977471950834834,
+      "words": [
+        {
+          "text": " though,",
+          "start": 83.8,
+          "end": 83.92,
+          "confidence": 0.9723719358444214
+        },
+        {
+          "text": " different.",
+          "start": 84.12,
+          "end": 84.38,
+          "confidence": 0.9476867914199829
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "start": 84.89999999999999,
+      "end": 85.88,
+      "startTime": "00:01:24,900",
+      "endTime": "00:01:25,880",
+      "text": "This is the seasonal choline breakdown.",
+      "confidence": -0.29962010744239104,
+      "words": [
+        {
+          "text": " This",
+          "start": 84.7,
+          "end": 84.98,
+          "confidence": 0.09592767059803009
+        },
+        {
+          "text": " is",
+          "start": 84.98,
+          "end": 85.08,
+          "confidence": 0.9730347990989685
+        },
+        {
+          "text": " the",
+          "start": 85.08,
+          "end": 85.14,
+          "confidence": 0.8709707260131836
+        },
+        {
+          "text": " seasonal",
+          "start": 85.14,
+          "end": 85.36,
+          "confidence": 0.17719806730747223
+        },
+        {
+          "text": " choline",
+          "start": 85.36,
+          "end": 85.6,
+          "confidence": 0.2954529437702149
+        },
+        {
+          "text": " breakdown.",
+          "start": 85.6,
+          "end": 85.88,
+          "confidence": 0.9851047396659851
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "start": 88.52,
+      "end": 91.6,
+      "startTime": "00:01:28,520",
+      "endTime": "00:01:31,600",
+      "text": "Monoamide oxidase, that metabolizes catecholamines,",
+      "confidence": -0.29962010744239104,
+      "words": [
+        {
+          "text": " Monoamide",
+          "start": 88.52,
+          "end": 89.08,
+          "confidence": 0.5029779192991555
+        },
+        {
+          "text": " oxidase,",
+          "start": 89.08,
+          "end": 89.64,
+          "confidence": 0.9385296404361725
+        },
+        {
+          "text": " that",
+          "start": 90.18,
+          "end": 90.28,
+          "confidence": 0.6713083982467651
+        },
+        {
+          "text": " metabolizes",
+          "start": 90.28,
+          "end": 90.78,
+          "confidence": 0.988726943731308
+        },
+        {
+          "text": " catecholamines,",
+          "start": 90.78,
+          "end": 91.6,
+          "confidence": 0.8987339933713278
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "start": 91.88,
+      "end": 92.64,
+      "startTime": "00:01:31,880",
+      "endTime": "00:01:32,640",
+      "text": "not muscle reactants.",
+      "confidence": -0.29962010744239104,
+      "words": [
+        {
+          "text": " not",
+          "start": 91.88,
+          "end": 91.96,
+          "confidence": 0.9739711284637451
+        },
+        {
+          "text": " muscle",
+          "start": 91.96,
+          "end": 92.18,
+          "confidence": 0.9926080703735352
+        },
+        {
+          "text": " reactants.",
+          "start": 92.18,
+          "end": 92.64,
+          "confidence": 0.984534502029419
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "start": 94.72,
+      "end": 98.22,
+      "startTime": "00:01:34,720",
+      "endTime": "00:01:38,220",
+      "text": "So your catecholamines are going to be your monoamide oxidase.",
+      "confidence": -0.29962010744239104,
+      "words": [
+        {
+          "text": " So",
+          "start": 94.72,
+          "end": 95.28,
+          "confidence": 0.8906459808349609
+        },
+        {
+          "text": " your",
+          "start": 95.28,
+          "end": 95.42,
+          "confidence": 0.9425541162490845
+        },
+        {
+          "text": " catecholamines",
+          "start": 95.42,
+          "end": 96.1,
+          "confidence": 0.995774100224177
+        },
+        {
+          "text": " are",
+          "start": 96.1,
+          "end": 96.44,
+          "confidence": 0.9925037622451782
+        },
+        {
+          "text": " going",
+          "start": 96.44,
+          "end": 96.6,
+          "confidence": 0.47094210982322693
+        },
+        {
+          "text": " to",
+          "start": 96.6,
+          "end": 96.66,
+          "confidence": 0.9985540509223938
+        },
+        {
+          "text": " be",
+          "start": 96.66,
+          "end": 96.8,
+          "confidence": 0.9979910850524902
+        },
+        {
+          "text": " your",
+          "start": 96.8,
+          "end": 97.14,
+          "confidence": 0.9792190194129944
+        },
+        {
+          "text": " monoamide",
+          "start": 97.14,
+          "end": 97.72,
+          "confidence": 0.770448366800944
+        },
+        {
+          "text": " oxidase.",
+          "start": 97.72,
+          "end": 98.22,
+          "confidence": 0.9955542385578156
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "start": 98.34,
+      "end": 100.9,
+      "startTime": "00:01:38,340",
+      "endTime": "00:01:40,900",
+      "text": "So it's like catecholamines are like any aromatic amines",
+      "confidence": -0.29962010744239104,
+      "words": [
+        {
+          "text": " So",
+          "start": 98.34,
+          "end": 98.34,
+          "confidence": 0.9611829519271851
+        },
+        {
+          "text": " it's",
+          "start": 98.34,
+          "end": 98.46,
+          "confidence": 0.9636474251747131
+        },
+        {
+          "text": " like",
+          "start": 98.46,
+          "end": 98.56,
+          "confidence": 0.9166513085365295
+        },
+        {
+          "text": " catecholamines",
+          "start": 98.56,
+          "end": 99.06,
+          "confidence": 0.9866213301817576
+        },
+        {
+          "text": " are",
+          "start": 99.06,
+          "end": 99.16,
+          "confidence": 0.7216882705688477
+        },
+        {
+          "text": " like",
+          "start": 99.16,
+          "end": 99.32,
+          "confidence": 0.9044066071510315
+        },
+        {
+          "text": " any",
+          "start": 99.32,
+          "end": 99.5,
+          "confidence": 0.9793979525566101
+        },
+        {
+          "text": " aromatic",
+          "start": 99.5,
+          "end": 100.28,
+          "confidence": 0.9869869947433472
+        },
+        {
+          "text": " amines",
+          "start": 100.28,
+          "end": 100.9,
+          "confidence": 0.980132520198822
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "start": 100.9,
+      "end": 103.78,
+      "startTime": "00:01:40,900",
+      "endTime": "00:01:43,780",
+      "text": "that have neurotransmitters like ebonyphrine and doroponyphrine.",
+      "confidence": -0.29962010744239104,
+      "words": [
+        {
+          "text": " that",
+          "start": 100.9,
+          "end": 101.16,
+          "confidence": 0.99314284324646
+        },
+        {
+          "text": " have",
+          "start": 101.16,
+          "end": 101.42,
+          "confidence": 0.9983686804771423
+        },
+        {
+          "text": " neurotransmitters",
+          "start": 101.42,
+          "end": 102.44,
+          "confidence": 0.8606090322136879
+        },
+        {
+          "text": " like",
+          "start": 102.44,
+          "end": 102.58,
+          "confidence": 0.9157544374465942
+        },
+        {
+          "text": " ebonyphrine",
+          "start": 102.58,
+          "end": 103.02,
+          "confidence": 0.47839305102825164
+        },
+        {
+          "text": " and",
+          "start": 103.02,
+          "end": 103.22,
+          "confidence": 0.9690815210342407
+        },
+        {
+          "text": " doroponyphrine.",
+          "start": 103.22,
+          "end": 103.78,
+          "confidence": 0.5277610450983048
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "start": 104.26,
+      "end": 105.78,
+      "startTime": "00:01:44,260",
+      "endTime": "00:01:45,780",
+      "text": "Those are broken down by monamine oxidase.",
+      "confidence": -0.29962010744239104,
+      "words": [
+        {
+          "text": " Those",
+          "start": 104.26,
+          "end": 104.38,
+          "confidence": 0.9810481071472168
+        },
+        {
+          "text": " are",
+          "start": 104.38,
+          "end": 104.48,
+          "confidence": 0.9760394096374512
+        },
+        {
+          "text": " broken",
+          "start": 104.48,
+          "end": 104.64,
+          "confidence": 0.9984656572341919
+        },
+        {
+          "text": " down",
+          "start": 104.64,
+          "end": 104.82,
+          "confidence": 0.9989186525344849
+        },
+        {
+          "text": " by",
+          "start": 104.82,
+          "end": 104.96,
+          "confidence": 0.9871455430984497
+        },
+        {
+          "text": " monamine",
+          "start": 104.96,
+          "end": 105.24,
+          "confidence": 0.8881303369998932
+        },
+        {
+          "text": " oxidase.",
+          "start": 105.24,
+          "end": 105.78,
+          "confidence": 0.997070699930191
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "start": 108.3,
+      "end": 109.42,
+      "startTime": "00:01:48,300",
+      "endTime": "00:01:49,420",
+      "text": "Cetachrom P450.",
+      "confidence": -0.29962010744239104,
+      "words": [
+        {
+          "text": " Cetachrom",
+          "start": 108.3,
+          "end": 108.86,
+          "confidence": 0.6405306458473206
+        },
+        {
+          "text": " P450.",
+          "start": 108.86,
+          "end": 109.42,
+          "confidence": 0.7389422655105591
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "start": 113.62,
+      "end": 115.4,
+      "startTime": "00:01:53,620",
+      "endTime": "00:01:55,400",
+      "text": "Yes, that's a hepatic enzyme.",
+      "confidence": -0.3657797090299837,
+      "words": [
+        {
+          "text": " Yes,",
+          "start": 113.62,
+          "end": 114.1,
+          "confidence": 0.37574252486228943
+        },
+        {
+          "text": " that's",
+          "start": 114.18,
+          "end": 114.36,
+          "confidence": 0.9816541075706482
+        },
+        {
+          "text": " a",
+          "start": 114.36,
+          "end": 114.44,
+          "confidence": 0.9780256152153015
+        },
+        {
+          "text": " hepatic",
+          "start": 114.44,
+          "end": 114.88,
+          "confidence": 0.9903764128684998
+        },
+        {
+          "text": " enzyme.",
+          "start": 114.88,
+          "end": 115.4,
+          "confidence": 0.9985243678092957
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "start": 115.6,
+      "end": 117.08,
+      "startTime": "00:01:55,600",
+      "endTime": "00:01:57,080",
+      "text": "It's not going to be involved in seasonal choline metabolism",
+      "confidence": -0.3657797090299837,
+      "words": [
+        {
+          "text": " It's",
+          "start": 115.6,
+          "end": 115.64,
+          "confidence": 0.9927437901496887
+        },
+        {
+          "text": " not",
+          "start": 115.64,
+          "end": 115.74,
+          "confidence": 0.9965916872024536
+        },
+        {
+          "text": " going",
+          "start": 115.74,
+          "end": 115.88,
+          "confidence": 0.6253310441970825
+        },
+        {
+          "text": " to",
+          "start": 115.88,
+          "end": 115.88,
+          "confidence": 0.9959893822669983
+        },
+        {
+          "text": " be",
+          "start": 115.88,
+          "end": 115.96,
+          "confidence": 0.9514211416244507
+        },
+        {
+          "text": " involved",
+          "start": 115.96,
+          "end": 116.14,
+          "confidence": 0.9710554480552673
+        },
+        {
+          "text": " in",
+          "start": 116.14,
+          "end": 116.24,
+          "confidence": 0.9859112501144409
+        },
+        {
+          "text": " seasonal",
+          "start": 116.24,
+          "end": 116.42,
+          "confidence": 0.03265441209077835
+        },
+        {
+          "text": " choline",
+          "start": 116.42,
+          "end": 116.72,
+          "confidence": 0.5220189765095711
+        },
+        {
+          "text": " metabolism",
+          "start": 116.72,
+          "end": 117.08,
+          "confidence": 0.9671311378479004
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "start": 117.08,
+      "end": 120.22,
+      "startTime": "00:01:57,080",
+      "endTime": "00:02:00,220",
+      "text": "and glutathione peroxidase, antioxidant enzyme.",
+      "confidence": -0.3657797090299837,
+      "words": [
+        {
+          "text": " and",
+          "start": 117.08,
+          "end": 117.52,
+          "confidence": 0.85898756980896
+        },
+        {
+          "text": " glutathione",
+          "start": 117.52,
+          "end": 117.96,
+          "confidence": 0.9496894677480062
+        },
+        {
+          "text": " peroxidase,",
+          "start": 117.96,
+          "end": 118.58,
+          "confidence": 0.9115153849124908
+        },
+        {
+          "text": " antioxidant",
+          "start": 118.94,
+          "end": 119.88,
+          "confidence": 0.9772007465362549
+        },
+        {
+          "text": " enzyme.",
+          "start": 119.88,
+          "end": 120.22,
+          "confidence": 0.9572848677635193
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "start": 121.74000000000001,
+      "end": 122.84,
+      "startTime": "00:02:01,740",
+      "endTime": "00:02:02,840",
+      "text": "Totally irrelevant here.",
+      "confidence": -0.3657797090299837,
+      "words": [
+        {
+          "text": " Totally",
+          "start": 121.74000000000001,
+          "end": 122.22,
+          "confidence": 0.8798812031745911
+        },
+        {
+          "text": " irrelevant",
+          "start": 122.22,
+          "end": 122.5,
+          "confidence": 0.9994982481002808
+        },
+        {
+          "text": " here.",
+          "start": 122.5,
+          "end": 122.84,
+          "confidence": 0.9882700443267822
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "start": 127.46000000000001,
+      "end": 129.78,
+      "startTime": "00:02:07,460",
+      "endTime": "00:02:09,780",
+      "text": "So your cetacholine esterase is deficient.",
+      "confidence": -0.3657797090299837,
+      "words": [
+        {
+          "text": " So",
+          "start": 127.46000000000001,
+          "end": 127.94,
+          "confidence": 0.9565865993499756
+        },
+        {
+          "text": " your",
+          "start": 127.94,
+          "end": 128.1,
+          "confidence": 0.9068214297294617
+        },
+        {
+          "text": " cetacholine",
+          "start": 128.1,
+          "end": 128.54,
+          "confidence": 0.0845322369132191
+        },
+        {
+          "text": " esterase",
+          "start": 128.54,
+          "end": 129,
+          "confidence": 0.44355137397845584
+        },
+        {
+          "text": " is",
+          "start": 129,
+          "end": 129.16,
+          "confidence": 0.9637407660484314
+        },
+        {
+          "text": " deficient.",
+          "start": 129.16,
+          "end": 129.78,
+          "confidence": 0.9649841487407684
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "start": 130.84,
+      "end": 133.14,
+      "startTime": "00:02:10,840",
+      "endTime": "00:02:13,140",
+      "text": "So you can't get rid of that seasonal choline in the plasma.",
+      "confidence": -0.3657797090299837,
+      "words": [
+        {
+          "text": " So",
+          "start": 130.84,
+          "end": 131.32,
+          "confidence": 0.9825204014778137
+        },
+        {
+          "text": " you",
+          "start": 131.32,
+          "end": 131.42,
+          "confidence": 0.9786140322685242
+        },
+        {
+          "text": " can't",
+          "start": 131.42,
+          "end": 131.72,
+          "confidence": 0.9974727034568787
+        },
+        {
+          "text": " get",
+          "start": 131.72,
+          "end": 131.82,
+          "confidence": 0.8155727982521057
+        },
+        {
+          "text": " rid",
+          "start": 131.82,
+          "end": 131.92,
+          "confidence": 0.9998468160629272
+        },
+        {
+          "text": " of",
+          "start": 131.92,
+          "end": 132,
+          "confidence": 0.9976317882537842
+        },
+        {
+          "text": " that",
+          "start": 132,
+          "end": 132.08,
+          "confidence": 0.9922642707824707
+        },
+        {
+          "text": " seasonal",
+          "start": 132.08,
+          "end": 132.32,
+          "confidence": 0.7846619486808777
+        },
+        {
+          "text": " choline",
+          "start": 132.32,
+          "end": 132.62,
+          "confidence": 0.9791390895843506
+        },
+        {
+          "text": " in",
+          "start": 132.62,
+          "end": 132.76,
+          "confidence": 0.4989067316055298
+        },
+        {
+          "text": " the",
+          "start": 132.76,
+          "end": 132.82,
+          "confidence": 0.9675452709197998
+        },
+        {
+          "text": " plasma.",
+          "start": 132.82,
+          "end": 133.14,
+          "confidence": 0.9982189536094666
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "start": 134.62,
+      "end": 136,
+      "startTime": "00:02:14,620",
+      "endTime": "00:02:16,000",
+      "text": "If you find this helpful, like and subscribe.",
+      "confidence": -0.3657797090299837,
+      "words": [
+        {
+          "text": " If",
+          "start": 134.62,
+          "end": 135.1,
+          "confidence": 0.9802483916282654
+        },
+        {
+          "text": " you",
+          "start": 135.1,
+          "end": 135.18,
+          "confidence": 0.9909935593605042
+        },
+        {
+          "text": " find",
+          "start": 135.18,
+          "end": 135.28,
+          "confidence": 0.4155469238758087
+        },
+        {
+          "text": " this",
+          "start": 135.28,
+          "end": 135.4,
+          "confidence": 0.9331530332565308
+        },
+        {
+          "text": " helpful,",
+          "start": 135.4,
+          "end": 135.54,
+          "confidence": 0.9960737228393555
+        },
+        {
+          "text": " like",
+          "start": 135.68,
+          "end": 135.74,
+          "confidence": 0.80769944190979
+        },
+        {
+          "text": " and",
+          "start": 135.74,
+          "end": 135.82,
+          "confidence": 0.9737986326217651
+        },
+        {
+          "text": " subscribe.",
+          "start": 135.82,
+          "end": 136,
+          "confidence": 0.9961788654327393
+        }
+      ]
+    }
+  ],
+  "fullText": "Prolonged paralysis after you give him seasonal choline. So that's going to be your pseudo colon esterase deficiency. It's the inability to metabolize the drug. So somebody's got paralysis after surgery, family history of delayed emergence, seasonal choline. So depolarizing the neuromuscular junction rapidly degradated by your pseudo colon esterase. So what happens is your seasonal choline normally wears off, but if it's deficient in this deficiency, it'll linger and so you're going to be paralyzed for a very, very long time. So it's going to be associated with this BCHE gene mutation, which decreases your pseudo colon esterase activity. All right. So the key features are going to be seasonal choline for intubation, genetic defect, greater than 10 minute post-hergery paralysis. Here's our question. She's got all those things. Sister similar, failstory gene after several hours. The enzyme that's deficient, butyrolocholine esterase, that normally degrades the seasonal choline in the plasma. And so if it's deficient, then you have prolonged stuff. It's going to be prolonged. Aseolocoline esterase, that works in the synaptic cleft. It's not responsible for the seasonal choline breakdown, though, different. This is the seasonal choline breakdown. Monoamide oxidase, that metabolizes catecholamines, not muscle reactants. So your catecholamines are going to be your monoamide oxidase. So it's like catecholamines are like any aromatic amines that have neurotransmitters like ebonyphrine and doroponyphrine. Those are broken down by monamine oxidase. Cetachrom P450. Yes, that's a hepatic enzyme. It's not going to be involved in seasonal choline metabolism and glutathione peroxidase, antioxidant enzyme. Totally irrelevant here. So your cetacholine esterase is deficient. So you can't get rid of that seasonal choline in the plasma. If you find this helpful, like and subscribe.",
+  "srtContent": "1\n00:00:00,000 --> 00:00:02,480\nProlonged paralysis after you give him seasonal choline.\n\n2\n00:00:02,700 --> 00:00:05,180\nSo that's going to be your pseudo colon esterase deficiency.\n\n3\n00:00:05,540 --> 00:00:07,920\nIt's the inability to metabolize the drug.\n\n4\n00:00:09,160 --> 00:00:11,180\nSo somebody's got paralysis after surgery,\n\n5\n00:00:11,560 --> 00:00:12,680\nfamily history of delayed emergence,\n\n6\n00:00:13,100 --> 00:00:13,600\nseasonal choline.\n\n7\n00:00:15,000 --> 00:00:17,640\nSo depolarizing the neuromuscular junction rapidly\n\n8\n00:00:17,640 --> 00:00:19,580\ndegradated by your pseudo colon esterase.\n\n9\n00:00:19,860 --> 00:00:23,140\nSo what happens is your seasonal choline normally wears off,\n\n10\n00:00:23,180 --> 00:00:24,980\nbut if it's deficient in this deficiency,\n\n11\n00:00:24,980 --> 00:00:26,660\nit'll linger and so you're going to be\n\n12\n00:00:26,660 --> 00:00:28,480\nparalyzed for a very, very long time.\n\n13\n00:00:28,480 --> 00:00:30,840\nSo it's going to be associated with this BCHE gene\n\n14\n00:00:30,840 --> 00:00:35,280\nmutation, which decreases your pseudo colon esterase activity.\n\n15\n00:00:38,160 --> 00:00:39,120\nAll right.\n\n16\n00:00:39,180 --> 00:00:42,340\nSo the key features are going to be\n\n17\n00:00:45,880 --> 00:00:48,380\nseasonal choline for intubation, genetic defect,\n\n18\n00:00:50,060 --> 00:00:51,880\ngreater than 10 minute post-hergery paralysis.\n\n19\n00:00:53,060 --> 00:00:53,920\nHere's our question.\n\n20\n00:00:54,340 --> 00:00:55,260\nShe's got all those things.\n\n21\n00:00:55,940 --> 00:00:58,660\nSister similar, failstory gene after several hours.\n\n22\n00:01:00,060 --> 00:01:07,760\nThe enzyme that's deficient, butyrolocholine esterase,\n\n23\n00:01:08,660 --> 00:01:12,080\nthat normally degrades the seasonal choline in the plasma.\n\n24\n00:01:13,780 --> 00:01:16,780\nAnd so if it's deficient, then you have prolonged stuff.\n\n25\n00:01:17,740 --> 00:01:18,420\nIt's going to be prolonged.\n\n26\n00:01:19,020 --> 00:01:21,940\nAseolocoline esterase, that works in the synaptic cleft.\n\n27\n00:01:22,020 --> 00:01:23,620\nIt's not responsible for the seasonal choline breakdown,\n\n28\n00:01:23,800 --> 00:01:24,380\nthough, different.\n\n29\n00:01:24,900 --> 00:01:25,880\nThis is the seasonal choline breakdown.\n\n30\n00:01:28,520 --> 00:01:31,600\nMonoamide oxidase, that metabolizes catecholamines,\n\n31\n00:01:31,880 --> 00:01:32,640\nnot muscle reactants.\n\n32\n00:01:34,720 --> 00:01:38,220\nSo your catecholamines are going to be your monoamide oxidase.\n\n33\n00:01:38,340 --> 00:01:40,900\nSo it's like catecholamines are like any aromatic amines\n\n34\n00:01:40,900 --> 00:01:43,780\nthat have neurotransmitters like ebonyphrine and doroponyphrine.\n\n35\n00:01:44,260 --> 00:01:45,780\nThose are broken down by monamine oxidase.\n\n36\n00:01:48,300 --> 00:01:49,420\nCetachrom P450.\n\n37\n00:01:53,620 --> 00:01:55,400\nYes, that's a hepatic enzyme.\n\n38\n00:01:55,600 --> 00:01:57,080\nIt's not going to be involved in seasonal choline metabolism\n\n39\n00:01:57,080 --> 00:02:00,220\nand glutathione peroxidase, antioxidant enzyme.\n\n40\n00:02:01,740 --> 00:02:02,840\nTotally irrelevant here.\n\n41\n00:02:07,460 --> 00:02:09,780\nSo your cetacholine esterase is deficient.\n\n42\n00:02:10,840 --> 00:02:13,140\nSo you can't get rid of that seasonal choline in the plasma.\n\n43\n00:02:14,620 --> 00:02:16,000\nIf you find this helpful, like and subscribe.\n\n",
+  "duration": 0,
+  "language": "en"
+}

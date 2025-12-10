@@ -1,0 +1,58 @@
+
+[Script Info]
+ScriptType: v4.00+
+ScaledBorderAndShadow: yes
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,55,&H00FFFFFF,&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,15,1
+Style: Highlight,Arial,62,&H0000FFFF,&H000000FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,2,2,2,10,10,15,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,000:00:00.00,000:00:01.80,Default,,0,0,0,,Let's see a question stem.
+Dialogue: 0,000:00:01.80,000:00:04.24,Default,,0,0,0,,Where you have a newborn, he's got a defect in his
+Dialogue: 0,000:00:04.24,000:00:05.44,Default,,0,0,0,,incering fibrils.
+Dialogue: 0,000:00:05.44,000:00:07.08,Highlight,,0,0,0,,This is going to be your type 7 collagen.
+Dialogue: 0,000:00:07.08,000:00:09.20,Default,,0,0,0,,And they're going to ask you, hey, what's the skin finding?
+Dialogue: 0,000:00:09.20,000:00:10.52,Default,,0,0,0,,The answer is going to be blisters.
+Dialogue: 0,000:00:10.52,000:00:13.24,Default,,0,0,0,,So, incering fibers should make you think of the hemidesmizomes.
+Dialogue: 0,000:00:13.24,000:00:15.28,Default,,0,0,0,,I don't know why, but I like to think of a little ladder.
+Dialogue: 0,000:00:15.28,000:00:16.88,Default,,0,0,0,,You know, a ladder kind of looks like this,
+Dialogue: 0,000:00:16.88,000:00:18.44,Default,,0,0,0,,and this is like, looks like an H.
+Dialogue: 0,000:00:18.44,000:00:20.72,Default,,0,0,0,,And I like to think of this as at the very bottom,
+Dialogue: 0,000:00:20.72,000:00:21.72,Default,,0,0,0,,like an anchor.
+Dialogue: 0,000:00:21.72,000:00:24.88,Default,,0,0,0,,It'll tether your basal keratinocytes of the epidermis
+Dialogue: 0,000:00:24.88,000:00:25.72,Default,,0,0,0,,to the dermis.
+Dialogue: 0,000:00:25.72,000:00:27.44,Default,,0,0,0,,So there's your H, your hemidesmizome.
+Dialogue: 0,000:00:27.44,000:00:29.36,Default,,0,0,0,,And that's going to be a type 7 collagen.
+Dialogue: 0,000:00:29.44,000:00:31.28,Default,,0,0,0,,And so the epidermis will separate from the dermis,
+Dialogue: 0,000:00:31.28,000:00:32.12,Highlight,,0,0,0,,and you get a blister.
+Dialogue: 0,000:00:32.12,000:00:34.52,Default,,0,0,0,,If you don't have that anchoring, if you don't have that,
+Dialogue: 0,000:00:34.52,000:00:36.72,Highlight,,0,0,0,,then that's what you get, mechanical fragility
+Dialogue: 0,000:00:36.72,000:00:38.64,Highlight,,0,0,0,,of that dermal epidermal junction.
+Dialogue: 0,000:00:38.64,000:00:40.84,Default,,0,0,0,,Some trap answers that you might see would be like,
+Dialogue: 0,000:00:40.84,000:00:43.12,Default,,0,0,0,,like a rash for that you think of like Job's syndrome,
+Dialogue: 0,000:00:43.12,000:00:46.04,Default,,0,0,0,,or atopic dermatitis, maybe even whisked algeage.
+Dialogue: 0,000:00:46.04,000:00:47.48,Default,,0,0,0,,So that would be like your red patches,
+Dialogue: 0,000:00:47.48,000:00:49.68,Default,,0,0,0,,not your blisters from structural weakness.
+Dialogue: 0,000:00:49.68,000:00:51.64,Default,,0,0,0,,There'd also be no vesicle rupture.
+Dialogue: 0,000:00:51.64,000:00:53.88,Default,,0,0,0,,Not easy bruising that would make you think of like,
+Dialogue: 0,000:00:53.88,000:00:55.88,Default,,0,0,0,,scurvy vitamin C deficiency.
+Dialogue: 0,000:00:55.92,000:00:59.56,Default,,0,0,0,,They could say, credodermas or ichthyosis.
+Dialogue: 0,000:00:59.56,000:01:02.48,Default,,0,0,0,,Icthy makes you think of like fish, little like fish skin.
+Dialogue: 0,000:01:02.48,000:01:03.60,Default,,0,0,0,,That's going to be your thickened skin
+Dialogue: 0,000:01:03.60,000:01:05.80,Default,,0,0,0,,that's due to the stratum corneum buildup.
+Dialogue: 0,000:01:05.80,000:01:07.80,Default,,0,0,0,,So that's just a different disease, ulcers.
+Dialogue: 0,000:01:07.80,000:01:10.72,Default,,0,0,0,,That'd be full thick loss of your epidermis
+Dialogue: 0,000:01:10.72,000:01:12.28,Default,,0,0,0,,that exposes the dermis.
+Dialogue: 0,000:01:12.28,000:01:14.88,Default,,0,0,0,,So you'd see that in like lupus, for instance,
+Dialogue: 0,000:01:14.88,000:01:16.20,Default,,0,0,0,,but this is not that.
+Dialogue: 0,000:01:16.20,000:01:18.32,Highlight,,0,0,0,,We're looking at a structural defect here.
+Dialogue: 0,000:01:18.32,000:01:22.16,Default,,0,0,0,,So epidermolysis, bulosa dystrophica.
+Dialogue: 0,000:01:22.16,000:01:23.84,Highlight,,0,0,0,,It's going to be a type 7 collagen defect
+Dialogue: 0,000:01:23.84,000:01:25.20,Default,,0,0,0,,causing your blisters,
+Dialogue: 0,000:01:25.20,000:01:26.92,Default,,0,0,0,,especially through trauma or friction.
+Dialogue: 0,000:01:26.92,000:01:27.76,Default,,0,0,0,,Stagnosed.

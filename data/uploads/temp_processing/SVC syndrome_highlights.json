@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "highlights": [
+    {
+      "title": "Recognizing SVC Syndrome Symptoms",
+      "description": "Key signs include facial swelling and neck vein engorgement.",
+      "startTime": 0,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Causes of SVC Syndrome",
+      "description": "Small cell lung cancer and non-Hodgkin's lymphoma are major causes.",
+      "startTime": 20,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Effects of Increased Venous Pressure",
+      "description": "Increased pressure leads to headaches and dyspnea.",
+      "startTime": 40,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Practice Question on Diagnosis",
+      "description": "Engaging practice question reinforces learning about SVC syndrome.",
+      "startTime": 60,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Conclusion and Call to Action",
+      "description": "Encourages viewers to like and subscribe for more content.",
+      "startTime": 80,
+      "endTime": null,
+      "importance": "low"
+    }
+  ],
+  "totalHighlights": 5,
+  "model": "gpt-4o-mini"
+}

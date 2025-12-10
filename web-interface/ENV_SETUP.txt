@@ -1,0 +1,1 @@
+# Create a .env.local file in this directory with your Facebook app credentials

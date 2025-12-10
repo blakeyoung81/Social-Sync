@@ -1,0 +1,2276 @@
+{
+  "success": true,
+  "segments": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 7.06,
+      "startTime": "00:00:00,000",
+      "endTime": "00:00:07,060",
+      "text": "Herpes hits hard. Painful genital ulcers, multi-giant cells would be primary HSV. You treat it with a",
+      "confidence": -0.23626944076183232,
+      "words": [
+        {
+          "text": " Herpes",
+          "start": 0,
+          "end": 0.44,
+          "confidence": 0.802658349275589
+        },
+        {
+          "text": " hits",
+          "start": 0.44,
+          "end": 0.72,
+          "confidence": 0.920475423336029
+        },
+        {
+          "text": " hard.",
+          "start": 0.72,
+          "end": 1.08,
+          "confidence": 0.9965965151786804
+        },
+        {
+          "text": " Painful",
+          "start": 2.12,
+          "end": 2.66,
+          "confidence": 0.9579237103462219
+        },
+        {
+          "text": " genital",
+          "start": 2.66,
+          "end": 2.96,
+          "confidence": 0.9663181304931641
+        },
+        {
+          "text": " ulcers,",
+          "start": 2.96,
+          "end": 3.38,
+          "confidence": 0.9918533265590668
+        },
+        {
+          "text": " multi",
+          "start": 3.64,
+          "end": 3.8,
+          "confidence": 0.8948351740837097
+        },
+        {
+          "text": "-giant",
+          "start": 3.8,
+          "end": 4.16,
+          "confidence": 0.8894269665082296
+        },
+        {
+          "text": " cells",
+          "start": 4.16,
+          "end": 4.84,
+          "confidence": 0.9954941272735596
+        },
+        {
+          "text": " would",
+          "start": 4.84,
+          "end": 5.08,
+          "confidence": 0.7516416311264038
+        },
+        {
+          "text": " be",
+          "start": 5.08,
+          "end": 5.2,
+          "confidence": 0.9983962178230286
+        },
+        {
+          "text": " primary",
+          "start": 5.2,
+          "end": 5.48,
+          "confidence": 0.988914430141449
+        },
+        {
+          "text": " HSV.",
+          "start": 5.48,
+          "end": 6.16,
+          "confidence": 0.9857304394245148
+        },
+        {
+          "text": " You",
+          "start": 6.54,
+          "end": 6.66,
+          "confidence": 0.9771831035614014
+        },
+        {
+          "text": " treat",
+          "start": 6.66,
+          "end": 6.82,
+          "confidence": 0.9502016305923462
+        },
+        {
+          "text": " it",
+          "start": 6.82,
+          "end": 6.9,
+          "confidence": 0.9467072486877441
+        },
+        {
+          "text": " with",
+          "start": 6.9,
+          "end": 6.98,
+          "confidence": 0.9984728693962097
+        },
+        {
+          "text": " a",
+          "start": 6.98,
+          "end": 7.06,
+          "confidence": 0.7726147174835205
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 7.06,
+      "end": 16,
+      "startTime": "00:00:07,060",
+      "endTime": "00:00:16,000",
+      "text": "cyclovir. So these are primary genital herpes. You'll see like the positive Sanktsmere.",
+      "confidence": -0.23626944076183232,
+      "words": [
+        {
+          "text": " cyclovir.",
+          "start": 7.06,
+          "end": 7.56,
+          "confidence": 0.7101925114790598
+        },
+        {
+          "text": " So",
+          "start": 9.84,
+          "end": 10.26,
+          "confidence": 0.853716254234314
+        },
+        {
+          "text": " these",
+          "start": 10.26,
+          "end": 10.36,
+          "confidence": 0.6873511075973511
+        },
+        {
+          "text": " are",
+          "start": 10.36,
+          "end": 10.42,
+          "confidence": 0.5231192708015442
+        },
+        {
+          "text": " primary",
+          "start": 10.42,
+          "end": 10.76,
+          "confidence": 0.21574948728084564
+        },
+        {
+          "text": " genital",
+          "start": 10.76,
+          "end": 11.3,
+          "confidence": 0.9127585589885712
+        },
+        {
+          "text": " herpes.",
+          "start": 11.3,
+          "end": 11.62,
+          "confidence": 0.9832289218902588
+        },
+        {
+          "text": " You'll",
+          "start": 14.16,
+          "end": 14.7,
+          "confidence": 0.9831044971942902
+        },
+        {
+          "text": " see",
+          "start": 14.7,
+          "end": 14.82,
+          "confidence": 0.9983854293823242
+        },
+        {
+          "text": " like",
+          "start": 14.82,
+          "end": 14.94,
+          "confidence": 0.43851107358932495
+        },
+        {
+          "text": " the",
+          "start": 14.94,
+          "end": 15.06,
+          "confidence": 0.983859658241272
+        },
+        {
+          "text": " positive",
+          "start": 15.06,
+          "end": 15.34,
+          "confidence": 0.9906222224235535
+        },
+        {
+          "text": " Sanktsmere.",
+          "start": 15.34,
+          "end": 16,
+          "confidence": 0.5056914687156677
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 16.64,
+      "end": 21.5,
+      "startTime": "00:00:16,640",
+      "endTime": "00:00:21,500",
+      "text": "You'll see a rash on the genitals and you should be giving them a cyclovir which is a nucleoside",
+      "confidence": -0.23626944076183232,
+      "words": [
+        {
+          "text": " You'll",
+          "start": 16.64,
+          "end": 17.12,
+          "confidence": 0.9785761833190918
+        },
+        {
+          "text": " see",
+          "start": 17.12,
+          "end": 17.24,
+          "confidence": 0.9974272847175598
+        },
+        {
+          "text": " a",
+          "start": 17.24,
+          "end": 17.4,
+          "confidence": 0.9751113653182983
+        },
+        {
+          "text": " rash",
+          "start": 17.4,
+          "end": 17.64,
+          "confidence": 0.9813938140869141
+        },
+        {
+          "text": " on",
+          "start": 17.64,
+          "end": 17.8,
+          "confidence": 0.9108790159225464
+        },
+        {
+          "text": " the",
+          "start": 17.8,
+          "end": 17.88,
+          "confidence": 0.9972490668296814
+        },
+        {
+          "text": " genitals",
+          "start": 17.88,
+          "end": 18.28,
+          "confidence": 0.9962321519851685
+        },
+        {
+          "text": " and",
+          "start": 18.28,
+          "end": 19.18,
+          "confidence": 0.3995765447616577
+        },
+        {
+          "text": " you",
+          "start": 19.18,
+          "end": 19.28,
+          "confidence": 0.9955430626869202
+        },
+        {
+          "text": " should",
+          "start": 19.28,
+          "end": 19.4,
+          "confidence": 0.9981877207756042
+        },
+        {
+          "text": " be",
+          "start": 19.4,
+          "end": 19.52,
+          "confidence": 0.9976510405540466
+        },
+        {
+          "text": " giving",
+          "start": 19.52,
+          "end": 19.66,
+          "confidence": 0.6348400712013245
+        },
+        {
+          "text": " them",
+          "start": 19.66,
+          "end": 19.8,
+          "confidence": 0.9617157578468323
+        },
+        {
+          "text": " a",
+          "start": 19.8,
+          "end": 19.88,
+          "confidence": 0.7985055446624756
+        },
+        {
+          "text": " cyclovir",
+          "start": 19.88,
+          "end": 20.32,
+          "confidence": 0.9883089264233907
+        },
+        {
+          "text": " which",
+          "start": 20.32,
+          "end": 20.5,
+          "confidence": 0.4602199196815491
+        },
+        {
+          "text": " is",
+          "start": 20.5,
+          "end": 20.6,
+          "confidence": 0.994610071182251
+        },
+        {
+          "text": " a",
+          "start": 20.6,
+          "end": 20.72,
+          "confidence": 0.9968306422233582
+        },
+        {
+          "text": " nucleoside",
+          "start": 20.72,
+          "end": 21.5,
+          "confidence": 0.9651558001836141
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 21.5,
+      "end": 36.44,
+      "startTime": "00:00:21,500",
+      "endTime": "00:00:36,440",
+      "text": "analog and it's converted into a cyclovir monophosphate principally through the virus",
+      "confidence": -0.13080680976479742,
+      "words": [
+        {
+          "text": " analog",
+          "start": 21.5,
+          "end": 21.92,
+          "confidence": 0.6812500953674316
+        },
+        {
+          "text": " and",
+          "start": 21.92,
+          "end": 26.62,
+          "confidence": 0.38997215032577515
+        },
+        {
+          "text": " it's",
+          "start": 26.62,
+          "end": 26.78,
+          "confidence": 0.9879565238952637
+        },
+        {
+          "text": " converted",
+          "start": 26.78,
+          "end": 27.06,
+          "confidence": 0.9976511597633362
+        },
+        {
+          "text": " into",
+          "start": 27.06,
+          "end": 29.56,
+          "confidence": 0.5579199194908142
+        },
+        {
+          "text": " a",
+          "start": 29.56,
+          "end": 34.02,
+          "confidence": 0.9343253970146179
+        },
+        {
+          "text": " cyclovir",
+          "start": 34.02,
+          "end": 34.54,
+          "confidence": 0.679441973567009
+        },
+        {
+          "text": " monophosphate",
+          "start": 34.54,
+          "end": 35.2,
+          "confidence": 0.978130966424942
+        },
+        {
+          "text": " principally",
+          "start": 35.2,
+          "end": 35.72,
+          "confidence": 0.9671178460121155
+        },
+        {
+          "text": " through",
+          "start": 35.72,
+          "end": 35.9,
+          "confidence": 0.9898702502250671
+        },
+        {
+          "text": " the",
+          "start": 35.9,
+          "end": 36.08,
+          "confidence": 0.9975288510322571
+        },
+        {
+          "text": " virus",
+          "start": 36.08,
+          "end": 36.44,
+          "confidence": 0.9798018932342529
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "start": 36.44,
+      "end": 42.24,
+      "startTime": "00:00:36,440",
+      "endTime": "00:00:42,240",
+      "text": "encoded thymidine kinase. That's definitely important.",
+      "confidence": -0.13080680976479742,
+      "words": [
+        {
+          "text": " encoded",
+          "start": 36.44,
+          "end": 37.22,
+          "confidence": 0.7784603536128998
+        },
+        {
+          "text": " thymidine",
+          "start": 37.22,
+          "end": 37.94,
+          "confidence": 0.8895887136459351
+        },
+        {
+          "text": " kinase.",
+          "start": 37.94,
+          "end": 38.48,
+          "confidence": 0.9433936178684235
+        },
+        {
+          "text": " That's",
+          "start": 40.42,
+          "end": 41.14,
+          "confidence": 0.9234209656715393
+        },
+        {
+          "text": " definitely",
+          "start": 41.14,
+          "end": 41.42,
+          "confidence": 0.9934672713279724
+        },
+        {
+          "text": " important.",
+          "start": 41.42,
+          "end": 42.24,
+          "confidence": 0.9822064638137817
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "start": 46.64,
+      "end": 50.9,
+      "startTime": "00:00:46,640",
+      "endTime": "00:00:50,900",
+      "text": "So basically it gets incorporated into the DNA chain and then it terminates the DNA sequence.",
+      "confidence": -0.13080680976479742,
+      "words": [
+        {
+          "text": " So",
+          "start": 46.64,
+          "end": 47.36,
+          "confidence": 0.8291090726852417
+        },
+        {
+          "text": " basically",
+          "start": 47.36,
+          "end": 47.5,
+          "confidence": 0.9555355906486511
+        },
+        {
+          "text": " it",
+          "start": 47.5,
+          "end": 47.72,
+          "confidence": 0.8105616569519043
+        },
+        {
+          "text": " gets",
+          "start": 47.72,
+          "end": 47.9,
+          "confidence": 0.9528887867927551
+        },
+        {
+          "text": " incorporated",
+          "start": 47.9,
+          "end": 48.3,
+          "confidence": 0.9987554550170898
+        },
+        {
+          "text": " into",
+          "start": 48.3,
+          "end": 48.62,
+          "confidence": 0.9952377080917358
+        },
+        {
+          "text": " the",
+          "start": 48.62,
+          "end": 48.74,
+          "confidence": 0.9970651268959045
+        },
+        {
+          "text": " DNA",
+          "start": 48.74,
+          "end": 48.96,
+          "confidence": 0.9873709678649902
+        },
+        {
+          "text": " chain",
+          "start": 48.96,
+          "end": 49.24,
+          "confidence": 0.9887576699256897
+        },
+        {
+          "text": " and",
+          "start": 49.24,
+          "end": 49.44,
+          "confidence": 0.8854151368141174
+        },
+        {
+          "text": " then",
+          "start": 49.44,
+          "end": 49.54,
+          "confidence": 0.9924803972244263
+        },
+        {
+          "text": " it",
+          "start": 49.54,
+          "end": 49.7,
+          "confidence": 0.9641002416610718
+        },
+        {
+          "text": " terminates",
+          "start": 49.7,
+          "end": 50.1,
+          "confidence": 0.9740293323993683
+        },
+        {
+          "text": " the",
+          "start": 50.1,
+          "end": 50.32,
+          "confidence": 0.990659236907959
+        },
+        {
+          "text": " DNA",
+          "start": 50.32,
+          "end": 50.56,
+          "confidence": 0.9962276220321655
+        },
+        {
+          "text": " sequence.",
+          "start": 50.56,
+          "end": 50.9,
+          "confidence": 0.9962760210037231
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "start": 50.9,
+      "end": 55.86,
+      "startTime": "00:00:50,900",
+      "endTime": "00:00:55,860",
+      "text": "That's how it stops primary genital herpes. So HSV is stopped with it.",
+      "confidence": -0.21899920818852445,
+      "words": [
+        {
+          "text": " That's",
+          "start": 50.9,
+          "end": 51.84,
+          "confidence": 0.6430046856403351
+        },
+        {
+          "text": " how",
+          "start": 51.84,
+          "end": 51.94,
+          "confidence": 0.9871748089790344
+        },
+        {
+          "text": " it",
+          "start": 51.94,
+          "end": 52.02,
+          "confidence": 0.9956014156341553
+        },
+        {
+          "text": " stops",
+          "start": 52.02,
+          "end": 52.4,
+          "confidence": 0.9962300658226013
+        },
+        {
+          "text": " primary",
+          "start": 52.4,
+          "end": 53.22,
+          "confidence": 0.8542325496673584
+        },
+        {
+          "text": " genital",
+          "start": 53.22,
+          "end": 53.56,
+          "confidence": 0.9919284284114838
+        },
+        {
+          "text": " herpes.",
+          "start": 53.56,
+          "end": 53.86,
+          "confidence": 0.968430757522583
+        },
+        {
+          "text": " So",
+          "start": 54.24,
+          "end": 54.64,
+          "confidence": 0.9775360226631165
+        },
+        {
+          "text": " HSV",
+          "start": 54.64,
+          "end": 55.1,
+          "confidence": 0.9087240397930145
+        },
+        {
+          "text": " is",
+          "start": 55.1,
+          "end": 55.22,
+          "confidence": 0.936308741569519
+        },
+        {
+          "text": " stopped",
+          "start": 55.22,
+          "end": 55.44,
+          "confidence": 0.9890207648277283
+        },
+        {
+          "text": " with",
+          "start": 55.44,
+          "end": 55.66,
+          "confidence": 0.9870569109916687
+        },
+        {
+          "text": " it.",
+          "start": 55.66,
+          "end": 55.86,
+          "confidence": 0.9855087399482727
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "start": 57.52,
+      "end": 62.2,
+      "startTime": "00:00:57,520",
+      "endTime": "00:01:02,200",
+      "text": "Buzzwords, painful vesicles in the arithmetic base, tendering Guinell and Vatnopathy,",
+      "confidence": -0.21899920818852445,
+      "words": [
+        {
+          "text": " Buzzwords,",
+          "start": 57.52,
+          "end": 58.2,
+          "confidence": 0.8569962978363037
+        },
+        {
+          "text": " painful",
+          "start": 58.36,
+          "end": 58.64,
+          "confidence": 0.9054970741271973
+        },
+        {
+          "text": " vesicles",
+          "start": 58.64,
+          "end": 59.14,
+          "confidence": 0.9780712127685547
+        },
+        {
+          "text": " in",
+          "start": 59.14,
+          "end": 59.4,
+          "confidence": 0.8936441540718079
+        },
+        {
+          "text": " the",
+          "start": 59.4,
+          "end": 59.46,
+          "confidence": 0.9985950589179993
+        },
+        {
+          "text": " arithmetic",
+          "start": 59.46,
+          "end": 59.66,
+          "confidence": 0.6395445466041565
+        },
+        {
+          "text": " base,",
+          "start": 59.66,
+          "end": 60.22,
+          "confidence": 0.9599054455757141
+        },
+        {
+          "text": " tendering",
+          "start": 60.66,
+          "end": 61.28,
+          "confidence": 0.8519682288169861
+        },
+        {
+          "text": " Guinell",
+          "start": 61.28,
+          "end": 61.6,
+          "confidence": 0.1819252741212646
+        },
+        {
+          "text": " and",
+          "start": 61.6,
+          "end": 61.68,
+          "confidence": 0.5831601619720459
+        },
+        {
+          "text": " Vatnopathy,",
+          "start": 61.68,
+          "end": 62.2,
+          "confidence": 0.6425504982471466
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "start": 62.38,
+      "end": 68.12,
+      "startTime": "00:01:02,380",
+      "endTime": "00:01:08,120",
+      "text": "Sanktsmere, multi-nucleated giant cells associated with HSV2, primarily genital,",
+      "confidence": -0.21899920818852445,
+      "words": [
+        {
+          "text": " Sanktsmere,",
+          "start": 62.38,
+          "end": 62.78,
+          "confidence": 0.33918512761592867
+        },
+        {
+          "text": " multi",
+          "start": 63.1,
+          "end": 63.36,
+          "confidence": 0.6947941780090332
+        },
+        {
+          "text": "-nucleated",
+          "start": 63.36,
+          "end": 63.84,
+          "confidence": 0.9355185985565185
+        },
+        {
+          "text": " giant",
+          "start": 63.84,
+          "end": 64.08,
+          "confidence": 0.8991947174072266
+        },
+        {
+          "text": " cells",
+          "start": 64.08,
+          "end": 64.44,
+          "confidence": 0.996842622756958
+        },
+        {
+          "text": " associated",
+          "start": 64.44,
+          "end": 65.62,
+          "confidence": 0.6466417908668518
+        },
+        {
+          "text": " with",
+          "start": 65.62,
+          "end": 65.88,
+          "confidence": 0.9978262782096863
+        },
+        {
+          "text": " HSV2,",
+          "start": 65.88,
+          "end": 67,
+          "confidence": 0.8555917739868164
+        },
+        {
+          "text": " primarily",
+          "start": 67.28,
+          "end": 67.52,
+          "confidence": 0.922356367111206
+        },
+        {
+          "text": " genital,",
+          "start": 67.52,
+          "end": 68.12,
+          "confidence": 0.9882958233356476
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "start": 70.04,
+      "end": 77.62,
+      "startTime": "00:01:10,040",
+      "endTime": "00:01:17,620",
+      "text": "neonatal, HSV, HIV co-infections. The link exists because HSV disrupts epithelial integrity and",
+      "confidence": -0.21899920818852445,
+      "words": [
+        {
+          "text": " neonatal,",
+          "start": 70.04,
+          "end": 70.4,
+          "confidence": 0.9459652304649353
+        },
+        {
+          "text": " HSV,",
+          "start": 70.7,
+          "end": 71.14,
+          "confidence": 0.9380393028259277
+        },
+        {
+          "text": " HIV",
+          "start": 71.36,
+          "end": 71.58,
+          "confidence": 0.983658492565155
+        },
+        {
+          "text": " co",
+          "start": 71.58,
+          "end": 71.86,
+          "confidence": 0.50318443775177
+        },
+        {
+          "text": "-infections.",
+          "start": 71.86,
+          "end": 72.34,
+          "confidence": 0.9529641071955363
+        },
+        {
+          "text": " The",
+          "start": 74.32,
+          "end": 74.66,
+          "confidence": 0.9927278757095337
+        },
+        {
+          "text": " link",
+          "start": 74.66,
+          "end": 74.8,
+          "confidence": 0.9951620697975159
+        },
+        {
+          "text": " exists",
+          "start": 74.8,
+          "end": 75.12,
+          "confidence": 0.9858302474021912
+        },
+        {
+          "text": " because",
+          "start": 75.12,
+          "end": 75.32,
+          "confidence": 0.9862096905708313
+        },
+        {
+          "text": " HSV",
+          "start": 75.32,
+          "end": 75.9,
+          "confidence": 0.973948061466217
+        },
+        {
+          "text": " disrupts",
+          "start": 75.9,
+          "end": 76.74,
+          "confidence": 0.9963834583759308
+        },
+        {
+          "text": " epithelial",
+          "start": 76.74,
+          "end": 77.14,
+          "confidence": 0.9786064922809601
+        },
+        {
+          "text": " integrity",
+          "start": 77.14,
+          "end": 77.5,
+          "confidence": 0.9989055395126343
+        },
+        {
+          "text": " and",
+          "start": 77.5,
+          "end": 77.84,
+          "confidence": 0.974961519241333
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "start": 77.84,
+      "end": 86.46,
+      "startTime": "00:01:17,840",
+      "endTime": "00:01:26,460",
+      "text": "recruits your CD4 positive T cells. So you get the direct contact. The virus replicates through",
+      "confidence": -0.19988110553787417,
+      "words": [
+        {
+          "text": " recruits",
+          "start": 77.84,
+          "end": 78.12,
+          "confidence": 0.6140673384070396
+        },
+        {
+          "text": " your",
+          "start": 78.12,
+          "end": 78.22,
+          "confidence": 0.9591962695121765
+        },
+        {
+          "text": " CD4",
+          "start": 78.22,
+          "end": 78.62,
+          "confidence": 0.6036084294319153
+        },
+        {
+          "text": " positive",
+          "start": 78.62,
+          "end": 78.98,
+          "confidence": 0.9661301970481873
+        },
+        {
+          "text": " T",
+          "start": 78.98,
+          "end": 79.22,
+          "confidence": 0.8903213739395142
+        },
+        {
+          "text": " cells.",
+          "start": 79.22,
+          "end": 79.46,
+          "confidence": 0.9688340425491333
+        },
+        {
+          "text": " So",
+          "start": 82.3,
+          "end": 82.86,
+          "confidence": 0.9882722496986389
+        },
+        {
+          "text": " you",
+          "start": 82.86,
+          "end": 83.04,
+          "confidence": 0.990483283996582
+        },
+        {
+          "text": " get",
+          "start": 83.04,
+          "end": 83.18,
+          "confidence": 0.9968618154525757
+        },
+        {
+          "text": " the",
+          "start": 83.18,
+          "end": 83.3,
+          "confidence": 0.849818766117096
+        },
+        {
+          "text": " direct",
+          "start": 83.3,
+          "end": 83.58,
+          "confidence": 0.9967390894889832
+        },
+        {
+          "text": " contact.",
+          "start": 83.58,
+          "end": 84.2,
+          "confidence": 0.9984682202339172
+        },
+        {
+          "text": " The",
+          "start": 85.12,
+          "end": 85.64,
+          "confidence": 0.8201450109481812
+        },
+        {
+          "text": " virus",
+          "start": 85.64,
+          "end": 85.84,
+          "confidence": 0.9971030354499817
+        },
+        {
+          "text": " replicates",
+          "start": 85.84,
+          "end": 86.3,
+          "confidence": 0.9947678049405416
+        },
+        {
+          "text": " through",
+          "start": 86.3,
+          "end": 86.46,
+          "confidence": 0.9843239188194275
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "start": 86.46,
+      "end": 95.76,
+      "startTime": "00:01:26,460",
+      "endTime": "00:01:35,760",
+      "text": "the DNA polymerase through thymidine kinase. Then it's latent and then acyclovir is needed to kill it.",
+      "confidence": -0.19988110553787417,
+      "words": [
+        {
+          "text": " the",
+          "start": 86.46,
+          "end": 86.56,
+          "confidence": 0.998285710811615
+        },
+        {
+          "text": " DNA",
+          "start": 86.56,
+          "end": 86.82,
+          "confidence": 0.9960632920265198
+        },
+        {
+          "text": " polymerase",
+          "start": 86.82,
+          "end": 87.48,
+          "confidence": 0.9956590235233307
+        },
+        {
+          "text": " through",
+          "start": 87.48,
+          "end": 88.24,
+          "confidence": 0.7793356776237488
+        },
+        {
+          "text": " thymidine",
+          "start": 88.24,
+          "end": 88.68,
+          "confidence": 0.664662204682827
+        },
+        {
+          "text": " kinase.",
+          "start": 88.68,
+          "end": 89.12,
+          "confidence": 0.9852384924888611
+        },
+        {
+          "text": " Then",
+          "start": 90.62,
+          "end": 91.18,
+          "confidence": 0.3826766908168793
+        },
+        {
+          "text": " it's",
+          "start": 91.18,
+          "end": 91.46,
+          "confidence": 0.9868989586830139
+        },
+        {
+          "text": " latent",
+          "start": 91.46,
+          "end": 91.8,
+          "confidence": 0.989059567451477
+        },
+        {
+          "text": " and",
+          "start": 91.8,
+          "end": 93,
+          "confidence": 0.32031410932540894
+        },
+        {
+          "text": " then",
+          "start": 93,
+          "end": 93.12,
+          "confidence": 0.9836446046829224
+        },
+        {
+          "text": " acyclovir",
+          "start": 93.12,
+          "end": 93.72,
+          "confidence": 0.9516847252845764
+        },
+        {
+          "text": " is",
+          "start": 93.72,
+          "end": 94.06,
+          "confidence": 0.9877535700798035
+        },
+        {
+          "text": " needed",
+          "start": 94.06,
+          "end": 94.3,
+          "confidence": 0.9989266991615295
+        },
+        {
+          "text": " to",
+          "start": 94.3,
+          "end": 94.56,
+          "confidence": 0.9984477758407593
+        },
+        {
+          "text": " kill",
+          "start": 94.56,
+          "end": 95.56,
+          "confidence": 0.987722635269165
+        },
+        {
+          "text": " it.",
+          "start": 95.56,
+          "end": 95.76,
+          "confidence": 0.9908500909805298
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "start": 100.82,
+      "end": 104.9,
+      "startTime": "00:01:40,820",
+      "endTime": "00:01:44,900",
+      "text": "All right, so we've got to get that chain termination. Practice question, 24-year-old man,",
+      "confidence": -0.19988110553787417,
+      "words": [
+        {
+          "text": " All",
+          "start": 100.82,
+          "end": 101.38,
+          "confidence": 0.7186996340751648
+        },
+        {
+          "text": " right,",
+          "start": 101.38,
+          "end": 101.94,
+          "confidence": 0.9957777261734009
+        },
+        {
+          "text": " so",
+          "start": 101.98,
+          "end": 102.1,
+          "confidence": 0.904523491859436
+        },
+        {
+          "text": " we've",
+          "start": 102.1,
+          "end": 102.2,
+          "confidence": 0.6439092457294464
+        },
+        {
+          "text": " got",
+          "start": 102.2,
+          "end": 102.26,
+          "confidence": 0.920692503452301
+        },
+        {
+          "text": " to",
+          "start": 102.26,
+          "end": 102.3,
+          "confidence": 0.9777485132217407
+        },
+        {
+          "text": " get",
+          "start": 102.3,
+          "end": 102.34,
+          "confidence": 0.9240686297416687
+        },
+        {
+          "text": " that",
+          "start": 102.34,
+          "end": 102.5,
+          "confidence": 0.895566463470459
+        },
+        {
+          "text": " chain",
+          "start": 102.5,
+          "end": 102.8,
+          "confidence": 0.9907694458961487
+        },
+        {
+          "text": " termination.",
+          "start": 102.8,
+          "end": 103.3,
+          "confidence": 0.9962712228298187
+        },
+        {
+          "text": " Practice",
+          "start": 103.68,
+          "end": 103.82,
+          "confidence": 0.9381417036056519
+        },
+        {
+          "text": " question,",
+          "start": 103.82,
+          "end": 104.06,
+          "confidence": 0.9433695673942566
+        },
+        {
+          "text": " 24",
+          "start": 104.2,
+          "end": 104.46,
+          "confidence": 0.9836893677711487
+        },
+        {
+          "text": "-year",
+          "start": 104.46,
+          "end": 104.64,
+          "confidence": 0.5715657472610474
+        },
+        {
+          "text": "-old",
+          "start": 104.64,
+          "end": 104.68,
+          "confidence": 0.9423823952674866
+        },
+        {
+          "text": " man,",
+          "start": 104.68,
+          "end": 104.9,
+          "confidence": 0.9451332092285156
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "start": 104.9,
+      "end": 114.28,
+      "startTime": "00:01:44,900",
+      "endTime": "00:01:54,280",
+      "text": "painful lesions, clusters of vesicles, arithmetic base. So that's already herpes simplex virus,",
+      "confidence": -0.13828537680886008,
+      "words": [
+        {
+          "text": " painful",
+          "start": 104.9,
+          "end": 105.62,
+          "confidence": 0.024934297427535057
+        },
+        {
+          "text": " lesions,",
+          "start": 105.62,
+          "end": 106.14,
+          "confidence": 0.9946198463439941
+        },
+        {
+          "text": " clusters",
+          "start": 107.42,
+          "end": 109.36,
+          "confidence": 0.9008098244667053
+        },
+        {
+          "text": " of",
+          "start": 109.36,
+          "end": 109.56,
+          "confidence": 0.992183268070221
+        },
+        {
+          "text": " vesicles,",
+          "start": 109.56,
+          "end": 109.88,
+          "confidence": 0.9939818382263184
+        },
+        {
+          "text": " arithmetic",
+          "start": 110.08,
+          "end": 110.22,
+          "confidence": 0.5022643208503723
+        },
+        {
+          "text": " base.",
+          "start": 110.22,
+          "end": 110.82,
+          "confidence": 0.9066523909568787
+        },
+        {
+          "text": " So",
+          "start": 112.3,
+          "end": 112.88,
+          "confidence": 0.7173665761947632
+        },
+        {
+          "text": " that's",
+          "start": 112.88,
+          "end": 113.06,
+          "confidence": 0.9512363374233246
+        },
+        {
+          "text": " already",
+          "start": 113.06,
+          "end": 113.3,
+          "confidence": 0.980519711971283
+        },
+        {
+          "text": " herpes",
+          "start": 113.3,
+          "end": 113.54,
+          "confidence": 0.7198512703180313
+        },
+        {
+          "text": " simplex",
+          "start": 113.54,
+          "end": 113.98,
+          "confidence": 0.6718995720148087
+        },
+        {
+          "text": " virus,",
+          "start": 113.98,
+          "end": 114.28,
+          "confidence": 0.8042390942573547
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "start": 114.56,
+      "end": 119.12,
+      "startTime": "00:01:54,560",
+      "endTime": "00:01:59,120",
+      "text": "Sanktsmere, they're giving us that as well. Oral medication is used. What's the mechanism?",
+      "confidence": -0.13828537680886008,
+      "words": [
+        {
+          "text": " Sanktsmere,",
+          "start": 114.56,
+          "end": 114.98,
+          "confidence": 0.22019367776811122
+        },
+        {
+          "text": " they're",
+          "start": 115.16,
+          "end": 115.22,
+          "confidence": 0.903723955154419
+        },
+        {
+          "text": " giving",
+          "start": 115.22,
+          "end": 115.36,
+          "confidence": 0.9959177374839783
+        },
+        {
+          "text": " us",
+          "start": 115.36,
+          "end": 115.54,
+          "confidence": 0.4770216643810272
+        },
+        {
+          "text": " that",
+          "start": 115.54,
+          "end": 115.72,
+          "confidence": 0.9746700525283813
+        },
+        {
+          "text": " as",
+          "start": 115.72,
+          "end": 115.84,
+          "confidence": 0.9922628402709961
+        },
+        {
+          "text": " well.",
+          "start": 115.84,
+          "end": 116.06,
+          "confidence": 0.9984159469604492
+        },
+        {
+          "text": " Oral",
+          "start": 116.24,
+          "end": 116.4,
+          "confidence": 0.9088466167449951
+        },
+        {
+          "text": " medication",
+          "start": 116.4,
+          "end": 116.64,
+          "confidence": 0.30630114674568176
+        },
+        {
+          "text": " is",
+          "start": 116.64,
+          "end": 117.14,
+          "confidence": 0.9487379193305969
+        },
+        {
+          "text": " used.",
+          "start": 117.14,
+          "end": 117.38,
+          "confidence": 0.9979165196418762
+        },
+        {
+          "text": " What's",
+          "start": 118.04,
+          "end": 118.48,
+          "confidence": 0.8880030512809753
+        },
+        {
+          "text": " the",
+          "start": 118.48,
+          "end": 118.58,
+          "confidence": 0.9985289573669434
+        },
+        {
+          "text": " mechanism?",
+          "start": 118.58,
+          "end": 119.12,
+          "confidence": 0.9979603290557861
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "start": 119.4,
+      "end": 126.5,
+      "startTime": "00:01:59,400",
+      "endTime": "00:02:06,500",
+      "text": "It requires viral thymidine kinase for activation. All right, so acyclovir and its pro-drugs are",
+      "confidence": -0.13828537680886008,
+      "words": [
+        {
+          "text": " It",
+          "start": 119.4,
+          "end": 119.46,
+          "confidence": 0.9644706845283508
+        },
+        {
+          "text": " requires",
+          "start": 119.46,
+          "end": 120.36,
+          "confidence": 0.9681950211524963
+        },
+        {
+          "text": " viral",
+          "start": 120.36,
+          "end": 121.18,
+          "confidence": 0.9870993494987488
+        },
+        {
+          "text": " thymidine",
+          "start": 121.18,
+          "end": 121.64,
+          "confidence": 0.6323771849274635
+        },
+        {
+          "text": " kinase",
+          "start": 121.64,
+          "end": 121.94,
+          "confidence": 0.9551035761833191
+        },
+        {
+          "text": " for",
+          "start": 121.94,
+          "end": 122.1,
+          "confidence": 0.9625760912895203
+        },
+        {
+          "text": " activation.",
+          "start": 122.1,
+          "end": 122.42,
+          "confidence": 0.9969260096549988
+        },
+        {
+          "text": " All",
+          "start": 123.48,
+          "end": 124.04,
+          "confidence": 0.5206850171089172
+        },
+        {
+          "text": " right,",
+          "start": 124.04,
+          "end": 124.14,
+          "confidence": 0.998330295085907
+        },
+        {
+          "text": " so",
+          "start": 124.26,
+          "end": 124.34,
+          "confidence": 0.9859376549720764
+        },
+        {
+          "text": " acyclovir",
+          "start": 124.34,
+          "end": 125,
+          "confidence": 0.9490379333496094
+        },
+        {
+          "text": " and",
+          "start": 125,
+          "end": 125.9,
+          "confidence": 0.6580913066864014
+        },
+        {
+          "text": " its",
+          "start": 125.9,
+          "end": 126,
+          "confidence": 0.44506239891052246
+        },
+        {
+          "text": " pro",
+          "start": 126,
+          "end": 126.18,
+          "confidence": 0.7609692215919495
+        },
+        {
+          "text": "-drugs",
+          "start": 126.18,
+          "end": 126.38,
+          "confidence": 0.8473345836003622
+        },
+        {
+          "text": " are",
+          "start": 126.38,
+          "end": 126.5,
+          "confidence": 0.9734727144241333
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "start": 126.5,
+      "end": 132.04,
+      "startTime": "00:02:06,500",
+      "endTime": "00:02:12,040",
+      "text": "nucleoside analogs that rely on HSV encoded thymidine kinase for activation, ensuring selectivity.",
+      "confidence": -0.13828537680886008,
+      "words": [
+        {
+          "text": " nucleoside",
+          "start": 126.5,
+          "end": 127,
+          "confidence": 0.9124058286348978
+        },
+        {
+          "text": " analogs",
+          "start": 127,
+          "end": 127.46,
+          "confidence": 0.7547537386417389
+        },
+        {
+          "text": " that",
+          "start": 127.46,
+          "end": 127.5,
+          "confidence": 0.9553303718566895
+        },
+        {
+          "text": " rely",
+          "start": 127.5,
+          "end": 127.7,
+          "confidence": 0.9891427159309387
+        },
+        {
+          "text": " on",
+          "start": 127.7,
+          "end": 127.86,
+          "confidence": 0.9976746439933777
+        },
+        {
+          "text": " HSV",
+          "start": 127.86,
+          "end": 128.38,
+          "confidence": 0.9344670176506042
+        },
+        {
+          "text": " encoded",
+          "start": 128.38,
+          "end": 128.66,
+          "confidence": 0.9494185745716095
+        },
+        {
+          "text": " thymidine",
+          "start": 128.66,
+          "end": 129,
+          "confidence": 0.9793916195631027
+        },
+        {
+          "text": " kinase",
+          "start": 129,
+          "end": 129.3,
+          "confidence": 0.9964835941791534
+        },
+        {
+          "text": " for",
+          "start": 129.3,
+          "end": 129.44,
+          "confidence": 0.9850452542304993
+        },
+        {
+          "text": " activation,",
+          "start": 129.44,
+          "end": 129.84,
+          "confidence": 0.9980740547180176
+        },
+        {
+          "text": " ensuring",
+          "start": 130.5,
+          "end": 131.36,
+          "confidence": 0.6112275123596191
+        },
+        {
+          "text": " selectivity.",
+          "start": 131.36,
+          "end": 132.04,
+          "confidence": 0.9839034676551819
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "start": 134.04000000000002,
+      "end": 141.08,
+      "startTime": "00:02:14,040",
+      "endTime": "00:02:21,080",
+      "text": "They're phosphorylated and then they can inhibit the viral DNA polymerase. So inhibits neuraminase,",
+      "confidence": -0.30330481896033656,
+      "words": [
+        {
+          "text": " They're",
+          "start": 134.04000000000002,
+          "end": 134.58,
+          "confidence": 0.7964188158512115
+        },
+        {
+          "text": " phosphorylated",
+          "start": 134.58,
+          "end": 135.12,
+          "confidence": 0.9698145588239034
+        },
+        {
+          "text": " and",
+          "start": 135.12,
+          "end": 135.42,
+          "confidence": 0.6683132648468018
+        },
+        {
+          "text": " then",
+          "start": 135.42,
+          "end": 135.64,
+          "confidence": 0.9954865574836731
+        },
+        {
+          "text": " they",
+          "start": 135.64,
+          "end": 136.26,
+          "confidence": 0.9885645508766174
+        },
+        {
+          "text": " can",
+          "start": 136.26,
+          "end": 136.4,
+          "confidence": 0.996556282043457
+        },
+        {
+          "text": " inhibit",
+          "start": 136.4,
+          "end": 136.66,
+          "confidence": 0.9969987869262695
+        },
+        {
+          "text": " the",
+          "start": 136.66,
+          "end": 136.92,
+          "confidence": 0.9510287642478943
+        },
+        {
+          "text": " viral",
+          "start": 136.92,
+          "end": 137.76,
+          "confidence": 0.8868813514709473
+        },
+        {
+          "text": " DNA",
+          "start": 137.76,
+          "end": 137.98,
+          "confidence": 0.8815346360206604
+        },
+        {
+          "text": " polymerase.",
+          "start": 137.98,
+          "end": 138.52,
+          "confidence": 0.9604927897453308
+        },
+        {
+          "text": " So",
+          "start": 139.64,
+          "end": 140.18,
+          "confidence": 0.9834188222885132
+        },
+        {
+          "text": " inhibits",
+          "start": 140.18,
+          "end": 140.52,
+          "confidence": 0.9682055413722992
+        },
+        {
+          "text": " neuraminase,",
+          "start": 140.52,
+          "end": 141.08,
+          "confidence": 0.8567127188046774
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "start": 141.32,
+      "end": 146.16,
+      "startTime": "00:02:21,320",
+      "endTime": "00:02:26,160",
+      "text": "that's going to be, oh, Sanktsmere, that's like a flu agent, you're for people who got the flu.",
+      "confidence": -0.30330481896033656,
+      "words": [
+        {
+          "text": " that's",
+          "start": 141.32,
+          "end": 141.42,
+          "confidence": 0.9910940229892731
+        },
+        {
+          "text": " going",
+          "start": 141.42,
+          "end": 141.52,
+          "confidence": 0.5824755430221558
+        },
+        {
+          "text": " to",
+          "start": 141.52,
+          "end": 141.6,
+          "confidence": 0.9988607168197632
+        },
+        {
+          "text": " be,",
+          "start": 141.6,
+          "end": 141.74,
+          "confidence": 0.9956295490264893
+        },
+        {
+          "text": " oh,",
+          "start": 142,
+          "end": 142.66,
+          "confidence": 0.20718900859355927
+        },
+        {
+          "text": " Sanktsmere,",
+          "start": 142.88,
+          "end": 143.14,
+          "confidence": 0.008796865629483364
+        },
+        {
+          "text": " that's",
+          "start": 143.2,
+          "end": 143.48,
+          "confidence": 0.9847952723503113
+        },
+        {
+          "text": " like",
+          "start": 143.48,
+          "end": 143.6,
+          "confidence": 0.9838510155677795
+        },
+        {
+          "text": " a",
+          "start": 143.6,
+          "end": 143.68,
+          "confidence": 0.9960287809371948
+        },
+        {
+          "text": " flu",
+          "start": 143.68,
+          "end": 143.86,
+          "confidence": 0.9331274628639221
+        },
+        {
+          "text": " agent,",
+          "start": 143.86,
+          "end": 144.16,
+          "confidence": 0.9991999268531799
+        },
+        {
+          "text": " you're",
+          "start": 145,
+          "end": 145.2,
+          "confidence": 0.37151773273944855
+        },
+        {
+          "text": " for",
+          "start": 145.2,
+          "end": 145.32,
+          "confidence": 0.3205519914627075
+        },
+        {
+          "text": " people",
+          "start": 145.32,
+          "end": 145.58,
+          "confidence": 0.9967296123504639
+        },
+        {
+          "text": " who",
+          "start": 145.58,
+          "end": 145.68,
+          "confidence": 0.9705349206924438
+        },
+        {
+          "text": " got",
+          "start": 145.68,
+          "end": 145.82,
+          "confidence": 0.4971546530723572
+        },
+        {
+          "text": " the",
+          "start": 145.82,
+          "end": 145.92,
+          "confidence": 0.9898213148117065
+        },
+        {
+          "text": " flu.",
+          "start": 145.92,
+          "end": 146.16,
+          "confidence": 0.9990391731262207
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "start": 147.58,
+      "end": 151.2,
+      "startTime": "00:02:27,580",
+      "endTime": "00:02:31,200",
+      "text": "Promotes up regulation into ferron synthesis, immune boost pathway.",
+      "confidence": -0.30330481896033656,
+      "words": [
+        {
+          "text": " Promotes",
+          "start": 147.58,
+          "end": 148.12,
+          "confidence": 0.9374015629291534
+        },
+        {
+          "text": " up",
+          "start": 148.12,
+          "end": 148.3,
+          "confidence": 0.8167042136192322
+        },
+        {
+          "text": " regulation",
+          "start": 148.3,
+          "end": 148.58,
+          "confidence": 0.5201638340950012
+        },
+        {
+          "text": " into",
+          "start": 148.58,
+          "end": 149,
+          "confidence": 0.7279338836669922
+        },
+        {
+          "text": " ferron",
+          "start": 149,
+          "end": 149.3,
+          "confidence": 0.3573533892631531
+        },
+        {
+          "text": " synthesis,",
+          "start": 149.3,
+          "end": 149.72,
+          "confidence": 0.9846567511558533
+        },
+        {
+          "text": " immune",
+          "start": 150.22,
+          "end": 150.44,
+          "confidence": 0.9913918972015381
+        },
+        {
+          "text": " boost",
+          "start": 150.44,
+          "end": 150.74,
+          "confidence": 0.9545167088508606
+        },
+        {
+          "text": " pathway.",
+          "start": 150.74,
+          "end": 151.2,
+          "confidence": 0.9917927384376526
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "start": 152.6,
+      "end": 160.96,
+      "startTime": "00:02:32,600",
+      "endTime": "00:02:40,960",
+      "text": "And I'm going to be anti-viral at all. Inhibits viral protease, that's HIV and HCV drug classes.",
+      "confidence": -0.30330481896033656,
+      "words": [
+        {
+          "text": " And",
+          "start": 152.6,
+          "end": 153.14,
+          "confidence": 0.5340874791145325
+        },
+        {
+          "text": " I'm",
+          "start": 153.14,
+          "end": 153.26,
+          "confidence": 0.6593499034643173
+        },
+        {
+          "text": " going",
+          "start": 153.26,
+          "end": 153.26,
+          "confidence": 0.4691421091556549
+        },
+        {
+          "text": " to",
+          "start": 153.26,
+          "end": 153.32,
+          "confidence": 0.9952528476715088
+        },
+        {
+          "text": " be",
+          "start": 153.32,
+          "end": 153.4,
+          "confidence": 0.9676271080970764
+        },
+        {
+          "text": " anti",
+          "start": 153.4,
+          "end": 153.6,
+          "confidence": 0.6000120043754578
+        },
+        {
+          "text": "-viral",
+          "start": 153.6,
+          "end": 153.9,
+          "confidence": 0.7675702671209971
+        },
+        {
+          "text": " at",
+          "start": 153.9,
+          "end": 154.1,
+          "confidence": 0.979726254940033
+        },
+        {
+          "text": " all.",
+          "start": 154.1,
+          "end": 154.26,
+          "confidence": 0.99910968542099
+        },
+        {
+          "text": " Inhibits",
+          "start": 156.1,
+          "end": 156.64,
+          "confidence": 0.8931515216827393
+        },
+        {
+          "text": " viral",
+          "start": 156.64,
+          "end": 156.86,
+          "confidence": 0.9170283675193787
+        },
+        {
+          "text": " protease,",
+          "start": 156.86,
+          "end": 157.62,
+          "confidence": 0.904965877532959
+        },
+        {
+          "text": " that's",
+          "start": 158.96,
+          "end": 159.12,
+          "confidence": 0.9889343976974487
+        },
+        {
+          "text": " HIV",
+          "start": 159.12,
+          "end": 159.66,
+          "confidence": 0.9767045974731445
+        },
+        {
+          "text": " and",
+          "start": 159.66,
+          "end": 159.96,
+          "confidence": 0.9729824662208557
+        },
+        {
+          "text": " HCV",
+          "start": 159.96,
+          "end": 160.42,
+          "confidence": 0.9552075564861298
+        },
+        {
+          "text": " drug",
+          "start": 160.42,
+          "end": 160.6,
+          "confidence": 0.9980693459510803
+        },
+        {
+          "text": " classes.",
+          "start": 160.6,
+          "end": 160.96,
+          "confidence": 0.9516169428825378
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "start": 164.24,
+      "end": 166.66,
+      "startTime": "00:02:44,240",
+      "endTime": "00:02:46,660",
+      "text": "Like indenivir, that's a retroviral assembly.",
+      "confidence": -0.3023073673248291,
+      "words": [
+        {
+          "text": " Like",
+          "start": 164.24,
+          "end": 164.68,
+          "confidence": 0.35151830315589905
+        },
+        {
+          "text": " indenivir,",
+          "start": 164.68,
+          "end": 165.12,
+          "confidence": 0.6501390002667904
+        },
+        {
+          "text": " that's",
+          "start": 165.42,
+          "end": 165.72,
+          "confidence": 0.9651099741458893
+        },
+        {
+          "text": " a",
+          "start": 165.72,
+          "end": 165.78,
+          "confidence": 0.8550897836685181
+        },
+        {
+          "text": " retroviral",
+          "start": 165.78,
+          "end": 166.2,
+          "confidence": 0.8487897912661234
+        },
+        {
+          "text": " assembly.",
+          "start": 166.2,
+          "end": 166.66,
+          "confidence": 0.9916129112243652
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "start": 175.1,
+      "end": 177,
+      "startTime": "00:02:55,100",
+      "endTime": "00:02:57,000",
+      "text": "Influenza A is the blocks of viral encoding.",
+      "confidence": -0.3023073673248291,
+      "words": [
+        {
+          "text": " Influenza",
+          "start": 175.1,
+          "end": 175.54,
+          "confidence": 0.9498368700345358
+        },
+        {
+          "text": " A",
+          "start": 175.54,
+          "end": 175.76,
+          "confidence": 0.9004992246627808
+        },
+        {
+          "text": " is",
+          "start": 175.76,
+          "end": 175.94,
+          "confidence": 0.9336296319961548
+        },
+        {
+          "text": " the",
+          "start": 175.94,
+          "end": 176.06,
+          "confidence": 0.9834911227226257
+        },
+        {
+          "text": " blocks",
+          "start": 176.06,
+          "end": 176.28,
+          "confidence": 0.5516355037689209
+        },
+        {
+          "text": " of",
+          "start": 176.28,
+          "end": 176.48,
+          "confidence": 0.4591345191001892
+        },
+        {
+          "text": " viral",
+          "start": 176.48,
+          "end": 176.64,
+          "confidence": 0.9593215584754944
+        },
+        {
+          "text": " encoding.",
+          "start": 176.64,
+          "end": 177,
+          "confidence": 0.5625704526901245
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "start": 178.18,
+      "end": 183.42,
+      "startTime": "00:02:58,180",
+      "endTime": "00:03:03,420",
+      "text": "Mantidine is a medication that does that. If you found this helpful, like and subscribe. We'll see",
+      "confidence": -0.3023073673248291,
+      "words": [
+        {
+          "text": " Mantidine",
+          "start": 178.18,
+          "end": 178.62,
+          "confidence": 0.7501431107521057
+        },
+        {
+          "text": " is",
+          "start": 178.62,
+          "end": 178.92,
+          "confidence": 0.9149893522262573
+        },
+        {
+          "text": " a",
+          "start": 178.92,
+          "end": 179.12,
+          "confidence": 0.7719472646713257
+        },
+        {
+          "text": " medication",
+          "start": 179.12,
+          "end": 180.08,
+          "confidence": 0.9935498833656311
+        },
+        {
+          "text": " that",
+          "start": 180.08,
+          "end": 180.38,
+          "confidence": 0.9980533123016357
+        },
+        {
+          "text": " does",
+          "start": 180.38,
+          "end": 180.52,
+          "confidence": 0.998404324054718
+        },
+        {
+          "text": " that.",
+          "start": 180.52,
+          "end": 180.7,
+          "confidence": 0.9988401532173157
+        },
+        {
+          "text": " If",
+          "start": 181.46,
+          "end": 181.9,
+          "confidence": 0.992252767086029
+        },
+        {
+          "text": " you",
+          "start": 181.9,
+          "end": 181.98,
+          "confidence": 0.9985072016716003
+        },
+        {
+          "text": " found",
+          "start": 181.98,
+          "end": 182.14,
+          "confidence": 0.8629205822944641
+        },
+        {
+          "text": " this",
+          "start": 182.14,
+          "end": 182.26,
+          "confidence": 0.9949118494987488
+        },
+        {
+          "text": " helpful,",
+          "start": 182.26,
+          "end": 182.46,
+          "confidence": 0.996819257736206
+        },
+        {
+          "text": " like",
+          "start": 182.62,
+          "end": 182.66,
+          "confidence": 0.927946150302887
+        },
+        {
+          "text": " and",
+          "start": 182.66,
+          "end": 182.78,
+          "confidence": 0.9126001596450806
+        },
+        {
+          "text": " subscribe.",
+          "start": 182.78,
+          "end": 183.04,
+          "confidence": 0.995557963848114
+        },
+        {
+          "text": " We'll",
+          "start": 183.24,
+          "end": 183.28,
+          "confidence": 0.9863554537296295
+        },
+        {
+          "text": " see",
+          "start": 183.28,
+          "end": 183.42,
+          "confidence": 0.9983426332473755
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "start": 183.42,
+      "end": 183.86,
+      "startTime": "00:03:03,420",
+      "endTime": "00:03:03,860",
+      "text": "you in the next video.",
+      "confidence": -0.6126416524251302,
+      "words": [
+        {
+          "text": " you",
+          "start": 183.42,
+          "end": 183.42,
+          "confidence": 0.0390375517308712
+        },
+        {
+          "text": " in",
+          "start": 183.42,
+          "end": 183.5,
+          "confidence": 0.9200721383094788
+        },
+        {
+          "text": " the",
+          "start": 183.5,
+          "end": 183.54,
+          "confidence": 0.9963617920875549
+        },
+        {
+          "text": " next",
+          "start": 183.54,
+          "end": 183.66,
+          "confidence": 0.9985870122909546
+        },
+        {
+          "text": " video.",
+          "start": 183.66,
+          "end": 183.86,
+          "confidence": 0.9970093965530396
+        }
+      ]
+    }
+  ],
+  "fullText": "Herpes hits hard. Painful genital ulcers, multi-giant cells would be primary HSV. You treat it with a cyclovir. So these are primary genital herpes. You'll see like the positive Sanktsmere. You'll see a rash on the genitals and you should be giving them a cyclovir which is a nucleoside analog and it's converted into a cyclovir monophosphate principally through the virus encoded thymidine kinase. That's definitely important. So basically it gets incorporated into the DNA chain and then it terminates the DNA sequence. That's how it stops primary genital herpes. So HSV is stopped with it. Buzzwords, painful vesicles in the arithmetic base, tendering Guinell and Vatnopathy, Sanktsmere, multi-nucleated giant cells associated with HSV2, primarily genital, neonatal, HSV, HIV co-infections. The link exists because HSV disrupts epithelial integrity and recruits your CD4 positive T cells. So you get the direct contact. The virus replicates through the DNA polymerase through thymidine kinase. Then it's latent and then acyclovir is needed to kill it. All right, so we've got to get that chain termination. Practice question, 24-year-old man, painful lesions, clusters of vesicles, arithmetic base. So that's already herpes simplex virus, Sanktsmere, they're giving us that as well. Oral medication is used. What's the mechanism? It requires viral thymidine kinase for activation. All right, so acyclovir and its pro-drugs are nucleoside analogs that rely on HSV encoded thymidine kinase for activation, ensuring selectivity. They're phosphorylated and then they can inhibit the viral DNA polymerase. So inhibits neuraminase, that's going to be, oh, Sanktsmere, that's like a flu agent, you're for people who got the flu. Promotes up regulation into ferron synthesis, immune boost pathway. And I'm going to be anti-viral at all. Inhibits viral protease, that's HIV and HCV drug classes. Like indenivir, that's a retroviral assembly. Influenza A is the blocks of viral encoding. Mantidine is a medication that does that. If you found this helpful, like and subscribe. We'll see you in the next video.",
+  "srtContent": "1\n00:00:00,000 --> 00:00:07,060\nHerpes hits hard. Painful genital ulcers, multi-giant cells would be primary HSV. You treat it with a\n\n2\n00:00:07,060 --> 00:00:16,000\ncyclovir. So these are primary genital herpes. You'll see like the positive Sanktsmere.\n\n3\n00:00:16,640 --> 00:00:21,500\nYou'll see a rash on the genitals and you should be giving them a cyclovir which is a nucleoside\n\n4\n00:00:21,500 --> 00:00:36,440\nanalog and it's converted into a cyclovir monophosphate principally through the virus\n\n5\n00:00:36,440 --> 00:00:42,240\nencoded thymidine kinase. That's definitely important.\n\n6\n00:00:46,640 --> 00:00:50,900\nSo basically it gets incorporated into the DNA chain and then it terminates the DNA sequence.\n\n7\n00:00:50,900 --> 00:00:55,860\nThat's how it stops primary genital herpes. So HSV is stopped with it.\n\n8\n00:00:57,520 --> 00:01:02,200\nBuzzwords, painful vesicles in the arithmetic base, tendering Guinell and Vatnopathy,\n\n9\n00:01:02,380 --> 00:01:08,120\nSanktsmere, multi-nucleated giant cells associated with HSV2, primarily genital,\n\n10\n00:01:10,040 --> 00:01:17,620\nneonatal, HSV, HIV co-infections. The link exists because HSV disrupts epithelial integrity and\n\n11\n00:01:17,840 --> 00:01:26,460\nrecruits your CD4 positive T cells. So you get the direct contact. The virus replicates through\n\n12\n00:01:26,460 --> 00:01:35,760\nthe DNA polymerase through thymidine kinase. Then it's latent and then acyclovir is needed to kill it.\n\n13\n00:01:40,820 --> 00:01:44,900\nAll right, so we've got to get that chain termination. Practice question, 24-year-old man,\n\n14\n00:01:44,900 --> 00:01:54,280\npainful lesions, clusters of vesicles, arithmetic base. So that's already herpes simplex virus,\n\n15\n00:01:54,560 --> 00:01:59,120\nSanktsmere, they're giving us that as well. Oral medication is used. What's the mechanism?\n\n16\n00:01:59,400 --> 00:02:06,500\nIt requires viral thymidine kinase for activation. All right, so acyclovir and its pro-drugs are\n\n17\n00:02:06,500 --> 00:02:12,040\nnucleoside analogs that rely on HSV encoded thymidine kinase for activation, ensuring selectivity.\n\n18\n00:02:14,040 --> 00:02:21,080\nThey're phosphorylated and then they can inhibit the viral DNA polymerase. So inhibits neuraminase,\n\n19\n00:02:21,320 --> 00:02:26,160\nthat's going to be, oh, Sanktsmere, that's like a flu agent, you're for people who got the flu.\n\n20\n00:02:27,580 --> 00:02:31,200\nPromotes up regulation into ferron synthesis, immune boost pathway.\n\n21\n00:02:32,600 --> 00:02:40,960\nAnd I'm going to be anti-viral at all. Inhibits viral protease, that's HIV and HCV drug classes.\n\n22\n00:02:44,240 --> 00:02:46,660\nLike indenivir, that's a retroviral assembly.\n\n23\n00:02:55,100 --> 00:02:57,000\nInfluenza A is the blocks of viral encoding.\n\n24\n00:02:58,180 --> 00:03:03,420\nMantidine is a medication that does that. If you found this helpful, like and subscribe. We'll see\n\n25\n00:03:03,420 --> 00:03:03,860\nyou in the next video.\n\n",
+  "duration": 0,
+  "language": "en"
+}

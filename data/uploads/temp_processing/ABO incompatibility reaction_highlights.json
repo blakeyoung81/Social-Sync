@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "highlights": [
+    {
+      "title": "Emergency Scenario Introduction",
+      "description": "Sets the stage for understanding ABO incompatibility.",
+      "startTime": 0,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Signs of Acute Hemolytic Reaction",
+      "description": "Identifies critical symptoms like low blood pressure and brown urine.",
+      "startTime": 30,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Mechanism of Reaction Explained",
+      "description": "Details the immune response and complement system involvement.",
+      "startTime": 60,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Key Takeaway for Clinicians",
+      "description": "Emphasizes immediate actions to take during a transfusion reaction.",
+      "startTime": 90,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Differentiating from Other Reactions",
+      "description": "Clarifies differences between ABO mismatch and other reactions.",
+      "startTime": 120,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Conclusion and Call to Action",
+      "description": "Encourages viewers to like, subscribe, and learn more.",
+      "startTime": 150,
+      "endTime": null,
+      "importance": "low"
+    }
+  ],
+  "totalHighlights": 6,
+  "model": "gpt-4o-mini"
+}

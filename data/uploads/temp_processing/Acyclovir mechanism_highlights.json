@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "highlights": [
+    {
+      "title": "Introduction to Acyclovir",
+      "description": "Overview of acyclovir as a treatment for HSV.",
+      "startTime": 0,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Mechanism of Action",
+      "description": "Acyclovir's conversion and DNA chain termination.",
+      "startTime": 20,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Key Symptoms of HSV",
+      "description": "Identifying painful vesicles and genital ulcers.",
+      "startTime": 50,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Thymidine Kinase Importance",
+      "description": "Role of viral thymidine kinase in acyclovir activation.",
+      "startTime": 70,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Clinical Practice Question",
+      "description": "Example case to apply knowledge of HSV treatment.",
+      "startTime": 100,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Acyclovir and Immune Response",
+      "description": "Acyclovir's role in boosting immune response.",
+      "startTime": 130,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Conclusion and Call to Action",
+      "description": "Encouragement to like and subscribe for more content.",
+      "startTime": 160,
+      "endTime": null,
+      "importance": "low"
+    }
+  ],
+  "totalHighlights": 7,
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,56 @@
+[Script Info]
+Title: Auto-generated ASS file
+ScriptType: v4.00+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,00:00:01.28,00:00:02.91,Default,,0,0,0,,We have a newborn; he's going to defend
+Dialogue: 0,00:00:02.91,00:00:04.12,Default,,0,0,0,,his anchoring fibrils.
+Dialogue: 0,00:00:04.12,00:00:05.44,Default,,0,0,0,,There's going to be a type VII collagen.
+Dialogue: 0,00:00:05.44,00:00:07.28,Default,,0,0,0,,And they're going to ask you, "Hey, what's the skin finding?"
+Dialogue: 0,00:00:07.28,00:00:08.19,Default,,0,0,0,,The answer is going to be blisters.
+Dialogue: 0,00:00:08.19,00:00:09.75,Default,,0,0,0,,So anchoring fibers should make you think
+Dialogue: 0,00:00:09.75,00:00:10.72,Default,,0,0,0,,of the hemidesmosomes.
+Dialogue: 0,00:00:10.72,00:00:12.40,Default,,0,0,0,,I don't know why, but I like to think of a little ladder.
+Dialogue: 0,00:00:12.40,00:00:13.72,Default,,0,0,0,,You know, the ladder kind of looks like this
+Dialogue: 0,00:00:13.72,00:00:15.20,Default,,0,0,0,,and this looks like an "H."
+Dialogue: 0,00:00:15.20,00:00:17.16,Default,,0,0,0,,And I like to think of this, at the very bottom,
+Dialogue: 0,00:00:17.16,00:00:18.00,Default,,0,0,0,,as an anchor.
+Dialogue: 0,00:00:18.00,00:00:19.55,Default,,0,0,0,,It'll tether your basal keratinocytes
+Dialogue: 0,00:00:19.55,00:00:20.76,Default,,0,0,0,,of the epidermis to the dermis.
+Dialogue: 0,00:00:20.76,00:00:22.12,Default,,0,0,0,,There's your "H," your hemidesmosome.
+Dialogue: 0,00:00:22.12,00:00:23.64,Default,,0,0,0,,And that's going to be a type VII collagen.
+Dialogue: 0,00:00:23.64,00:00:25.44,Default,,0,0,0,,And so the epidermis will separate from the dermis
+Dialogue: 0,00:00:25.44,00:00:26.28,Default,,0,0,0,,and you get a blister.
+Dialogue: 0,00:00:26.28,00:00:27.88,Default,,0,0,0,,If you don't have that anchoring, you don't have that.
+Dialogue: 0,00:00:27.88,00:00:29.35,Default,,0,0,0,,Then that's what you get: mechanical fragility
+Dialogue: 0,00:00:29.35,00:00:30.96,Default,,0,0,0,,of that dermal epidermal junction.
+Dialogue: 0,00:00:30.96,00:00:32.28,Default,,0,0,0,,Some trap answers that you might see
+Dialogue: 0,00:00:32.28,00:00:33.84,Default,,0,0,0,,would be like a rash for that.
+Dialogue: 0,00:00:33.84,00:00:36.24,Default,,0,0,0,,You think of, like, Job's syndrome or atopic dermatitis,
+Dialogue: 0,00:00:36.24,00:00:37.28,Default,,0,0,0,,maybe even West Cod Algae.
+Dialogue: 0,00:00:37.28,00:00:38.71,Default,,0,0,0,,So that would be like your red patches,
+Dialogue: 0,00:00:38.71,00:00:40.56,Default,,0,0,0,,not your blisters from structural weakness.
+Dialogue: 0,00:00:40.56,00:00:42.16,Default,,0,0,0,,There would also be no vesicle rupture.
+Dialogue: 0,00:00:42.16,00:00:44.68,Default,,0,0,0,,Not easy bruising that would make you think of, like, scurvy,
+Dialogue: 0,00:00:44.68,00:00:45.76,Default,,0,0,0,,vitamin C deficiency.
+Dialogue: 0,00:00:45.76,00:00:48.32,Default,,0,0,0,,They could say keratodermas or ichthyosis.
+Dialogue: 0,00:00:48.32,00:00:50.60,Default,,0,0,0,,"Ichthy" makes you think of a fish, a little like fish skin.
+Dialogue: 0,00:00:50.60,00:00:51.68,Default,,0,0,0,,That's going to be your thickened skin
+Dialogue: 0,00:00:51.68,00:00:53.24,Default,,0,0,0,,that's due to this straight-up stratum corneum buildup.
+Dialogue: 0,00:00:53.24,00:00:54.84,Default,,0,0,0,,So that's just a different disease: ulcers.
+Dialogue: 0,00:00:54.84,00:00:57.40,Default,,0,0,0,,That would be full-thickness loss of your epidermis
+Dialogue: 0,00:00:57.40,00:00:58.56,Default,,0,0,0,,that exposes the dermis.
+Dialogue: 0,00:00:58.56,00:01:00.60,Default,,0,0,0,,So you'd see that in, like, lupus, for instance,
+Dialogue: 0,00:01:00.60,00:01:01.88,Default,,0,0,0,,but this is not that.
+Dialogue: 0,00:01:01.88,00:01:03.84,Default,,0,0,0,,We're looking at a structural defect here.
+Dialogue: 0,00:01:03.84,00:01:06.52,Default,,0,0,0,,So epidermolysis bullosa dystrophica
+Dialogue: 0,00:01:06.52,00:01:08.20,Default,,0,0,0,,is going to be a type VII collagen defect
+Dialogue: 0,00:01:08.20,00:01:11.04,Default,,0,0,0,,causing your blisters, especially through trauma or friction.
+Dialogue: 0,00:01:11.04,00:01:13.40,Default,,0,0,0,,Diagnosed on skin biopsy with immunofluorescence.
+Dialogue: 0,00:01:13.40,00:01:14.84,Default,,0,0,0,,Here's your educational pearl for the day.
+Dialogue: 0,00:01:14.84,00:01:16.43,Default,,0,0,0,,We'll see you guys in the next video. ```

@@ -1,0 +1,3876 @@
+{
+  "success": true,
+  "segments": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 4.4,
+      "startTime": "00:00:00,000",
+      "endTime": "00:00:04,400",
+      "text": "What are all of the drugs and associations that you need to know with ototoxicity on step one?",
+      "confidence": -0.24690769740513394,
+      "words": [
+        {
+          "text": " What",
+          "start": 0,
+          "end": 0.28,
+          "confidence": 0.7679775357246399
+        },
+        {
+          "text": " are",
+          "start": 0.28,
+          "end": 0.46,
+          "confidence": 0.9926371574401855
+        },
+        {
+          "text": " all",
+          "start": 0.46,
+          "end": 0.66,
+          "confidence": 0.9810765981674194
+        },
+        {
+          "text": " of",
+          "start": 0.66,
+          "end": 0.78,
+          "confidence": 0.6257774233818054
+        },
+        {
+          "text": " the",
+          "start": 0.78,
+          "end": 0.82,
+          "confidence": 0.9956563711166382
+        },
+        {
+          "text": " drugs",
+          "start": 0.82,
+          "end": 1.04,
+          "confidence": 0.9907773733139038
+        },
+        {
+          "text": " and",
+          "start": 1.04,
+          "end": 1.52,
+          "confidence": 0.9928511381149292
+        },
+        {
+          "text": " associations",
+          "start": 1.52,
+          "end": 1.78,
+          "confidence": 0.9929012060165405
+        },
+        {
+          "text": " that",
+          "start": 1.78,
+          "end": 2.22,
+          "confidence": 0.9746323227882385
+        },
+        {
+          "text": " you",
+          "start": 2.22,
+          "end": 2.34,
+          "confidence": 0.9980814456939697
+        },
+        {
+          "text": " need",
+          "start": 2.34,
+          "end": 2.44,
+          "confidence": 0.9983835220336914
+        },
+        {
+          "text": " to",
+          "start": 2.44,
+          "end": 2.56,
+          "confidence": 0.9989553689956665
+        },
+        {
+          "text": " know",
+          "start": 2.56,
+          "end": 2.74,
+          "confidence": 0.9982433319091797
+        },
+        {
+          "text": " with",
+          "start": 2.74,
+          "end": 3.04,
+          "confidence": 0.9905845522880554
+        },
+        {
+          "text": " ototoxicity",
+          "start": 3.04,
+          "end": 3.7,
+          "confidence": 0.9366921633481979
+        },
+        {
+          "text": " on",
+          "start": 3.7,
+          "end": 3.98,
+          "confidence": 0.9839443564414978
+        },
+        {
+          "text": " step",
+          "start": 3.98,
+          "end": 4.14,
+          "confidence": 0.8796668648719788
+        },
+        {
+          "text": " one?",
+          "start": 4.14,
+          "end": 4.4,
+          "confidence": 0.8609592914581299
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 4.66,
+      "end": 12.84,
+      "startTime": "00:00:04,660",
+      "endTime": "00:00:12,840",
+      "text": "So the first one is vancomycin. So that inhibits cell wall",
+      "confidence": -0.24690769740513394,
+      "words": [
+        {
+          "text": " So",
+          "start": 4.66,
+          "end": 4.66,
+          "confidence": 0.9192531704902649
+        },
+        {
+          "text": " the",
+          "start": 4.66,
+          "end": 4.76,
+          "confidence": 0.8877245187759399
+        },
+        {
+          "text": " first",
+          "start": 4.76,
+          "end": 4.94,
+          "confidence": 0.9977595806121826
+        },
+        {
+          "text": " one",
+          "start": 4.94,
+          "end": 5.22,
+          "confidence": 0.9972808361053467
+        },
+        {
+          "text": " is",
+          "start": 5.22,
+          "end": 9.14,
+          "confidence": 0.7789703607559204
+        },
+        {
+          "text": " vancomycin.",
+          "start": 9.14,
+          "end": 9.68,
+          "confidence": 0.7859633192420006
+        },
+        {
+          "text": " So",
+          "start": 11.38,
+          "end": 11.56,
+          "confidence": 0.9695483446121216
+        },
+        {
+          "text": " that",
+          "start": 11.56,
+          "end": 11.76,
+          "confidence": 0.9789863228797913
+        },
+        {
+          "text": " inhibits",
+          "start": 11.76,
+          "end": 12.34,
+          "confidence": 0.9975320100784302
+        },
+        {
+          "text": " cell",
+          "start": 12.34,
+          "end": 12.64,
+          "confidence": 0.9965329170227051
+        },
+        {
+          "text": " wall",
+          "start": 12.64,
+          "end": 12.84,
+          "confidence": 0.9550235867500305
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 12.84,
+      "end": 15.58,
+      "startTime": "00:00:12,840",
+      "endTime": "00:00:15,580",
+      "text": "peptoglide conformation by binding the D-ala D-ala",
+      "confidence": -0.24690769740513394,
+      "words": [
+        {
+          "text": " peptoglide",
+          "start": 12.84,
+          "end": 13.44,
+          "confidence": 0.44169753044843674
+        },
+        {
+          "text": " conformation",
+          "start": 13.44,
+          "end": 14,
+          "confidence": 0.6446501463651657
+        },
+        {
+          "text": " by",
+          "start": 14,
+          "end": 14.18,
+          "confidence": 0.9895153045654297
+        },
+        {
+          "text": " binding",
+          "start": 14.18,
+          "end": 14.42,
+          "confidence": 0.9614207744598389
+        },
+        {
+          "text": " the",
+          "start": 14.42,
+          "end": 14.56,
+          "confidence": 0.9847145676612854
+        },
+        {
+          "text": " D",
+          "start": 14.56,
+          "end": 14.74,
+          "confidence": 0.683855414390564
+        },
+        {
+          "text": "-ala",
+          "start": 14.74,
+          "end": 14.96,
+          "confidence": 0.2997106462717056
+        },
+        {
+          "text": " D",
+          "start": 14.96,
+          "end": 15.22,
+          "confidence": 0.4760483503341675
+        },
+        {
+          "text": "-ala",
+          "start": 15.22,
+          "end": 15.58,
+          "confidence": 0.936822235584259
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 21.279999999999998,
+      "end": 22.8,
+      "startTime": "00:00:21,280",
+      "endTime": "00:00:22,800",
+      "text": "portion of the cell wall precursors",
+      "confidence": -0.24690769740513394,
+      "words": [
+        {
+          "text": " portion",
+          "start": 21.279999999999998,
+          "end": 21.72,
+          "confidence": 0.5766898989677429
+        },
+        {
+          "text": " of",
+          "start": 21.72,
+          "end": 21.9,
+          "confidence": 0.9970977306365967
+        },
+        {
+          "text": " the",
+          "start": 21.9,
+          "end": 21.96,
+          "confidence": 0.9962016940116882
+        },
+        {
+          "text": " cell",
+          "start": 21.96,
+          "end": 22.1,
+          "confidence": 0.9904217720031738
+        },
+        {
+          "text": " wall",
+          "start": 22.1,
+          "end": 22.22,
+          "confidence": 0.976290225982666
+        },
+        {
+          "text": " precursors",
+          "start": 22.22,
+          "end": 22.8,
+          "confidence": 0.990922212600708
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "start": 25.12,
+      "end": 31.12,
+      "startTime": "00:00:25,120",
+      "endTime": "00:00:31,120",
+      "text": "and this can cause your nephrotoxicity and also your ototoxicity",
+      "confidence": -0.2289698918660482,
+      "words": [
+        {
+          "text": " and",
+          "start": 25.12,
+          "end": 25.68,
+          "confidence": 0.15470829606056213
+        },
+        {
+          "text": " this",
+          "start": 25.68,
+          "end": 25.82,
+          "confidence": 0.7532467842102051
+        },
+        {
+          "text": " can",
+          "start": 25.82,
+          "end": 25.96,
+          "confidence": 0.9761036038398743
+        },
+        {
+          "text": " cause",
+          "start": 25.96,
+          "end": 26.24,
+          "confidence": 0.9901062846183777
+        },
+        {
+          "text": " your",
+          "start": 26.24,
+          "end": 26.4,
+          "confidence": 0.9391800761222839
+        },
+        {
+          "text": " nephrotoxicity",
+          "start": 26.4,
+          "end": 27.46,
+          "confidence": 0.9259924530982971
+        },
+        {
+          "text": " and",
+          "start": 27.46,
+          "end": 29.84,
+          "confidence": 0.7232465744018555
+        },
+        {
+          "text": " also",
+          "start": 29.84,
+          "end": 30.12,
+          "confidence": 0.9895390868186951
+        },
+        {
+          "text": " your",
+          "start": 30.12,
+          "end": 30.32,
+          "confidence": 0.9712119102478027
+        },
+        {
+          "text": " ototoxicity",
+          "start": 30.32,
+          "end": 31.12,
+          "confidence": 0.9750608056783676
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "start": 34.22,
+      "end": 37.42,
+      "startTime": "00:00:34,220",
+      "endTime": "00:00:37,420",
+      "text": "and amino glycosides also causes these and you can remember that by saying",
+      "confidence": -0.2289698918660482,
+      "words": [
+        {
+          "text": " and",
+          "start": 34.22,
+          "end": 34.78,
+          "confidence": 0.29807448387145996
+        },
+        {
+          "text": " amino",
+          "start": 34.78,
+          "end": 34.98,
+          "confidence": 0.29599571228027344
+        },
+        {
+          "text": " glycosides",
+          "start": 34.98,
+          "end": 35.48,
+          "confidence": 0.9039885997772217
+        },
+        {
+          "text": " also",
+          "start": 35.48,
+          "end": 35.78,
+          "confidence": 0.9841032028198242
+        },
+        {
+          "text": " causes",
+          "start": 35.78,
+          "end": 36.18,
+          "confidence": 0.8982369303703308
+        },
+        {
+          "text": " these",
+          "start": 36.18,
+          "end": 36.42,
+          "confidence": 0.9799387454986572
+        },
+        {
+          "text": " and",
+          "start": 36.42,
+          "end": 36.56,
+          "confidence": 0.4847464859485626
+        },
+        {
+          "text": " you",
+          "start": 36.56,
+          "end": 36.64,
+          "confidence": 0.9718276262283325
+        },
+        {
+          "text": " can",
+          "start": 36.64,
+          "end": 36.66,
+          "confidence": 0.9711067080497742
+        },
+        {
+          "text": " remember",
+          "start": 36.66,
+          "end": 36.84,
+          "confidence": 0.9965967535972595
+        },
+        {
+          "text": " that",
+          "start": 36.84,
+          "end": 37,
+          "confidence": 0.989072322845459
+        },
+        {
+          "text": " by",
+          "start": 37,
+          "end": 37.16,
+          "confidence": 0.9912643432617188
+        },
+        {
+          "text": " saying",
+          "start": 37.16,
+          "end": 37.42,
+          "confidence": 0.9979538917541504
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "start": 37.42,
+      "end": 44.82,
+      "startTime": "00:00:37,420",
+      "endTime": "00:00:44,820",
+      "text": "amin-no-glycosides, nephrotoxic, ototoxic. Also this can cause thrombophlebitis,",
+      "confidence": -0.2289698918660482,
+      "words": [
+        {
+          "text": " amin",
+          "start": 37.42,
+          "end": 38.06,
+          "confidence": 0.3668331503868103
+        },
+        {
+          "text": "-no",
+          "start": 38.06,
+          "end": 38.82,
+          "confidence": 0.3515205681324005
+        },
+        {
+          "text": "-glycosides,",
+          "start": 38.82,
+          "end": 39.88,
+          "confidence": 0.8776598453521729
+        },
+        {
+          "text": " nephrotoxic,",
+          "start": 39.96,
+          "end": 40.62,
+          "confidence": 0.988435173034668
+        },
+        {
+          "text": " ototoxic.",
+          "start": 40.7,
+          "end": 41.4,
+          "confidence": 0.9947313517332077
+        },
+        {
+          "text": " Also",
+          "start": 42.58,
+          "end": 43.14,
+          "confidence": 0.9682303071022034
+        },
+        {
+          "text": " this",
+          "start": 43.14,
+          "end": 43.3,
+          "confidence": 0.7145663499832153
+        },
+        {
+          "text": " can",
+          "start": 43.3,
+          "end": 43.42,
+          "confidence": 0.9761263132095337
+        },
+        {
+          "text": " cause",
+          "start": 43.42,
+          "end": 43.62,
+          "confidence": 0.992388129234314
+        },
+        {
+          "text": " thrombophlebitis,",
+          "start": 43.62,
+          "end": 44.82,
+          "confidence": 0.8150216490030289
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "start": 45.38,
+      "end": 48.34,
+      "startTime": "00:00:45,380",
+      "endTime": "00:00:48,340",
+      "text": "diffuse flushing and that's what you need to know about vinc.",
+      "confidence": -0.1570302944372196,
+      "words": [
+        {
+          "text": " diffuse",
+          "start": 45.38,
+          "end": 45.92,
+          "confidence": 0.007853906601667404
+        },
+        {
+          "text": " flushing",
+          "start": 45.92,
+          "end": 46.4,
+          "confidence": 0.9669521152973175
+        },
+        {
+          "text": " and",
+          "start": 46.4,
+          "end": 47.1,
+          "confidence": 0.40590569376945496
+        },
+        {
+          "text": " that's",
+          "start": 47.1,
+          "end": 47.36,
+          "confidence": 0.9886486828327179
+        },
+        {
+          "text": " what",
+          "start": 47.36,
+          "end": 47.6,
+          "confidence": 0.9113022089004517
+        },
+        {
+          "text": " you",
+          "start": 47.6,
+          "end": 47.68,
+          "confidence": 0.9688401222229004
+        },
+        {
+          "text": " need",
+          "start": 47.68,
+          "end": 47.76,
+          "confidence": 0.9979540109634399
+        },
+        {
+          "text": " to",
+          "start": 47.76,
+          "end": 47.84,
+          "confidence": 0.9982283711433411
+        },
+        {
+          "text": " know",
+          "start": 47.84,
+          "end": 47.94,
+          "confidence": 0.9952588677406311
+        },
+        {
+          "text": " about",
+          "start": 47.94,
+          "end": 48.12,
+          "confidence": 0.9958474040031433
+        },
+        {
+          "text": " vinc.",
+          "start": 48.12,
+          "end": 48.34,
+          "confidence": 0.24496544152498245
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "start": 51.16,
+      "end": 55.54,
+      "startTime": "00:00:51,160",
+      "endTime": "00:00:55,540",
+      "text": "Now ototoxicity is also as we mentioned associated with amin-no, hence the NO,",
+      "confidence": -0.1570302944372196,
+      "words": [
+        {
+          "text": " Now",
+          "start": 51.16,
+          "end": 51.32,
+          "confidence": 0.9325718879699707
+        },
+        {
+          "text": " ototoxicity",
+          "start": 51.32,
+          "end": 52.2,
+          "confidence": 0.8100720942020416
+        },
+        {
+          "text": " is",
+          "start": 52.2,
+          "end": 52.36,
+          "confidence": 0.9896429777145386
+        },
+        {
+          "text": " also",
+          "start": 52.36,
+          "end": 52.72,
+          "confidence": 0.9974219799041748
+        },
+        {
+          "text": " as",
+          "start": 52.72,
+          "end": 52.94,
+          "confidence": 0.4541972279548645
+        },
+        {
+          "text": " we",
+          "start": 52.94,
+          "end": 53.04,
+          "confidence": 0.872814416885376
+        },
+        {
+          "text": " mentioned",
+          "start": 53.04,
+          "end": 53.32,
+          "confidence": 0.9854398369789124
+        },
+        {
+          "text": " associated",
+          "start": 53.32,
+          "end": 53.74,
+          "confidence": 0.9661937355995178
+        },
+        {
+          "text": " with",
+          "start": 53.74,
+          "end": 54.02,
+          "confidence": 0.9992893934249878
+        },
+        {
+          "text": " amin",
+          "start": 54.02,
+          "end": 54.32,
+          "confidence": 0.34447959810495377
+        },
+        {
+          "text": "-no,",
+          "start": 54.32,
+          "end": 54.66,
+          "confidence": 0.08012393582612276
+        },
+        {
+          "text": " hence",
+          "start": 54.9,
+          "end": 55.04,
+          "confidence": 0.9934753775596619
+        },
+        {
+          "text": " the",
+          "start": 55.04,
+          "end": 55.22,
+          "confidence": 0.9867467880249023
+        },
+        {
+          "text": " NO,",
+          "start": 55.22,
+          "end": 55.54,
+          "confidence": 0.6218407154083252
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "start": 56.1,
+      "end": 62,
+      "startTime": "00:00:56,100",
+      "endTime": "00:01:02,000",
+      "text": "glycosides especially in loop diuretics. Aminoglycosides can cause nephrotoxicity,",
+      "confidence": -0.1570302944372196,
+      "words": [
+        {
+          "text": " glycosides",
+          "start": 56.1,
+          "end": 56.64,
+          "confidence": 0.9240412712097168
+        },
+        {
+          "text": " especially",
+          "start": 56.64,
+          "end": 56.96,
+          "confidence": 0.33709606528282166
+        },
+        {
+          "text": " in",
+          "start": 56.96,
+          "end": 57.14,
+          "confidence": 0.9016947746276855
+        },
+        {
+          "text": " loop",
+          "start": 57.14,
+          "end": 57.28,
+          "confidence": 0.8930643796920776
+        },
+        {
+          "text": " diuretics.",
+          "start": 57.28,
+          "end": 57.84,
+          "confidence": 0.9731192588806152
+        },
+        {
+          "text": " Aminoglycosides",
+          "start": 59.34,
+          "end": 59.88,
+          "confidence": 0.9395332217216492
+        },
+        {
+          "text": " can",
+          "start": 59.88,
+          "end": 61.04,
+          "confidence": 0.9884951710700989
+        },
+        {
+          "text": " cause",
+          "start": 61.04,
+          "end": 61.24,
+          "confidence": 0.9980643391609192
+        },
+        {
+          "text": " nephrotoxicity,",
+          "start": 61.24,
+          "end": 62,
+          "confidence": 0.9688931345939636
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "start": 62.42,
+      "end": 64.54,
+      "startTime": "00:01:02,420",
+      "endTime": "00:01:04,540",
+      "text": "neuromuscular blockade and also teratogenicity.",
+      "confidence": -0.1570302944372196,
+      "words": [
+        {
+          "text": " neuromuscular",
+          "start": 62.42,
+          "end": 62.86,
+          "confidence": 0.9825299233198166
+        },
+        {
+          "text": " blockade",
+          "start": 62.86,
+          "end": 63.38,
+          "confidence": 0.9920682609081268
+        },
+        {
+          "text": " and",
+          "start": 63.38,
+          "end": 63.54,
+          "confidence": 0.4337904155254364
+        },
+        {
+          "text": " also",
+          "start": 63.54,
+          "end": 63.74,
+          "confidence": 0.991999089717865
+        },
+        {
+          "text": " teratogenicity.",
+          "start": 63.74,
+          "end": 64.54,
+          "confidence": 0.7780821919441223
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "start": 66.72000000000001,
+      "end": 69.78,
+      "startTime": "00:01:06,720",
+      "endTime": "00:01:09,780",
+      "text": "Now there are also some antimicrobials that you need to avoid in pregnancy",
+      "confidence": -0.1570302944372196,
+      "words": [
+        {
+          "text": " Now",
+          "start": 66.72000000000001,
+          "end": 67.26,
+          "confidence": 0.9764311909675598
+        },
+        {
+          "text": " there",
+          "start": 67.26,
+          "end": 67.38,
+          "confidence": 0.9323943257331848
+        },
+        {
+          "text": " are",
+          "start": 67.38,
+          "end": 67.46,
+          "confidence": 0.9771170020103455
+        },
+        {
+          "text": " also",
+          "start": 67.46,
+          "end": 67.64,
+          "confidence": 0.996239423751831
+        },
+        {
+          "text": " some",
+          "start": 67.64,
+          "end": 67.84,
+          "confidence": 0.9991410970687866
+        },
+        {
+          "text": " antimicrobials",
+          "start": 67.84,
+          "end": 68.52,
+          "confidence": 0.9860321283340454
+        },
+        {
+          "text": " that",
+          "start": 68.52,
+          "end": 68.66,
+          "confidence": 0.7879772186279297
+        },
+        {
+          "text": " you",
+          "start": 68.66,
+          "end": 68.72,
+          "confidence": 0.8967115879058838
+        },
+        {
+          "text": " need",
+          "start": 68.72,
+          "end": 68.8,
+          "confidence": 0.9983605742454529
+        },
+        {
+          "text": " to",
+          "start": 68.8,
+          "end": 68.94,
+          "confidence": 0.9997702240943909
+        },
+        {
+          "text": " avoid",
+          "start": 68.94,
+          "end": 69.22,
+          "confidence": 0.999140739440918
+        },
+        {
+          "text": " in",
+          "start": 69.22,
+          "end": 69.4,
+          "confidence": 0.9983306527137756
+        },
+        {
+          "text": " pregnancy",
+          "start": 69.4,
+          "end": 69.78,
+          "confidence": 0.9969074130058289
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "start": 69.78,
+      "end": 74.68,
+      "startTime": "00:01:09,780",
+      "endTime": "00:01:14,680",
+      "text": "and on that list is amino glycosides and why? Because of that ototoxicity.",
+      "confidence": -0.14531675974527994,
+      "words": [
+        {
+          "text": " and",
+          "start": 69.78,
+          "end": 70.34,
+          "confidence": 0.06362218409776688
+        },
+        {
+          "text": " on",
+          "start": 70.34,
+          "end": 71.44,
+          "confidence": 0.3649500012397766
+        },
+        {
+          "text": " that",
+          "start": 71.44,
+          "end": 71.62,
+          "confidence": 0.9882797002792358
+        },
+        {
+          "text": " list",
+          "start": 71.62,
+          "end": 71.88,
+          "confidence": 0.9973057508468628
+        },
+        {
+          "text": " is",
+          "start": 71.88,
+          "end": 72.12,
+          "confidence": 0.9770383238792419
+        },
+        {
+          "text": " amino",
+          "start": 72.12,
+          "end": 72.28,
+          "confidence": 0.2489345222711563
+        },
+        {
+          "text": " glycosides",
+          "start": 72.28,
+          "end": 72.86,
+          "confidence": 0.8578170339266459
+        },
+        {
+          "text": " and",
+          "start": 72.86,
+          "end": 73.1,
+          "confidence": 0.4829835593700409
+        },
+        {
+          "text": " why?",
+          "start": 73.1,
+          "end": 73.4,
+          "confidence": 0.9859759211540222
+        },
+        {
+          "text": " Because",
+          "start": 73.64,
+          "end": 73.74,
+          "confidence": 0.8245624899864197
+        },
+        {
+          "text": " of",
+          "start": 73.74,
+          "end": 73.9,
+          "confidence": 0.9680743217468262
+        },
+        {
+          "text": " that",
+          "start": 73.9,
+          "end": 73.98,
+          "confidence": 0.9378165006637573
+        },
+        {
+          "text": " ototoxicity.",
+          "start": 73.98,
+          "end": 74.68,
+          "confidence": 0.9087434262037277
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "start": 74.9,
+      "end": 79.68,
+      "startTime": "00:01:14,900",
+      "endTime": "00:01:19,680",
+      "text": "Because you're a mean person amino glycoside if you punch a baby in the ear.",
+      "confidence": -0.14531675974527994,
+      "words": [
+        {
+          "text": " Because",
+          "start": 74.9,
+          "end": 75.18,
+          "confidence": 0.8071277737617493
+        },
+        {
+          "text": " you're",
+          "start": 75.18,
+          "end": 75.42,
+          "confidence": 0.9225229322910309
+        },
+        {
+          "text": " a",
+          "start": 75.42,
+          "end": 75.52,
+          "confidence": 0.7254037261009216
+        },
+        {
+          "text": " mean",
+          "start": 75.52,
+          "end": 75.7,
+          "confidence": 0.98052579164505
+        },
+        {
+          "text": " person",
+          "start": 75.7,
+          "end": 76.12,
+          "confidence": 0.9894954562187195
+        },
+        {
+          "text": " amino",
+          "start": 76.12,
+          "end": 77.22,
+          "confidence": 0.18296000361442566
+        },
+        {
+          "text": " glycoside",
+          "start": 77.22,
+          "end": 77.9,
+          "confidence": 0.9786728620529175
+        },
+        {
+          "text": " if",
+          "start": 77.9,
+          "end": 78.08,
+          "confidence": 0.8651089668273926
+        },
+        {
+          "text": " you",
+          "start": 78.08,
+          "end": 78.3,
+          "confidence": 0.9986945986747742
+        },
+        {
+          "text": " punch",
+          "start": 78.3,
+          "end": 78.86,
+          "confidence": 0.9857579469680786
+        },
+        {
+          "text": " a",
+          "start": 78.86,
+          "end": 79,
+          "confidence": 0.9267953038215637
+        },
+        {
+          "text": " baby",
+          "start": 79,
+          "end": 79.14,
+          "confidence": 0.9986559152603149
+        },
+        {
+          "text": " in",
+          "start": 79.14,
+          "end": 79.38,
+          "confidence": 0.9979054927825928
+        },
+        {
+          "text": " the",
+          "start": 79.38,
+          "end": 79.48,
+          "confidence": 0.9987213015556335
+        },
+        {
+          "text": " ear.",
+          "start": 79.48,
+          "end": 79.68,
+          "confidence": 0.991019070148468
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "start": 80.16,
+      "end": 83.26,
+      "startTime": "00:01:20,160",
+      "endTime": "00:01:23,260",
+      "text": "So ototoxicity, amino glycoside, watch out for that in pregnancy.",
+      "confidence": -0.14531675974527994,
+      "words": [
+        {
+          "text": " So",
+          "start": 80.16,
+          "end": 80.24,
+          "confidence": 0.9526571035385132
+        },
+        {
+          "text": " ototoxicity,",
+          "start": 80.24,
+          "end": 81.02,
+          "confidence": 0.9364969432353973
+        },
+        {
+          "text": " amino",
+          "start": 81.22,
+          "end": 81.36,
+          "confidence": 0.978131890296936
+        },
+        {
+          "text": " glycoside,",
+          "start": 81.36,
+          "end": 82,
+          "confidence": 0.9909262657165527
+        },
+        {
+          "text": " watch",
+          "start": 82.2,
+          "end": 82.38,
+          "confidence": 0.9924433827400208
+        },
+        {
+          "text": " out",
+          "start": 82.38,
+          "end": 82.56,
+          "confidence": 0.9982898831367493
+        },
+        {
+          "text": " for",
+          "start": 82.56,
+          "end": 82.62,
+          "confidence": 0.9992805123329163
+        },
+        {
+          "text": " that",
+          "start": 82.62,
+          "end": 82.8,
+          "confidence": 0.9993056058883667
+        },
+        {
+          "text": " in",
+          "start": 82.8,
+          "end": 82.98,
+          "confidence": 0.9922235608100891
+        },
+        {
+          "text": " pregnancy.",
+          "start": 82.98,
+          "end": 83.26,
+          "confidence": 0.9990068078041077
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "start": 84.64,
+      "end": 86.94,
+      "startTime": "00:01:24,640",
+      "endTime": "00:01:26,940",
+      "text": "Only five more associations. There are platinum.",
+      "confidence": -0.14531675974527994,
+      "words": [
+        {
+          "text": " Only",
+          "start": 84.64,
+          "end": 85.12,
+          "confidence": 0.9349992871284485
+        },
+        {
+          "text": " five",
+          "start": 85.12,
+          "end": 85.3,
+          "confidence": 0.8856880068778992
+        },
+        {
+          "text": " more",
+          "start": 85.3,
+          "end": 85.44,
+          "confidence": 0.9506314992904663
+        },
+        {
+          "text": " associations.",
+          "start": 85.44,
+          "end": 85.82,
+          "confidence": 0.9940762519836426
+        },
+        {
+          "text": " There",
+          "start": 86.38,
+          "end": 86.5,
+          "confidence": 0.9501811861991882
+        },
+        {
+          "text": " are",
+          "start": 86.5,
+          "end": 86.58,
+          "confidence": 0.9789774417877197
+        },
+        {
+          "text": " platinum.",
+          "start": 86.58,
+          "end": 86.94,
+          "confidence": 0.9158930778503418
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "start": 90.3,
+      "end": 94.28,
+      "startTime": "00:01:30,300",
+      "endTime": "00:01:34,280",
+      "text": "So there's some platinum compounds like cisplatin, carboplatin, the platins,",
+      "confidence": -0.14531675974527994,
+      "words": [
+        {
+          "text": " So",
+          "start": 90.3,
+          "end": 90.78,
+          "confidence": 0.8514035940170288
+        },
+        {
+          "text": " there's",
+          "start": 90.78,
+          "end": 90.94,
+          "confidence": 0.9692409038543701
+        },
+        {
+          "text": " some",
+          "start": 90.94,
+          "end": 91.02,
+          "confidence": 0.9568963646888733
+        },
+        {
+          "text": " platinum",
+          "start": 91.02,
+          "end": 91.28,
+          "confidence": 0.9897803068161011
+        },
+        {
+          "text": " compounds",
+          "start": 91.28,
+          "end": 91.82,
+          "confidence": 0.9992722868919373
+        },
+        {
+          "text": " like",
+          "start": 91.82,
+          "end": 92.26,
+          "confidence": 0.8716058731079102
+        },
+        {
+          "text": " cisplatin,",
+          "start": 92.26,
+          "end": 92.8,
+          "confidence": 0.8549619118372599
+        },
+        {
+          "text": " carboplatin,",
+          "start": 92.96,
+          "end": 93.58,
+          "confidence": 0.9029170125722885
+        },
+        {
+          "text": " the",
+          "start": 93.7,
+          "end": 93.72,
+          "confidence": 0.9707947373390198
+        },
+        {
+          "text": " platins,",
+          "start": 93.72,
+          "end": 94.28,
+          "confidence": 0.9387498497962952
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "start": 94.52,
+      "end": 97.92,
+      "startTime": "00:01:34,520",
+      "endTime": "00:01:37,920",
+      "text": "platinum platins and these guys can also be nephrotoxic",
+      "confidence": -0.14531675974527994,
+      "words": [
+        {
+          "text": " platinum",
+          "start": 94.52,
+          "end": 94.82,
+          "confidence": 0.9357590079307556
+        },
+        {
+          "text": " platins",
+          "start": 94.82,
+          "end": 95.42,
+          "confidence": 0.7825899720191956
+        },
+        {
+          "text": " and",
+          "start": 95.42,
+          "end": 96,
+          "confidence": 0.19266974925994873
+        },
+        {
+          "text": " these",
+          "start": 96,
+          "end": 96.12,
+          "confidence": 0.9984476566314697
+        },
+        {
+          "text": " guys",
+          "start": 96.12,
+          "end": 96.36,
+          "confidence": 0.9982971549034119
+        },
+        {
+          "text": " can",
+          "start": 96.36,
+          "end": 96.6,
+          "confidence": 0.9966482520103455
+        },
+        {
+          "text": " also",
+          "start": 96.6,
+          "end": 96.92,
+          "confidence": 0.38705912232398987
+        },
+        {
+          "text": " be",
+          "start": 96.92,
+          "end": 97.1,
+          "confidence": 0.9972388744354248
+        },
+        {
+          "text": " nephrotoxic",
+          "start": 97.1,
+          "end": 97.92,
+          "confidence": 0.9790358901023865
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "start": 97.92,
+      "end": 101,
+      "startTime": "00:01:37,920",
+      "endTime": "00:01:41,000",
+      "text": "and they can also be ototoxics. This is a very common kind of coupling here,",
+      "confidence": -0.16457493049054106,
+      "words": [
+        {
+          "text": " and",
+          "start": 97.92,
+          "end": 98.42,
+          "confidence": 0.33332496881484985
+        },
+        {
+          "text": " they",
+          "start": 98.42,
+          "end": 98.5,
+          "confidence": 0.946434736251831
+        },
+        {
+          "text": " can",
+          "start": 98.5,
+          "end": 98.6,
+          "confidence": 0.9818013310432434
+        },
+        {
+          "text": " also",
+          "start": 98.6,
+          "end": 98.74,
+          "confidence": 0.9919750094413757
+        },
+        {
+          "text": " be",
+          "start": 98.74,
+          "end": 98.86,
+          "confidence": 0.9960176348686218
+        },
+        {
+          "text": " ototoxics.",
+          "start": 98.86,
+          "end": 99.36,
+          "confidence": 0.8692190945148468
+        },
+        {
+          "text": " This",
+          "start": 99.38,
+          "end": 99.56,
+          "confidence": 0.7177426218986511
+        },
+        {
+          "text": " is",
+          "start": 99.56,
+          "end": 99.68,
+          "confidence": 0.9956690073013306
+        },
+        {
+          "text": " a",
+          "start": 99.68,
+          "end": 99.78,
+          "confidence": 0.9589712619781494
+        },
+        {
+          "text": " very",
+          "start": 99.78,
+          "end": 99.88,
+          "confidence": 0.9936344623565674
+        },
+        {
+          "text": " common",
+          "start": 99.88,
+          "end": 100.16,
+          "confidence": 0.9973053932189941
+        },
+        {
+          "text": " kind",
+          "start": 100.16,
+          "end": 100.38,
+          "confidence": 0.8704531788825989
+        },
+        {
+          "text": " of",
+          "start": 100.38,
+          "end": 100.46,
+          "confidence": 0.9983435869216919
+        },
+        {
+          "text": " coupling",
+          "start": 100.46,
+          "end": 100.76,
+          "confidence": 0.9949468970298767
+        },
+        {
+          "text": " here,",
+          "start": 100.76,
+          "end": 101,
+          "confidence": 0.9872272610664368
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "start": 101.12,
+      "end": 105.1,
+      "startTime": "00:01:41,120",
+      "endTime": "00:01:45,100",
+      "text": "nephrotoxic and ototoxic. That's you know, fecunis syndrome and you can prevent it with",
+      "confidence": -0.16457493049054106,
+      "words": [
+        {
+          "text": " nephrotoxic",
+          "start": 101.12,
+          "end": 101.7,
+          "confidence": 0.9734683871269226
+        },
+        {
+          "text": " and",
+          "start": 101.7,
+          "end": 101.78,
+          "confidence": 0.9911864399909973
+        },
+        {
+          "text": " ototoxic.",
+          "start": 101.78,
+          "end": 102.4,
+          "confidence": 0.9954611957073212
+        },
+        {
+          "text": " That's",
+          "start": 102.9,
+          "end": 103.04,
+          "confidence": 0.9688632786273956
+        },
+        {
+          "text": " you",
+          "start": 103.04,
+          "end": 103.12,
+          "confidence": 0.08484591543674469
+        },
+        {
+          "text": " know,",
+          "start": 103.12,
+          "end": 103.24,
+          "confidence": 0.9696654677391052
+        },
+        {
+          "text": " fecunis",
+          "start": 103.3,
+          "end": 103.6,
+          "confidence": 0.40574792586266994
+        },
+        {
+          "text": " syndrome",
+          "start": 103.6,
+          "end": 103.94,
+          "confidence": 0.8509132266044617
+        },
+        {
+          "text": " and",
+          "start": 103.94,
+          "end": 104.22,
+          "confidence": 0.5929377675056458
+        },
+        {
+          "text": " you",
+          "start": 104.22,
+          "end": 104.34,
+          "confidence": 0.9501892328262329
+        },
+        {
+          "text": " can",
+          "start": 104.34,
+          "end": 104.44,
+          "confidence": 0.7299280762672424
+        },
+        {
+          "text": " prevent",
+          "start": 104.44,
+          "end": 104.66,
+          "confidence": 0.9994433522224426
+        },
+        {
+          "text": " it",
+          "start": 104.66,
+          "end": 104.82,
+          "confidence": 0.9980536699295044
+        },
+        {
+          "text": " with",
+          "start": 104.82,
+          "end": 105.1,
+          "confidence": 0.9973069429397583
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "start": 106.72,
+      "end": 110.28,
+      "startTime": "00:01:46,720",
+      "endTime": "00:01:50,280",
+      "text": "amyfostine and also you have peripheral neuropathy that's associated with your platins.",
+      "confidence": -0.16457493049054106,
+      "words": [
+        {
+          "text": " amyfostine",
+          "start": 106.72,
+          "end": 107.2,
+          "confidence": 0.6127727448940277
+        },
+        {
+          "text": " and",
+          "start": 107.2,
+          "end": 107.32,
+          "confidence": 0.7172025442123413
+        },
+        {
+          "text": " also",
+          "start": 107.32,
+          "end": 107.62,
+          "confidence": 0.9848565459251404
+        },
+        {
+          "text": " you",
+          "start": 107.62,
+          "end": 107.88,
+          "confidence": 0.9211551547050476
+        },
+        {
+          "text": " have",
+          "start": 107.88,
+          "end": 108.02,
+          "confidence": 0.9976391792297363
+        },
+        {
+          "text": " peripheral",
+          "start": 108.02,
+          "end": 108.42,
+          "confidence": 0.9919135570526123
+        },
+        {
+          "text": " neuropathy",
+          "start": 108.42,
+          "end": 108.96,
+          "confidence": 0.994147260983785
+        },
+        {
+          "text": " that's",
+          "start": 108.96,
+          "end": 109.26,
+          "confidence": 0.9592515826225281
+        },
+        {
+          "text": " associated",
+          "start": 109.26,
+          "end": 109.5,
+          "confidence": 0.9990547299385071
+        },
+        {
+          "text": " with",
+          "start": 109.5,
+          "end": 109.78,
+          "confidence": 0.9994089603424072
+        },
+        {
+          "text": " your",
+          "start": 109.78,
+          "end": 109.9,
+          "confidence": 0.9952357411384583
+        },
+        {
+          "text": " platins.",
+          "start": 109.9,
+          "end": 110.28,
+          "confidence": 0.3005132768303156
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "start": 110.96,
+      "end": 115.62,
+      "startTime": "00:01:50,960",
+      "endTime": "00:01:55,620",
+      "text": "So peripheral neuropathy, you can remember the man who has the peripheral neuropathy here.",
+      "confidence": -0.16457493049054106,
+      "words": [
+        {
+          "text": " So",
+          "start": 110.96,
+          "end": 111.12,
+          "confidence": 0.919099748134613
+        },
+        {
+          "text": " peripheral",
+          "start": 111.12,
+          "end": 111.44,
+          "confidence": 0.9899893999099731
+        },
+        {
+          "text": " neuropathy,",
+          "start": 111.44,
+          "end": 112.04,
+          "confidence": 0.9972713192303976
+        },
+        {
+          "text": " you",
+          "start": 112.16,
+          "end": 112.2,
+          "confidence": 0.9884610176086426
+        },
+        {
+          "text": " can",
+          "start": 112.2,
+          "end": 112.26,
+          "confidence": 0.9945888519287109
+        },
+        {
+          "text": " remember",
+          "start": 112.26,
+          "end": 112.44,
+          "confidence": 0.9846305251121521
+        },
+        {
+          "text": " the",
+          "start": 112.44,
+          "end": 112.7,
+          "confidence": 0.9674363732337952
+        },
+        {
+          "text": " man",
+          "start": 112.7,
+          "end": 114.34,
+          "confidence": 0.4470154643058777
+        },
+        {
+          "text": " who",
+          "start": 114.34,
+          "end": 114.44,
+          "confidence": 0.9594296216964722
+        },
+        {
+          "text": " has",
+          "start": 114.44,
+          "end": 114.54,
+          "confidence": 0.9975488781929016
+        },
+        {
+          "text": " the",
+          "start": 114.54,
+          "end": 114.64,
+          "confidence": 0.990617573261261
+        },
+        {
+          "text": " peripheral",
+          "start": 114.64,
+          "end": 114.86,
+          "confidence": 0.9988481998443604
+        },
+        {
+          "text": " neuropathy",
+          "start": 114.86,
+          "end": 115.32,
+          "confidence": 0.9982652465502421
+        },
+        {
+          "text": " here.",
+          "start": 115.32,
+          "end": 115.62,
+          "confidence": 0.9950194358825684
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "start": 118.08,
+      "end": 125,
+      "startTime": "00:01:58,080",
+      "endTime": "00:02:05,000",
+      "text": "And so ototoxicity is associated with platinum compounds. So cisplatin, carboplatin",
+      "confidence": -0.16457493049054106,
+      "words": [
+        {
+          "text": " And",
+          "start": 118.08,
+          "end": 118.56,
+          "confidence": 0.9677460789680481
+        },
+        {
+          "text": " so",
+          "start": 118.56,
+          "end": 118.76,
+          "confidence": 0.9945631623268127
+        },
+        {
+          "text": " ototoxicity",
+          "start": 118.76,
+          "end": 119.54,
+          "confidence": 0.9624895453453064
+        },
+        {
+          "text": " is",
+          "start": 119.54,
+          "end": 120.18,
+          "confidence": 0.9963266253471375
+        },
+        {
+          "text": " associated",
+          "start": 120.18,
+          "end": 120.8,
+          "confidence": 0.9772637486457825
+        },
+        {
+          "text": " with",
+          "start": 120.8,
+          "end": 121.02,
+          "confidence": 0.9990328550338745
+        },
+        {
+          "text": " platinum",
+          "start": 121.02,
+          "end": 121.3,
+          "confidence": 0.8409523367881775
+        },
+        {
+          "text": " compounds.",
+          "start": 121.3,
+          "end": 121.8,
+          "confidence": 0.9993116855621338
+        },
+        {
+          "text": " So",
+          "start": 123.1,
+          "end": 123.58,
+          "confidence": 0.9916959404945374
+        },
+        {
+          "text": " cisplatin,",
+          "start": 123.58,
+          "end": 124.16,
+          "confidence": 0.8796412746111552
+        },
+        {
+          "text": " carboplatin",
+          "start": 124.4,
+          "end": 125,
+          "confidence": 0.8206321895122528
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "start": 126.02,
+      "end": 128.66,
+      "startTime": "00:02:06,020",
+      "endTime": "00:02:08,660",
+      "text": "and if you know what I'm referring to here, it is going to be",
+      "confidence": -0.1504765494925077,
+      "words": [
+        {
+          "text": " and",
+          "start": 126.02,
+          "end": 126.46,
+          "confidence": 0.0976095125079155
+        },
+        {
+          "text": " if",
+          "start": 126.46,
+          "end": 126.56,
+          "confidence": 0.5601272583007812
+        },
+        {
+          "text": " you",
+          "start": 126.56,
+          "end": 126.66,
+          "confidence": 0.9970869421958923
+        },
+        {
+          "text": " know",
+          "start": 126.66,
+          "end": 126.76,
+          "confidence": 0.9805934429168701
+        },
+        {
+          "text": " what",
+          "start": 126.76,
+          "end": 126.86,
+          "confidence": 0.9819779992103577
+        },
+        {
+          "text": " I'm",
+          "start": 126.86,
+          "end": 126.94,
+          "confidence": 0.9716157019138336
+        },
+        {
+          "text": " referring",
+          "start": 126.94,
+          "end": 127.16,
+          "confidence": 0.9967040419578552
+        },
+        {
+          "text": " to",
+          "start": 127.16,
+          "end": 127.38,
+          "confidence": 0.9941211342811584
+        },
+        {
+          "text": " here,",
+          "start": 127.38,
+          "end": 127.62,
+          "confidence": 0.984130322933197
+        },
+        {
+          "text": " it",
+          "start": 127.86,
+          "end": 127.86,
+          "confidence": 0.9771652221679688
+        },
+        {
+          "text": " is",
+          "start": 127.86,
+          "end": 128.06,
+          "confidence": 0.9898664951324463
+        },
+        {
+          "text": " going",
+          "start": 128.06,
+          "end": 128.22,
+          "confidence": 0.9944776296615601
+        },
+        {
+          "text": " to",
+          "start": 128.22,
+          "end": 128.38,
+          "confidence": 0.998842179775238
+        },
+        {
+          "text": " be",
+          "start": 128.38,
+          "end": 128.66,
+          "confidence": 0.9971897006034851
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "start": 132.66,
+      "end": 135.56,
+      "startTime": "00:02:12,660",
+      "endTime": "00:02:15,560",
+      "text": "cisplatin, carboplatin and then the arms here are going to be like vincristine.",
+      "confidence": -0.1504765494925077,
+      "words": [
+        {
+          "text": " cisplatin,",
+          "start": 132.66,
+          "end": 133.1,
+          "confidence": 0.7787556052207947
+        },
+        {
+          "text": " carboplatin",
+          "start": 133.1,
+          "end": 133.54,
+          "confidence": 0.8036994487047195
+        },
+        {
+          "text": " and",
+          "start": 133.54,
+          "end": 133.82,
+          "confidence": 0.260723352432251
+        },
+        {
+          "text": " then",
+          "start": 133.82,
+          "end": 133.92,
+          "confidence": 0.9353966116905212
+        },
+        {
+          "text": " the",
+          "start": 133.92,
+          "end": 134,
+          "confidence": 0.9934265613555908
+        },
+        {
+          "text": " arms",
+          "start": 134,
+          "end": 134.22,
+          "confidence": 0.7632092237472534
+        },
+        {
+          "text": " here",
+          "start": 134.22,
+          "end": 134.4,
+          "confidence": 0.9155588150024414
+        },
+        {
+          "text": " are",
+          "start": 134.4,
+          "end": 134.5,
+          "confidence": 0.930936872959137
+        },
+        {
+          "text": " going",
+          "start": 134.5,
+          "end": 134.56,
+          "confidence": 0.6974666118621826
+        },
+        {
+          "text": " to",
+          "start": 134.56,
+          "end": 134.6,
+          "confidence": 0.9977331161499023
+        },
+        {
+          "text": " be",
+          "start": 134.6,
+          "end": 134.72,
+          "confidence": 0.9970620274543762
+        },
+        {
+          "text": " like",
+          "start": 134.72,
+          "end": 134.86,
+          "confidence": 0.9495766162872314
+        },
+        {
+          "text": " vincristine.",
+          "start": 134.86,
+          "end": 135.56,
+          "confidence": 0.8323399126529694
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "start": 135.78,
+      "end": 138.86,
+      "startTime": "00:02:15,780",
+      "endTime": "00:02:18,860",
+      "text": "That's why they're in a V shape and so they're associated with peripheral neuropathy.",
+      "confidence": -0.1504765494925077,
+      "words": [
+        {
+          "text": " That's",
+          "start": 135.78,
+          "end": 136.14,
+          "confidence": 0.986192911863327
+        },
+        {
+          "text": " why",
+          "start": 136.14,
+          "end": 136.26,
+          "confidence": 0.9878717660903931
+        },
+        {
+          "text": " they're",
+          "start": 136.26,
+          "end": 136.34,
+          "confidence": 0.9884045422077179
+        },
+        {
+          "text": " in",
+          "start": 136.34,
+          "end": 136.44,
+          "confidence": 0.9896953105926514
+        },
+        {
+          "text": " a",
+          "start": 136.44,
+          "end": 136.48,
+          "confidence": 0.9656299352645874
+        },
+        {
+          "text": " V",
+          "start": 136.48,
+          "end": 136.62,
+          "confidence": 0.8407840132713318
+        },
+        {
+          "text": " shape",
+          "start": 136.62,
+          "end": 136.8,
+          "confidence": 0.8297203779220581
+        },
+        {
+          "text": " and",
+          "start": 136.8,
+          "end": 137.18,
+          "confidence": 0.5436096787452698
+        },
+        {
+          "text": " so",
+          "start": 137.18,
+          "end": 137.36,
+          "confidence": 0.9799808859825134
+        },
+        {
+          "text": " they're",
+          "start": 137.36,
+          "end": 137.64,
+          "confidence": 0.9684345722198486
+        },
+        {
+          "text": " associated",
+          "start": 137.64,
+          "end": 137.86,
+          "confidence": 0.9960896968841553
+        },
+        {
+          "text": " with",
+          "start": 137.86,
+          "end": 138.08,
+          "confidence": 0.9986447691917419
+        },
+        {
+          "text": " peripheral",
+          "start": 138.08,
+          "end": 138.32,
+          "confidence": 0.8125839233398438
+        },
+        {
+          "text": " neuropathy.",
+          "start": 138.32,
+          "end": 138.86,
+          "confidence": 0.9930163621902466
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "start": 139.08,
+      "end": 148.18,
+      "startTime": "00:02:19,080",
+      "endTime": "00:02:28,180",
+      "text": "But cisplatin, carboplatin on your chemoman, they are the ears. C, C, cisplatin and carboplatin.",
+      "confidence": -0.1504765494925077,
+      "words": [
+        {
+          "text": " But",
+          "start": 139.08,
+          "end": 139.38,
+          "confidence": 0.9577301740646362
+        },
+        {
+          "text": " cisplatin,",
+          "start": 139.38,
+          "end": 139.82,
+          "confidence": 0.9860034386316935
+        },
+        {
+          "text": " carboplatin",
+          "start": 139.98,
+          "end": 140.52,
+          "confidence": 0.9752210229635239
+        },
+        {
+          "text": " on",
+          "start": 140.52,
+          "end": 140.8,
+          "confidence": 0.7836249470710754
+        },
+        {
+          "text": " your",
+          "start": 140.8,
+          "end": 141.16,
+          "confidence": 0.9974610805511475
+        },
+        {
+          "text": " chemoman,",
+          "start": 141.16,
+          "end": 142.46,
+          "confidence": 0.7802044451236725
+        },
+        {
+          "text": " they",
+          "start": 143.44,
+          "end": 143.98,
+          "confidence": 0.9642186760902405
+        },
+        {
+          "text": " are",
+          "start": 143.98,
+          "end": 144.08,
+          "confidence": 0.8010517954826355
+        },
+        {
+          "text": " the",
+          "start": 144.08,
+          "end": 144.18,
+          "confidence": 0.9979190230369568
+        },
+        {
+          "text": " ears.",
+          "start": 144.18,
+          "end": 144.44,
+          "confidence": 0.9661551117897034
+        },
+        {
+          "text": " C,",
+          "start": 144.84,
+          "end": 144.96,
+          "confidence": 0.696236252784729
+        },
+        {
+          "text": " C,",
+          "start": 145.24,
+          "end": 145.5,
+          "confidence": 0.9830141067504883
+        },
+        {
+          "text": " cisplatin",
+          "start": 145.86,
+          "end": 146.28,
+          "confidence": 0.9900305271148682
+        },
+        {
+          "text": " and",
+          "start": 146.28,
+          "end": 146.64,
+          "confidence": 0.6892681121826172
+        },
+        {
+          "text": " carboplatin.",
+          "start": 146.64,
+          "end": 148.18,
+          "confidence": 0.98393414914608
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "start": 149.28,
+      "end": 153.54,
+      "startTime": "00:02:29,280",
+      "endTime": "00:02:33,540",
+      "text": "All right, now just three more. So loop diuretics, we mentioned this.",
+      "confidence": -0.1504765494925077,
+      "words": [
+        {
+          "text": " All",
+          "start": 149.28,
+          "end": 149.72,
+          "confidence": 0.6300317645072937
+        },
+        {
+          "text": " right,",
+          "start": 149.72,
+          "end": 149.86,
+          "confidence": 0.9981719255447388
+        },
+        {
+          "text": " now",
+          "start": 149.92,
+          "end": 150.08,
+          "confidence": 0.9598885178565979
+        },
+        {
+          "text": " just",
+          "start": 150.08,
+          "end": 150.24,
+          "confidence": 0.9460368156433105
+        },
+        {
+          "text": " three",
+          "start": 150.24,
+          "end": 150.4,
+          "confidence": 0.9887822270393372
+        },
+        {
+          "text": " more.",
+          "start": 150.4,
+          "end": 150.62,
+          "confidence": 0.9996957778930664
+        },
+        {
+          "text": " So",
+          "start": 152.12,
+          "end": 152.18,
+          "confidence": 0.97407466173172
+        },
+        {
+          "text": " loop",
+          "start": 152.18,
+          "end": 152.44,
+          "confidence": 0.6837745308876038
+        },
+        {
+          "text": " diuretics,",
+          "start": 152.44,
+          "end": 152.94,
+          "confidence": 0.9053390473127365
+        },
+        {
+          "text": " we",
+          "start": 152.98,
+          "end": 153.06,
+          "confidence": 0.9775870442390442
+        },
+        {
+          "text": " mentioned",
+          "start": 153.06,
+          "end": 153.28,
+          "confidence": 0.953409731388092
+        },
+        {
+          "text": " this.",
+          "start": 153.28,
+          "end": 153.54,
+          "confidence": 0.9976682066917419
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "start": 153.54,
+      "end": 155.16,
+      "startTime": "00:02:33,540",
+      "endTime": "00:02:35,160",
+      "text": "Loop diuretics have adverse effects.",
+      "confidence": -0.2825777670916389,
+      "words": [
+        {
+          "text": " Loop",
+          "start": 153.54,
+          "end": 153.96,
+          "confidence": 0.1368298977613449
+        },
+        {
+          "text": " diuretics",
+          "start": 153.96,
+          "end": 154.34,
+          "confidence": 0.7232683897018433
+        },
+        {
+          "text": " have",
+          "start": 154.34,
+          "end": 154.46,
+          "confidence": 0.8994314074516296
+        },
+        {
+          "text": " adverse",
+          "start": 154.46,
+          "end": 154.8,
+          "confidence": 0.9797476530075073
+        },
+        {
+          "text": " effects.",
+          "start": 154.8,
+          "end": 155.16,
+          "confidence": 0.9940152764320374
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "start": 158.88,
+      "end": 161,
+      "startTime": "00:02:38,880",
+      "endTime": "00:02:41,000",
+      "text": "So what are our loop diuretics?",
+      "confidence": -0.2825777670916389,
+      "words": [
+        {
+          "text": " So",
+          "start": 158.88,
+          "end": 159.6,
+          "confidence": 0.8627403378486633
+        },
+        {
+          "text": " what",
+          "start": 159.6,
+          "end": 159.88,
+          "confidence": 0.7695111036300659
+        },
+        {
+          "text": " are",
+          "start": 159.88,
+          "end": 160.06,
+          "confidence": 0.995966911315918
+        },
+        {
+          "text": " our",
+          "start": 160.06,
+          "end": 160.24,
+          "confidence": 0.9785506725311279
+        },
+        {
+          "text": " loop",
+          "start": 160.24,
+          "end": 160.46,
+          "confidence": 0.9788130521774292
+        },
+        {
+          "text": " diuretics?",
+          "start": 160.46,
+          "end": 161,
+          "confidence": 0.9962380677461624
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "start": 164.58,
+      "end": 165.3,
+      "startTime": "00:02:44,580",
+      "endTime": "00:02:45,300",
+      "text": "Feruzimide,",
+      "confidence": -0.2825777670916389,
+      "words": [
+        {
+          "text": " Feruzimide,",
+          "start": 164.58,
+          "end": 165.3,
+          "confidence": 0.6281158775091171
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "start": 167.88,
+      "end": 168.62,
+      "startTime": "00:02:47,880",
+      "endTime": "00:02:48,620",
+      "text": "B-mattenide",
+      "confidence": -0.2825777670916389,
+      "words": [
+        {
+          "text": " B",
+          "start": 167.88,
+          "end": 168.1,
+          "confidence": 0.10934769362211227
+        },
+        {
+          "text": "-mattenide",
+          "start": 168.1,
+          "end": 168.62,
+          "confidence": 0.4870763048529625
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "start": 173.18,
+      "end": 181.54,
+      "startTime": "00:02:53,180",
+      "endTime": "00:03:01,540",
+      "text": "and also torzimide. All right, so these guys can all cause ototoxicity, hypochalemia,",
+      "confidence": -0.2825777670916389,
+      "words": [
+        {
+          "text": " and",
+          "start": 173.18,
+          "end": 173.9,
+          "confidence": 0.14732910692691803
+        },
+        {
+          "text": " also",
+          "start": 173.9,
+          "end": 174.22,
+          "confidence": 0.9705374836921692
+        },
+        {
+          "text": " torzimide.",
+          "start": 174.22,
+          "end": 175.82,
+          "confidence": 0.6359157413244247
+        },
+        {
+          "text": " All",
+          "start": 176.92,
+          "end": 177.26,
+          "confidence": 0.35171595215797424
+        },
+        {
+          "text": " right,",
+          "start": 177.26,
+          "end": 177.38,
+          "confidence": 0.9941786527633667
+        },
+        {
+          "text": " so",
+          "start": 177.38,
+          "end": 177.44,
+          "confidence": 0.9667556285858154
+        },
+        {
+          "text": " these",
+          "start": 177.44,
+          "end": 177.56,
+          "confidence": 0.9902428984642029
+        },
+        {
+          "text": " guys",
+          "start": 177.56,
+          "end": 177.76,
+          "confidence": 0.9987239241600037
+        },
+        {
+          "text": " can",
+          "start": 177.76,
+          "end": 177.98,
+          "confidence": 0.9970299005508423
+        },
+        {
+          "text": " all",
+          "start": 177.98,
+          "end": 178.14,
+          "confidence": 0.997269332408905
+        },
+        {
+          "text": " cause",
+          "start": 178.14,
+          "end": 178.44,
+          "confidence": 0.9975435137748718
+        },
+        {
+          "text": " ototoxicity,",
+          "start": 178.44,
+          "end": 179.5,
+          "confidence": 0.8840457051992416
+        },
+        {
+          "text": " hypochalemia,",
+          "start": 180.82,
+          "end": 181.54,
+          "confidence": 0.6566609978675843
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "start": 182.66,
+      "end": 188.78,
+      "startTime": "00:03:02,660",
+      "endTime": "00:03:08,780",
+      "text": "hypomagnosemia, dehydration, allergies, metabolic alkalosis,",
+      "confidence": -0.1638757586479187,
+      "words": [
+        {
+          "text": " hypomagnosemia,",
+          "start": 182.66,
+          "end": 183.6,
+          "confidence": 0.7645626664161682
+        },
+        {
+          "text": " dehydration,",
+          "start": 185.3,
+          "end": 185.82,
+          "confidence": 0.5097549045458436
+        },
+        {
+          "text": " allergies,",
+          "start": 186.22,
+          "end": 186.7,
+          "confidence": 0.9858850240707397
+        },
+        {
+          "text": " metabolic",
+          "start": 187.52,
+          "end": 187.8,
+          "confidence": 0.9945043325424194
+        },
+        {
+          "text": " alkalosis,",
+          "start": 187.8,
+          "end": 188.78,
+          "confidence": 0.8732919692993164
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "start": 191,
+      "end": 194.26,
+      "startTime": "00:03:11,000",
+      "endTime": "00:03:14,260",
+      "text": "nephritis and gout. And if you spell it out, it's odang.",
+      "confidence": -0.1638757586479187,
+      "words": [
+        {
+          "text": " nephritis",
+          "start": 191,
+          "end": 191.68,
+          "confidence": 0.954900066057841
+        },
+        {
+          "text": " and",
+          "start": 191.68,
+          "end": 192.24,
+          "confidence": 0.7266052961349487
+        },
+        {
+          "text": " gout.",
+          "start": 192.24,
+          "end": 192.52,
+          "confidence": 0.9690857529640198
+        },
+        {
+          "text": " And",
+          "start": 192.74,
+          "end": 192.82,
+          "confidence": 0.8943890333175659
+        },
+        {
+          "text": " if",
+          "start": 192.82,
+          "end": 192.94,
+          "confidence": 0.9961146116256714
+        },
+        {
+          "text": " you",
+          "start": 192.94,
+          "end": 193.02,
+          "confidence": 0.9989025592803955
+        },
+        {
+          "text": " spell",
+          "start": 193.02,
+          "end": 193.2,
+          "confidence": 0.9828709363937378
+        },
+        {
+          "text": " it",
+          "start": 193.2,
+          "end": 193.32,
+          "confidence": 0.8927778005599976
+        },
+        {
+          "text": " out,",
+          "start": 193.32,
+          "end": 193.44,
+          "confidence": 0.996566653251648
+        },
+        {
+          "text": " it's",
+          "start": 193.58,
+          "end": 193.68,
+          "confidence": 0.9872550070285797
+        },
+        {
+          "text": " odang.",
+          "start": 193.68,
+          "end": 194.26,
+          "confidence": 0.5286043584346771
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "start": 195,
+      "end": 200.72,
+      "startTime": "00:03:15,000",
+      "endTime": "00:03:20,720",
+      "text": "Ototoxicity, hypokleemia, hypomagnosemia, dehydration, allergies, alkalosis,",
+      "confidence": -0.1638757586479187,
+      "words": [
+        {
+          "text": " Ototoxicity,",
+          "start": 195,
+          "end": 195.94,
+          "confidence": 0.8472595065832138
+        },
+        {
+          "text": " hypokleemia,",
+          "start": 196,
+          "end": 196.52,
+          "confidence": 0.6356027126312256
+        },
+        {
+          "text": " hypomagnosemia,",
+          "start": 196.72,
+          "end": 197.52,
+          "confidence": 0.9871888399124146
+        },
+        {
+          "text": " dehydration,",
+          "start": 198,
+          "end": 198.46,
+          "confidence": 0.9991085529327393
+        },
+        {
+          "text": " allergies,",
+          "start": 198.88,
+          "end": 199.42,
+          "confidence": 0.9969176054000854
+        },
+        {
+          "text": " alkalosis,",
+          "start": 200.06,
+          "end": 200.72,
+          "confidence": 0.9958947002887726
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "start": 201.78,
+      "end": 208.4,
+      "startTime": "00:03:21,780",
+      "endTime": "00:03:28,400",
+      "text": "nephritis and gout. Okay, so those are your fruzimides, your ids, your loop diuretics.",
+      "confidence": -0.1638757586479187,
+      "words": [
+        {
+          "text": " nephritis",
+          "start": 201.78,
+          "end": 202.26,
+          "confidence": 0.9955999056498209
+        },
+        {
+          "text": " and",
+          "start": 202.26,
+          "end": 202.7,
+          "confidence": 0.7924724221229553
+        },
+        {
+          "text": " gout.",
+          "start": 202.7,
+          "end": 202.96,
+          "confidence": 0.9983415603637695
+        },
+        {
+          "text": " Okay,",
+          "start": 203.5,
+          "end": 203.74,
+          "confidence": 0.7209553718566895
+        },
+        {
+          "text": " so",
+          "start": 203.78,
+          "end": 203.92,
+          "confidence": 0.989658534526825
+        },
+        {
+          "text": " those",
+          "start": 203.92,
+          "end": 204.1,
+          "confidence": 0.9920008182525635
+        },
+        {
+          "text": " are",
+          "start": 204.1,
+          "end": 204.24,
+          "confidence": 0.9988848567008972
+        },
+        {
+          "text": " your",
+          "start": 204.24,
+          "end": 204.36,
+          "confidence": 0.9969215989112854
+        },
+        {
+          "text": " fruzimides,",
+          "start": 204.36,
+          "end": 204.98,
+          "confidence": 0.3610120378434658
+        },
+        {
+          "text": " your",
+          "start": 205.68,
+          "end": 206.28,
+          "confidence": 0.9947485327720642
+        },
+        {
+          "text": " ids,",
+          "start": 206.28,
+          "end": 206.76,
+          "confidence": 0.34117119014263153
+        },
+        {
+          "text": " your",
+          "start": 207.68,
+          "end": 207.74,
+          "confidence": 0.9905487895011902
+        },
+        {
+          "text": " loop",
+          "start": 207.74,
+          "end": 207.94,
+          "confidence": 0.5330126881599426
+        },
+        {
+          "text": " diuretics.",
+          "start": 207.94,
+          "end": 208.4,
+          "confidence": 0.9108187705278397
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "start": 211.54,
+      "end": 215.18,
+      "startTime": "00:03:31,540",
+      "endTime": "00:03:35,180",
+      "text": "We also have ethylchronic acid. This is similar to feruzimide.",
+      "confidence": -0.1542682647705078,
+      "words": [
+        {
+          "text": " We",
+          "start": 211.54,
+          "end": 211.96,
+          "confidence": 0.5183383822441101
+        },
+        {
+          "text": " also",
+          "start": 211.96,
+          "end": 212.1,
+          "confidence": 0.986831784248352
+        },
+        {
+          "text": " have",
+          "start": 212.1,
+          "end": 212.26,
+          "confidence": 0.9935275912284851
+        },
+        {
+          "text": " ethylchronic",
+          "start": 212.26,
+          "end": 212.68,
+          "confidence": 0.6199707329273224
+        },
+        {
+          "text": " acid.",
+          "start": 212.68,
+          "end": 213.18,
+          "confidence": 0.9878056049346924
+        },
+        {
+          "text": " This",
+          "start": 213.88,
+          "end": 214.08,
+          "confidence": 0.7706377506256104
+        },
+        {
+          "text": " is",
+          "start": 214.08,
+          "end": 214.2,
+          "confidence": 0.9971092343330383
+        },
+        {
+          "text": " similar",
+          "start": 214.2,
+          "end": 214.44,
+          "confidence": 0.9917080998420715
+        },
+        {
+          "text": " to",
+          "start": 214.44,
+          "end": 214.58,
+          "confidence": 0.9925274848937988
+        },
+        {
+          "text": " feruzimide.",
+          "start": 214.58,
+          "end": 215.18,
+          "confidence": 0.6140788793563843
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "start": 215.98,
+      "end": 220.92,
+      "startTime": "00:03:35,980",
+      "endTime": "00:03:40,920",
+      "text": "You know, it's similar to your loop diuretic, but it's even more ototoxic. And so",
+      "confidence": -0.1542682647705078,
+      "words": [
+        {
+          "text": " You",
+          "start": 215.98,
+          "end": 216.36,
+          "confidence": 0.4666737914085388
+        },
+        {
+          "text": " know,",
+          "start": 216.36,
+          "end": 216.42,
+          "confidence": 0.9971139430999756
+        },
+        {
+          "text": " it's",
+          "start": 216.42,
+          "end": 216.48,
+          "confidence": 0.8271767497062683
+        },
+        {
+          "text": " similar",
+          "start": 216.48,
+          "end": 216.68,
+          "confidence": 0.9972550272941589
+        },
+        {
+          "text": " to",
+          "start": 216.68,
+          "end": 216.84,
+          "confidence": 0.9980269074440002
+        },
+        {
+          "text": " your",
+          "start": 216.84,
+          "end": 216.96,
+          "confidence": 0.9922754168510437
+        },
+        {
+          "text": " loop",
+          "start": 216.96,
+          "end": 217.12,
+          "confidence": 0.37983372807502747
+        },
+        {
+          "text": " diuretic,",
+          "start": 217.12,
+          "end": 217.46,
+          "confidence": 0.9183276295661926
+        },
+        {
+          "text": " but",
+          "start": 217.68,
+          "end": 218,
+          "confidence": 0.9976847171783447
+        },
+        {
+          "text": " it's",
+          "start": 218,
+          "end": 218.24,
+          "confidence": 0.9978919923305511
+        },
+        {
+          "text": " even",
+          "start": 218.24,
+          "end": 218.36,
+          "confidence": 0.9982132911682129
+        },
+        {
+          "text": " more",
+          "start": 218.36,
+          "end": 218.58,
+          "confidence": 0.9993058443069458
+        },
+        {
+          "text": " ototoxic.",
+          "start": 218.58,
+          "end": 219.32,
+          "confidence": 0.9316833317279816
+        },
+        {
+          "text": " And",
+          "start": 220.06,
+          "end": 220.06,
+          "confidence": 0.9214251041412354
+        },
+        {
+          "text": " so",
+          "start": 220.06,
+          "end": 220.92,
+          "confidence": 0.9183832406997681
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "start": 221.99999999999997,
+      "end": 225.38,
+      "startTime": "00:03:41,1000",
+      "endTime": "00:03:45,380",
+      "text": "ethylchronic acid is going to be also part of your kind of odang and loop,",
+      "confidence": -0.1542682647705078,
+      "words": [
+        {
+          "text": " ethylchronic",
+          "start": 221.99999999999997,
+          "end": 222.45999999999998,
+          "confidence": 0.8050253614783287
+        },
+        {
+          "text": " acid",
+          "start": 222.45999999999998,
+          "end": 222.92,
+          "confidence": 0.9962109327316284
+        },
+        {
+          "text": " is",
+          "start": 222.92,
+          "end": 223.28,
+          "confidence": 0.9932069182395935
+        },
+        {
+          "text": " going",
+          "start": 223.28,
+          "end": 223.42,
+          "confidence": 0.6694333553314209
+        },
+        {
+          "text": " to",
+          "start": 223.42,
+          "end": 223.48,
+          "confidence": 0.9987460374832153
+        },
+        {
+          "text": " be",
+          "start": 223.48,
+          "end": 223.6,
+          "confidence": 0.9860078692436218
+        },
+        {
+          "text": " also",
+          "start": 223.6,
+          "end": 223.92,
+          "confidence": 0.9967603087425232
+        },
+        {
+          "text": " part",
+          "start": 223.92,
+          "end": 224.14,
+          "confidence": 0.9725427031517029
+        },
+        {
+          "text": " of",
+          "start": 224.14,
+          "end": 224.26,
+          "confidence": 0.9995416402816772
+        },
+        {
+          "text": " your",
+          "start": 224.26,
+          "end": 224.38,
+          "confidence": 0.9881485104560852
+        },
+        {
+          "text": " kind",
+          "start": 224.38,
+          "end": 224.54,
+          "confidence": 0.9606829881668091
+        },
+        {
+          "text": " of",
+          "start": 224.54,
+          "end": 224.64,
+          "confidence": 0.9958469271659851
+        },
+        {
+          "text": " odang",
+          "start": 224.64,
+          "end": 224.92,
+          "confidence": 0.35016612662002444
+        },
+        {
+          "text": " and",
+          "start": 224.92,
+          "end": 225.08,
+          "confidence": 0.4436407685279846
+        },
+        {
+          "text": " loop,",
+          "start": 225.08,
+          "end": 225.38,
+          "confidence": 0.7961854338645935
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "start": 225.66,
+      "end": 229.72,
+      "startTime": "00:03:45,660",
+      "endTime": "00:03:49,720",
+      "text": "loop earrings hurt your ears. So that's the way you can think of these loop diuretics.",
+      "confidence": -0.1542682647705078,
+      "words": [
+        {
+          "text": " loop",
+          "start": 225.66,
+          "end": 226.04,
+          "confidence": 0.8298768997192383
+        },
+        {
+          "text": " earrings",
+          "start": 226.04,
+          "end": 226.4,
+          "confidence": 0.9031402468681335
+        },
+        {
+          "text": " hurt",
+          "start": 226.4,
+          "end": 226.7,
+          "confidence": 0.7037758827209473
+        },
+        {
+          "text": " your",
+          "start": 226.7,
+          "end": 226.9,
+          "confidence": 0.9972236156463623
+        },
+        {
+          "text": " ears.",
+          "start": 226.9,
+          "end": 227.22,
+          "confidence": 0.9983066320419312
+        },
+        {
+          "text": " So",
+          "start": 227.78,
+          "end": 228.24,
+          "confidence": 0.9477370381355286
+        },
+        {
+          "text": " that's",
+          "start": 228.24,
+          "end": 228.36,
+          "confidence": 0.9791727960109711
+        },
+        {
+          "text": " the",
+          "start": 228.36,
+          "end": 228.38,
+          "confidence": 0.8552050590515137
+        },
+        {
+          "text": " way",
+          "start": 228.38,
+          "end": 228.48,
+          "confidence": 0.9991574287414551
+        },
+        {
+          "text": " you",
+          "start": 228.48,
+          "end": 228.56,
+          "confidence": 0.996478259563446
+        },
+        {
+          "text": " can",
+          "start": 228.56,
+          "end": 228.66,
+          "confidence": 0.9988768696784973
+        },
+        {
+          "text": " think",
+          "start": 228.66,
+          "end": 228.78,
+          "confidence": 0.9989570379257202
+        },
+        {
+          "text": " of",
+          "start": 228.78,
+          "end": 228.88,
+          "confidence": 0.9983647465705872
+        },
+        {
+          "text": " these",
+          "start": 228.88,
+          "end": 228.98,
+          "confidence": 0.9982194304466248
+        },
+        {
+          "text": " loop",
+          "start": 228.98,
+          "end": 229.16,
+          "confidence": 0.9199267625808716
+        },
+        {
+          "text": " diuretics.",
+          "start": 229.16,
+          "end": 229.72,
+          "confidence": 0.9938113838434219
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "start": 234.2,
+      "end": 235.54,
+      "startTime": "00:03:54,200",
+      "endTime": "00:03:55,540",
+      "text": "And ethylchronic acid.",
+      "confidence": -0.1542682647705078,
+      "words": [
+        {
+          "text": " And",
+          "start": 234.2,
+          "end": 234.66,
+          "confidence": 0.8860189914703369
+        },
+        {
+          "text": " ethylchronic",
+          "start": 234.66,
+          "end": 235.04,
+          "confidence": 0.9408890008926392
+        },
+        {
+          "text": " acid.",
+          "start": 235.04,
+          "end": 235.54,
+          "confidence": 0.9990455508232117
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "start": 236.7,
+      "end": 239.36,
+      "startTime": "00:03:56,700",
+      "endTime": "00:03:59,360",
+      "text": "Okay. And now the last two associations.",
+      "confidence": -0.3357594728469849,
+      "words": [
+        {
+          "text": " Okay.",
+          "start": 236.7,
+          "end": 237.06,
+          "confidence": 0.20649462938308716
+        },
+        {
+          "text": " And",
+          "start": 237.74,
+          "end": 238.1,
+          "confidence": 0.9157080054283142
+        },
+        {
+          "text": " now",
+          "start": 238.1,
+          "end": 238.28,
+          "confidence": 0.9898132681846619
+        },
+        {
+          "text": " the",
+          "start": 238.28,
+          "end": 238.4,
+          "confidence": 0.9773702025413513
+        },
+        {
+          "text": " last",
+          "start": 238.4,
+          "end": 238.64,
+          "confidence": 0.9898017048835754
+        },
+        {
+          "text": " two",
+          "start": 238.64,
+          "end": 238.82,
+          "confidence": 0.985228955745697
+        },
+        {
+          "text": " associations.",
+          "start": 238.82,
+          "end": 239.36,
+          "confidence": 0.9812910556793213
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "start": 240.62,
+      "end": 243.58,
+      "startTime": "00:04:00,620",
+      "endTime": "00:04:03,580",
+      "text": "Ototoxicity would be just your amino glycoside, the immune guy hits the baby in the ear.",
+      "confidence": -0.3357594728469849,
+      "words": [
+        {
+          "text": " Ototoxicity",
+          "start": 240.62,
+          "end": 240.98,
+          "confidence": 0.8667109608650208
+        },
+        {
+          "text": " would",
+          "start": 240.98,
+          "end": 241.18,
+          "confidence": 0.9357782006263733
+        },
+        {
+          "text": " be",
+          "start": 241.18,
+          "end": 241.3,
+          "confidence": 0.9950001239776611
+        },
+        {
+          "text": " just",
+          "start": 241.3,
+          "end": 241.46,
+          "confidence": 0.9841321706771851
+        },
+        {
+          "text": " your",
+          "start": 241.46,
+          "end": 241.58,
+          "confidence": 0.9649823307991028
+        },
+        {
+          "text": " amino",
+          "start": 241.58,
+          "end": 241.76,
+          "confidence": 0.7020094990730286
+        },
+        {
+          "text": " glycoside,",
+          "start": 241.76,
+          "end": 242.28,
+          "confidence": 0.8727169036865234
+        },
+        {
+          "text": " the",
+          "start": 242.4,
+          "end": 242.42,
+          "confidence": 0.3669087290763855
+        },
+        {
+          "text": " immune",
+          "start": 242.42,
+          "end": 242.56,
+          "confidence": 0.434059202671051
+        },
+        {
+          "text": " guy",
+          "start": 242.56,
+          "end": 242.76,
+          "confidence": 0.9916157126426697
+        },
+        {
+          "text": " hits",
+          "start": 242.76,
+          "end": 242.96,
+          "confidence": 0.9804039597511292
+        },
+        {
+          "text": " the",
+          "start": 242.96,
+          "end": 243.08,
+          "confidence": 0.9886996150016785
+        },
+        {
+          "text": " baby",
+          "start": 243.08,
+          "end": 243.22,
+          "confidence": 0.9988033771514893
+        },
+        {
+          "text": " in",
+          "start": 243.22,
+          "end": 243.36,
+          "confidence": 0.9917831420898438
+        },
+        {
+          "text": " the",
+          "start": 243.36,
+          "end": 243.4,
+          "confidence": 0.993655800819397
+        },
+        {
+          "text": " ear.",
+          "start": 243.4,
+          "end": 243.58,
+          "confidence": 0.8225613236427307
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "start": 246,
+      "end": 249.18,
+      "startTime": "00:04:06,000",
+      "endTime": "00:04:09,180",
+      "text": "And then last is just going to be reviewed. D, ala-alavincamia,",
+      "confidence": -0.3357594728469849,
+      "words": [
+        {
+          "text": " And",
+          "start": 246,
+          "end": 246.36,
+          "confidence": 0.968356192111969
+        },
+        {
+          "text": " then",
+          "start": 246.36,
+          "end": 246.5,
+          "confidence": 0.9836627244949341
+        },
+        {
+          "text": " last",
+          "start": 246.5,
+          "end": 246.78,
+          "confidence": 0.7251480221748352
+        },
+        {
+          "text": " is",
+          "start": 246.78,
+          "end": 246.94,
+          "confidence": 0.7529362440109253
+        },
+        {
+          "text": " just",
+          "start": 246.94,
+          "end": 247.06,
+          "confidence": 0.9646570086479187
+        },
+        {
+          "text": " going",
+          "start": 247.06,
+          "end": 247.16,
+          "confidence": 0.8770329356193542
+        },
+        {
+          "text": " to",
+          "start": 247.16,
+          "end": 247.2,
+          "confidence": 0.9986909031867981
+        },
+        {
+          "text": " be",
+          "start": 247.2,
+          "end": 247.28,
+          "confidence": 0.9952740669250488
+        },
+        {
+          "text": " reviewed.",
+          "start": 247.28,
+          "end": 247.54,
+          "confidence": 0.7685152292251587
+        },
+        {
+          "text": " D,",
+          "start": 247.92,
+          "end": 247.92,
+          "confidence": 0.8738884329795837
+        },
+        {
+          "text": " ala",
+          "start": 248.32,
+          "end": 248.56,
+          "confidence": 0.5196364149451256
+        },
+        {
+          "text": "-alavincamia,",
+          "start": 248.56,
+          "end": 249.18,
+          "confidence": 0.48509884004791576
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "start": 249.3,
+      "end": 253.22,
+      "startTime": "00:04:09,300",
+      "endTime": "00:04:13,220",
+      "text": "synhasinephro and ototoxicity. Amine man, it's a baby in the ear. You have the platinum associations,",
+      "confidence": -0.3357594728469849,
+      "words": [
+        {
+          "text": " synhasinephro",
+          "start": 249.3,
+          "end": 249.86,
+          "confidence": 0.4514779657125473
+        },
+        {
+          "text": " and",
+          "start": 249.86,
+          "end": 249.96,
+          "confidence": 0.3661251962184906
+        },
+        {
+          "text": " ototoxicity.",
+          "start": 249.96,
+          "end": 250.6,
+          "confidence": 0.9845163375139236
+        },
+        {
+          "text": " Amine",
+          "start": 251.16,
+          "end": 251.42,
+          "confidence": 0.7141562104225159
+        },
+        {
+          "text": " man,",
+          "start": 251.42,
+          "end": 251.64,
+          "confidence": 0.6516250371932983
+        },
+        {
+          "text": " it's",
+          "start": 251.68,
+          "end": 251.82,
+          "confidence": 0.9343508183956146
+        },
+        {
+          "text": " a",
+          "start": 251.82,
+          "end": 251.86,
+          "confidence": 0.5346516370773315
+        },
+        {
+          "text": " baby",
+          "start": 251.86,
+          "end": 251.96,
+          "confidence": 0.9990160465240479
+        },
+        {
+          "text": " in",
+          "start": 251.96,
+          "end": 252.12,
+          "confidence": 0.9848963022232056
+        },
+        {
+          "text": " the",
+          "start": 252.12,
+          "end": 252.18,
+          "confidence": 0.9971824884414673
+        },
+        {
+          "text": " ear.",
+          "start": 252.18,
+          "end": 252.34,
+          "confidence": 0.972770094871521
+        },
+        {
+          "text": " You",
+          "start": 252.44,
+          "end": 252.46,
+          "confidence": 0.9773173332214355
+        },
+        {
+          "text": " have",
+          "start": 252.46,
+          "end": 252.52,
+          "confidence": 0.9590367078781128
+        },
+        {
+          "text": " the",
+          "start": 252.52,
+          "end": 252.6,
+          "confidence": 0.9877333641052246
+        },
+        {
+          "text": " platinum",
+          "start": 252.6,
+          "end": 252.86,
+          "confidence": 0.5655715465545654
+        },
+        {
+          "text": " associations,",
+          "start": 252.86,
+          "end": 253.22,
+          "confidence": 0.9924271702766418
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "start": 254.47999999999996,
+      "end": 257.92,
+      "startTime": "00:04:14,480",
+      "endTime": "00:04:17,920",
+      "text": "carboplatin, cisplatin, and you have your loop diuretics and",
+      "confidence": -0.3357594728469849,
+      "words": [
+        {
+          "text": " carboplatin,",
+          "start": 254.47999999999996,
+          "end": 254.83999999999997,
+          "confidence": 0.8911863267421722
+        },
+        {
+          "text": " cisplatin,",
+          "start": 254.83999999999997,
+          "end": 255.2,
+          "confidence": 0.8213716149330139
+        },
+        {
+          "text": " and",
+          "start": 255.78,
+          "end": 255.84,
+          "confidence": 0.8628195524215698
+        },
+        {
+          "text": " you",
+          "start": 255.84,
+          "end": 255.88,
+          "confidence": 0.9889695644378662
+        },
+        {
+          "text": " have",
+          "start": 255.88,
+          "end": 256.02,
+          "confidence": 0.9882929921150208
+        },
+        {
+          "text": " your",
+          "start": 256.02,
+          "end": 256.1,
+          "confidence": 0.9764710664749146
+        },
+        {
+          "text": " loop",
+          "start": 256.1,
+          "end": 256.28,
+          "confidence": 0.7180448174476624
+        },
+        {
+          "text": " diuretics",
+          "start": 256.28,
+          "end": 256.92,
+          "confidence": 0.9277822822332382
+        },
+        {
+          "text": " and",
+          "start": 256.92,
+          "end": 257.92,
+          "confidence": 0.7962108850479126
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "start": 258.9,
+      "end": 262.12,
+      "startTime": "00:04:18,900",
+      "endTime": "00:04:22,120",
+      "text": "ethylchronic acid. So odang is what you need to remember for that one. And lastly,",
+      "confidence": -0.3357594728469849,
+      "words": [
+        {
+          "text": " ethylchronic",
+          "start": 258.9,
+          "end": 259.26,
+          "confidence": 0.6069597154855728
+        },
+        {
+          "text": " acid.",
+          "start": 259.26,
+          "end": 259.6,
+          "confidence": 0.7256714105606079
+        },
+        {
+          "text": " So",
+          "start": 259.86,
+          "end": 259.86,
+          "confidence": 0.9796234965324402
+        },
+        {
+          "text": " odang",
+          "start": 259.86,
+          "end": 260.32,
+          "confidence": 0.4367433786392212
+        },
+        {
+          "text": " is",
+          "start": 260.32,
+          "end": 260.6,
+          "confidence": 0.9641064405441284
+        },
+        {
+          "text": " what",
+          "start": 260.6,
+          "end": 260.7,
+          "confidence": 0.996556282043457
+        },
+        {
+          "text": " you",
+          "start": 260.7,
+          "end": 260.76,
+          "confidence": 0.9975584745407104
+        },
+        {
+          "text": " need",
+          "start": 260.76,
+          "end": 260.86,
+          "confidence": 0.9982081651687622
+        },
+        {
+          "text": " to",
+          "start": 260.86,
+          "end": 260.94,
+          "confidence": 0.9994223117828369
+        },
+        {
+          "text": " remember",
+          "start": 260.94,
+          "end": 261.14,
+          "confidence": 0.9988738894462585
+        },
+        {
+          "text": " for",
+          "start": 261.14,
+          "end": 261.32,
+          "confidence": 0.9979627132415771
+        },
+        {
+          "text": " that",
+          "start": 261.32,
+          "end": 261.46,
+          "confidence": 0.9994896650314331
+        },
+        {
+          "text": " one.",
+          "start": 261.46,
+          "end": 261.66,
+          "confidence": 0.9974700212478638
+        },
+        {
+          "text": " And",
+          "start": 261.7,
+          "end": 261.84,
+          "confidence": 0.994135856628418
+        },
+        {
+          "text": " lastly,",
+          "start": 261.84,
+          "end": 262.12,
+          "confidence": 0.9977893829345703
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "start": 262.22,
+      "end": 265.52,
+      "startTime": "00:04:22,220",
+      "endTime": "00:04:25,520",
+      "text": "just going over for bonus here. Odang is ototoxicity, hypokleemia,",
+      "confidence": -0.3357594728469849,
+      "words": [
+        {
+          "text": " just",
+          "start": 262.22,
+          "end": 262.38,
+          "confidence": 0.9964730143547058
+        },
+        {
+          "text": " going",
+          "start": 262.38,
+          "end": 262.56,
+          "confidence": 0.9968994855880737
+        },
+        {
+          "text": " over",
+          "start": 262.56,
+          "end": 262.82,
+          "confidence": 0.9981923699378967
+        },
+        {
+          "text": " for",
+          "start": 262.82,
+          "end": 263,
+          "confidence": 0.9747515916824341
+        },
+        {
+          "text": " bonus",
+          "start": 263,
+          "end": 263.22,
+          "confidence": 0.9670937657356262
+        },
+        {
+          "text": " here.",
+          "start": 263.22,
+          "end": 263.5,
+          "confidence": 0.8126289248466492
+        },
+        {
+          "text": " Odang",
+          "start": 264.06,
+          "end": 264.42,
+          "confidence": 0.9091277420520782
+        },
+        {
+          "text": " is",
+          "start": 264.42,
+          "end": 264.52,
+          "confidence": 0.988637387752533
+        },
+        {
+          "text": " ototoxicity,",
+          "start": 264.52,
+          "end": 265.18,
+          "confidence": 0.981755405664444
+        },
+        {
+          "text": " hypokleemia,",
+          "start": 265.3,
+          "end": 265.52,
+          "confidence": 0.14463321894618275
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "start": 266.98,
+      "end": 271.24,
+      "startTime": "00:04:26,980",
+      "endTime": "00:04:31,240",
+      "text": "hypomagnosemia, dehydration, allergies, metabolic alkalosis, nephritis, and gout.",
+      "confidence": -0.1495226835593199,
+      "words": [
+        {
+          "text": " hypomagnosemia,",
+          "start": 266.98,
+          "end": 267.42,
+          "confidence": 0.6842545290011912
+        },
+        {
+          "text": " dehydration,",
+          "start": 267.42,
+          "end": 267.86,
+          "confidence": 0.9983263611793518
+        },
+        {
+          "text": " allergies,",
+          "start": 268.04,
+          "end": 268.42,
+          "confidence": 0.9939551949501038
+        },
+        {
+          "text": " metabolic",
+          "start": 269.22,
+          "end": 269.48,
+          "confidence": 0.9988942742347717
+        },
+        {
+          "text": " alkalosis,",
+          "start": 269.48,
+          "end": 270.2,
+          "confidence": 0.9318466186523438
+        },
+        {
+          "text": " nephritis,",
+          "start": 270.3,
+          "end": 270.6,
+          "confidence": 0.9658917387326559
+        },
+        {
+          "text": " and",
+          "start": 270.88,
+          "end": 270.9,
+          "confidence": 0.9974198341369629
+        },
+        {
+          "text": " gout.",
+          "start": 270.9,
+          "end": 271.24,
+          "confidence": 0.987623780965805
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "start": 271.56,
+      "end": 272.86,
+      "startTime": "00:04:31,560",
+      "endTime": "00:04:32,860",
+      "text": "If you found this helpful, then like and subscribe.",
+      "confidence": -0.1495226835593199,
+      "words": [
+        {
+          "text": " If",
+          "start": 271.56,
+          "end": 271.62,
+          "confidence": 0.9882848262786865
+        },
+        {
+          "text": " you",
+          "start": 271.62,
+          "end": 271.7,
+          "confidence": 0.9963201284408569
+        },
+        {
+          "text": " found",
+          "start": 271.7,
+          "end": 271.82,
+          "confidence": 0.9824169874191284
+        },
+        {
+          "text": " this",
+          "start": 271.82,
+          "end": 271.92,
+          "confidence": 0.9980502128601074
+        },
+        {
+          "text": " helpful,",
+          "start": 271.92,
+          "end": 272.14,
+          "confidence": 0.9990591406822205
+        },
+        {
+          "text": " then",
+          "start": 272.3,
+          "end": 272.38,
+          "confidence": 0.9829244017601013
+        },
+        {
+          "text": " like",
+          "start": 272.38,
+          "end": 272.52,
+          "confidence": 0.9506811499595642
+        },
+        {
+          "text": " and",
+          "start": 272.52,
+          "end": 272.62,
+          "confidence": 0.9902570247650146
+        },
+        {
+          "text": " subscribe.",
+          "start": 272.62,
+          "end": 272.86,
+          "confidence": 0.9986240863800049
+        }
+      ]
+    }
+  ],
+  "fullText": "What are all of the drugs and associations that you need to know with ototoxicity on step one? So the first one is vancomycin. So that inhibits cell wall peptoglide conformation by binding the D-ala D-ala portion of the cell wall precursors and this can cause your nephrotoxicity and also your ototoxicity and amino glycosides also causes these and you can remember that by saying amin-no-glycosides, nephrotoxic, ototoxic. Also this can cause thrombophlebitis, diffuse flushing and that's what you need to know about vinc. Now ototoxicity is also as we mentioned associated with amin-no, hence the NO, glycosides especially in loop diuretics. Aminoglycosides can cause nephrotoxicity, neuromuscular blockade and also teratogenicity. Now there are also some antimicrobials that you need to avoid in pregnancy and on that list is amino glycosides and why? Because of that ototoxicity. Because you're a mean person amino glycoside if you punch a baby in the ear. So ototoxicity, amino glycoside, watch out for that in pregnancy. Only five more associations. There are platinum. So there's some platinum compounds like cisplatin, carboplatin, the platins, platinum platins and these guys can also be nephrotoxic and they can also be ototoxics. This is a very common kind of coupling here, nephrotoxic and ototoxic. That's you know, fecunis syndrome and you can prevent it with amyfostine and also you have peripheral neuropathy that's associated with your platins. So peripheral neuropathy, you can remember the man who has the peripheral neuropathy here. And so ototoxicity is associated with platinum compounds. So cisplatin, carboplatin and if you know what I'm referring to here, it is going to be cisplatin, carboplatin and then the arms here are going to be like vincristine. That's why they're in a V shape and so they're associated with peripheral neuropathy. But cisplatin, carboplatin on your chemoman, they are the ears. C, C, cisplatin and carboplatin. All right, now just three more. So loop diuretics, we mentioned this. Loop diuretics have adverse effects. So what are our loop diuretics? Feruzimide, B-mattenide and also torzimide. All right, so these guys can all cause ototoxicity, hypochalemia, hypomagnosemia, dehydration, allergies, metabolic alkalosis, nephritis and gout. And if you spell it out, it's odang. Ototoxicity, hypokleemia, hypomagnosemia, dehydration, allergies, alkalosis, nephritis and gout. Okay, so those are your fruzimides, your ids, your loop diuretics. We also have ethylchronic acid. This is similar to feruzimide. You know, it's similar to your loop diuretic, but it's even more ototoxic. And so ethylchronic acid is going to be also part of your kind of odang and loop, loop earrings hurt your ears. So that's the way you can think of these loop diuretics. And ethylchronic acid. Okay. And now the last two associations. Ototoxicity would be just your amino glycoside, the immune guy hits the baby in the ear. And then last is just going to be reviewed. D, ala-alavincamia, synhasinephro and ototoxicity. Amine man, it's a baby in the ear. You have the platinum associations, carboplatin, cisplatin, and you have your loop diuretics and ethylchronic acid. So odang is what you need to remember for that one. And lastly, just going over for bonus here. Odang is ototoxicity, hypokleemia, hypomagnosemia, dehydration, allergies, metabolic alkalosis, nephritis, and gout. If you found this helpful, then like and subscribe.",
+  "srtContent": "1\n00:00:00,000 --> 00:00:04,400\nWhat are all of the drugs and associations that you need to know with ototoxicity on step one?\n\n2\n00:00:04,660 --> 00:00:12,840\nSo the first one is vancomycin. So that inhibits cell wall\n\n3\n00:00:12,840 --> 00:00:15,580\npeptoglide conformation by binding the D-ala D-ala\n\n4\n00:00:21,280 --> 00:00:22,800\nportion of the cell wall precursors\n\n5\n00:00:25,120 --> 00:00:31,120\nand this can cause your nephrotoxicity and also your ototoxicity\n\n6\n00:00:34,220 --> 00:00:37,420\nand amino glycosides also causes these and you can remember that by saying\n\n7\n00:00:37,420 --> 00:00:44,820\namin-no-glycosides, nephrotoxic, ototoxic. Also this can cause thrombophlebitis,\n\n8\n00:00:45,380 --> 00:00:48,340\ndiffuse flushing and that's what you need to know about vinc.\n\n9\n00:00:51,160 --> 00:00:55,540\nNow ototoxicity is also as we mentioned associated with amin-no, hence the NO,\n\n10\n00:00:56,100 --> 00:01:02,000\nglycosides especially in loop diuretics. Aminoglycosides can cause nephrotoxicity,\n\n11\n00:01:02,420 --> 00:01:04,540\nneuromuscular blockade and also teratogenicity.\n\n12\n00:01:06,720 --> 00:01:09,780\nNow there are also some antimicrobials that you need to avoid in pregnancy\n\n13\n00:01:09,780 --> 00:01:14,680\nand on that list is amino glycosides and why? Because of that ototoxicity.\n\n14\n00:01:14,900 --> 00:01:19,680\nBecause you're a mean person amino glycoside if you punch a baby in the ear.\n\n15\n00:01:20,160 --> 00:01:23,260\nSo ototoxicity, amino glycoside, watch out for that in pregnancy.\n\n16\n00:01:24,640 --> 00:01:26,940\nOnly five more associations. There are platinum.\n\n17\n00:01:30,300 --> 00:01:34,280\nSo there's some platinum compounds like cisplatin, carboplatin, the platins,\n\n18\n00:01:34,520 --> 00:01:37,920\nplatinum platins and these guys can also be nephrotoxic\n\n19\n00:01:37,920 --> 00:01:41,000\nand they can also be ototoxics. This is a very common kind of coupling here,\n\n20\n00:01:41,120 --> 00:01:45,100\nnephrotoxic and ototoxic. That's you know, fecunis syndrome and you can prevent it with\n\n21\n00:01:46,720 --> 00:01:50,280\namyfostine and also you have peripheral neuropathy that's associated with your platins.\n\n22\n00:01:50,960 --> 00:01:55,620\nSo peripheral neuropathy, you can remember the man who has the peripheral neuropathy here.\n\n23\n00:01:58,080 --> 00:02:05,000\nAnd so ototoxicity is associated with platinum compounds. So cisplatin, carboplatin\n\n24\n00:02:06,020 --> 00:02:08,660\nand if you know what I'm referring to here, it is going to be\n\n25\n00:02:12,660 --> 00:02:15,560\ncisplatin, carboplatin and then the arms here are going to be like vincristine.\n\n26\n00:02:15,780 --> 00:02:18,860\nThat's why they're in a V shape and so they're associated with peripheral neuropathy.\n\n27\n00:02:19,080 --> 00:02:28,180\nBut cisplatin, carboplatin on your chemoman, they are the ears. C, C, cisplatin and carboplatin.\n\n28\n00:02:29,280 --> 00:02:33,540\nAll right, now just three more. So loop diuretics, we mentioned this.\n\n29\n00:02:33,540 --> 00:02:35,160\nLoop diuretics have adverse effects.\n\n30\n00:02:38,880 --> 00:02:41,000\nSo what are our loop diuretics?\n\n31\n00:02:44,580 --> 00:02:45,300\nFeruzimide,\n\n32\n00:02:47,880 --> 00:02:48,620\nB-mattenide\n\n33\n00:02:53,180 --> 00:03:01,540\nand also torzimide. All right, so these guys can all cause ototoxicity, hypochalemia,\n\n34\n00:03:02,660 --> 00:03:08,780\nhypomagnosemia, dehydration, allergies, metabolic alkalosis,\n\n35\n00:03:11,000 --> 00:03:14,260\nnephritis and gout. And if you spell it out, it's odang.\n\n36\n00:03:15,000 --> 00:03:20,720\nOtotoxicity, hypokleemia, hypomagnosemia, dehydration, allergies, alkalosis,\n\n37\n00:03:21,780 --> 00:03:28,400\nnephritis and gout. Okay, so those are your fruzimides, your ids, your loop diuretics.\n\n38\n00:03:31,540 --> 00:03:35,180\nWe also have ethylchronic acid. This is similar to feruzimide.\n\n39\n00:03:35,980 --> 00:03:40,920\nYou know, it's similar to your loop diuretic, but it's even more ototoxic. And so\n\n40\n00:03:41,1000 --> 00:03:45,380\nethylchronic acid is going to be also part of your kind of odang and loop,\n\n41\n00:03:45,660 --> 00:03:49,720\nloop earrings hurt your ears. So that's the way you can think of these loop diuretics.\n\n42\n00:03:54,200 --> 00:03:55,540\nAnd ethylchronic acid.\n\n43\n00:03:56,700 --> 00:03:59,360\nOkay. And now the last two associations.\n\n44\n00:04:00,620 --> 00:04:03,580\nOtotoxicity would be just your amino glycoside, the immune guy hits the baby in the ear.\n\n45\n00:04:06,000 --> 00:04:09,180\nAnd then last is just going to be reviewed. D, ala-alavincamia,\n\n46\n00:04:09,300 --> 00:04:13,220\nsynhasinephro and ototoxicity. Amine man, it's a baby in the ear. You have the platinum associations,\n\n47\n00:04:14,480 --> 00:04:17,920\ncarboplatin, cisplatin, and you have your loop diuretics and\n\n48\n00:04:18,900 --> 00:04:22,120\nethylchronic acid. So odang is what you need to remember for that one. And lastly,\n\n49\n00:04:22,220 --> 00:04:25,520\njust going over for bonus here. Odang is ototoxicity, hypokleemia,\n\n50\n00:04:26,980 --> 00:04:31,240\nhypomagnosemia, dehydration, allergies, metabolic alkalosis, nephritis, and gout.\n\n51\n00:04:31,560 --> 00:04:32,860\nIf you found this helpful, then like and subscribe.\n\n",
+  "duration": 0,
+  "language": "en"
+}

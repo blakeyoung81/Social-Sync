@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "highlights": [
+    {
+      "title": "Cortisol's Role in Fasting",
+      "description": "Explains how cortisol maintains glucose during fasting.",
+      "startTime": 10,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Cortisol Mechanism Explained",
+      "description": "Details the steroid hormone mechanism of cortisol.",
+      "startTime": 30,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Comparison with Other Hormones",
+      "description": "Contrasts cortisol's mechanism with glucagon and epinephrine.",
+      "startTime": 50,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Cortisol and Gene Transcription",
+      "description": "Highlights the importance of cortisol in gene transcription.",
+      "startTime": 70,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Conclusion and Call to Action",
+      "description": "Encourages viewers to like and subscribe for more content.",
+      "startTime": 90,
+      "endTime": null,
+      "importance": "low"
+    }
+  ],
+  "totalHighlights": 5,
+  "model": "gpt-4o-mini"
+}

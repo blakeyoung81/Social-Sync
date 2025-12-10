@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "highlights": [
+    {
+      "title": "Pseudocholinesterase Deficiency Explained",
+      "description": "Key concept on prolonged paralysis post-surgery.",
+      "startTime": 0,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Genetic Factors in Anesthesia",
+      "description": "Discusses the BCHE gene mutation's impact.",
+      "startTime": 30,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Importance of Seasonal Choline",
+      "description": "Critical drug for intubation and its breakdown.",
+      "startTime": 60,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Enzyme Roles Clarified",
+      "description": "Distinguishes between various enzymes and their functions.",
+      "startTime": 90,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Call to Action",
+      "description": "Encourages viewers to like and subscribe for more info.",
+      "startTime": 120,
+      "endTime": null,
+      "importance": "low"
+    }
+  ],
+  "totalHighlights": 5,
+  "model": "gpt-4o-mini"
+}

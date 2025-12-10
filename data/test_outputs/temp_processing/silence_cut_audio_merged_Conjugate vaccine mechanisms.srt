@@ -1,0 +1,64 @@
+1
+00:00:00,000 --> 00:00:08,600
+Six month old infant receives a vaccine that includes a bacterial capsule polysaccharide conjugated to diphtheria toxoid.
+
+2
+00:00:08,600 --> 00:00:12,600
+What is the immunological advantage conferred by this conjugation?
+
+3
+00:00:12,600 --> 00:00:16,100
+It's going to be enhanced class switching through the T helper cells.
+
+4
+00:00:16,100 --> 00:00:21,900
+So infants under two years old can't mount a memory response to plain polysaccharide antigens.
+
+5
+00:00:21,900 --> 00:00:23,600
+They just can't do it.
+
+6
+00:00:23,800 --> 00:00:31,000
+But when you conjugate that capsule to a protein like a tetanus toxoid, then it recruits T helper cells
+
+7
+00:00:31,000 --> 00:00:36,400
+and it enables class switching, affinity maturation, and immunological memory.
+
+8
+00:00:36,400 --> 00:00:39,700
+So that's how HIV vaccines work.
+
+9
+00:00:39,700 --> 00:00:43,900
+It's not because of the toxoid, but because of that teamwork.
+
+10
+00:00:43,900 --> 00:00:47,400
+It's because of that robust T cell dependent immunity.
+
+11
+00:00:47,400 --> 00:00:50,200
+So let's look at these trap answers.
+
+12
+00:00:50,200 --> 00:00:57,600
+Ucosyl IGA. It's induced by oral and intranasal vaccines and mucosal infections, not systemic conjugates.
+
+13
+00:00:57,600 --> 00:01:05,200
+TLR4 recognizes your LPS, not capsular polysaccharides, somatic hypermutation,
+
+14
+00:01:05,200 --> 00:01:09,700
+the advantage of conjugation as T cell helpers, not diversification.
+
+15
+00:01:09,700 --> 00:01:15,800
+M cells involved in mucosal antigen sampling, unrelated to conjugate vaccines.
+
+16
+00:01:15,800 --> 00:01:18,800
+Like and subscribe for a new question every day.
+

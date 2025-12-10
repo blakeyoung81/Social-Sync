@@ -1,0 +1,77 @@
+{
+  "success": true,
+  "highlights": [
+    {
+      "title": "Introduction to Genetic Disorders",
+      "description": "Overview of genetic disorders by chromosome is crucial for understanding.",
+      "startTime": 0,
+      "endTime": 10,
+      "importance": "high"
+    },
+    {
+      "title": "Vaughn Hippolindow Mnemonic",
+      "description": "Mnemonic aids in recalling important genetic disorders.",
+      "startTime": 10,
+      "endTime": 30,
+      "importance": "high"
+    },
+    {
+      "title": "Huntington's Disease Explanation",
+      "description": "Details on Huntington's disease and its effects are essential for medical knowledge.",
+      "startTime": 30,
+      "endTime": 50,
+      "importance": "high"
+    },
+    {
+      "title": "Chromosome 5 Disorders",
+      "description": "Crude de chat syndrome and familial adenomatous polyposis are key concepts.",
+      "startTime": 50,
+      "endTime": 70,
+      "importance": "medium"
+    },
+    {
+      "title": "Wilms Tumor and MEN1",
+      "description": "Important associations with Wilms tumor and MEN1 for understanding genetic links.",
+      "startTime": 70,
+      "endTime": 90,
+      "importance": "high"
+    },
+    {
+      "title": "Patau and Wilson's Disease",
+      "description": "Links between Patau syndrome and Wilson's disease are significant for genetic studies.",
+      "startTime": 90,
+      "endTime": 110,
+      "importance": "medium"
+    },
+    {
+      "title": "Down Syndrome Overview",
+      "description": "Down syndrome is a major genetic disorder that needs to be recognized.",
+      "startTime": 110,
+      "endTime": 130,
+      "importance": "high"
+    },
+    {
+      "title": "X Chromosome Disorders",
+      "description": "Fragile X and Turner syndrome are critical for understanding X-linked disorders.",
+      "startTime": 130,
+      "endTime": 150,
+      "importance": "high"
+    },
+    {
+      "title": "Recap of Key Disorders",
+      "description": "Recap reinforces learning and retention of genetic disorders.",
+      "startTime": 150,
+      "endTime": 180,
+      "importance": "medium"
+    },
+    {
+      "title": "Call to Action",
+      "description": "Encourages viewers to engage with the content for further learning.",
+      "startTime": 180,
+      "endTime": 200,
+      "importance": "low"
+    }
+  ],
+  "totalHighlights": 10,
+  "model": "gpt-4o-mini"
+}

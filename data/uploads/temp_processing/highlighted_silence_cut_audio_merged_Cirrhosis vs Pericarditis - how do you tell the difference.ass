@@ -1,0 +1,25 @@
+
+[Script Info]
+ScriptType: v4.00+
+ScaledBorderAndShadow: yes
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,55,&H00FFFFFF,&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,15,1
+Style: Highlight,Arial,62,&H0000FFFF,&H000000FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,2,2,2,10,10,15,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,000:00:00.00,000:00:05.44,Default,,0,0,0,,Constrictive pericarditis. So we think of an increased JVD, also a pericardial knock,
+Dialogue: 0,000:00:06.16,000:00:10.40,Default,,0,0,0,,and Kussmaul's sign. Equalization of diastolic pressure is also going to be seen there.
+Dialogue: 0,000:00:10.40,000:00:15.44,Default,,0,0,0,,So you see the increased JVP because of the impaired right heart filling. In cirrhosis,
+Dialogue: 0,000:00:15.44,000:00:20.48,Default,,0,0,0,,your JVP is normally going to be normal or low, even if you've got ascites or edema,
+Dialogue: 0,000:00:20.48,000:00:25.36,Default,,0,0,0,,because that's driven by hypoalbuminemia and portal hypertension. So let's imagine you've got some
+Dialogue: 0,000:00:25.44,000:00:30.00,Default,,0,0,0,,thick, fibrotic pericardium. What's that going to do? It's going to restrict your diastolic
+Dialogue: 0,000:00:30.00,000:00:34.24,Default,,0,0,0,,filling of the heart. That's going to lead to an elevated diastolic pressure and also an equalization
+Dialogue: 0,000:00:34.24,000:00:38.40,Default,,0,0,0,,of all the pressures in the four chambers. That'll cause hepatic congestion, peripheral edema, and
+Dialogue: 0,000:00:38.40,000:00:43.52,Default,,0,0,0,,ascites that can mimic your cirrhosis. And so constrictive pericarditis can mimic cirrhosis.
+Dialogue: 0,000:00:43.52,000:00:47.76,Default,,0,0,0,,But the difference here, the difference is going to be these jugular veins because the right heart
+Dialogue: 0,000:00:47.76,000:00:53.60,Default,,0,0,0,,can't fill because of the stiff pericardium. So you get that Kussmaul's sign, JVP rising.

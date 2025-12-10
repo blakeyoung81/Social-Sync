@@ -1,0 +1,41 @@
+
+[Script Info]
+ScriptType: v4.00+
+ScaledBorderAndShadow: yes
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,55,&H00FFFFFF,&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,15,1
+Style: Highlight,Arial,62,&H0000FFFF,&H000000FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,2,2,2,10,10,15,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,000:00:00.00,000:00:03.74,Default,,0,0,0,,This is a very important concept: increased carbon dioxide leads to increased cerebral blood flow.
+Dialogue: 0,000:00:03.74,000:00:04.74,Default,,0,0,0,,So, CO2 is the most potent cerebral vasodilator.
+Dialogue: 0,000:00:04.74,000:00:07.72,Default,,0,0,0,,Yes, that's correct.
+Dialogue: 0,000:00:07.72,000:00:12.80,Highlight,,0,0,0,,In narcotic overdose, we have respiratory depression, decreased respiratory rate, and increased
+Dialogue: 0,000:00:12.80,000:00:13.80,Highlight,,0,0,0,,CO2 in the blood.
+Dialogue: 0,000:00:13.80,000:00:14.88,Default,,0,0,0,,This condition is called hypercapnia.
+Dialogue: 0,000:00:14.88,000:00:16.96,Default,,0,0,0,,That means we have increased cerebral blood flow.
+Dialogue: 0,000:00:16.96,000:00:19.60,Default,,0,0,0,,Respiratory depression results in elevated CO2 levels.
+Dialogue: 0,000:00:19.60,000:00:22.32,Highlight,,0,0,0,,Hypercapnia indicates that cerebral vasodilation is occurring.
+Dialogue: 0,000:00:22.32,000:00:25.84,Default,,0,0,0,,We have a fixed intracranial compartment, so the brain's auto-regulation of flow is affected.
+Dialogue: 0,000:00:25.84,000:00:27.08,Default,,0,0,0,,This leads to increased intracranial pressure.
+Dialogue: 0,000:00:27.08,000:00:32.68,Default,,0,0,0,,If a patient is arousable only with painful stimuli, we should suspect narcotic overdose.
+Dialogue: 0,000:00:32.68,000:00:37.24,Default,,0,0,0,,Central hypoventilation leads to increased CO2 and increased vasodilation.
+Dialogue: 0,000:00:37.24,000:00:38.24,Default,,0,0,0,,That's it.
+Dialogue: 0,000:00:38.24,000:00:39.24,Default,,0,0,0,,That's the secret.
+Dialogue: 0,000:00:39.24,000:00:42.16,Default,,0,0,0,,Opioids depress the respiratory center.
+Dialogue: 0,000:00:42.16,000:00:44.60,Default,,0,0,0,,This decrease in ventilation causes CO2 to build up.
+Dialogue: 0,000:00:44.60,000:00:49.52,Default,,0,0,0,,CO2 can freely cross the blood-brain barrier, combining with water to form carbonic acid,
+Dialogue: 0,000:00:49.52,000:00:53.44,Default,,0,0,0,,which dissociates into hydronium ions, leading to local acidosis.
+Dialogue: 0,000:00:53.44,000:00:57.12,Highlight,,0,0,0,,Acidosis triggers vasodilation, increasing cranial blood flow and intracranial pressure if
+Dialogue: 0,000:00:57.12,000:00:58.12,Highlight,,0,0,0,,unchecked.
+Dialogue: 0,000:00:58.12,000:01:03.16,Default,,0,0,0,,Hypercapnia causes an increase in hydronium ions (H+), which leads to respiratory acidosis.
+Dialogue: 0,000:01:03.16,000:01:04.16,Default,,0,0,0,,Here's a practice question.
+Dialogue: 0,000:01:04.16,000:01:10.40,Default,,0,0,0,,A patient is unresponsive after heroin use; the cause is increased perfusion due to respiratory depression and increased CO2.
+Dialogue: 0,000:01:10.40,000:01:11.40,Default,,0,0,0,,Decreased systemic vascular resistance (SVR) is seen in septic shock.
+Dialogue: 0,000:01:11.40,000:01:13.56,Default,,0,0,0,,Hypoxia triggers a pulmonary response in the brain.
+Dialogue: 0,000:01:13.56,000:01:16.08,Default,,0,0,0,,Increased bicarbonate indicates metabolic compensation.

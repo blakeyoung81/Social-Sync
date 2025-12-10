@@ -1,0 +1,106 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.cursor/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Cache and temporary files
+cache/
+data/temp/
+*.tmp
+*.temp
+
+# Sensitive configuration
+config/token.json
+config/credentials.json
+*.key
+*.pem
+
+# Processing outputs
+data/uploads/*.mp4
+data/uploads/*.mov
+data/temp/*.mp4
+data/temp/*.mov
+
+# Archive (old files we don't need in git)
+archive/old_files/
+archive/cleanup_archive/
+
+# Next.js
+web-interface/.next/
+web-interface/out/
+web-interface/build/
+web-interface/dist/
+web-interface/node_modules/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temporary video files (anywhere in project)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Audio cache
+audio_cache/
+
+# Test outputs
+tests/output/
+tests/temp/
+
+# Documentation builds
+docs/build/ 

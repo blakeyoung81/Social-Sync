@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "highlights": [
+    {
+      "title": "Introduction to Ototoxicity",
+      "description": "Overview of drugs causing ototoxicity is crucial for medical students.",
+      "startTime": 0,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Vancomycin and Ototoxicity",
+      "description": "Understanding vancomycin's effects helps in clinical decisions.",
+      "startTime": 15,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Aminoglycosides Explained",
+      "description": "Key association with ototoxicity and nephrotoxicity highlighted.",
+      "startTime": 45,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Platinum Compounds",
+      "description": "Cisplatin and carboplatin's ototoxic effects are critical for oncology.",
+      "startTime": 75,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Loop Diuretics Overview",
+      "description": "Loop diuretics' side effects including ototoxicity are essential knowledge.",
+      "startTime": 105,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Ethacrynic Acid's Risks",
+      "description": "Ethacrynic acid's higher ototoxicity is important for patient safety.",
+      "startTime": 135,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Memorable Mnemonics",
+      "description": "Using 'odang' helps remember multiple adverse effects.",
+      "startTime": 165,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Conclusion and Summary",
+      "description": "Recap of key drugs and their associations with ototoxicity.",
+      "startTime": 195,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Call to Action",
+      "description": "Encouragement to like and subscribe fosters community engagement.",
+      "startTime": 240,
+      "endTime": null,
+      "importance": "low"
+    }
+  ],
+  "totalHighlights": 9,
+  "model": "gpt-4o-mini"
+}

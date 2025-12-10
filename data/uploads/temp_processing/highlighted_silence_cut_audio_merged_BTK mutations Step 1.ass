@@ -1,0 +1,50 @@
+
+[Script Info]
+ScriptType: v4.00+
+ScaledBorderAndShadow: yes
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,55,&H00FFFFFF,&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,15,1
+Style: Highlight,Arial,62,&H0000FFFF,&H000000FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,2,2,2,10,10,15,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,000:00:00.00,000:00:03.76,Default,,0,0,0,,Did you know that by six months your mom's antibodies have already worn off?
+Dialogue: 0,000:00:03.76,000:00:09.20,Default,,0,0,0,,And so if you have Bruton's agammaglobulinemia, then you are flying low immunologically speaking.
+Dialogue: 0,000:00:09.20,000:00:12.24,Default,,0,0,0,,So your bone marrow is going to make these B cells.
+Dialogue: 0,000:00:12.24,000:00:17.52,Default,,0,0,0,,And then the BTK gene is needed for the transition from pre-B cells to immature B cells.
+Dialogue: 0,000:00:17.52,000:00:21.52,Highlight,,0,0,0,,And if you have a mutation there, like X-linked Bruton's agammaglobulinemia,
+Dialogue: 0,000:00:21.52,000:00:24.08,Highlight,,0,0,0,,then the B cells are going to rest in that pre-B stage.
+Dialogue: 0,000:00:24.08,000:00:27.36,Default,,0,0,0,,And so that means you get no plasma cells, no antibodies, no immunoglobulins.
+Dialogue: 0,000:00:27.36,000:00:30.72,Default,,0,0,0,,And so if you see the electrophoresis graph, it's going to be very low for the gamma globulin.
+Dialogue: 0,000:00:30.72,000:00:31.84,Default,,0,0,0,,So here's our practice question.
+Dialogue: 0,000:00:31.84,000:00:34.64,Default,,0,0,0,,We have a nine-month-old boy who has been to the hospital a couple of times,
+Dialogue: 0,000:00:34.64,000:00:36.88,Default,,0,0,0,,could be anywhere from nine months to ten or eleven.
+Dialogue: 0,000:00:36.88,000:00:37.68,Default,,0,0,0,,Pneumonia.
+Dialogue: 0,000:00:37.68,000:00:39.92,Default,,0,0,0,,He's got some pneumonia and has been in the hospital a couple of times.
+Dialogue: 0,000:00:39.92,000:00:44.80,Default,,0,0,0,,His dad, another male in the family, died of severe infections.
+Dialogue: 0,000:00:44.80,000:00:48.72,Default,,0,0,0,,We have absent CD19 cells and low immunoglobulin levels.
+Dialogue: 0,000:00:48.72,000:00:49.60,Default,,0,0,0,,So what are we going to see?
+Dialogue: 0,000:00:49.60,000:00:51.20,Default,,0,0,0,,We're definitely going to see absence.
+Dialogue: 0,000:00:51.20,000:00:54.00,Default,,0,0,0,,A monoclonal spike would make us think of multiple myeloma.
+Dialogue: 0,000:00:54.00,000:00:57.04,Default,,0,0,0,,Beta-gamma bridging indicates IgA overproduction
+Dialogue: 0,000:00:57.04,000:00:59.76,Default,,0,0,0,,or cirrhosis, broad-based polyclonal increase.
+Dialogue: 0,000:00:59.76,000:01:03.28,Default,,0,0,0,,That would be seen in an autoimmune condition, and it's definitely not normal.
+Dialogue: 0,000:01:03.28,000:01:04.96,Default,,0,0,0,,So let's think of the buzzy buzzwords.
+Dialogue: 0,000:01:04.96,000:01:09.20,Default,,0,0,0,,Strep pneumoniae, H. influenzae, Staphylococcus aureus, just recurrent respiratory infections.
+Dialogue: 0,000:01:09.20,000:01:11.92,Default,,0,0,0,,Also, if you have a boy with an X-linked disease,
+Dialogue: 0,000:01:11.92,000:01:13.76,Default,,0,0,0,,that should already key you into that a little bit too.
+Dialogue: 0,000:01:13.76,000:01:16.24,Highlight,,0,0,0,,So encapsulated organisms, no IgG.
+Dialogue: 0,000:01:16.24,000:01:17.60,Default,,0,0,0,,So you have poor opsonization.
+Dialogue: 0,000:01:17.60,000:01:19.20,Default,,0,0,0,,You have no tonsils or lymphoid tissue, right?
+Dialogue: 0,000:01:19.20,000:01:21.84,Default,,0,0,0,,Because those are B cell-dependent organs that are underdeveloped.
+Dialogue: 0,000:01:21.84,000:01:24.48,Default,,0,0,0,,If you found this video helpful, then please like and subscribe.
+Dialogue: 0,000:01:24.48,000:01:25.76,Default,,0,0,0,,It definitely helps out the channel.
+Dialogue: 0,000:01:25.76,000:01:28.96,Default,,0,0,0,,Also consider subscribing because we're going to be giving out free subscriptions
+Dialogue: 0,000:01:28.96,000:01:31.52,Default,,0,0,0,,to our new platform, which is like UWorld, but a little bit better.
+Dialogue: 0,000:01:31.52,000:01:34.24,Default,,0,0,0,,It uses artificial intelligence to pinpoint your weaknesses.
+Dialogue: 0,000:01:34.24,000:01:35.36,Default,,0,0,0,,Well, good luck studying for Step.
+Dialogue: 0,000:01:35.36,000:01:36.32,Default,,0,0,0,,We'll see you in the next one.

@@ -1,0 +1,55 @@
+Sure, here is the corrected version of the SRT subtitles:
+
+```
+1
+00:00:00,000 --> 00:00:03,439
+Hey guys, here's an example from my Chrome extension that makes this question super easy.
+
+2
+00:00:03,439 --> 00:00:07,839
+A 68-year-old man with advanced melanoma is receiving antibody treatment.
+
+3
+00:00:10,160 --> 00:00:15,359
+that blocks receptors on the T cells. Which receptor is it? Well, before, the question looked like this.
+
+4
+00:00:16,879 --> 00:00:21,120
+And now with my extension, you click it, click this button down here, and it'll load.
+
+5
+00:00:21,120 --> 00:00:25,519
+It'll tell you, boom, a receptor involved in HIV entry, a receptor on the helper.
+
+6
+00:00:25,519 --> 00:00:28,480
+A receptor meaning it's on B cells, a receptor that activates T cells,
+
+7
+00:00:28,480 --> 00:00:32,079
+or a receptor that blocks and helps activate the T cells on cancer.
+
+8
+00:00:32,079 --> 00:00:37,679
+Well, indeed, that would be your PD-1 ligand. This guy activates this as a B cell, for instance,
+
+9
+00:00:37,679 --> 00:00:43,200
+and B. So, each of these is the chemoreceptor 5 that binds to your CD4s, and the antagonist there
+
+10
+00:00:43,920 --> 00:00:48,000
+has been developed and managed to engage HIV, and blockade of your CD4 itself
+
+11
+00:00:48,000 --> 00:00:51,200
+inhibits T cell activation. So, with this little extension,
+
+12
+00:00:52,400 --> 00:00:56,560
+you guys can simplify these questions. If you find this helpful, like and subscribe.
+
+13
+00:00:56,560 --> 00:01:00,160
+Also, you can give this out by clicking the link in the description.
+```

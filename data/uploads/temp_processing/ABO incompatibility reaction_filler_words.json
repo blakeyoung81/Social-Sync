@@ -1,0 +1,94 @@
+{
+  "fillerWords": [
+    {
+      "text": "So",
+      "start": 0,
+      "end": 1,
+      "reason": "filler"
+    },
+    {
+      "text": "All right",
+      "start": 10,
+      "end": 12,
+      "reason": "filler"
+    },
+    {
+      "text": "So",
+      "start": 12,
+      "end": 13,
+      "reason": "filler"
+    },
+    {
+      "text": "All right",
+      "start": 20,
+      "end": 22,
+      "reason": "filler"
+    },
+    {
+      "text": "Well",
+      "start": 39,
+      "end": 40,
+      "reason": "filler"
+    },
+    {
+      "text": "So",
+      "start": 56,
+      "end": 57,
+      "reason": "filler"
+    },
+    {
+      "text": "right?",
+      "start": 61,
+      "end": 62,
+      "reason": "filler"
+    },
+    {
+      "text": "like",
+      "start": 80,
+      "end": 81,
+      "reason": "filler"
+    },
+    {
+      "text": "right?",
+      "start": 85,
+      "end": 86,
+      "reason": "filler"
+    },
+    {
+      "text": "So",
+      "start": 90,
+      "end": 91,
+      "reason": "filler"
+    },
+    {
+      "text": "that's not going to be relevant",
+      "start": 135,
+      "end": 138,
+      "reason": "repetition"
+    },
+    {
+      "text": "All right",
+      "start": 143,
+      "end": 145,
+      "reason": "filler"
+    },
+    {
+      "text": "then",
+      "start": 145,
+      "end": 146,
+      "reason": "filler"
+    },
+    {
+      "text": "you know",
+      "start": 147,
+      "end": 149,
+      "reason": "filler"
+    },
+    {
+      "text": "and",
+      "start": 150,
+      "end": 151,
+      "reason": "filler"
+    }
+  ]
+}

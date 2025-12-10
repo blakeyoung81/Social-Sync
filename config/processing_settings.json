@@ -1,0 +1,12 @@
+{
+  "cutSilences": true,
+  "cutBadTakes": true,
+  "removeFiller": true,
+  "addSmartCaptions": true,
+  "likeSubscribeButton": true,
+  "jumpCutZoom": false,
+  "enhanceAudio": true,
+  "aiBackground": false,
+  "savedAt": "2025-07-14T06:47:59.826Z",
+  "version": "1.0"
+}

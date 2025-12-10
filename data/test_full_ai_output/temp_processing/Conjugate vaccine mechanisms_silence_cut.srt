@@ -1,0 +1,47 @@
+1
+00:00:00,000 --> 00:00:04,160
+A 6-month-old infant receives a vaccine that includes a bacterial
+
+2
+00:00:04,480 --> 00:00:09,360
+capsule polysaccharide conjugated to diphtheria toxoid. What is the immunological advantage
+
+3
+00:00:09,520 --> 00:00:13,600
+conferred by this conjugation? It's going to be enhanced class switching through T helper cells.
+
+4
+00:00:13,840 --> 00:00:18,880
+Infants under two years old can't mount a memory response to plain polysaccharide antigens;
+
+5
+00:00:19,040 --> 00:00:20,000
+they just can't do it.
+
+6
+00:00:20,000 --> 00:00:25,760
+But when you conjugate that capsule to a protein like tetanus toxoid, then it recruits T helper cells
+
+7
+00:00:26,080 --> 00:00:31,920
+and enables class switching, affinity maturation, and immunological memory. So that's how conjugate
+
+8
+00:00:32,720 --> 00:00:39,280
+vaccines work. It's not because of the toxoid, but because of that teamwork. It's because of that robust T cell-dependent immunity.
+
+9
+00:00:39,680 --> 00:00:46,320
+So let's look at these trap answers. Mucosal IgA is induced by oral and intranasal vaccines and mucosal infections,
+
+10
+00:00:46,320 --> 00:00:52,480
+not systemic conjugates. TLR4 recognizes your LPS, not capsular polysaccharides.
+
+11
+00:00:52,560 --> 00:00:57,680
+Somatic hypermutation is the advantage of conjugation as T cell helpers, not diversification.
+
+12
+00:00:58,080 --> 00:01:05,200
+M cells are involved in mucosal antigen sampling, unrelated to conjugate vaccines. Like and subscribe for a new question every day.

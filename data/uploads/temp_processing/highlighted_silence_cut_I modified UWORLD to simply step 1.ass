@@ -1,0 +1,24 @@
+
+[Script Info]
+ScriptType: v4.00+
+ScaledBorderAndShadow: yes
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,55,&H00FFFFFF,&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,15,1
+Style: Highlight,Arial,62,&H0000FFFF,&H000000FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,2,2,2,10,10,15,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,000:00:00.00,000:00:03.52,Default,,0,0,0,,Hey guys, here's an example of how my crime this question is super easy. A 68-year-old man with
+Dialogue: 0,000:00:03.52,000:00:07.92,Default,,0,0,0,,advanced disease is receiving antibody treatment that blocks a receptor on the T cell. Which receptor is
+Dialogue: 0,000:00:07.92,000:00:12.32,Default,,0,0,0,,it? Well, before the question looked like this, and now with my extension, you click this
+Dialogue: 0,000:00:12.32,000:00:17.04,Default,,0,0,0,,button down here, and it'll load and it'll tell you, boom, a receptor involved in HIV, the receptor
+Dialogue: 0,000:00:17.04,000:00:20.48,Default,,0,0,0,,on the helper T cell that activates or a receptor that blocks that, when blocked, helps activate.
+Dialogue: 0,000:00:20.48,000:00:25.36,Default,,0,0,0,,Well, indeed that would be your PD-1 ligand. This guy activates, this is a B cell for instance, and
+Dialogue: 0,000:00:25.36,000:00:30.96,Highlight,,0,0,0,,HIV uses a receptor 5 to bind to your CD4s, and the antagonist there has been developed into
+Dialogue: 0,000:00:30.96,000:00:35.76,Default,,0,0,0,,HIV, and blockade of your CD4 itself inhibits T cell activation. So with this little extension, you
+Dialogue: 0,000:00:35.76,000:00:39.84,Default,,0,0,0,,guys can simplify these. If you found this helpful, like and subscribe. Also, you can get this software
+Dialogue: 0,000:00:39.84,000:00:40.40,Default,,0,0,0,,by clicking

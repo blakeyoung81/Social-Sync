@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:03,520
+Hey guys, here's an example of how my crime this question is super easy. A 68-year-old man with
+
+2
+00:00:03,520 --> 00:00:07,920
+advanced disease is receiving antibody treatment that blocks a receptor on the T cell. Which receptor is
+
+3
+00:00:07,920 --> 00:00:12,320
+it? Well, before the question looked like this, and now with my extension, you click this
+
+4
+00:00:12,320 --> 00:00:17,040
+button down here, and it'll load and it'll tell you, boom, a receptor involved in HIV, the receptor
+
+5
+00:00:17,040 --> 00:00:20,480
+on the helper T cell that activates or a receptor that blocks that, when blocked, helps activate.
+
+6
+00:00:20,480 --> 00:00:25,360
+Well, indeed that would be your PD-1 ligand. This guy activates, this is a B cell for instance, and
+
+7
+00:00:25,360 --> 00:00:30,960
+HIV uses a receptor 5 to bind to your CD4s, and the antagonist there has been developed into
+
+8
+00:00:30,960 --> 00:00:35,760
+HIV, and blockade of your CD4 itself inhibits T cell activation. So with this little extension, you
+
+9
+00:00:35,760 --> 00:00:39,840
+guys can simplify these. If you found this helpful, like and subscribe. Also, you can get this software
+
+10
+00:00:39,840 --> 00:00:40,400
+by clicking

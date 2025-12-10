@@ -1,0 +1,3227 @@
+{
+  "success": true,
+  "segments": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 3.4,
+      "startTime": "00:00:00,000",
+      "endTime": "00:00:03,400",
+      "text": "Okay, let's see the scene so you're at the emergency department and",
+      "confidence": -0.2326121098786882,
+      "words": [
+        {
+          "text": " Okay,",
+          "start": 0,
+          "end": 0.52,
+          "confidence": 0.850152850151062
+        },
+        {
+          "text": " let's",
+          "start": 0.58,
+          "end": 1.22,
+          "confidence": 0.9868630766868591
+        },
+        {
+          "text": " see",
+          "start": 1.22,
+          "end": 1.3,
+          "confidence": 0.3320549726486206
+        },
+        {
+          "text": " the",
+          "start": 1.3,
+          "end": 1.38,
+          "confidence": 0.9726625084877014
+        },
+        {
+          "text": " scene",
+          "start": 1.38,
+          "end": 1.6,
+          "confidence": 0.9930412769317627
+        },
+        {
+          "text": " so",
+          "start": 1.6,
+          "end": 1.96,
+          "confidence": 0.5342018008232117
+        },
+        {
+          "text": " you're",
+          "start": 1.96,
+          "end": 2.1,
+          "confidence": 0.9957436323165894
+        },
+        {
+          "text": " at",
+          "start": 2.1,
+          "end": 2.2,
+          "confidence": 0.998611330986023
+        },
+        {
+          "text": " the",
+          "start": 2.2,
+          "end": 2.3,
+          "confidence": 0.9990515112876892
+        },
+        {
+          "text": " emergency",
+          "start": 2.3,
+          "end": 2.56,
+          "confidence": 0.9504796266555786
+        },
+        {
+          "text": " department",
+          "start": 2.56,
+          "end": 3.04,
+          "confidence": 0.9328539371490479
+        },
+        {
+          "text": " and",
+          "start": 3.04,
+          "end": 3.4,
+          "confidence": 0.9693847894668579
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 4.379999999999999,
+      "end": 9.42,
+      "startTime": "00:00:04,380",
+      "endTime": "00:00:09,420",
+      "text": "A trauma patient comes in from a car crash and he's bleeding badly and the vitals are unstable",
+      "confidence": -0.2326121098786882,
+      "words": [
+        {
+          "text": " A",
+          "start": 4.379999999999999,
+          "end": 4.82,
+          "confidence": 0.25440818071365356
+        },
+        {
+          "text": " trauma",
+          "start": 4.82,
+          "end": 5.06,
+          "confidence": 0.9658099412918091
+        },
+        {
+          "text": " patient",
+          "start": 5.06,
+          "end": 5.38,
+          "confidence": 0.9984664916992188
+        },
+        {
+          "text": " comes",
+          "start": 5.38,
+          "end": 5.66,
+          "confidence": 0.998588502407074
+        },
+        {
+          "text": " in",
+          "start": 5.66,
+          "end": 5.86,
+          "confidence": 0.9996488094329834
+        },
+        {
+          "text": " from",
+          "start": 5.86,
+          "end": 6.24,
+          "confidence": 0.9971900582313538
+        },
+        {
+          "text": " a",
+          "start": 6.24,
+          "end": 6.38,
+          "confidence": 0.9988328814506531
+        },
+        {
+          "text": " car",
+          "start": 6.38,
+          "end": 6.52,
+          "confidence": 0.9946078062057495
+        },
+        {
+          "text": " crash",
+          "start": 6.52,
+          "end": 6.84,
+          "confidence": 0.9961203932762146
+        },
+        {
+          "text": " and",
+          "start": 6.84,
+          "end": 7.06,
+          "confidence": 0.6144506931304932
+        },
+        {
+          "text": " he's",
+          "start": 7.06,
+          "end": 7.24,
+          "confidence": 0.9976931214332581
+        },
+        {
+          "text": " bleeding",
+          "start": 7.24,
+          "end": 7.5,
+          "confidence": 0.9992184638977051
+        },
+        {
+          "text": " badly",
+          "start": 7.5,
+          "end": 7.82,
+          "confidence": 0.9105644822120667
+        },
+        {
+          "text": " and",
+          "start": 7.82,
+          "end": 8.26,
+          "confidence": 0.8806978464126587
+        },
+        {
+          "text": " the",
+          "start": 8.26,
+          "end": 8.48,
+          "confidence": 0.9410766959190369
+        },
+        {
+          "text": " vitals",
+          "start": 8.48,
+          "end": 8.8,
+          "confidence": 0.99688321352005
+        },
+        {
+          "text": " are",
+          "start": 8.8,
+          "end": 8.94,
+          "confidence": 0.9979574680328369
+        },
+        {
+          "text": " unstable",
+          "start": 8.94,
+          "end": 9.42,
+          "confidence": 0.9943342208862305
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 9.94,
+      "end": 13.6,
+      "startTime": "00:00:09,940",
+      "endTime": "00:00:13,600",
+      "text": "And he needs blood fast and so the team jumps into action and you start your transfusion",
+      "confidence": -0.2326121098786882,
+      "words": [
+        {
+          "text": " And",
+          "start": 9.94,
+          "end": 10.38,
+          "confidence": 0.1839742511510849
+        },
+        {
+          "text": " he",
+          "start": 10.38,
+          "end": 10.54,
+          "confidence": 0.9425680637359619
+        },
+        {
+          "text": " needs",
+          "start": 10.54,
+          "end": 10.68,
+          "confidence": 0.9971381425857544
+        },
+        {
+          "text": " blood",
+          "start": 10.68,
+          "end": 10.86,
+          "confidence": 0.9964479207992554
+        },
+        {
+          "text": " fast",
+          "start": 10.86,
+          "end": 11.2,
+          "confidence": 0.9857501983642578
+        },
+        {
+          "text": " and",
+          "start": 11.2,
+          "end": 11.44,
+          "confidence": 0.8242301940917969
+        },
+        {
+          "text": " so",
+          "start": 11.44,
+          "end": 11.56,
+          "confidence": 0.9968916773796082
+        },
+        {
+          "text": " the",
+          "start": 11.56,
+          "end": 11.66,
+          "confidence": 0.9996280670166016
+        },
+        {
+          "text": " team",
+          "start": 11.66,
+          "end": 11.8,
+          "confidence": 0.991792619228363
+        },
+        {
+          "text": " jumps",
+          "start": 11.8,
+          "end": 12,
+          "confidence": 0.9949753284454346
+        },
+        {
+          "text": " into",
+          "start": 12,
+          "end": 12.18,
+          "confidence": 0.996355414390564
+        },
+        {
+          "text": " action",
+          "start": 12.18,
+          "end": 12.48,
+          "confidence": 0.9989039897918701
+        },
+        {
+          "text": " and",
+          "start": 12.48,
+          "end": 12.74,
+          "confidence": 0.868391215801239
+        },
+        {
+          "text": " you",
+          "start": 12.74,
+          "end": 12.84,
+          "confidence": 0.9931185245513916
+        },
+        {
+          "text": " start",
+          "start": 12.84,
+          "end": 13,
+          "confidence": 0.9988184571266174
+        },
+        {
+          "text": " your",
+          "start": 13,
+          "end": 13.12,
+          "confidence": 0.9988383650779724
+        },
+        {
+          "text": " transfusion",
+          "start": 13.12,
+          "end": 13.6,
+          "confidence": 0.9850857555866241
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 14.559999999999997,
+      "end": 20.84,
+      "startTime": "00:00:14,560",
+      "endTime": "00:00:20,840",
+      "text": "Then within minutes everything changes. All right, so here's our practice question. Let's see if you can diagnose this as if you were a physician",
+      "confidence": -0.2326121098786882,
+      "words": [
+        {
+          "text": " Then",
+          "start": 14.559999999999997,
+          "end": 14.999999999999998,
+          "confidence": 0.8480504155158997
+        },
+        {
+          "text": " within",
+          "start": 14.999999999999998,
+          "end": 15.44,
+          "confidence": 0.993026614189148
+        },
+        {
+          "text": " minutes",
+          "start": 15.44,
+          "end": 15.9,
+          "confidence": 0.9987035989761353
+        },
+        {
+          "text": " everything",
+          "start": 15.9,
+          "end": 16.38,
+          "confidence": 0.8160473108291626
+        },
+        {
+          "text": " changes.",
+          "start": 16.38,
+          "end": 16.9,
+          "confidence": 0.9984069466590881
+        },
+        {
+          "text": " All",
+          "start": 17.28,
+          "end": 17.72,
+          "confidence": 0.5724325776100159
+        },
+        {
+          "text": " right,",
+          "start": 17.72,
+          "end": 17.8,
+          "confidence": 0.9996858835220337
+        },
+        {
+          "text": " so",
+          "start": 17.8,
+          "end": 17.96,
+          "confidence": 0.9980902075767517
+        },
+        {
+          "text": " here's",
+          "start": 17.96,
+          "end": 18.14,
+          "confidence": 0.9990803003311157
+        },
+        {
+          "text": " our",
+          "start": 18.14,
+          "end": 18.24,
+          "confidence": 0.9962766766548157
+        },
+        {
+          "text": " practice",
+          "start": 18.24,
+          "end": 18.44,
+          "confidence": 0.9962305426597595
+        },
+        {
+          "text": " question.",
+          "start": 18.44,
+          "end": 18.76,
+          "confidence": 0.9851493835449219
+        },
+        {
+          "text": " Let's",
+          "start": 18.8,
+          "end": 18.92,
+          "confidence": 0.9985747635364532
+        },
+        {
+          "text": " see",
+          "start": 18.92,
+          "end": 19.04,
+          "confidence": 0.9995610117912292
+        },
+        {
+          "text": " if",
+          "start": 19.04,
+          "end": 19.12,
+          "confidence": 0.9890621304512024
+        },
+        {
+          "text": " you",
+          "start": 19.12,
+          "end": 19.16,
+          "confidence": 0.9971441626548767
+        },
+        {
+          "text": " can",
+          "start": 19.16,
+          "end": 19.26,
+          "confidence": 0.9867604970932007
+        },
+        {
+          "text": " diagnose",
+          "start": 19.26,
+          "end": 19.52,
+          "confidence": 0.9964452385902405
+        },
+        {
+          "text": " this",
+          "start": 19.52,
+          "end": 19.78,
+          "confidence": 0.9957203269004822
+        },
+        {
+          "text": " as",
+          "start": 19.78,
+          "end": 20.06,
+          "confidence": 0.9943537712097168
+        },
+        {
+          "text": " if",
+          "start": 20.06,
+          "end": 20.22,
+          "confidence": 0.9989990592002869
+        },
+        {
+          "text": " you",
+          "start": 20.22,
+          "end": 20.4,
+          "confidence": 0.9983745813369751
+        },
+        {
+          "text": " were",
+          "start": 20.4,
+          "end": 20.5,
+          "confidence": 0.9943061470985413
+        },
+        {
+          "text": " a",
+          "start": 20.5,
+          "end": 20.6,
+          "confidence": 0.9994392991065979
+        },
+        {
+          "text": " physician",
+          "start": 20.6,
+          "end": 20.84,
+          "confidence": 0.9985527396202087
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "start": 20.84,
+      "end": 23.86,
+      "startTime": "00:00:20,840",
+      "endTime": "00:00:23,860",
+      "text": "All right, so suddenly in this patient",
+      "confidence": -0.2326121098786882,
+      "words": [
+        {
+          "text": " All",
+          "start": 20.84,
+          "end": 21.52,
+          "confidence": 0.7356102466583252
+        },
+        {
+          "text": " right,",
+          "start": 21.52,
+          "end": 22.2,
+          "confidence": 0.9996962547302246
+        },
+        {
+          "text": " so",
+          "start": 22.22,
+          "end": 22.44,
+          "confidence": 0.9991055130958557
+        },
+        {
+          "text": " suddenly",
+          "start": 22.44,
+          "end": 22.98,
+          "confidence": 0.9984042048454285
+        },
+        {
+          "text": " in",
+          "start": 22.98,
+          "end": 23.3,
+          "confidence": 0.9420737624168396
+        },
+        {
+          "text": " this",
+          "start": 23.3,
+          "end": 23.42,
+          "confidence": 0.9994630217552185
+        },
+        {
+          "text": " patient",
+          "start": 23.42,
+          "end": 23.86,
+          "confidence": 0.9981589913368225
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "start": 24.38,
+      "end": 28.18,
+      "startTime": "00:00:24,380",
+      "endTime": "00:00:28,180",
+      "text": "Their blood pressure tanks and this patient is gasping for air",
+      "confidence": -0.20079249602097732,
+      "words": [
+        {
+          "text": " Their",
+          "start": 24.38,
+          "end": 24.86,
+          "confidence": 0.0641356110572815
+        },
+        {
+          "text": " blood",
+          "start": 24.86,
+          "end": 25.04,
+          "confidence": 0.9864382743835449
+        },
+        {
+          "text": " pressure",
+          "start": 25.04,
+          "end": 25.3,
+          "confidence": 0.9977322816848755
+        },
+        {
+          "text": " tanks",
+          "start": 25.3,
+          "end": 25.62,
+          "confidence": 0.9652900695800781
+        },
+        {
+          "text": " and",
+          "start": 25.62,
+          "end": 26.28,
+          "confidence": 0.541075587272644
+        },
+        {
+          "text": " this",
+          "start": 26.28,
+          "end": 26.64,
+          "confidence": 0.5022745132446289
+        },
+        {
+          "text": " patient",
+          "start": 26.64,
+          "end": 26.92,
+          "confidence": 0.7823131680488586
+        },
+        {
+          "text": " is",
+          "start": 26.92,
+          "end": 27.32,
+          "confidence": 0.989462673664093
+        },
+        {
+          "text": " gasping",
+          "start": 27.32,
+          "end": 27.82,
+          "confidence": 0.9879951477050781
+        },
+        {
+          "text": " for",
+          "start": 27.82,
+          "end": 27.98,
+          "confidence": 0.9984233379364014
+        },
+        {
+          "text": " air",
+          "start": 27.98,
+          "end": 28.18,
+          "confidence": 0.995175838470459
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "start": 28.18,
+      "end": 33.72,
+      "startTime": "00:00:28,180",
+      "endTime": "00:00:33,720",
+      "text": "They're clenching their chest back and forth and then just moments later the nurse notices a folly bag",
+      "confidence": -0.20079249602097732,
+      "words": [
+        {
+          "text": " They're",
+          "start": 28.18,
+          "end": 28.4,
+          "confidence": 0.5516907833516598
+        },
+        {
+          "text": " clenching",
+          "start": 28.4,
+          "end": 28.66,
+          "confidence": 0.9870885809262594
+        },
+        {
+          "text": " their",
+          "start": 28.66,
+          "end": 28.86,
+          "confidence": 0.9907825589179993
+        },
+        {
+          "text": " chest",
+          "start": 28.86,
+          "end": 29.14,
+          "confidence": 0.9714478850364685
+        },
+        {
+          "text": " back",
+          "start": 29.14,
+          "end": 29.42,
+          "confidence": 0.9970142841339111
+        },
+        {
+          "text": " and",
+          "start": 29.42,
+          "end": 29.56,
+          "confidence": 0.9917941689491272
+        },
+        {
+          "text": " forth",
+          "start": 29.56,
+          "end": 29.82,
+          "confidence": 0.9980341792106628
+        },
+        {
+          "text": " and",
+          "start": 29.82,
+          "end": 30.38,
+          "confidence": 0.8511573076248169
+        },
+        {
+          "text": " then",
+          "start": 30.38,
+          "end": 30.56,
+          "confidence": 0.9983086585998535
+        },
+        {
+          "text": " just",
+          "start": 30.56,
+          "end": 31.06,
+          "confidence": 0.9949365854263306
+        },
+        {
+          "text": " moments",
+          "start": 31.06,
+          "end": 31.38,
+          "confidence": 0.9961383938789368
+        },
+        {
+          "text": " later",
+          "start": 31.38,
+          "end": 31.66,
+          "confidence": 0.9931655526161194
+        },
+        {
+          "text": " the",
+          "start": 31.66,
+          "end": 31.86,
+          "confidence": 0.8311809301376343
+        },
+        {
+          "text": " nurse",
+          "start": 31.86,
+          "end": 32.14,
+          "confidence": 0.9957854151725769
+        },
+        {
+          "text": " notices",
+          "start": 32.14,
+          "end": 32.6,
+          "confidence": 0.9808032512664795
+        },
+        {
+          "text": " a",
+          "start": 32.6,
+          "end": 33,
+          "confidence": 0.981050431728363
+        },
+        {
+          "text": " folly",
+          "start": 33,
+          "end": 33.38,
+          "confidence": 0.8775660395622253
+        },
+        {
+          "text": " bag",
+          "start": 33.38,
+          "end": 33.72,
+          "confidence": 0.9592512249946594
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "start": 33.72,
+      "end": 38.36,
+      "startTime": "00:00:33,720",
+      "endTime": "00:00:38,360",
+      "text": "That's filling with brown urine and so at this point you've got to think of one thing",
+      "confidence": -0.20079249602097732,
+      "words": [
+        {
+          "text": " That's",
+          "start": 33.72,
+          "end": 34.38,
+          "confidence": 0.7299442738294601
+        },
+        {
+          "text": " filling",
+          "start": 34.38,
+          "end": 34.64,
+          "confidence": 0.9812871813774109
+        },
+        {
+          "text": " with",
+          "start": 34.64,
+          "end": 34.84,
+          "confidence": 0.9990859031677246
+        },
+        {
+          "text": " brown",
+          "start": 34.84,
+          "end": 35.08,
+          "confidence": 0.7975422739982605
+        },
+        {
+          "text": " urine",
+          "start": 35.08,
+          "end": 35.36,
+          "confidence": 0.9972355961799622
+        },
+        {
+          "text": " and",
+          "start": 35.36,
+          "end": 36.34,
+          "confidence": 0.5052779316902161
+        },
+        {
+          "text": " so",
+          "start": 36.34,
+          "end": 36.48,
+          "confidence": 0.9909889101982117
+        },
+        {
+          "text": " at",
+          "start": 36.48,
+          "end": 36.58,
+          "confidence": 0.9826996326446533
+        },
+        {
+          "text": " this",
+          "start": 36.58,
+          "end": 36.66,
+          "confidence": 0.9997674822807312
+        },
+        {
+          "text": " point",
+          "start": 36.66,
+          "end": 36.86,
+          "confidence": 0.9996849298477173
+        },
+        {
+          "text": " you've",
+          "start": 36.86,
+          "end": 37.06,
+          "confidence": 0.8127184808254242
+        },
+        {
+          "text": " got",
+          "start": 37.06,
+          "end": 37.14,
+          "confidence": 0.9694948792457581
+        },
+        {
+          "text": " to",
+          "start": 37.14,
+          "end": 37.26,
+          "confidence": 0.9933801889419556
+        },
+        {
+          "text": " think",
+          "start": 37.26,
+          "end": 37.44,
+          "confidence": 0.9995074272155762
+        },
+        {
+          "text": " of",
+          "start": 37.44,
+          "end": 37.86,
+          "confidence": 0.9993720650672913
+        },
+        {
+          "text": " one",
+          "start": 37.86,
+          "end": 38.06,
+          "confidence": 0.9989261031150818
+        },
+        {
+          "text": " thing",
+          "start": 38.06,
+          "end": 38.36,
+          "confidence": 0.9944414496421814
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "start": 38.36,
+      "end": 44.74,
+      "startTime": "00:00:38,360",
+      "endTime": "00:00:44,740",
+      "text": "This is a cute hemolytic transfusion reaction. All right, so we have several answer choices delayed antibody response",
+      "confidence": -0.20079249602097732,
+      "words": [
+        {
+          "text": " This",
+          "start": 38.36,
+          "end": 38.94,
+          "confidence": 0.3756232261657715
+        },
+        {
+          "text": " is",
+          "start": 38.94,
+          "end": 39.08,
+          "confidence": 0.9995321035385132
+        },
+        {
+          "text": " a",
+          "start": 39.08,
+          "end": 39.22,
+          "confidence": 0.5601730942726135
+        },
+        {
+          "text": " cute",
+          "start": 39.22,
+          "end": 39.5,
+          "confidence": 0.9945176243782043
+        },
+        {
+          "text": " hemolytic",
+          "start": 39.5,
+          "end": 40.38,
+          "confidence": 0.9752877652645111
+        },
+        {
+          "text": " transfusion",
+          "start": 40.38,
+          "end": 41.04,
+          "confidence": 0.9616944491863251
+        },
+        {
+          "text": " reaction.",
+          "start": 41.04,
+          "end": 41.38,
+          "confidence": 0.9889995455741882
+        },
+        {
+          "text": " All",
+          "start": 41.8,
+          "end": 42.36,
+          "confidence": 0.6165942549705505
+        },
+        {
+          "text": " right,",
+          "start": 42.36,
+          "end": 42.42,
+          "confidence": 0.9994046688079834
+        },
+        {
+          "text": " so",
+          "start": 42.42,
+          "end": 42.52,
+          "confidence": 0.9812102913856506
+        },
+        {
+          "text": " we",
+          "start": 42.52,
+          "end": 42.58,
+          "confidence": 0.9056397676467896
+        },
+        {
+          "text": " have",
+          "start": 42.58,
+          "end": 42.64,
+          "confidence": 0.9989136457443237
+        },
+        {
+          "text": " several",
+          "start": 42.64,
+          "end": 42.88,
+          "confidence": 0.99930739402771
+        },
+        {
+          "text": " answer",
+          "start": 42.88,
+          "end": 43.1,
+          "confidence": 0.8595427870750427
+        },
+        {
+          "text": " choices",
+          "start": 43.1,
+          "end": 43.36,
+          "confidence": 0.9978910088539124
+        },
+        {
+          "text": " delayed",
+          "start": 43.36,
+          "end": 43.68,
+          "confidence": 0.8157777190208435
+        },
+        {
+          "text": " antibody",
+          "start": 43.68,
+          "end": 44.12,
+          "confidence": 0.9907992482185364
+        },
+        {
+          "text": " response",
+          "start": 44.12,
+          "end": 44.74,
+          "confidence": 0.9952115416526794
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "start": 45.46,
+      "end": 50.28,
+      "startTime": "00:00:45,460",
+      "endTime": "00:00:50,280",
+      "text": "I g mediated histamine. All right, so delayed antibody response that",
+      "confidence": -0.20079249602097732,
+      "words": [
+        {
+          "text": " I",
+          "start": 45.46,
+          "end": 46.02,
+          "confidence": 0.7082916498184204
+        },
+        {
+          "text": " g",
+          "start": 46.02,
+          "end": 46.2,
+          "confidence": 0.136191263794899
+        },
+        {
+          "text": " mediated",
+          "start": 46.2,
+          "end": 46.6,
+          "confidence": 0.7687295079231262
+        },
+        {
+          "text": " histamine.",
+          "start": 46.6,
+          "end": 47.02,
+          "confidence": 0.9865672886371613
+        },
+        {
+          "text": " All",
+          "start": 47.44,
+          "end": 47.74,
+          "confidence": 0.8548892736434937
+        },
+        {
+          "text": " right,",
+          "start": 47.74,
+          "end": 47.86,
+          "confidence": 0.9997021555900574
+        },
+        {
+          "text": " so",
+          "start": 47.86,
+          "end": 48.08,
+          "confidence": 0.9988415837287903
+        },
+        {
+          "text": " delayed",
+          "start": 48.08,
+          "end": 48.56,
+          "confidence": 0.9943140745162964
+        },
+        {
+          "text": " antibody",
+          "start": 48.56,
+          "end": 49,
+          "confidence": 0.9954356551170349
+        },
+        {
+          "text": " response",
+          "start": 49,
+          "end": 49.34,
+          "confidence": 0.9962685108184814
+        },
+        {
+          "text": " that",
+          "start": 49.34,
+          "end": 50.28,
+          "confidence": 0.8496107459068298
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "start": 50.800000000000004,
+      "end": 53.94,
+      "startTime": "00:00:50,800",
+      "endTime": "00:00:53,940",
+      "text": "Would be seen days later not minutes, right?",
+      "confidence": -0.22460691134134927,
+      "words": [
+        {
+          "text": " Would",
+          "start": 50.800000000000004,
+          "end": 51.24,
+          "confidence": 0.0017934382194653153
+        },
+        {
+          "text": " be",
+          "start": 51.24,
+          "end": 51.46,
+          "confidence": 0.9549395442008972
+        },
+        {
+          "text": " seen",
+          "start": 51.46,
+          "end": 51.9,
+          "confidence": 0.8582525253295898
+        },
+        {
+          "text": " days",
+          "start": 51.9,
+          "end": 52.6,
+          "confidence": 0.9603908658027649
+        },
+        {
+          "text": " later",
+          "start": 52.6,
+          "end": 53,
+          "confidence": 0.990649402141571
+        },
+        {
+          "text": " not",
+          "start": 53,
+          "end": 53.34,
+          "confidence": 0.392261803150177
+        },
+        {
+          "text": " minutes,",
+          "start": 53.34,
+          "end": 53.62,
+          "confidence": 0.9954609274864197
+        },
+        {
+          "text": " right?",
+          "start": 53.76,
+          "end": 53.94,
+          "confidence": 0.99954754114151
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "start": 54.58,
+      "end": 58.12,
+      "startTime": "00:00:54,580",
+      "endTime": "00:00:58,120",
+      "text": "What we're dealing with here, this is one of the fastest and most dangerous complications in medicine",
+      "confidence": -0.22460691134134927,
+      "words": [
+        {
+          "text": " What",
+          "start": 54.58,
+          "end": 54.84,
+          "confidence": 0.9124034643173218
+        },
+        {
+          "text": " we're",
+          "start": 54.84,
+          "end": 55,
+          "confidence": 0.9926970899105072
+        },
+        {
+          "text": " dealing",
+          "start": 55,
+          "end": 55.14,
+          "confidence": 0.9984232187271118
+        },
+        {
+          "text": " with",
+          "start": 55.14,
+          "end": 55.32,
+          "confidence": 0.996713399887085
+        },
+        {
+          "text": " here,",
+          "start": 55.32,
+          "end": 55.54,
+          "confidence": 0.9832942485809326
+        },
+        {
+          "text": " this",
+          "start": 55.54,
+          "end": 55.78,
+          "confidence": 0.9780071377754211
+        },
+        {
+          "text": " is",
+          "start": 55.78,
+          "end": 55.88,
+          "confidence": 0.9968833327293396
+        },
+        {
+          "text": " one",
+          "start": 55.88,
+          "end": 55.98,
+          "confidence": 0.996020495891571
+        },
+        {
+          "text": " of",
+          "start": 55.98,
+          "end": 56.04,
+          "confidence": 0.9976792931556702
+        },
+        {
+          "text": " the",
+          "start": 56.04,
+          "end": 56.12,
+          "confidence": 0.9983941912651062
+        },
+        {
+          "text": " fastest",
+          "start": 56.12,
+          "end": 56.42,
+          "confidence": 0.994487464427948
+        },
+        {
+          "text": " and",
+          "start": 56.42,
+          "end": 56.7,
+          "confidence": 0.9667732119560242
+        },
+        {
+          "text": " most",
+          "start": 56.7,
+          "end": 56.84,
+          "confidence": 0.9963825941085815
+        },
+        {
+          "text": " dangerous",
+          "start": 56.84,
+          "end": 57.18,
+          "confidence": 0.9978506565093994
+        },
+        {
+          "text": " complications",
+          "start": 57.18,
+          "end": 57.72,
+          "confidence": 0.9606606364250183
+        },
+        {
+          "text": " in",
+          "start": 57.72,
+          "end": 57.88,
+          "confidence": 0.7406403422355652
+        },
+        {
+          "text": " medicine",
+          "start": 57.88,
+          "end": 58.12,
+          "confidence": 0.8900759220123291
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "start": 58.12,
+      "end": 62.3,
+      "startTime": "00:00:58,120",
+      "endTime": "00:01:02,300",
+      "text": "It doesn't take hours or days. This is like minutes and why well this patients",
+      "confidence": -0.22460691134134927,
+      "words": [
+        {
+          "text": " It",
+          "start": 58.12,
+          "end": 58.26,
+          "confidence": 0.3464428186416626
+        },
+        {
+          "text": " doesn't",
+          "start": 58.26,
+          "end": 58.44,
+          "confidence": 0.9996032416820526
+        },
+        {
+          "text": " take",
+          "start": 58.44,
+          "end": 58.58,
+          "confidence": 0.9983807802200317
+        },
+        {
+          "text": " hours",
+          "start": 58.58,
+          "end": 58.9,
+          "confidence": 0.9987404942512512
+        },
+        {
+          "text": " or",
+          "start": 58.9,
+          "end": 59.04,
+          "confidence": 0.9910964965820312
+        },
+        {
+          "text": " days.",
+          "start": 59.04,
+          "end": 59.24,
+          "confidence": 0.9985896944999695
+        },
+        {
+          "text": " This",
+          "start": 59.34,
+          "end": 59.46,
+          "confidence": 0.9975064396858215
+        },
+        {
+          "text": " is",
+          "start": 59.46,
+          "end": 59.58,
+          "confidence": 0.9990556836128235
+        },
+        {
+          "text": " like",
+          "start": 59.58,
+          "end": 59.76,
+          "confidence": 0.9967122077941895
+        },
+        {
+          "text": " minutes",
+          "start": 59.76,
+          "end": 60.24,
+          "confidence": 0.990047812461853
+        },
+        {
+          "text": " and",
+          "start": 60.24,
+          "end": 61.2,
+          "confidence": 0.7906087636947632
+        },
+        {
+          "text": " why",
+          "start": 61.2,
+          "end": 61.5,
+          "confidence": 0.9578692317008972
+        },
+        {
+          "text": " well",
+          "start": 61.5,
+          "end": 61.76,
+          "confidence": 0.6437501311302185
+        },
+        {
+          "text": " this",
+          "start": 61.76,
+          "end": 61.94,
+          "confidence": 0.8390028476715088
+        },
+        {
+          "text": " patients",
+          "start": 61.94,
+          "end": 62.3,
+          "confidence": 0.7732831239700317
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "start": 63.04,
+      "end": 67.84,
+      "startTime": "00:01:03,040",
+      "endTime": "00:01:07,840",
+      "text": "immune system has preformed IgM antibodies against the donor's",
+      "confidence": -0.22460691134134927,
+      "words": [
+        {
+          "text": " immune",
+          "start": 63.04,
+          "end": 63.58,
+          "confidence": 0.8279607892036438
+        },
+        {
+          "text": " system",
+          "start": 63.58,
+          "end": 63.92,
+          "confidence": 0.9974900484085083
+        },
+        {
+          "text": " has",
+          "start": 63.92,
+          "end": 64.8,
+          "confidence": 0.9737424254417419
+        },
+        {
+          "text": " preformed",
+          "start": 64.8,
+          "end": 65.62,
+          "confidence": 0.9219414293766022
+        },
+        {
+          "text": " IgM",
+          "start": 65.62,
+          "end": 66.3,
+          "confidence": 0.7637854218482971
+        },
+        {
+          "text": " antibodies",
+          "start": 66.3,
+          "end": 66.8,
+          "confidence": 0.9877069592475891
+        },
+        {
+          "text": " against",
+          "start": 66.8,
+          "end": 67.14,
+          "confidence": 0.9984921216964722
+        },
+        {
+          "text": " the",
+          "start": 67.14,
+          "end": 67.32,
+          "confidence": 0.9991974234580994
+        },
+        {
+          "text": " donor's",
+          "start": 67.32,
+          "end": 67.84,
+          "confidence": 0.7769603431224823
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "start": 68.84000000000002,
+      "end": 77.62,
+      "startTime": "00:01:08,840",
+      "endTime": "00:01:17,620",
+      "text": "ABO antigens and that triggers the complement system which forms a membrane attack complex or MAC and then you get red blood cells that",
+      "confidence": -0.22460691134134927,
+      "words": [
+        {
+          "text": " ABO",
+          "start": 68.84000000000002,
+          "end": 69.38000000000001,
+          "confidence": 0.8661475777626038
+        },
+        {
+          "text": " antigens",
+          "start": 69.38000000000001,
+          "end": 69.92,
+          "confidence": 0.8794449865818024
+        },
+        {
+          "text": " and",
+          "start": 69.92,
+          "end": 70.94,
+          "confidence": 0.841133177280426
+        },
+        {
+          "text": " that",
+          "start": 70.94,
+          "end": 71.08,
+          "confidence": 0.9384010434150696
+        },
+        {
+          "text": " triggers",
+          "start": 71.08,
+          "end": 71.4,
+          "confidence": 0.9952808022499084
+        },
+        {
+          "text": " the",
+          "start": 71.4,
+          "end": 72.4,
+          "confidence": 0.7329316735267639
+        },
+        {
+          "text": " complement",
+          "start": 72.4,
+          "end": 72.66,
+          "confidence": 0.7532073855400085
+        },
+        {
+          "text": " system",
+          "start": 72.66,
+          "end": 73.04,
+          "confidence": 0.9975894689559937
+        },
+        {
+          "text": " which",
+          "start": 73.04,
+          "end": 73.52,
+          "confidence": 0.7008230686187744
+        },
+        {
+          "text": " forms",
+          "start": 73.52,
+          "end": 73.74,
+          "confidence": 0.998066246509552
+        },
+        {
+          "text": " a",
+          "start": 73.74,
+          "end": 73.88,
+          "confidence": 0.9828821420669556
+        },
+        {
+          "text": " membrane",
+          "start": 73.88,
+          "end": 74.1,
+          "confidence": 0.9962512850761414
+        },
+        {
+          "text": " attack",
+          "start": 74.1,
+          "end": 74.42,
+          "confidence": 0.9551466703414917
+        },
+        {
+          "text": " complex",
+          "start": 74.42,
+          "end": 74.9,
+          "confidence": 0.988477349281311
+        },
+        {
+          "text": " or",
+          "start": 74.9,
+          "end": 75.18,
+          "confidence": 0.9796125888824463
+        },
+        {
+          "text": " MAC",
+          "start": 75.18,
+          "end": 75.48,
+          "confidence": 0.5683897733688354
+        },
+        {
+          "text": " and",
+          "start": 75.48,
+          "end": 76.32,
+          "confidence": 0.9364801645278931
+        },
+        {
+          "text": " then",
+          "start": 76.32,
+          "end": 76.44,
+          "confidence": 0.9892606735229492
+        },
+        {
+          "text": " you",
+          "start": 76.44,
+          "end": 76.52,
+          "confidence": 0.9970766305923462
+        },
+        {
+          "text": " get",
+          "start": 76.52,
+          "end": 76.62,
+          "confidence": 0.9980579018592834
+        },
+        {
+          "text": " red",
+          "start": 76.62,
+          "end": 76.8,
+          "confidence": 0.9735158681869507
+        },
+        {
+          "text": " blood",
+          "start": 76.8,
+          "end": 76.98,
+          "confidence": 0.9969702959060669
+        },
+        {
+          "text": " cells",
+          "start": 76.98,
+          "end": 77.3,
+          "confidence": 0.9995798468589783
+        },
+        {
+          "text": " that",
+          "start": 77.3,
+          "end": 77.62,
+          "confidence": 0.9948006868362427
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "start": 78.5,
+      "end": 84.2,
+      "startTime": "00:01:18,500",
+      "endTime": "00:01:24,200",
+      "text": "Rupture in circulation and they spill the hemoglobin into the plasma and so the kidneys will filter this and that's the reason why you're getting the brown urine",
+      "confidence": -0.20740149124808935,
+      "words": [
+        {
+          "text": " Rupture",
+          "start": 78.5,
+          "end": 79.02,
+          "confidence": 0.4900977343786508
+        },
+        {
+          "text": " in",
+          "start": 79.02,
+          "end": 79.34,
+          "confidence": 0.427140474319458
+        },
+        {
+          "text": " circulation",
+          "start": 79.34,
+          "end": 79.66,
+          "confidence": 0.9956793189048767
+        },
+        {
+          "text": " and",
+          "start": 79.66,
+          "end": 80.06,
+          "confidence": 0.8552770018577576
+        },
+        {
+          "text": " they",
+          "start": 80.06,
+          "end": 80.16,
+          "confidence": 0.8051307201385498
+        },
+        {
+          "text": " spill",
+          "start": 80.16,
+          "end": 80.38,
+          "confidence": 0.9663949608802795
+        },
+        {
+          "text": " the",
+          "start": 80.38,
+          "end": 80.56,
+          "confidence": 0.9669439196586609
+        },
+        {
+          "text": " hemoglobin",
+          "start": 80.56,
+          "end": 80.98,
+          "confidence": 0.9905486106872559
+        },
+        {
+          "text": " into",
+          "start": 80.98,
+          "end": 81.14,
+          "confidence": 0.9736113548278809
+        },
+        {
+          "text": " the",
+          "start": 81.14,
+          "end": 81.26,
+          "confidence": 0.9917169213294983
+        },
+        {
+          "text": " plasma",
+          "start": 81.26,
+          "end": 81.56,
+          "confidence": 0.993635892868042
+        },
+        {
+          "text": " and",
+          "start": 81.56,
+          "end": 81.86,
+          "confidence": 0.7371222376823425
+        },
+        {
+          "text": " so",
+          "start": 81.86,
+          "end": 81.94,
+          "confidence": 0.9623971581459045
+        },
+        {
+          "text": " the",
+          "start": 81.94,
+          "end": 82.06,
+          "confidence": 0.9974718689918518
+        },
+        {
+          "text": " kidneys",
+          "start": 82.06,
+          "end": 82.24,
+          "confidence": 0.9938924312591553
+        },
+        {
+          "text": " will",
+          "start": 82.24,
+          "end": 82.48,
+          "confidence": 0.9941828846931458
+        },
+        {
+          "text": " filter",
+          "start": 82.48,
+          "end": 82.74,
+          "confidence": 0.9959551095962524
+        },
+        {
+          "text": " this",
+          "start": 82.74,
+          "end": 82.96,
+          "confidence": 0.9886503219604492
+        },
+        {
+          "text": " and",
+          "start": 82.96,
+          "end": 83.06,
+          "confidence": 0.7781867980957031
+        },
+        {
+          "text": " that's",
+          "start": 83.06,
+          "end": 83.2,
+          "confidence": 0.995317816734314
+        },
+        {
+          "text": " the",
+          "start": 83.2,
+          "end": 83.3,
+          "confidence": 0.9915167093276978
+        },
+        {
+          "text": " reason",
+          "start": 83.3,
+          "end": 83.4,
+          "confidence": 0.9984908103942871
+        },
+        {
+          "text": " why",
+          "start": 83.4,
+          "end": 83.54,
+          "confidence": 0.9696857333183289
+        },
+        {
+          "text": " you're",
+          "start": 83.54,
+          "end": 83.62,
+          "confidence": 0.9930167496204376
+        },
+        {
+          "text": " getting",
+          "start": 83.62,
+          "end": 83.72,
+          "confidence": 0.9960534572601318
+        },
+        {
+          "text": " the",
+          "start": 83.72,
+          "end": 83.84,
+          "confidence": 0.9922086000442505
+        },
+        {
+          "text": " brown",
+          "start": 83.84,
+          "end": 84,
+          "confidence": 0.7889896035194397
+        },
+        {
+          "text": " urine",
+          "start": 84,
+          "end": 84.2,
+          "confidence": 0.9924464821815491
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "start": 85.04,
+      "end": 92.14,
+      "startTime": "00:01:25,040",
+      "endTime": "00:01:32,140",
+      "text": "Meanwhile the inflammatory cytokines like the C3a and C5a cause massive vasodilation and shock and so",
+      "confidence": -0.20740149124808935,
+      "words": [
+        {
+          "text": " Meanwhile",
+          "start": 85.04,
+          "end": 85.56,
+          "confidence": 0.7613192796707153
+        },
+        {
+          "text": " the",
+          "start": 85.56,
+          "end": 85.8,
+          "confidence": 0.6243201494216919
+        },
+        {
+          "text": " inflammatory",
+          "start": 85.8,
+          "end": 86.14,
+          "confidence": 0.9964558482170105
+        },
+        {
+          "text": " cytokines",
+          "start": 86.14,
+          "end": 86.68,
+          "confidence": 0.9919421672821045
+        },
+        {
+          "text": " like",
+          "start": 86.68,
+          "end": 86.88,
+          "confidence": 0.9726811051368713
+        },
+        {
+          "text": " the",
+          "start": 86.88,
+          "end": 86.98,
+          "confidence": 0.9944705963134766
+        },
+        {
+          "text": " C3a",
+          "start": 86.98,
+          "end": 88.22,
+          "confidence": 0.7811742424964905
+        },
+        {
+          "text": " and",
+          "start": 88.22,
+          "end": 88.44,
+          "confidence": 0.9760684967041016
+        },
+        {
+          "text": " C5a",
+          "start": 88.44,
+          "end": 89.12,
+          "confidence": 0.9535721143086752
+        },
+        {
+          "text": " cause",
+          "start": 89.12,
+          "end": 89.38,
+          "confidence": 0.8949223160743713
+        },
+        {
+          "text": " massive",
+          "start": 89.38,
+          "end": 89.92,
+          "confidence": 0.9817686080932617
+        },
+        {
+          "text": " vasodilation",
+          "start": 89.92,
+          "end": 90.42,
+          "confidence": 0.9575342337290446
+        },
+        {
+          "text": " and",
+          "start": 90.42,
+          "end": 90.78,
+          "confidence": 0.9623312950134277
+        },
+        {
+          "text": " shock",
+          "start": 90.78,
+          "end": 91.08,
+          "confidence": 0.9956069588661194
+        },
+        {
+          "text": " and",
+          "start": 91.08,
+          "end": 91.82,
+          "confidence": 0.7704207301139832
+        },
+        {
+          "text": " so",
+          "start": 91.82,
+          "end": 92.14,
+          "confidence": 0.964549720287323
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "start": 92.14,
+      "end": 98.08,
+      "startTime": "00:01:32,140",
+      "endTime": "00:01:38,080",
+      "text": "Here the immune system is basically attacking the invader be IG mediated histamine response",
+      "confidence": -0.20740149124808935,
+      "words": [
+        {
+          "text": " Here",
+          "start": 92.14,
+          "end": 93.08,
+          "confidence": 0.8189205527305603
+        },
+        {
+          "text": " the",
+          "start": 93.08,
+          "end": 93.36,
+          "confidence": 0.9679933190345764
+        },
+        {
+          "text": " immune",
+          "start": 93.36,
+          "end": 93.52,
+          "confidence": 0.9991645812988281
+        },
+        {
+          "text": " system",
+          "start": 93.52,
+          "end": 93.9,
+          "confidence": 0.9992282390594482
+        },
+        {
+          "text": " is",
+          "start": 93.9,
+          "end": 94.24,
+          "confidence": 0.996940016746521
+        },
+        {
+          "text": " basically",
+          "start": 94.24,
+          "end": 94.56,
+          "confidence": 0.9980096220970154
+        },
+        {
+          "text": " attacking",
+          "start": 94.56,
+          "end": 94.86,
+          "confidence": 0.9985355138778687
+        },
+        {
+          "text": " the",
+          "start": 94.86,
+          "end": 95.08,
+          "confidence": 0.9968124032020569
+        },
+        {
+          "text": " invader",
+          "start": 95.08,
+          "end": 95.42,
+          "confidence": 0.986933171749115
+        },
+        {
+          "text": " be",
+          "start": 95.42,
+          "end": 95.92,
+          "confidence": 0.1689469963312149
+        },
+        {
+          "text": " IG",
+          "start": 95.92,
+          "end": 96.72,
+          "confidence": 0.6550506353378296
+        },
+        {
+          "text": " mediated",
+          "start": 96.72,
+          "end": 97.18,
+          "confidence": 0.5179766025394201
+        },
+        {
+          "text": " histamine",
+          "start": 97.18,
+          "end": 97.54,
+          "confidence": 0.9890093207359314
+        },
+        {
+          "text": " response",
+          "start": 97.54,
+          "end": 98.08,
+          "confidence": 0.9228068590164185
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "start": 98.08,
+      "end": 104.5,
+      "startTime": "00:01:38,080",
+      "endTime": "00:01:44,500",
+      "text": "Yes, that's type one hypersensitivity like anaphylaxis not to molasses. C is the correct answer preformed IgM",
+      "confidence": -0.20740149124808935,
+      "words": [
+        {
+          "text": " Yes,",
+          "start": 98.08,
+          "end": 98.88,
+          "confidence": 0.29948171973228455
+        },
+        {
+          "text": " that's",
+          "start": 98.94,
+          "end": 99.12,
+          "confidence": 0.9916046261787415
+        },
+        {
+          "text": " type",
+          "start": 99.12,
+          "end": 99.28,
+          "confidence": 0.9775804281234741
+        },
+        {
+          "text": " one",
+          "start": 99.28,
+          "end": 99.46,
+          "confidence": 0.41935664415359497
+        },
+        {
+          "text": " hypersensitivity",
+          "start": 99.46,
+          "end": 100.06,
+          "confidence": 0.8716397643089294
+        },
+        {
+          "text": " like",
+          "start": 100.06,
+          "end": 100.32,
+          "confidence": 0.9742417335510254
+        },
+        {
+          "text": " anaphylaxis",
+          "start": 100.32,
+          "end": 100.82,
+          "confidence": 0.9368236780166626
+        },
+        {
+          "text": " not",
+          "start": 100.82,
+          "end": 101.02,
+          "confidence": 0.8504732251167297
+        },
+        {
+          "text": " to",
+          "start": 101.02,
+          "end": 101.18,
+          "confidence": 0.30059370398521423
+        },
+        {
+          "text": " molasses.",
+          "start": 101.18,
+          "end": 101.58,
+          "confidence": 0.5348948016762733
+        },
+        {
+          "text": " C",
+          "start": 101.74,
+          "end": 102.04,
+          "confidence": 0.7560477256774902
+        },
+        {
+          "text": " is",
+          "start": 102.04,
+          "end": 102.2,
+          "confidence": 0.9874942898750305
+        },
+        {
+          "text": " the",
+          "start": 102.2,
+          "end": 102.28,
+          "confidence": 0.9989423155784607
+        },
+        {
+          "text": " correct",
+          "start": 102.28,
+          "end": 102.42,
+          "confidence": 0.989651620388031
+        },
+        {
+          "text": " answer",
+          "start": 102.42,
+          "end": 102.72,
+          "confidence": 0.9957647323608398
+        },
+        {
+          "text": " preformed",
+          "start": 102.72,
+          "end": 103.58,
+          "confidence": 0.9129684269428253
+        },
+        {
+          "text": " IgM",
+          "start": 103.58,
+          "end": 104.5,
+          "confidence": 0.607027217745781
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "start": 105.16000000000001,
+      "end": 111.7,
+      "startTime": "00:01:45,160",
+      "endTime": "00:01:51,700",
+      "text": "Binding transfused red blood cells. This is textbook type two hypersensitivity reaction. It's antibody mediated and complement driven",
+      "confidence": -0.1921273810522897,
+      "words": [
+        {
+          "text": " Binding",
+          "start": 105.16000000000001,
+          "end": 105.7,
+          "confidence": 0.5541794113814831
+        },
+        {
+          "text": " transfused",
+          "start": 105.7,
+          "end": 106.24,
+          "confidence": 0.7988182604312897
+        },
+        {
+          "text": " red",
+          "start": 106.24,
+          "end": 106.46,
+          "confidence": 0.7224551439285278
+        },
+        {
+          "text": " blood",
+          "start": 106.46,
+          "end": 106.56,
+          "confidence": 0.7386327385902405
+        },
+        {
+          "text": " cells.",
+          "start": 106.56,
+          "end": 106.8,
+          "confidence": 0.9987596273422241
+        },
+        {
+          "text": " This",
+          "start": 106.98,
+          "end": 106.98,
+          "confidence": 0.9729560613632202
+        },
+        {
+          "text": " is",
+          "start": 106.98,
+          "end": 107.08,
+          "confidence": 0.9971644282341003
+        },
+        {
+          "text": " textbook",
+          "start": 107.08,
+          "end": 107.46,
+          "confidence": 0.5882846117019653
+        },
+        {
+          "text": " type",
+          "start": 107.46,
+          "end": 108.34,
+          "confidence": 0.8909134864807129
+        },
+        {
+          "text": " two",
+          "start": 108.34,
+          "end": 108.54,
+          "confidence": 0.446780800819397
+        },
+        {
+          "text": " hypersensitivity",
+          "start": 108.54,
+          "end": 109.12,
+          "confidence": 0.8549326717853546
+        },
+        {
+          "text": " reaction.",
+          "start": 109.12,
+          "end": 109.5,
+          "confidence": 0.9834340810775757
+        },
+        {
+          "text": " It's",
+          "start": 109.74,
+          "end": 110.2,
+          "confidence": 0.9831874668598175
+        },
+        {
+          "text": " antibody",
+          "start": 110.2,
+          "end": 110.48,
+          "confidence": 0.9867404103279114
+        },
+        {
+          "text": " mediated",
+          "start": 110.48,
+          "end": 111,
+          "confidence": 0.9652111232280731
+        },
+        {
+          "text": " and",
+          "start": 111,
+          "end": 111.14,
+          "confidence": 0.9171456098556519
+        },
+        {
+          "text": " complement",
+          "start": 111.14,
+          "end": 111.34,
+          "confidence": 0.7351018786430359
+        },
+        {
+          "text": " driven",
+          "start": 111.34,
+          "end": 111.7,
+          "confidence": 0.9135773777961731
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "start": 111.7,
+      "end": 116.48,
+      "startTime": "00:01:51,700",
+      "endTime": "00:01:56,480",
+      "text": "So if you leave this unchecked then it can spiral lead to renal failure",
+      "confidence": -0.1921273810522897,
+      "words": [
+        {
+          "text": " So",
+          "start": 111.7,
+          "end": 112.48,
+          "confidence": 0.16562847793102264
+        },
+        {
+          "text": " if",
+          "start": 112.48,
+          "end": 112.64,
+          "confidence": 0.9903885722160339
+        },
+        {
+          "text": " you",
+          "start": 112.64,
+          "end": 112.84,
+          "confidence": 0.9996473789215088
+        },
+        {
+          "text": " leave",
+          "start": 112.84,
+          "end": 113.22,
+          "confidence": 0.9993501305580139
+        },
+        {
+          "text": " this",
+          "start": 113.22,
+          "end": 113.38,
+          "confidence": 0.9990309476852417
+        },
+        {
+          "text": " unchecked",
+          "start": 113.38,
+          "end": 114.24,
+          "confidence": 0.9178273379802704
+        },
+        {
+          "text": " then",
+          "start": 114.24,
+          "end": 114.38,
+          "confidence": 0.49064576625823975
+        },
+        {
+          "text": " it",
+          "start": 114.38,
+          "end": 114.48,
+          "confidence": 0.9866175055503845
+        },
+        {
+          "text": " can",
+          "start": 114.48,
+          "end": 114.58,
+          "confidence": 0.9769552946090698
+        },
+        {
+          "text": " spiral",
+          "start": 114.58,
+          "end": 114.96,
+          "confidence": 0.9959301352500916
+        },
+        {
+          "text": " lead",
+          "start": 114.96,
+          "end": 115.6,
+          "confidence": 0.9695720076560974
+        },
+        {
+          "text": " to",
+          "start": 115.6,
+          "end": 115.84,
+          "confidence": 0.9985095858573914
+        },
+        {
+          "text": " renal",
+          "start": 115.84,
+          "end": 116.22,
+          "confidence": 0.9212778508663177
+        },
+        {
+          "text": " failure",
+          "start": 116.22,
+          "end": 116.48,
+          "confidence": 0.9993307590484619
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "start": 116.48,
+      "end": 119.08,
+      "startTime": "00:01:56,480",
+      "endTime": "00:01:59,080",
+      "text": "DIC and also death, right?",
+      "confidence": -0.1921273810522897,
+      "words": [
+        {
+          "text": " DIC",
+          "start": 116.48,
+          "end": 117.14,
+          "confidence": 0.5989291071891785
+        },
+        {
+          "text": " and",
+          "start": 117.14,
+          "end": 117.64,
+          "confidence": 0.9437566995620728
+        },
+        {
+          "text": " also",
+          "start": 117.64,
+          "end": 117.94,
+          "confidence": 0.9950227737426758
+        },
+        {
+          "text": " death,",
+          "start": 117.94,
+          "end": 118.3,
+          "confidence": 0.9274951815605164
+        },
+        {
+          "text": " right?",
+          "start": 118.52,
+          "end": 119.08,
+          "confidence": 0.988654375076294
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "start": 119.26,
+      "end": 123.32,
+      "startTime": "00:01:59,260",
+      "endTime": "00:02:03,320",
+      "text": "So your key takeaway for this question is going to be if you see fever",
+      "confidence": -0.1921273810522897,
+      "words": [
+        {
+          "text": " So",
+          "start": 119.26,
+          "end": 119.4,
+          "confidence": 0.7310482263565063
+        },
+        {
+          "text": " your",
+          "start": 119.4,
+          "end": 119.66,
+          "confidence": 0.9913029670715332
+        },
+        {
+          "text": " key",
+          "start": 119.66,
+          "end": 119.86,
+          "confidence": 0.9953824877738953
+        },
+        {
+          "text": " takeaway",
+          "start": 119.86,
+          "end": 120.14,
+          "confidence": 0.9483389258384705
+        },
+        {
+          "text": " for",
+          "start": 120.14,
+          "end": 120.42,
+          "confidence": 0.9978694915771484
+        },
+        {
+          "text": " this",
+          "start": 120.42,
+          "end": 120.64,
+          "confidence": 0.9994599223136902
+        },
+        {
+          "text": " question",
+          "start": 120.64,
+          "end": 121.04,
+          "confidence": 0.9671164751052856
+        },
+        {
+          "text": " is",
+          "start": 121.04,
+          "end": 121.2,
+          "confidence": 0.9168049693107605
+        },
+        {
+          "text": " going",
+          "start": 121.2,
+          "end": 121.3,
+          "confidence": 0.6319296956062317
+        },
+        {
+          "text": " to",
+          "start": 121.3,
+          "end": 121.38,
+          "confidence": 0.9987792372703552
+        },
+        {
+          "text": " be",
+          "start": 121.38,
+          "end": 121.56,
+          "confidence": 0.999631404876709
+        },
+        {
+          "text": " if",
+          "start": 121.56,
+          "end": 122.34,
+          "confidence": 0.8428032398223877
+        },
+        {
+          "text": " you",
+          "start": 122.34,
+          "end": 122.48,
+          "confidence": 0.9935304522514343
+        },
+        {
+          "text": " see",
+          "start": 122.48,
+          "end": 122.7,
+          "confidence": 0.9961244463920593
+        },
+        {
+          "text": " fever",
+          "start": 122.7,
+          "end": 123.32,
+          "confidence": 0.9545549750328064
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "start": 123.32,
+      "end": 128.12,
+      "startTime": "00:02:03,320",
+      "endTime": "00:02:08,120",
+      "text": "Hypotension chest or back pain and dark urine right after a transfusion",
+      "confidence": -0.1921273810522897,
+      "words": [
+        {
+          "text": " Hypotension",
+          "start": 123.32,
+          "end": 124.22,
+          "confidence": 0.6781001140673956
+        },
+        {
+          "text": " chest",
+          "start": 124.22,
+          "end": 124.7,
+          "confidence": 0.9384922385215759
+        },
+        {
+          "text": " or",
+          "start": 124.7,
+          "end": 125.24,
+          "confidence": 0.9719007015228271
+        },
+        {
+          "text": " back",
+          "start": 125.24,
+          "end": 125.44,
+          "confidence": 0.9962711334228516
+        },
+        {
+          "text": " pain",
+          "start": 125.44,
+          "end": 125.78,
+          "confidence": 0.9972800016403198
+        },
+        {
+          "text": " and",
+          "start": 125.78,
+          "end": 126.42,
+          "confidence": 0.969626247882843
+        },
+        {
+          "text": " dark",
+          "start": 126.42,
+          "end": 126.66,
+          "confidence": 0.9698758125305176
+        },
+        {
+          "text": " urine",
+          "start": 126.66,
+          "end": 126.86,
+          "confidence": 0.9596657156944275
+        },
+        {
+          "text": " right",
+          "start": 126.86,
+          "end": 127.14,
+          "confidence": 0.9862171411514282
+        },
+        {
+          "text": " after",
+          "start": 127.14,
+          "end": 127.38,
+          "confidence": 0.9988148212432861
+        },
+        {
+          "text": " a",
+          "start": 127.38,
+          "end": 127.54,
+          "confidence": 0.9980894923210144
+        },
+        {
+          "text": " transfusion",
+          "start": 127.54,
+          "end": 128.12,
+          "confidence": 0.9934200346469879
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "start": 128.12,
+      "end": 132.12,
+      "startTime": "00:02:08,120",
+      "endTime": "00:02:12,120",
+      "text": "Then you should stop the transfusion immediately and think about the ABO mismatch",
+      "confidence": -0.1921273810522897,
+      "words": [
+        {
+          "text": " Then",
+          "start": 128.12,
+          "end": 128.66,
+          "confidence": 0.4760986566543579
+        },
+        {
+          "text": " you",
+          "start": 128.66,
+          "end": 128.74,
+          "confidence": 0.9995524287223816
+        },
+        {
+          "text": " should",
+          "start": 128.74,
+          "end": 128.86,
+          "confidence": 0.9997267127037048
+        },
+        {
+          "text": " stop",
+          "start": 128.86,
+          "end": 129.26,
+          "confidence": 0.9978917241096497
+        },
+        {
+          "text": " the",
+          "start": 129.26,
+          "end": 129.48,
+          "confidence": 0.9978086352348328
+        },
+        {
+          "text": " transfusion",
+          "start": 129.48,
+          "end": 129.9,
+          "confidence": 0.9919937551021576
+        },
+        {
+          "text": " immediately",
+          "start": 129.9,
+          "end": 130.28,
+          "confidence": 0.9933648109436035
+        },
+        {
+          "text": " and",
+          "start": 130.28,
+          "end": 130.56,
+          "confidence": 0.9933661818504333
+        },
+        {
+          "text": " think",
+          "start": 130.56,
+          "end": 130.72,
+          "confidence": 0.999319314956665
+        },
+        {
+          "text": " about",
+          "start": 130.72,
+          "end": 130.88,
+          "confidence": 0.9994816184043884
+        },
+        {
+          "text": " the",
+          "start": 130.88,
+          "end": 131.04,
+          "confidence": 0.9991132616996765
+        },
+        {
+          "text": " ABO",
+          "start": 131.04,
+          "end": 131.64,
+          "confidence": 0.6077718138694763
+        },
+        {
+          "text": " mismatch",
+          "start": 131.64,
+          "end": 132.12,
+          "confidence": 0.9864032566547394
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "start": 132.12,
+      "end": 135.48,
+      "startTime": "00:02:12,120",
+      "endTime": "00:02:15,480",
+      "text": "This isn't an allergy like it says and be here. This isn't",
+      "confidence": -0.21951646390168564,
+      "words": [
+        {
+          "text": " This",
+          "start": 132.12,
+          "end": 132.62,
+          "confidence": 0.14809872210025787
+        },
+        {
+          "text": " isn't",
+          "start": 132.62,
+          "end": 132.9,
+          "confidence": 0.8936907052993774
+        },
+        {
+          "text": " an",
+          "start": 132.9,
+          "end": 132.98,
+          "confidence": 0.9117509126663208
+        },
+        {
+          "text": " allergy",
+          "start": 132.98,
+          "end": 133.44,
+          "confidence": 0.9827287793159485
+        },
+        {
+          "text": " like",
+          "start": 133.44,
+          "end": 133.82,
+          "confidence": 0.5937089323997498
+        },
+        {
+          "text": " it",
+          "start": 133.82,
+          "end": 133.92,
+          "confidence": 0.9912562370300293
+        },
+        {
+          "text": " says",
+          "start": 133.92,
+          "end": 134.04,
+          "confidence": 0.9378887414932251
+        },
+        {
+          "text": " and",
+          "start": 134.04,
+          "end": 134.24,
+          "confidence": 0.44414398074150085
+        },
+        {
+          "text": " be",
+          "start": 134.24,
+          "end": 134.42,
+          "confidence": 0.9616942405700684
+        },
+        {
+          "text": " here.",
+          "start": 134.42,
+          "end": 134.72,
+          "confidence": 0.9862197637557983
+        },
+        {
+          "text": " This",
+          "start": 134.86,
+          "end": 134.92,
+          "confidence": 0.9936098456382751
+        },
+        {
+          "text": " isn't",
+          "start": 134.92,
+          "end": 135.48,
+          "confidence": 0.9931721091270447
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "start": 136.3,
+      "end": 136.72,
+      "startTime": "00:02:16,300",
+      "endTime": "00:02:16,720",
+      "text": "sepsis",
+      "confidence": -0.21951646390168564,
+      "words": [
+        {
+          "text": " sepsis",
+          "start": 136.3,
+          "end": 136.72,
+          "confidence": 0.945426325003306
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "start": 137.24,
+      "end": 139.88,
+      "startTime": "00:02:17,240",
+      "endTime": "00:02:19,880",
+      "text": "This is a full blown immune mental meltdown, right?",
+      "confidence": -0.21951646390168564,
+      "words": [
+        {
+          "text": " This",
+          "start": 137.24,
+          "end": 137.66,
+          "confidence": 0.7738041281700134
+        },
+        {
+          "text": " is",
+          "start": 137.66,
+          "end": 137.8,
+          "confidence": 0.9994702935218811
+        },
+        {
+          "text": " a",
+          "start": 137.8,
+          "end": 137.9,
+          "confidence": 0.9883400201797485
+        },
+        {
+          "text": " full",
+          "start": 137.9,
+          "end": 138.06,
+          "confidence": 0.9872465133666992
+        },
+        {
+          "text": " blown",
+          "start": 138.06,
+          "end": 138.24,
+          "confidence": 0.8093716502189636
+        },
+        {
+          "text": " immune",
+          "start": 138.24,
+          "end": 138.48,
+          "confidence": 0.9483853578567505
+        },
+        {
+          "text": " mental",
+          "start": 138.48,
+          "end": 138.84,
+          "confidence": 0.1875842660665512
+        },
+        {
+          "text": " meltdown,",
+          "start": 138.84,
+          "end": 139.64,
+          "confidence": 0.9549320340156555
+        },
+        {
+          "text": " right?",
+          "start": 139.68,
+          "end": 139.88,
+          "confidence": 0.9997379183769226
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "start": 140.94,
+      "end": 143.48,
+      "startTime": "00:02:20,940",
+      "endTime": "00:02:23,480",
+      "text": "So the enemy is not the infection. It's the wrong blood",
+      "confidence": -0.21951646390168564,
+      "words": [
+        {
+          "text": " So",
+          "start": 140.94,
+          "end": 141.36,
+          "confidence": 0.9196171760559082
+        },
+        {
+          "text": " the",
+          "start": 141.36,
+          "end": 141.78,
+          "confidence": 0.8078384399414062
+        },
+        {
+          "text": " enemy",
+          "start": 141.78,
+          "end": 141.94,
+          "confidence": 0.9944275617599487
+        },
+        {
+          "text": " is",
+          "start": 141.94,
+          "end": 142.08,
+          "confidence": 0.9732217788696289
+        },
+        {
+          "text": " not",
+          "start": 142.08,
+          "end": 142.16,
+          "confidence": 0.9689325094223022
+        },
+        {
+          "text": " the",
+          "start": 142.16,
+          "end": 142.28,
+          "confidence": 0.9953740239143372
+        },
+        {
+          "text": " infection.",
+          "start": 142.28,
+          "end": 142.54,
+          "confidence": 0.999152421951294
+        },
+        {
+          "text": " It's",
+          "start": 142.76,
+          "end": 143.1,
+          "confidence": 0.9976697862148285
+        },
+        {
+          "text": " the",
+          "start": 143.1,
+          "end": 143.18,
+          "confidence": 0.6921840906143188
+        },
+        {
+          "text": " wrong",
+          "start": 143.18,
+          "end": 143.28,
+          "confidence": 0.9969155788421631
+        },
+        {
+          "text": " blood",
+          "start": 143.28,
+          "end": 143.48,
+          "confidence": 0.9979040622711182
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "start": 143.98000000000002,
+      "end": 150.18,
+      "startTime": "00:02:23,980",
+      "endTime": "00:02:30,180",
+      "text": "So the answer is going to be C preformed against the blood endotoxin activation that sepsis related and macrophages",
+      "confidence": -0.21951646390168564,
+      "words": [
+        {
+          "text": " So",
+          "start": 143.98000000000002,
+          "end": 144.4,
+          "confidence": 0.7805522680282593
+        },
+        {
+          "text": " the",
+          "start": 144.4,
+          "end": 144.54,
+          "confidence": 0.9965745210647583
+        },
+        {
+          "text": " answer",
+          "start": 144.54,
+          "end": 144.68,
+          "confidence": 0.9669259786605835
+        },
+        {
+          "text": " is",
+          "start": 144.68,
+          "end": 144.78,
+          "confidence": 0.9732676148414612
+        },
+        {
+          "text": " going",
+          "start": 144.78,
+          "end": 144.86,
+          "confidence": 0.48374226689338684
+        },
+        {
+          "text": " to",
+          "start": 144.86,
+          "end": 144.94,
+          "confidence": 0.9986481070518494
+        },
+        {
+          "text": " be",
+          "start": 144.94,
+          "end": 145,
+          "confidence": 0.9871319532394409
+        },
+        {
+          "text": " C",
+          "start": 145,
+          "end": 145.22,
+          "confidence": 0.6108933687210083
+        },
+        {
+          "text": " preformed",
+          "start": 145.22,
+          "end": 145.9,
+          "confidence": 0.9366682171821594
+        },
+        {
+          "text": " against",
+          "start": 145.9,
+          "end": 146.58,
+          "confidence": 0.990868330001831
+        },
+        {
+          "text": " the",
+          "start": 146.58,
+          "end": 146.72,
+          "confidence": 0.9990622401237488
+        },
+        {
+          "text": " blood",
+          "start": 146.72,
+          "end": 146.92,
+          "confidence": 0.9971224665641785
+        },
+        {
+          "text": " endotoxin",
+          "start": 146.92,
+          "end": 148.04,
+          "confidence": 0.9044197797775269
+        },
+        {
+          "text": " activation",
+          "start": 148.04,
+          "end": 148.34,
+          "confidence": 0.9880859851837158
+        },
+        {
+          "text": " that",
+          "start": 148.34,
+          "end": 148.64,
+          "confidence": 0.8112500905990601
+        },
+        {
+          "text": " sepsis",
+          "start": 148.64,
+          "end": 149,
+          "confidence": 0.9207380811373392
+        },
+        {
+          "text": " related",
+          "start": 149,
+          "end": 149.28,
+          "confidence": 0.9453431367874146
+        },
+        {
+          "text": " and",
+          "start": 149.28,
+          "end": 149.72,
+          "confidence": 0.7244711518287659
+        },
+        {
+          "text": " macrophages",
+          "start": 149.72,
+          "end": 150.18,
+          "confidence": 0.9772966106732687
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "start": 150.18,
+      "end": 151.86,
+      "startTime": "00:02:30,180",
+      "endTime": "00:02:31,860",
+      "text": "immune complex deposition",
+      "confidence": -0.21951646390168564,
+      "words": [
+        {
+          "text": " immune",
+          "start": 150.18,
+          "end": 151.02,
+          "confidence": 0.9245133399963379
+        },
+        {
+          "text": " complex",
+          "start": 151.02,
+          "end": 151.38,
+          "confidence": 0.9948168396949768
+        },
+        {
+          "text": " deposition",
+          "start": 151.38,
+          "end": 151.86,
+          "confidence": 0.9913369715213776
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "start": 152.39999999999998,
+      "end": 155.08,
+      "startTime": "00:02:32,400",
+      "endTime": "00:02:35,080",
+      "text": "Type three hypersensitivity reaction that's not going to be relevant for your acute",
+      "confidence": -0.21951646390168564,
+      "words": [
+        {
+          "text": " Type",
+          "start": 152.39999999999998,
+          "end": 152.82,
+          "confidence": 0.7972747683525085
+        },
+        {
+          "text": " three",
+          "start": 152.82,
+          "end": 153,
+          "confidence": 0.17829380929470062
+        },
+        {
+          "text": " hypersensitivity",
+          "start": 153,
+          "end": 153.48,
+          "confidence": 0.5411743376404047
+        },
+        {
+          "text": " reaction",
+          "start": 153.48,
+          "end": 153.8,
+          "confidence": 0.9895387291908264
+        },
+        {
+          "text": " that's",
+          "start": 153.8,
+          "end": 154.04,
+          "confidence": 0.7263077795505524
+        },
+        {
+          "text": " not",
+          "start": 154.04,
+          "end": 154.14,
+          "confidence": 0.9994329810142517
+        },
+        {
+          "text": " going",
+          "start": 154.14,
+          "end": 154.26,
+          "confidence": 0.7988163232803345
+        },
+        {
+          "text": " to",
+          "start": 154.26,
+          "end": 154.3,
+          "confidence": 0.9988210797309875
+        },
+        {
+          "text": " be",
+          "start": 154.3,
+          "end": 154.36,
+          "confidence": 0.9989939332008362
+        },
+        {
+          "text": " relevant",
+          "start": 154.36,
+          "end": 154.56,
+          "confidence": 0.9971998929977417
+        },
+        {
+          "text": " for",
+          "start": 154.56,
+          "end": 154.74,
+          "confidence": 0.9959023594856262
+        },
+        {
+          "text": " your",
+          "start": 154.74,
+          "end": 154.84,
+          "confidence": 0.995414137840271
+        },
+        {
+          "text": " acute",
+          "start": 154.84,
+          "end": 155.08,
+          "confidence": 0.93279629945755
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "start": 155.86,
+      "end": 162.1,
+      "startTime": "00:02:35,860",
+      "endTime": "00:02:42,100",
+      "text": "Transfusion reaction here. All right, if you found this helpful then please like and subscribe always hoping to improve and we'll see you guys",
+      "confidence": -0.21951646390168564,
+      "words": [
+        {
+          "text": " Transfusion",
+          "start": 155.86,
+          "end": 156.28,
+          "confidence": 0.912716825803121
+        },
+        {
+          "text": " reaction",
+          "start": 156.28,
+          "end": 156.56,
+          "confidence": 0.9879262447357178
+        },
+        {
+          "text": " here.",
+          "start": 156.56,
+          "end": 156.92,
+          "confidence": 0.9868314266204834
+        },
+        {
+          "text": " All",
+          "start": 157.1,
+          "end": 157.52,
+          "confidence": 0.703338086605072
+        },
+        {
+          "text": " right,",
+          "start": 157.52,
+          "end": 157.64,
+          "confidence": 0.9996871948242188
+        },
+        {
+          "text": " if",
+          "start": 157.66,
+          "end": 157.86,
+          "confidence": 0.9956901669502258
+        },
+        {
+          "text": " you",
+          "start": 157.86,
+          "end": 157.92,
+          "confidence": 0.9976086616516113
+        },
+        {
+          "text": " found",
+          "start": 157.92,
+          "end": 158.08,
+          "confidence": 0.9818893671035767
+        },
+        {
+          "text": " this",
+          "start": 158.08,
+          "end": 158.18,
+          "confidence": 0.9962266683578491
+        },
+        {
+          "text": " helpful",
+          "start": 158.18,
+          "end": 158.44,
+          "confidence": 0.9985716342926025
+        },
+        {
+          "text": " then",
+          "start": 158.44,
+          "end": 158.76,
+          "confidence": 0.4073340892791748
+        },
+        {
+          "text": " please",
+          "start": 158.76,
+          "end": 158.98,
+          "confidence": 0.8979754447937012
+        },
+        {
+          "text": " like",
+          "start": 158.98,
+          "end": 159.18,
+          "confidence": 0.966609001159668
+        },
+        {
+          "text": " and",
+          "start": 159.18,
+          "end": 159.32,
+          "confidence": 0.9888573288917542
+        },
+        {
+          "text": " subscribe",
+          "start": 159.32,
+          "end": 159.64,
+          "confidence": 0.9968709349632263
+        },
+        {
+          "text": " always",
+          "start": 159.64,
+          "end": 160.26,
+          "confidence": 0.9557385444641113
+        },
+        {
+          "text": " hoping",
+          "start": 160.26,
+          "end": 160.5,
+          "confidence": 0.9941843152046204
+        },
+        {
+          "text": " to",
+          "start": 160.5,
+          "end": 160.66,
+          "confidence": 0.9996770620346069
+        },
+        {
+          "text": " improve",
+          "start": 160.66,
+          "end": 160.98,
+          "confidence": 0.9977868795394897
+        },
+        {
+          "text": " and",
+          "start": 160.98,
+          "end": 161.54,
+          "confidence": 0.9919105172157288
+        },
+        {
+          "text": " we'll",
+          "start": 161.54,
+          "end": 161.84,
+          "confidence": 0.8735363483428955
+        },
+        {
+          "text": " see",
+          "start": 161.84,
+          "end": 161.96,
+          "confidence": 0.9992511868476868
+        },
+        {
+          "text": " you",
+          "start": 161.96,
+          "end": 162.04,
+          "confidence": 0.8966512084007263
+        },
+        {
+          "text": " guys",
+          "start": 162.04,
+          "end": 162.1,
+          "confidence": 0.9932776093482971
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "start": 162.12,
+      "end": 162.76,
+      "startTime": "00:02:42,120",
+      "endTime": "00:02:42,760",
+      "text": "the next video",
+      "confidence": -0.19771979252497354,
+      "words": [
+        {
+          "text": " the",
+          "start": 162.12,
+          "end": 162.32,
+          "confidence": 0.4576386511325836
+        },
+        {
+          "text": " next",
+          "start": 162.32,
+          "end": 162.48,
+          "confidence": 0.996006190776825
+        },
+        {
+          "text": " video",
+          "start": 162.48,
+          "end": 162.76,
+          "confidence": 0.9980893731117249
+        }
+      ]
+    }
+  ],
+  "fullText": "Okay, let's see the scene so you're at the emergency department and A trauma patient comes in from a car crash and he's bleeding badly and the vitals are unstable And he needs blood fast and so the team jumps into action and you start your transfusion Then within minutes everything changes. All right, so here's our practice question. Let's see if you can diagnose this as if you were a physician All right, so suddenly in this patient Their blood pressure tanks and this patient is gasping for air They're clenching their chest back and forth and then just moments later the nurse notices a folly bag That's filling with brown urine and so at this point you've got to think of one thing This is a cute hemolytic transfusion reaction. All right, so we have several answer choices delayed antibody response I g mediated histamine. All right, so delayed antibody response that Would be seen days later not minutes, right? What we're dealing with here, this is one of the fastest and most dangerous complications in medicine It doesn't take hours or days. This is like minutes and why well this patients immune system has preformed IgM antibodies against the donor's ABO antigens and that triggers the complement system which forms a membrane attack complex or MAC and then you get red blood cells that Rupture in circulation and they spill the hemoglobin into the plasma and so the kidneys will filter this and that's the reason why you're getting the brown urine Meanwhile the inflammatory cytokines like the C3a and C5a cause massive vasodilation and shock and so Here the immune system is basically attacking the invader be IG mediated histamine response Yes, that's type one hypersensitivity like anaphylaxis not to molasses. C is the correct answer preformed IgM Binding transfused red blood cells. This is textbook type two hypersensitivity reaction. It's antibody mediated and complement driven So if you leave this unchecked then it can spiral lead to renal failure DIC and also death, right? So your key takeaway for this question is going to be if you see fever Hypotension chest or back pain and dark urine right after a transfusion Then you should stop the transfusion immediately and think about the ABO mismatch This isn't an allergy like it says and be here. This isn't sepsis This is a full blown immune mental meltdown, right? So the enemy is not the infection. It's the wrong blood So the answer is going to be C preformed against the blood endotoxin activation that sepsis related and macrophages immune complex deposition Type three hypersensitivity reaction that's not going to be relevant for your acute Transfusion reaction here. All right, if you found this helpful then please like and subscribe always hoping to improve and we'll see you guys the next video",
+  "srtContent": "1\n00:00:00,000 --> 00:00:03,400\nOkay, let's see the scene so you're at the emergency department and\n\n2\n00:00:04,380 --> 00:00:09,420\nA trauma patient comes in from a car crash and he's bleeding badly and the vitals are unstable\n\n3\n00:00:09,940 --> 00:00:13,600\nAnd he needs blood fast and so the team jumps into action and you start your transfusion\n\n4\n00:00:14,560 --> 00:00:20,840\nThen within minutes everything changes. All right, so here's our practice question. Let's see if you can diagnose this as if you were a physician\n\n5\n00:00:20,840 --> 00:00:23,860\nAll right, so suddenly in this patient\n\n6\n00:00:24,380 --> 00:00:28,180\nTheir blood pressure tanks and this patient is gasping for air\n\n7\n00:00:28,180 --> 00:00:33,720\nThey're clenching their chest back and forth and then just moments later the nurse notices a folly bag\n\n8\n00:00:33,720 --> 00:00:38,360\nThat's filling with brown urine and so at this point you've got to think of one thing\n\n9\n00:00:38,360 --> 00:00:44,740\nThis is a cute hemolytic transfusion reaction. All right, so we have several answer choices delayed antibody response\n\n10\n00:00:45,460 --> 00:00:50,280\nI g mediated histamine. All right, so delayed antibody response that\n\n11\n00:00:50,800 --> 00:00:53,940\nWould be seen days later not minutes, right?\n\n12\n00:00:54,580 --> 00:00:58,120\nWhat we're dealing with here, this is one of the fastest and most dangerous complications in medicine\n\n13\n00:00:58,120 --> 00:01:02,300\nIt doesn't take hours or days. This is like minutes and why well this patients\n\n14\n00:01:03,040 --> 00:01:07,840\nimmune system has preformed IgM antibodies against the donor's\n\n15\n00:01:08,840 --> 00:01:17,620\nABO antigens and that triggers the complement system which forms a membrane attack complex or MAC and then you get red blood cells that\n\n16\n00:01:18,500 --> 00:01:24,200\nRupture in circulation and they spill the hemoglobin into the plasma and so the kidneys will filter this and that's the reason why you're getting the brown urine\n\n17\n00:01:25,040 --> 00:01:32,140\nMeanwhile the inflammatory cytokines like the C3a and C5a cause massive vasodilation and shock and so\n\n18\n00:01:32,140 --> 00:01:38,080\nHere the immune system is basically attacking the invader be IG mediated histamine response\n\n19\n00:01:38,080 --> 00:01:44,500\nYes, that's type one hypersensitivity like anaphylaxis not to molasses. C is the correct answer preformed IgM\n\n20\n00:01:45,160 --> 00:01:51,700\nBinding transfused red blood cells. This is textbook type two hypersensitivity reaction. It's antibody mediated and complement driven\n\n21\n00:01:51,700 --> 00:01:56,480\nSo if you leave this unchecked then it can spiral lead to renal failure\n\n22\n00:01:56,480 --> 00:01:59,080\nDIC and also death, right?\n\n23\n00:01:59,260 --> 00:02:03,320\nSo your key takeaway for this question is going to be if you see fever\n\n24\n00:02:03,320 --> 00:02:08,120\nHypotension chest or back pain and dark urine right after a transfusion\n\n25\n00:02:08,120 --> 00:02:12,120\nThen you should stop the transfusion immediately and think about the ABO mismatch\n\n26\n00:02:12,120 --> 00:02:15,480\nThis isn't an allergy like it says and be here. This isn't\n\n27\n00:02:16,300 --> 00:02:16,720\nsepsis\n\n28\n00:02:17,240 --> 00:02:19,880\nThis is a full blown immune mental meltdown, right?\n\n29\n00:02:20,940 --> 00:02:23,480\nSo the enemy is not the infection. It's the wrong blood\n\n30\n00:02:23,980 --> 00:02:30,180\nSo the answer is going to be C preformed against the blood endotoxin activation that sepsis related and macrophages\n\n31\n00:02:30,180 --> 00:02:31,860\nimmune complex deposition\n\n32\n00:02:32,400 --> 00:02:35,080\nType three hypersensitivity reaction that's not going to be relevant for your acute\n\n33\n00:02:35,860 --> 00:02:42,100\nTransfusion reaction here. All right, if you found this helpful then please like and subscribe always hoping to improve and we'll see you guys\n\n34\n00:02:42,120 --> 00:02:42,760\nthe next video\n\n",
+  "duration": 0,
+  "language": "en"
+}

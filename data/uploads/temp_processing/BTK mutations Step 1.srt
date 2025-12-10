@@ -1,0 +1,155 @@
+Here's the corrected SRT:
+
+```
+1
+00:00:00,000 --> 00:00:03,240
+Did you know that by six months, your mom's antibodies have already worn off?
+
+2
+00:00:03,240 --> 00:00:07,200
+So if you have Bruton's agammaglobulinemia, then you are flying so low and breaking.
+
+3
+00:00:07,200 --> 00:00:09,599
+So your bone marrow is going to make these B cells.
+
+4
+00:00:09,599 --> 00:00:14,120
+And then the BTK gene is needed for the transition from pre-B cells to the mature B cells.
+
+5
+00:00:14,120 --> 00:00:17,320
+And if you have a mutation there, like in Bruton's agammaglobulinemia,
+
+6
+00:00:17,320 --> 00:00:19,600
+then the B cells are going to rest in that pre-B stage.
+
+7
+00:00:19,600 --> 00:00:22,480
+And so that means you get no plasma cells, no antibodies, no immunoglobulins.
+
+8
+00:00:22,480 --> 00:00:25,400
+So if you see the electrophoresis graph, it's going to be super low for the gamma.
+
+9
+00:00:25,400 --> 00:00:26,400
+So here's our practice question.
+
+10
+00:00:26,400 --> 00:00:28,800
+We got a nine-month-old boy who has been to the hospital a couple of times.
+
+11
+00:00:28,800 --> 00:00:30,719
+Could be anywhere from nine months to ten or eleven.
+
+12
+00:00:30,719 --> 00:00:31,400
+Pneumonia.
+
+13
+00:00:31,400 --> 00:00:33,160
+We've got some pneumonia; he's been in the hospital a couple of times.
+
+14
+00:00:33,160 --> 00:00:37,039
+His dad, another male in the family, died of severe infections.
+
+15
+00:00:37,039 --> 00:00:38,960
+We have absent B cells.
+
+16
+00:00:38,960 --> 00:00:39,920
+Low, I mean, low levels.
+
+17
+00:00:39,920 --> 00:00:40,679
+So what are we going to see?
+
+18
+00:00:40,679 --> 00:00:41,799
+We're going to definitely see absent.
+
+19
+00:00:41,799 --> 00:00:42,600
+Monoclonal spike.
+
+20
+00:00:42,600 --> 00:00:44,000
+That would make us think of multiple myeloma.
+
+21
+00:00:44,000 --> 00:00:45,280
+Beta-gamma bridging.
+
+22
+00:00:45,280 --> 00:00:47,159
+That's IgA overproduction or cirrhosis.
+
+23
+00:00:47,159 --> 00:00:48,760
+Broad-based polyclonal increase.
+
+24
+00:00:48,760 --> 00:00:50,439
+That would be seen in an autoimmune condition.
+
+25
+00:00:50,439 --> 00:00:51,400
+It's definitely not normal.
+
+26
+00:00:51,400 --> 00:00:52,920
+So let's think of the buzzwords.
+
+27
+00:00:52,920 --> 00:00:56,000
+Recurrent pneumonia, H. flu, Staphylococcus aureus, just recurrent pulmonary infections.
+
+28
+00:00:56,000 --> 00:00:58,359
+Also, just think that if you have a boy with an X-linked disease,
+
+29
+00:00:58,359 --> 00:00:59,880
+it should cue you into that a little bit too.
+
+30
+00:00:59,880 --> 00:01:02,159
+So encapsulated organisms, no IgG.
+
+31
+00:01:02,159 --> 00:01:03,119
+You have poor opsonization.
+
+32
+00:01:03,119 --> 00:01:04,120
+You have no tonsils or they're absent.
+
+33
+00:01:04,120 --> 00:01:06,120
+Because those are B-cell dependent organs, or they are underdeveloped.
+
+34
+00:01:06,120 --> 00:01:08,439
+If you guys found this video helpful, then please like and subscribe.
+
+35
+00:01:08,439 --> 00:01:09,000
+Definitely hit the bell.
+
+36
+00:01:09,000 --> 00:01:10,840
+Also, consider subscribing because we're going to be giving a
+
+37
+00:01:10,840 --> 00:01:13,039
+subscription to our new platform, which you'll like to explore better.
+
+38
+00:01:13,039 --> 00:01:14,039
+Well, good luck studying for that.
+```

@@ -1,0 +1,27 @@
+
+[Script Info]
+ScriptType: v4.00+
+ScaledBorderAndShadow: yes
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,55,&H00FFFFFF,&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,15,1
+Style: Highlight,Arial,62,&H0000FFFF,&H000000FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,2,2,2,10,10,15,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,000:00:00.00,000:00:04.64,Default,,0,0,0,,High-yield step question of the day. Did you know that a single allergen can trigger a system-wide
+Dialogue: 0,000:00:04.64,000:00:09.84,Default,,0,0,0,,meltdown in under five minutes? That is the power of IgE crosslinking. Now let's see what my extension
+Dialogue: 0,000:00:09.84,000:00:14.96,Default,,0,0,0,,does to these answer choices here. What is meant by autoantibody binding to the epithelial surface?
+Dialogue: 0,000:00:14.96,000:00:20.00,Default,,0,0,0,,Pemphigus vulgaris. What is meant by Stevens-Johnson syndrome? Well, that's the cell-mediated
+Dialogue: 0,000:00:20.00,000:00:24.72,Default,,0,0,0,,hypersensitivity that the test writers are referring to with B. How about exotoxin-mediated?
+Dialogue: 0,000:00:24.72,000:00:29.20,Default,,0,0,0,,Well, yeah, it's exotoxin, but endotoxin-mediated is from gram-negative bacteria.
+Dialogue: 0,000:00:29.20,000:00:33.68,Default,,0,0,0,,Now, because of the inflammatory response, exotoxin-mediated is correct because that makes us think of
+Dialogue: 0,000:00:33.68,000:00:38.80,Default,,0,0,0,,Staphylococcus aureus. It's called its skin, mast cell degranulation, and is related to allergic reactions.
+Dialogue: 0,000:00:38.80,000:00:42.24,Default,,0,0,0,,So let's close that and do a practice question. Now that we know what the buzzy test writers are
+Dialogue: 0,000:00:42.24,000:00:46.16,Default,,0,0,0,,trying to get us to think of, we had a patient with hypotension and wheezing near the carrier after
+Dialogue: 0,000:00:46.16,000:00:51.76,Default,,0,0,0,,exposure to an allergen. It's IgE-mediated. Which molecular interaction initiates the degranulation
+Dialogue: 0,000:00:51.76,000:00:57.76,Default,,0,0,0,,process? The answer? Cross-linking. So anaphylaxis is going to begin with the multivalent antigen
+Dialogue: 0,000:00:57.76,000:01:03.60,Highlight,,0,0,0,,cross-links.

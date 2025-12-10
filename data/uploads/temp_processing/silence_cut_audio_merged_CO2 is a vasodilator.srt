@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:03,740
+This is a very important concept: increased carbon dioxide leads to increased cerebral blood flow.
+
+2
+00:00:03,740 --> 00:00:04,740
+So, CO2 is the most potent cerebral vasodilator.
+
+3
+00:00:04,740 --> 00:00:07,720
+Yes, that's correct.
+
+4
+00:00:07,720 --> 00:00:12,800
+In narcotic overdose, we have respiratory depression, decreased respiratory rate, and increased
+
+5
+00:00:12,800 --> 00:00:13,800
+CO2 in the blood.
+
+6
+00:00:13,800 --> 00:00:14,880
+This condition is called hypercapnia.
+
+7
+00:00:14,880 --> 00:00:16,960
+That means we have increased cerebral blood flow.
+
+8
+00:00:16,960 --> 00:00:19,600
+Respiratory depression results in elevated CO2 levels.
+
+9
+00:00:19,600 --> 00:00:22,320
+Hypercapnia indicates that cerebral vasodilation is occurring.
+
+10
+00:00:22,320 --> 00:00:25,840
+We have a fixed intracranial compartment, so the brain's auto-regulation of flow is affected.
+
+11
+00:00:25,840 --> 00:00:27,080
+This leads to increased intracranial pressure.
+
+12
+00:00:27,080 --> 00:00:32,680
+If a patient is arousable only with painful stimuli, we should suspect narcotic overdose.
+
+13
+00:00:32,680 --> 00:00:37,240
+Central hypoventilation leads to increased CO2 and increased vasodilation.
+
+14
+00:00:37,240 --> 00:00:38,240
+That's it.
+
+15
+00:00:38,240 --> 00:00:39,240
+That's the secret.
+
+16
+00:00:39,240 --> 00:00:42,160
+Opioids depress the respiratory center.
+
+17
+00:00:42,160 --> 00:00:44,600
+This decrease in ventilation causes CO2 to build up.
+
+18
+00:00:44,600 --> 00:00:49,520
+CO2 can freely cross the blood-brain barrier, combining with water to form carbonic acid,
+
+19
+00:00:49,520 --> 00:00:53,440
+which dissociates into hydronium ions, leading to local acidosis.
+
+20
+00:00:53,440 --> 00:00:57,120
+Acidosis triggers vasodilation, increasing cranial blood flow and intracranial pressure if
+
+21
+00:00:57,120 --> 00:00:58,120
+unchecked.
+
+22
+00:00:58,120 --> 00:01:03,160
+Hypercapnia causes an increase in hydronium ions (H+), which leads to respiratory acidosis.
+
+23
+00:01:03,160 --> 00:01:04,160
+Here's a practice question.
+
+24
+00:01:04,160 --> 00:01:10,400
+A patient is unresponsive after heroin use; the cause is increased perfusion due to respiratory depression and increased CO2.
+
+25
+00:01:10,400 --> 00:01:11,400
+Decreased systemic vascular resistance (SVR) is seen in septic shock.
+
+26
+00:01:11,400 --> 00:01:13,560
+Hypoxia triggers a pulmonary response in the brain.
+
+27
+00:01:13,560 --> 00:01:16,080
+Increased bicarbonate indicates metabolic compensation.

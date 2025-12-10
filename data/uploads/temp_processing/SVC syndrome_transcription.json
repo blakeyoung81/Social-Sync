@@ -1,0 +1,1990 @@
+{
+  "success": true,
+  "segments": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 4.14,
+      "startTime": "00:00:00,000",
+      "endTime": "00:00:04,140",
+      "text": "If you see facial swelling in a neck vein engorgement, you should think of superior",
+      "confidence": -0.21401643753051758,
+      "words": [
+        {
+          "text": " If",
+          "start": 0,
+          "end": 0.2,
+          "confidence": 0.7332351207733154
+        },
+        {
+          "text": " you",
+          "start": 0.2,
+          "end": 0.3,
+          "confidence": 0.9946221113204956
+        },
+        {
+          "text": " see",
+          "start": 0.3,
+          "end": 0.46,
+          "confidence": 0.9933851361274719
+        },
+        {
+          "text": " facial",
+          "start": 0.46,
+          "end": 0.88,
+          "confidence": 0.9840055704116821
+        },
+        {
+          "text": " swelling",
+          "start": 0.88,
+          "end": 1.32,
+          "confidence": 0.9867643117904663
+        },
+        {
+          "text": " in",
+          "start": 1.32,
+          "end": 1.5,
+          "confidence": 0.4638288617134094
+        },
+        {
+          "text": " a",
+          "start": 1.5,
+          "end": 1.62,
+          "confidence": 0.8942360281944275
+        },
+        {
+          "text": " neck",
+          "start": 1.62,
+          "end": 1.84,
+          "confidence": 0.9983879327774048
+        },
+        {
+          "text": " vein",
+          "start": 1.84,
+          "end": 2.14,
+          "confidence": 0.9157592058181763
+        },
+        {
+          "text": " engorgement,",
+          "start": 2.14,
+          "end": 2.76,
+          "confidence": 0.7465242346127828
+        },
+        {
+          "text": " you",
+          "start": 2.84,
+          "end": 2.9,
+          "confidence": 0.9709252715110779
+        },
+        {
+          "text": " should",
+          "start": 2.9,
+          "end": 2.98,
+          "confidence": 0.9968863129615784
+        },
+        {
+          "text": " think",
+          "start": 2.98,
+          "end": 3.18,
+          "confidence": 0.997140645980835
+        },
+        {
+          "text": " of",
+          "start": 3.18,
+          "end": 3.4,
+          "confidence": 0.9976894855499268
+        },
+        {
+          "text": " superior",
+          "start": 3.4,
+          "end": 4.14,
+          "confidence": 0.8307390213012695
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 4.14,
+      "end": 7.08,
+      "startTime": "00:00:04,140",
+      "endTime": "00:00:07,080",
+      "text": "vena cava syndrome from a mediastinal mass.",
+      "confidence": -0.21401643753051758,
+      "words": [
+        {
+          "text": " vena",
+          "start": 4.14,
+          "end": 4.38,
+          "confidence": 0.7669371962547302
+        },
+        {
+          "text": " cava",
+          "start": 4.38,
+          "end": 4.58,
+          "confidence": 0.9485275149345398
+        },
+        {
+          "text": " syndrome",
+          "start": 4.58,
+          "end": 5.02,
+          "confidence": 0.991500973701477
+        },
+        {
+          "text": " from",
+          "start": 5.02,
+          "end": 6.14,
+          "confidence": 0.7607038617134094
+        },
+        {
+          "text": " a",
+          "start": 6.14,
+          "end": 6.3,
+          "confidence": 0.24052941799163818
+        },
+        {
+          "text": " mediastinal",
+          "start": 6.3,
+          "end": 6.68,
+          "confidence": 0.7829318543275198
+        },
+        {
+          "text": " mass.",
+          "start": 6.68,
+          "end": 7.08,
+          "confidence": 0.9916885495185852
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 7.42,
+      "end": 10.76,
+      "startTime": "00:00:07,420",
+      "endTime": "00:00:10,760",
+      "text": "So like small cell lung cancer, symmetrical face swelling.",
+      "confidence": -0.21401643753051758,
+      "words": [
+        {
+          "text": " So",
+          "start": 7.42,
+          "end": 7.42,
+          "confidence": 0.9445411562919617
+        },
+        {
+          "text": " like",
+          "start": 7.42,
+          "end": 7.58,
+          "confidence": 0.8820345401763916
+        },
+        {
+          "text": " small",
+          "start": 7.58,
+          "end": 7.78,
+          "confidence": 0.9717605113983154
+        },
+        {
+          "text": " cell",
+          "start": 7.78,
+          "end": 8,
+          "confidence": 0.7839934825897217
+        },
+        {
+          "text": " lung",
+          "start": 8,
+          "end": 8.98,
+          "confidence": 0.7332985997200012
+        },
+        {
+          "text": " cancer,",
+          "start": 8.98,
+          "end": 9.42,
+          "confidence": 0.983738899230957
+        },
+        {
+          "text": " symmetrical",
+          "start": 9.64,
+          "end": 10.26,
+          "confidence": 0.9674800038337708
+        },
+        {
+          "text": " face",
+          "start": 10.26,
+          "end": 10.5,
+          "confidence": 0.9413120746612549
+        },
+        {
+          "text": " swelling.",
+          "start": 10.5,
+          "end": 10.76,
+          "confidence": 0.9505985379219055
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 11.84,
+      "end": 14.52,
+      "startTime": "00:00:11,840",
+      "endTime": "00:00:14,520",
+      "text": "That's because you have the venous drainage that is blocked above the heart.",
+      "confidence": -0.21401643753051758,
+      "words": [
+        {
+          "text": " That's",
+          "start": 11.84,
+          "end": 12.28,
+          "confidence": 0.9695258438587189
+        },
+        {
+          "text": " because",
+          "start": 12.28,
+          "end": 12.36,
+          "confidence": 0.8632391095161438
+        },
+        {
+          "text": " you",
+          "start": 12.36,
+          "end": 12.52,
+          "confidence": 0.9145339131355286
+        },
+        {
+          "text": " have",
+          "start": 12.52,
+          "end": 12.6,
+          "confidence": 0.9415026903152466
+        },
+        {
+          "text": " the",
+          "start": 12.6,
+          "end": 12.7,
+          "confidence": 0.9960556030273438
+        },
+        {
+          "text": " venous",
+          "start": 12.7,
+          "end": 12.94,
+          "confidence": 0.934873640537262
+        },
+        {
+          "text": " drainage",
+          "start": 12.94,
+          "end": 13.14,
+          "confidence": 0.948147714138031
+        },
+        {
+          "text": " that",
+          "start": 13.14,
+          "end": 13.54,
+          "confidence": 0.991456925868988
+        },
+        {
+          "text": " is",
+          "start": 13.54,
+          "end": 13.7,
+          "confidence": 0.9951948523521423
+        },
+        {
+          "text": " blocked",
+          "start": 13.7,
+          "end": 13.96,
+          "confidence": 0.9981149435043335
+        },
+        {
+          "text": " above",
+          "start": 13.96,
+          "end": 14.18,
+          "confidence": 0.9714217782020569
+        },
+        {
+          "text": " the",
+          "start": 14.18,
+          "end": 14.3,
+          "confidence": 0.9986982345581055
+        },
+        {
+          "text": " heart.",
+          "start": 14.3,
+          "end": 14.52,
+          "confidence": 0.9985772371292114
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "start": 14.7,
+      "end": 17.76,
+      "startTime": "00:00:14,700",
+      "endTime": "00:00:17,760",
+      "text": "So you get the dilated neck and also the chest veins.",
+      "confidence": -0.21401643753051758,
+      "words": [
+        {
+          "text": " So",
+          "start": 14.7,
+          "end": 15.14,
+          "confidence": 0.9721440672874451
+        },
+        {
+          "text": " you",
+          "start": 15.14,
+          "end": 15.2,
+          "confidence": 0.9895308017730713
+        },
+        {
+          "text": " get",
+          "start": 15.2,
+          "end": 15.3,
+          "confidence": 0.8356253504753113
+        },
+        {
+          "text": " the",
+          "start": 15.3,
+          "end": 15.42,
+          "confidence": 0.9971887469291687
+        },
+        {
+          "text": " dilated",
+          "start": 15.42,
+          "end": 15.84,
+          "confidence": 0.9906629920005798
+        },
+        {
+          "text": " neck",
+          "start": 15.84,
+          "end": 16.16,
+          "confidence": 0.9972012042999268
+        },
+        {
+          "text": " and",
+          "start": 16.16,
+          "end": 16.48,
+          "confidence": 0.959098219871521
+        },
+        {
+          "text": " also",
+          "start": 16.48,
+          "end": 16.66,
+          "confidence": 0.9874646663665771
+        },
+        {
+          "text": " the",
+          "start": 16.66,
+          "end": 16.82,
+          "confidence": 0.9962896108627319
+        },
+        {
+          "text": " chest",
+          "start": 16.82,
+          "end": 17.12,
+          "confidence": 0.9990857839584351
+        },
+        {
+          "text": " veins.",
+          "start": 17.12,
+          "end": 17.76,
+          "confidence": 0.9816821813583374
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "start": 18.08,
+      "end": 20.56,
+      "startTime": "00:00:18,080",
+      "endTime": "00:00:20,560",
+      "text": "And so the blood is going to be rerouted through the collateral system.",
+      "confidence": -0.21401643753051758,
+      "words": [
+        {
+          "text": " And",
+          "start": 18.08,
+          "end": 18.46,
+          "confidence": 0.9837418794631958
+        },
+        {
+          "text": " so",
+          "start": 18.46,
+          "end": 18.58,
+          "confidence": 0.9926445484161377
+        },
+        {
+          "text": " the",
+          "start": 18.58,
+          "end": 18.66,
+          "confidence": 0.9974657297134399
+        },
+        {
+          "text": " blood",
+          "start": 18.66,
+          "end": 18.82,
+          "confidence": 0.9964348077774048
+        },
+        {
+          "text": " is",
+          "start": 18.82,
+          "end": 18.94,
+          "confidence": 0.9968262910842896
+        },
+        {
+          "text": " going",
+          "start": 18.94,
+          "end": 19.02,
+          "confidence": 0.9761542677879333
+        },
+        {
+          "text": " to",
+          "start": 19.02,
+          "end": 19.06,
+          "confidence": 0.9992398023605347
+        },
+        {
+          "text": " be",
+          "start": 19.06,
+          "end": 19.16,
+          "confidence": 0.9983574748039246
+        },
+        {
+          "text": " rerouted",
+          "start": 19.16,
+          "end": 19.64,
+          "confidence": 0.9789507587750753
+        },
+        {
+          "text": " through",
+          "start": 19.64,
+          "end": 19.76,
+          "confidence": 0.993500292301178
+        },
+        {
+          "text": " the",
+          "start": 19.76,
+          "end": 19.86,
+          "confidence": 0.9990329742431641
+        },
+        {
+          "text": " collateral",
+          "start": 19.86,
+          "end": 20.1,
+          "confidence": 0.9977978467941284
+        },
+        {
+          "text": " system.",
+          "start": 20.1,
+          "end": 20.56,
+          "confidence": 0.9988235831260681
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "start": 20.94,
+      "end": 24.46,
+      "startTime": "00:00:20,940",
+      "endTime": "00:00:24,460",
+      "text": "You have conjunctival edema, headache, dyspnea that's due to the increased",
+      "confidence": -0.21401643753051758,
+      "words": [
+        {
+          "text": " You",
+          "start": 20.94,
+          "end": 21.38,
+          "confidence": 0.46309998631477356
+        },
+        {
+          "text": " have",
+          "start": 21.38,
+          "end": 21.56,
+          "confidence": 0.9748969674110413
+        },
+        {
+          "text": " conjunctival",
+          "start": 21.56,
+          "end": 22.34,
+          "confidence": 0.8171640038490295
+        },
+        {
+          "text": " edema,",
+          "start": 22.34,
+          "end": 22.7,
+          "confidence": 0.9754441678524017
+        },
+        {
+          "text": " headache,",
+          "start": 22.88,
+          "end": 23,
+          "confidence": 0.9306480884552002
+        },
+        {
+          "text": " dyspnea",
+          "start": 23.28,
+          "end": 23.5,
+          "confidence": 0.7696874539057413
+        },
+        {
+          "text": " that's",
+          "start": 23.5,
+          "end": 23.86,
+          "confidence": 0.6489073634147644
+        },
+        {
+          "text": " due",
+          "start": 23.86,
+          "end": 23.94,
+          "confidence": 0.9955142140388489
+        },
+        {
+          "text": " to",
+          "start": 23.94,
+          "end": 24.02,
+          "confidence": 0.9988455772399902
+        },
+        {
+          "text": " the",
+          "start": 24.02,
+          "end": 24.16,
+          "confidence": 0.9944591522216797
+        },
+        {
+          "text": " increased",
+          "start": 24.16,
+          "end": 24.46,
+          "confidence": 0.9845038652420044
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "start": 24.46,
+      "end": 26.16,
+      "startTime": "00:00:24,460",
+      "endTime": "00:00:26,160",
+      "text": "intracranial and thoracic venous pressure.",
+      "confidence": -0.21401643753051758,
+      "words": [
+        {
+          "text": " intracranial",
+          "start": 24.46,
+          "end": 25.04,
+          "confidence": 0.9781742542982101
+        },
+        {
+          "text": " and",
+          "start": 25.04,
+          "end": 25.34,
+          "confidence": 0.8166487812995911
+        },
+        {
+          "text": " thoracic",
+          "start": 25.34,
+          "end": 25.74,
+          "confidence": 0.9984124898910522
+        },
+        {
+          "text": " venous",
+          "start": 25.74,
+          "end": 25.94,
+          "confidence": 0.9787676632404327
+        },
+        {
+          "text": " pressure.",
+          "start": 25.94,
+          "end": 26.16,
+          "confidence": 0.9917685985565186
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "start": 26.24,
+      "end": 28.18,
+      "startTime": "00:00:26,240",
+      "endTime": "00:00:28,180",
+      "text": "So it's all about that pressure buildup upstairs.",
+      "confidence": -0.21401643753051758,
+      "words": [
+        {
+          "text": " So",
+          "start": 26.24,
+          "end": 26.68,
+          "confidence": 0.6915798783302307
+        },
+        {
+          "text": " it's",
+          "start": 26.68,
+          "end": 26.74,
+          "confidence": 0.9972636699676514
+        },
+        {
+          "text": " all",
+          "start": 26.74,
+          "end": 26.84,
+          "confidence": 0.9985111355781555
+        },
+        {
+          "text": " about",
+          "start": 26.84,
+          "end": 26.98,
+          "confidence": 0.9973558187484741
+        },
+        {
+          "text": " that",
+          "start": 26.98,
+          "end": 27.12,
+          "confidence": 0.9831271171569824
+        },
+        {
+          "text": " pressure",
+          "start": 27.12,
+          "end": 27.36,
+          "confidence": 0.9897655844688416
+        },
+        {
+          "text": " buildup",
+          "start": 27.36,
+          "end": 27.72,
+          "confidence": 0.7464024722576141
+        },
+        {
+          "text": " upstairs.",
+          "start": 27.72,
+          "end": 28.18,
+          "confidence": 0.943759560585022
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "start": 28.92,
+      "end": 32.52,
+      "startTime": "00:00:28,920",
+      "endTime": "00:00:32,520",
+      "text": "Compression of the superior vena cava and period drainage venous congestion.",
+      "confidence": -0.30813525390625,
+      "words": [
+        {
+          "text": " Compression",
+          "start": 28.92,
+          "end": 29.5,
+          "confidence": 0.7647466659545898
+        },
+        {
+          "text": " of",
+          "start": 29.5,
+          "end": 29.78,
+          "confidence": 0.9368368983268738
+        },
+        {
+          "text": " the",
+          "start": 29.78,
+          "end": 30,
+          "confidence": 0.8146117925643921
+        },
+        {
+          "text": " superior",
+          "start": 30,
+          "end": 30.36,
+          "confidence": 0.8959887027740479
+        },
+        {
+          "text": " vena",
+          "start": 30.36,
+          "end": 30.6,
+          "confidence": 0.8157851994037628
+        },
+        {
+          "text": " cava",
+          "start": 30.6,
+          "end": 30.88,
+          "confidence": 0.9309028387069702
+        },
+        {
+          "text": " and",
+          "start": 30.88,
+          "end": 31.26,
+          "confidence": 0.14624524116516113
+        },
+        {
+          "text": " period",
+          "start": 31.26,
+          "end": 31.44,
+          "confidence": 0.3566336929798126
+        },
+        {
+          "text": " drainage",
+          "start": 31.44,
+          "end": 31.78,
+          "confidence": 0.9920387268066406
+        },
+        {
+          "text": " venous",
+          "start": 31.78,
+          "end": 32.12,
+          "confidence": 0.46545497328042984
+        },
+        {
+          "text": " congestion.",
+          "start": 32.12,
+          "end": 32.52,
+          "confidence": 0.9874477982521057
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "start": 33.8,
+      "end": 36.92,
+      "startTime": "00:00:33,800",
+      "endTime": "00:00:36,920",
+      "text": "So think small cell, also non-hodgkin's lymphoma.",
+      "confidence": -0.30813525390625,
+      "words": [
+        {
+          "text": " So",
+          "start": 33.8,
+          "end": 34.32,
+          "confidence": 0.2861311137676239
+        },
+        {
+          "text": " think",
+          "start": 34.32,
+          "end": 34.56,
+          "confidence": 0.7279462218284607
+        },
+        {
+          "text": " small",
+          "start": 34.56,
+          "end": 34.82,
+          "confidence": 0.962654709815979
+        },
+        {
+          "text": " cell,",
+          "start": 34.82,
+          "end": 35.06,
+          "confidence": 0.870974600315094
+        },
+        {
+          "text": " also",
+          "start": 35.58,
+          "end": 35.76,
+          "confidence": 0.9772847890853882
+        },
+        {
+          "text": " non",
+          "start": 35.76,
+          "end": 35.98,
+          "confidence": 0.9227450489997864
+        },
+        {
+          "text": "-hodgkin's",
+          "start": 35.98,
+          "end": 36.44,
+          "confidence": 0.46452512840429944
+        },
+        {
+          "text": " lymphoma.",
+          "start": 36.44,
+          "end": 36.92,
+          "confidence": 0.9809085428714752
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "start": 37.22,
+      "end": 40.2,
+      "startTime": "00:00:37,220",
+      "endTime": "00:00:40,200",
+      "text": "You have a mediastinal structure kind of causing problems there.",
+      "confidence": -0.30813525390625,
+      "words": [
+        {
+          "text": " You",
+          "start": 37.22,
+          "end": 37.26,
+          "confidence": 0.9596554040908813
+        },
+        {
+          "text": " have",
+          "start": 37.26,
+          "end": 37.32,
+          "confidence": 0.9945223331451416
+        },
+        {
+          "text": " a",
+          "start": 37.32,
+          "end": 37.4,
+          "confidence": 0.9496321678161621
+        },
+        {
+          "text": " mediastinal",
+          "start": 37.4,
+          "end": 37.84,
+          "confidence": 0.7666600247224172
+        },
+        {
+          "text": " structure",
+          "start": 37.84,
+          "end": 38.26,
+          "confidence": 0.9906151294708252
+        },
+        {
+          "text": " kind",
+          "start": 38.26,
+          "end": 38.62,
+          "confidence": 0.6799304485321045
+        },
+        {
+          "text": " of",
+          "start": 38.62,
+          "end": 38.78,
+          "confidence": 0.9964842796325684
+        },
+        {
+          "text": " causing",
+          "start": 38.78,
+          "end": 39.62,
+          "confidence": 0.9364451169967651
+        },
+        {
+          "text": " problems",
+          "start": 39.62,
+          "end": 39.98,
+          "confidence": 0.9977973699569702
+        },
+        {
+          "text": " there.",
+          "start": 39.98,
+          "end": 40.2,
+          "confidence": 0.9289392232894897
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "start": 40.3,
+      "end": 41.92,
+      "startTime": "00:00:40,300",
+      "endTime": "00:00:41,920",
+      "text": "Throbosis of catheters, pancreas, tumors.",
+      "confidence": -0.30813525390625,
+      "words": [
+        {
+          "text": " Throbosis",
+          "start": 40.3,
+          "end": 40.62,
+          "confidence": 0.45899378259976703
+        },
+        {
+          "text": " of",
+          "start": 40.62,
+          "end": 40.8,
+          "confidence": 0.991574227809906
+        },
+        {
+          "text": " catheters,",
+          "start": 40.8,
+          "end": 41.24,
+          "confidence": 0.9659062922000885
+        },
+        {
+          "text": " pancreas,",
+          "start": 41.4,
+          "end": 41.74,
+          "confidence": 0.7109945714473724
+        },
+        {
+          "text": " tumors.",
+          "start": 41.76,
+          "end": 41.92,
+          "confidence": 0.9743638038635254
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "start": 43.42,
+      "end": 44,
+      "startTime": "00:00:43,420",
+      "endTime": "00:00:44,000",
+      "text": "Rarely.",
+      "confidence": -0.30813525390625,
+      "words": [
+        {
+          "text": " Rarely.",
+          "start": 43.42,
+          "end": 44,
+          "confidence": 0.9846436381340027
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "start": 45.06,
+      "end": 46.92,
+      "startTime": "00:00:45,060",
+      "endTime": "00:00:46,920",
+      "text": "Usually be a horner syndrome for pancreas.",
+      "confidence": -0.30813525390625,
+      "words": [
+        {
+          "text": " Usually",
+          "start": 45.06,
+          "end": 45.64,
+          "confidence": 0.9334356784820557
+        },
+        {
+          "text": " be",
+          "start": 45.64,
+          "end": 45.82,
+          "confidence": 0.7146368026733398
+        },
+        {
+          "text": " a",
+          "start": 45.82,
+          "end": 45.9,
+          "confidence": 0.5346978306770325
+        },
+        {
+          "text": " horner",
+          "start": 45.9,
+          "end": 46.02,
+          "confidence": 0.42201945185661316
+        },
+        {
+          "text": " syndrome",
+          "start": 46.02,
+          "end": 46.38,
+          "confidence": 0.8765470385551453
+        },
+        {
+          "text": " for",
+          "start": 46.38,
+          "end": 46.54,
+          "confidence": 0.9893476963043213
+        },
+        {
+          "text": " pancreas.",
+          "start": 46.54,
+          "end": 46.92,
+          "confidence": 0.9737014571825663
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "start": 48.120000000000005,
+      "end": 50.44,
+      "startTime": "00:00:48,120",
+      "endTime": "00:00:50,440",
+      "text": "So you have a tumor compressing the superior vena cava.",
+      "confidence": -0.30813525390625,
+      "words": [
+        {
+          "text": " So",
+          "start": 48.120000000000005,
+          "end": 48.7,
+          "confidence": 0.9723018407821655
+        },
+        {
+          "text": " you",
+          "start": 48.7,
+          "end": 48.8,
+          "confidence": 0.9658976793289185
+        },
+        {
+          "text": " have",
+          "start": 48.8,
+          "end": 48.88,
+          "confidence": 0.9977551102638245
+        },
+        {
+          "text": " a",
+          "start": 48.88,
+          "end": 48.96,
+          "confidence": 0.9550383687019348
+        },
+        {
+          "text": " tumor",
+          "start": 48.96,
+          "end": 49.16,
+          "confidence": 0.9972290396690369
+        },
+        {
+          "text": " compressing",
+          "start": 49.16,
+          "end": 49.64,
+          "confidence": 0.9843390882015228
+        },
+        {
+          "text": " the",
+          "start": 49.64,
+          "end": 49.76,
+          "confidence": 0.9755347967147827
+        },
+        {
+          "text": " superior",
+          "start": 49.76,
+          "end": 49.96,
+          "confidence": 0.9927098751068115
+        },
+        {
+          "text": " vena",
+          "start": 49.96,
+          "end": 50.16,
+          "confidence": 0.9900274276733398
+        },
+        {
+          "text": " cava.",
+          "start": 50.16,
+          "end": 50.44,
+          "confidence": 0.994876354932785
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "start": 50.94,
+      "end": 52.66,
+      "startTime": "00:00:50,940",
+      "endTime": "00:00:52,660",
+      "text": "If untreated, you have cerebral edema.",
+      "confidence": -0.30813525390625,
+      "words": [
+        {
+          "text": " If",
+          "start": 50.94,
+          "end": 51.1,
+          "confidence": 0.9815807938575745
+        },
+        {
+          "text": " untreated,",
+          "start": 51.1,
+          "end": 51.52,
+          "confidence": 0.9972826242446899
+        },
+        {
+          "text": " you",
+          "start": 51.94,
+          "end": 51.96,
+          "confidence": 0.958737850189209
+        },
+        {
+          "text": " have",
+          "start": 51.96,
+          "end": 52.04,
+          "confidence": 0.9814586043357849
+        },
+        {
+          "text": " cerebral",
+          "start": 52.04,
+          "end": 52.22,
+          "confidence": 0.6656395792961121
+        },
+        {
+          "text": " edema.",
+          "start": 52.22,
+          "end": 52.66,
+          "confidence": 0.9885637760162354
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "start": 53.36,
+      "end": 55.28,
+      "startTime": "00:00:53,360",
+      "endTime": "00:00:55,280",
+      "text": "Key features, puffiness above the shoulders.",
+      "confidence": -0.30813525390625,
+      "words": [
+        {
+          "text": " Key",
+          "start": 53.36,
+          "end": 53.66,
+          "confidence": 0.9550824165344238
+        },
+        {
+          "text": " features,",
+          "start": 53.66,
+          "end": 53.86,
+          "confidence": 0.9498625993728638
+        },
+        {
+          "text": " puffiness",
+          "start": 54.04,
+          "end": 54.34,
+          "confidence": 0.9819321632385254
+        },
+        {
+          "text": " above",
+          "start": 54.34,
+          "end": 54.66,
+          "confidence": 0.6780987977981567
+        },
+        {
+          "text": " the",
+          "start": 54.66,
+          "end": 55.04,
+          "confidence": 0.980846107006073
+        },
+        {
+          "text": " shoulders.",
+          "start": 55.04,
+          "end": 55.28,
+          "confidence": 0.902489960193634
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "start": 56.64,
+      "end": 57.38,
+      "startTime": "00:00:56,640",
+      "endTime": "00:00:57,380",
+      "text": "Mediastinal mass.",
+      "confidence": -0.45251133645227715,
+      "words": [
+        {
+          "text": " Mediastinal",
+          "start": 56.64,
+          "end": 57.12,
+          "confidence": 0.3762035153340548
+        },
+        {
+          "text": " mass.",
+          "start": 57.12,
+          "end": 57.38,
+          "confidence": 0.3747123181819916
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "start": 57.64,
+      "end": 58.24,
+      "startTime": "00:00:57,640",
+      "endTime": "00:00:58,240",
+      "text": "Here's our practice question.",
+      "confidence": -0.45251133645227715,
+      "words": [
+        {
+          "text": " Here's",
+          "start": 57.64,
+          "end": 57.78,
+          "confidence": 0.7897005379199982
+        },
+        {
+          "text": " our",
+          "start": 57.78,
+          "end": 57.82,
+          "confidence": 0.35832300782203674
+        },
+        {
+          "text": " practice",
+          "start": 57.82,
+          "end": 57.98,
+          "confidence": 0.9695475697517395
+        },
+        {
+          "text": " question.",
+          "start": 57.98,
+          "end": 58.24,
+          "confidence": 0.8988967537879944
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "start": 58.44,
+      "end": 62.48,
+      "startTime": "00:00:58,440",
+      "endTime": "00:01:02,480",
+      "text": "64, smoker, facial swelling, persistence of dry cough, headaches that",
+      "confidence": -0.45251133645227715,
+      "words": [
+        {
+          "text": " 64,",
+          "start": 58.44,
+          "end": 58.68,
+          "confidence": 0.672516942024231
+        },
+        {
+          "text": " smoker,",
+          "start": 58.98,
+          "end": 59.26,
+          "confidence": 0.7781651616096497
+        },
+        {
+          "text": " facial",
+          "start": 59.48,
+          "end": 59.64,
+          "confidence": 0.9721077084541321
+        },
+        {
+          "text": " swelling,",
+          "start": 59.64,
+          "end": 60.1,
+          "confidence": 0.9524103999137878
+        },
+        {
+          "text": " persistence",
+          "start": 60.74,
+          "end": 61.08,
+          "confidence": 0.7880444526672363
+        },
+        {
+          "text": " of",
+          "start": 61.08,
+          "end": 61.38,
+          "confidence": 0.9566338062286377
+        },
+        {
+          "text": " dry",
+          "start": 61.38,
+          "end": 61.58,
+          "confidence": 0.9088716506958008
+        },
+        {
+          "text": " cough,",
+          "start": 61.58,
+          "end": 61.86,
+          "confidence": 0.9955800175666809
+        },
+        {
+          "text": " headaches",
+          "start": 62.12,
+          "end": 62.24,
+          "confidence": 0.9847937226295471
+        },
+        {
+          "text": " that",
+          "start": 62.24,
+          "end": 62.48,
+          "confidence": 0.8592662215232849
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "start": 62.48,
+      "end": 63.4,
+      "startTime": "00:01:02,480",
+      "endTime": "00:01:03,400",
+      "text": "were someone leaning forward.",
+      "confidence": -0.45251133645227715,
+      "words": [
+        {
+          "text": " were",
+          "start": 62.48,
+          "end": 62.58,
+          "confidence": 0.6246517896652222
+        },
+        {
+          "text": " someone",
+          "start": 62.58,
+          "end": 62.76,
+          "confidence": 0.4515470862388611
+        },
+        {
+          "text": " leaning",
+          "start": 62.76,
+          "end": 63,
+          "confidence": 0.9608758091926575
+        },
+        {
+          "text": " forward.",
+          "start": 63,
+          "end": 63.4,
+          "confidence": 0.9966937303543091
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "start": 67.8,
+      "end": 71.78,
+      "startTime": "00:01:07,800",
+      "endTime": "00:01:11,780",
+      "text": "Exam shows periorbital edema and dilated veins on the upper chest.",
+      "confidence": -0.45251133645227715,
+      "words": [
+        {
+          "text": " Exam",
+          "start": 67.8,
+          "end": 68.28,
+          "confidence": 0.6201480627059937
+        },
+        {
+          "text": " shows",
+          "start": 68.28,
+          "end": 68.58,
+          "confidence": 0.957946240901947
+        },
+        {
+          "text": " periorbital",
+          "start": 68.58,
+          "end": 69.2,
+          "confidence": 0.7239944338798523
+        },
+        {
+          "text": " edema",
+          "start": 69.2,
+          "end": 69.54,
+          "confidence": 0.9896428883075714
+        },
+        {
+          "text": " and",
+          "start": 69.54,
+          "end": 70.36,
+          "confidence": 0.8672181367874146
+        },
+        {
+          "text": " dilated",
+          "start": 70.36,
+          "end": 70.78,
+          "confidence": 0.9932381808757782
+        },
+        {
+          "text": " veins",
+          "start": 70.78,
+          "end": 71.06,
+          "confidence": 0.9935234785079956
+        },
+        {
+          "text": " on",
+          "start": 71.06,
+          "end": 71.24,
+          "confidence": 0.9973087310791016
+        },
+        {
+          "text": " the",
+          "start": 71.24,
+          "end": 71.34,
+          "confidence": 0.9979649782180786
+        },
+        {
+          "text": " upper",
+          "start": 71.34,
+          "end": 71.46,
+          "confidence": 0.9989363551139832
+        },
+        {
+          "text": " chest.",
+          "start": 71.46,
+          "end": 71.78,
+          "confidence": 0.9995649456977844
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "start": 72.76,
+      "end": 74.36,
+      "startTime": "00:01:12,760",
+      "endTime": "00:01:14,360",
+      "text": "Chest imaging shows a higher mass.",
+      "confidence": -0.45251133645227715,
+      "words": [
+        {
+          "text": " Chest",
+          "start": 72.76,
+          "end": 73.24,
+          "confidence": 0.9741592407226562
+        },
+        {
+          "text": " imaging",
+          "start": 73.24,
+          "end": 73.44,
+          "confidence": 0.9816094040870667
+        },
+        {
+          "text": " shows",
+          "start": 73.44,
+          "end": 73.74,
+          "confidence": 0.9943552017211914
+        },
+        {
+          "text": " a",
+          "start": 73.74,
+          "end": 73.9,
+          "confidence": 0.992757260799408
+        },
+        {
+          "text": " higher",
+          "start": 73.9,
+          "end": 74.06,
+          "confidence": 0.3337576687335968
+        },
+        {
+          "text": " mass.",
+          "start": 74.06,
+          "end": 74.36,
+          "confidence": 0.9923525452613831
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "start": 74.74,
+      "end": 75.44,
+      "startTime": "00:01:14,740",
+      "endTime": "00:01:15,440",
+      "text": "What is the diagnosis?",
+      "confidence": -0.45251133645227715,
+      "words": [
+        {
+          "text": " What",
+          "start": 74.74,
+          "end": 74.82,
+          "confidence": 0.9962416887283325
+        },
+        {
+          "text": " is",
+          "start": 74.82,
+          "end": 75,
+          "confidence": 0.9978786706924438
+        },
+        {
+          "text": " the",
+          "start": 75,
+          "end": 75.1,
+          "confidence": 0.998163640499115
+        },
+        {
+          "text": " diagnosis?",
+          "start": 75.1,
+          "end": 75.44,
+          "confidence": 0.9957789182662964
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "start": 76.54,
+      "end": 79.34,
+      "startTime": "00:01:16,540",
+      "endTime": "00:01:19,340",
+      "text": "Now it's going to be superior vena cava syndrome, obviously, because that's",
+      "confidence": -0.45251133645227715,
+      "words": [
+        {
+          "text": " Now",
+          "start": 76.54,
+          "end": 76.92,
+          "confidence": 0.9517454504966736
+        },
+        {
+          "text": " it's",
+          "start": 76.92,
+          "end": 77.08,
+          "confidence": 0.8420357406139374
+        },
+        {
+          "text": " going",
+          "start": 77.08,
+          "end": 77.16,
+          "confidence": 0.7641763091087341
+        },
+        {
+          "text": " to",
+          "start": 77.16,
+          "end": 77.24,
+          "confidence": 0.9984015822410583
+        },
+        {
+          "text": " be",
+          "start": 77.24,
+          "end": 77.28,
+          "confidence": 0.9954723119735718
+        },
+        {
+          "text": " superior",
+          "start": 77.28,
+          "end": 77.52,
+          "confidence": 0.9822359085083008
+        },
+        {
+          "text": " vena",
+          "start": 77.52,
+          "end": 77.72,
+          "confidence": 0.42421565018594265
+        },
+        {
+          "text": " cava",
+          "start": 77.72,
+          "end": 77.88,
+          "confidence": 0.8780972361564636
+        },
+        {
+          "text": " syndrome,",
+          "start": 77.88,
+          "end": 78.18,
+          "confidence": 0.9902119040489197
+        },
+        {
+          "text": " obviously,",
+          "start": 78.18,
+          "end": 78.66,
+          "confidence": 0.9921575784683228
+        },
+        {
+          "text": " because",
+          "start": 79,
+          "end": 79.18,
+          "confidence": 0.9140857458114624
+        },
+        {
+          "text": " that's",
+          "start": 79.18,
+          "end": 79.34,
+          "confidence": 0.9746873676776886
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "start": 79.34,
+      "end": 81.32,
+      "startTime": "00:01:19,340",
+      "endTime": "00:01:21,320",
+      "text": "her video for the day.",
+      "confidence": -0.45251133645227715,
+      "words": [
+        {
+          "text": " her",
+          "start": 79.34,
+          "end": 79.5,
+          "confidence": 0.984488844871521
+        },
+        {
+          "text": " video",
+          "start": 79.5,
+          "end": 80.74,
+          "confidence": 0.9211204648017883
+        },
+        {
+          "text": " for",
+          "start": 80.74,
+          "end": 81.08,
+          "confidence": 0.980932354927063
+        },
+        {
+          "text": " the",
+          "start": 81.08,
+          "end": 81.14,
+          "confidence": 0.9763945937156677
+        },
+        {
+          "text": " day.",
+          "start": 81.14,
+          "end": 81.32,
+          "confidence": 0.9958896040916443
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "start": 81.9,
+      "end": 84.82,
+      "startTime": "00:01:21,900",
+      "endTime": "00:01:24,820",
+      "text": "Cushings, that'd be moon vases stuff, myosthenia gravis is going to be",
+      "confidence": -0.45251133645227715,
+      "words": [
+        {
+          "text": " Cushings,",
+          "start": 81.9,
+          "end": 82.38,
+          "confidence": 0.7955046693483988
+        },
+        {
+          "text": " that'd",
+          "start": 82.48,
+          "end": 82.62,
+          "confidence": 0.29729631543159485
+        },
+        {
+          "text": " be",
+          "start": 82.62,
+          "end": 82.68,
+          "confidence": 0.9836465716362
+        },
+        {
+          "text": " moon",
+          "start": 82.68,
+          "end": 82.9,
+          "confidence": 0.6329701542854309
+        },
+        {
+          "text": " vases",
+          "start": 82.9,
+          "end": 83.18,
+          "confidence": 0.6006170213222504
+        },
+        {
+          "text": " stuff,",
+          "start": 83.18,
+          "end": 83.58,
+          "confidence": 0.9038410782814026
+        },
+        {
+          "text": " myosthenia",
+          "start": 83.74,
+          "end": 84.04,
+          "confidence": 0.7128707692027092
+        },
+        {
+          "text": " gravis",
+          "start": 84.04,
+          "end": 84.36,
+          "confidence": 0.5622324198484421
+        },
+        {
+          "text": " is",
+          "start": 84.36,
+          "end": 84.58,
+          "confidence": 0.7407565116882324
+        },
+        {
+          "text": " going",
+          "start": 84.58,
+          "end": 84.7,
+          "confidence": 0.9596033692359924
+        },
+        {
+          "text": " to",
+          "start": 84.7,
+          "end": 84.74,
+          "confidence": 0.9980517625808716
+        },
+        {
+          "text": " be",
+          "start": 84.74,
+          "end": 84.82,
+          "confidence": 0.997683048248291
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "start": 84.82,
+      "end": 86.88,
+      "startTime": "00:01:24,820",
+      "endTime": "00:01:26,880",
+      "text": "fluctuating weakness, not facial edema.",
+      "confidence": -0.26481346967743663,
+      "words": [
+        {
+          "text": " fluctuating",
+          "start": 84.82,
+          "end": 85.24,
+          "confidence": 0.6066931039094925
+        },
+        {
+          "text": " weakness,",
+          "start": 85.24,
+          "end": 85.64,
+          "confidence": 0.9713613986968994
+        },
+        {
+          "text": " not",
+          "start": 86.2,
+          "end": 86.24,
+          "confidence": 0.9366534948348999
+        },
+        {
+          "text": " facial",
+          "start": 86.24,
+          "end": 86.54,
+          "confidence": 0.953399121761322
+        },
+        {
+          "text": " edema.",
+          "start": 86.54,
+          "end": 86.88,
+          "confidence": 0.9853691160678864
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "start": 87.46,
+      "end": 90.24,
+      "startTime": "00:01:27,460",
+      "endTime": "00:01:30,240",
+      "text": "Bronchiectasis, that's like with a gross productive cough, irrelevant",
+      "confidence": -0.26481346967743663,
+      "words": [
+        {
+          "text": " Bronchiectasis,",
+          "start": 87.46,
+          "end": 87.94,
+          "confidence": 0.8143757224082947
+        },
+        {
+          "text": " that's",
+          "start": 88.16,
+          "end": 88.28,
+          "confidence": 0.9810467660427094
+        },
+        {
+          "text": " like",
+          "start": 88.28,
+          "end": 88.42,
+          "confidence": 0.9883710145950317
+        },
+        {
+          "text": " with",
+          "start": 88.42,
+          "end": 88.58,
+          "confidence": 0.9652976989746094
+        },
+        {
+          "text": " a",
+          "start": 88.58,
+          "end": 88.74,
+          "confidence": 0.9957286715507507
+        },
+        {
+          "text": " gross",
+          "start": 88.74,
+          "end": 89.06,
+          "confidence": 0.931843101978302
+        },
+        {
+          "text": " productive",
+          "start": 89.06,
+          "end": 89.4,
+          "confidence": 0.7233884930610657
+        },
+        {
+          "text": " cough,",
+          "start": 89.4,
+          "end": 89.82,
+          "confidence": 0.9940438866615295
+        },
+        {
+          "text": " irrelevant",
+          "start": 90.06,
+          "end": 90.24,
+          "confidence": 0.9527505040168762
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "start": 90.24,
+      "end": 94.18,
+      "startTime": "00:01:30,240",
+      "endTime": "00:01:34,180",
+      "text": "to venous stuff and sarcoidosis is non-gaseous and granulomus asymptomatic",
+      "confidence": -0.26481346967743663,
+      "words": [
+        {
+          "text": " to",
+          "start": 90.24,
+          "end": 90.54,
+          "confidence": 0.2880728542804718
+        },
+        {
+          "text": " venous",
+          "start": 90.54,
+          "end": 90.74,
+          "confidence": 0.9615173637866974
+        },
+        {
+          "text": " stuff",
+          "start": 90.74,
+          "end": 91,
+          "confidence": 0.9965229034423828
+        },
+        {
+          "text": " and",
+          "start": 91,
+          "end": 91.24,
+          "confidence": 0.19612763822078705
+        },
+        {
+          "text": " sarcoidosis",
+          "start": 91.24,
+          "end": 91.88,
+          "confidence": 0.7674445509910583
+        },
+        {
+          "text": " is",
+          "start": 91.88,
+          "end": 92,
+          "confidence": 0.7107925415039062
+        },
+        {
+          "text": " non",
+          "start": 92,
+          "end": 92.16,
+          "confidence": 0.9763292074203491
+        },
+        {
+          "text": "-gaseous",
+          "start": 92.16,
+          "end": 92.46,
+          "confidence": 0.7356784045696259
+        },
+        {
+          "text": " and",
+          "start": 92.46,
+          "end": 92.56,
+          "confidence": 0.2178649604320526
+        },
+        {
+          "text": " granulomus",
+          "start": 92.56,
+          "end": 93.16,
+          "confidence": 0.6120896264910698
+        },
+        {
+          "text": " asymptomatic",
+          "start": 93.16,
+          "end": 94.18,
+          "confidence": 0.794365644454956
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "start": 94.82,
+      "end": 96.06,
+      "startTime": "00:01:34,820",
+      "endTime": "00:01:36,060",
+      "text": "or lung infiltrate associated.",
+      "confidence": -0.26481346967743663,
+      "words": [
+        {
+          "text": " or",
+          "start": 94.72,
+          "end": 94.96,
+          "confidence": 0.8350947499275208
+        },
+        {
+          "text": " lung",
+          "start": 94.96,
+          "end": 95.22,
+          "confidence": 0.9920769929885864
+        },
+        {
+          "text": " infiltrate",
+          "start": 95.22,
+          "end": 95.6,
+          "confidence": 0.8648307621479034
+        },
+        {
+          "text": " associated.",
+          "start": 95.6,
+          "end": 96.06,
+          "confidence": 0.9709072709083557
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "start": 96.9,
+      "end": 97.02,
+      "startTime": "00:01:36,900",
+      "endTime": "00:01:37,020",
+      "text": "Okay.",
+      "confidence": -0.26481346967743663,
+      "words": [
+        {
+          "text": " Okay.",
+          "start": 96.9,
+          "end": 97.02,
+          "confidence": 0.9049749374389648
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "start": 97.1,
+      "end": 97.74,
+      "startTime": "00:01:37,100",
+      "endTime": "00:01:37,740",
+      "text": "Hopefully that was helpful.",
+      "confidence": -0.26481346967743663,
+      "words": [
+        {
+          "text": " Hopefully",
+          "start": 97.1,
+          "end": 97.3,
+          "confidence": 0.9906835556030273
+        },
+        {
+          "text": " that",
+          "start": 97.3,
+          "end": 97.48,
+          "confidence": 0.7883440256118774
+        },
+        {
+          "text": " was",
+          "start": 97.48,
+          "end": 97.56,
+          "confidence": 0.9966615438461304
+        },
+        {
+          "text": " helpful.",
+          "start": 97.56,
+          "end": 97.74,
+          "confidence": 0.9995236396789551
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "start": 97.92,
+      "end": 99.46,
+      "startTime": "00:01:37,920",
+      "endTime": "00:01:39,460",
+      "text": "If it was like and subscribe.",
+      "confidence": -0.26481346967743663,
+      "words": [
+        {
+          "text": " If",
+          "start": 97.92,
+          "end": 97.92,
+          "confidence": 0.9651613235473633
+        },
+        {
+          "text": " it",
+          "start": 97.92,
+          "end": 97.98,
+          "confidence": 0.8324741125106812
+        },
+        {
+          "text": " was",
+          "start": 97.98,
+          "end": 98.22,
+          "confidence": 0.9978857636451721
+        },
+        {
+          "text": " like",
+          "start": 98.22,
+          "end": 99.08,
+          "confidence": 0.4629005491733551
+        },
+        {
+          "text": " and",
+          "start": 99.08,
+          "end": 99.24,
+          "confidence": 0.8981925249099731
+        },
+        {
+          "text": " subscribe.",
+          "start": 99.24,
+          "end": 99.46,
+          "confidence": 0.992159366607666
+        }
+      ]
+    }
+  ],
+  "fullText": "If you see facial swelling in a neck vein engorgement, you should think of superior vena cava syndrome from a mediastinal mass. So like small cell lung cancer, symmetrical face swelling. That's because you have the venous drainage that is blocked above the heart. So you get the dilated neck and also the chest veins. And so the blood is going to be rerouted through the collateral system. You have conjunctival edema, headache, dyspnea that's due to the increased intracranial and thoracic venous pressure. So it's all about that pressure buildup upstairs. Compression of the superior vena cava and period drainage venous congestion. So think small cell, also non-hodgkin's lymphoma. You have a mediastinal structure kind of causing problems there. Throbosis of catheters, pancreas, tumors. Rarely. Usually be a horner syndrome for pancreas. So you have a tumor compressing the superior vena cava. If untreated, you have cerebral edema. Key features, puffiness above the shoulders. Mediastinal mass. Here's our practice question. 64, smoker, facial swelling, persistence of dry cough, headaches that were someone leaning forward. Exam shows periorbital edema and dilated veins on the upper chest. Chest imaging shows a higher mass. What is the diagnosis? Now it's going to be superior vena cava syndrome, obviously, because that's her video for the day. Cushings, that'd be moon vases stuff, myosthenia gravis is going to be fluctuating weakness, not facial edema. Bronchiectasis, that's like with a gross productive cough, irrelevant to venous stuff and sarcoidosis is non-gaseous and granulomus asymptomatic or lung infiltrate associated. Okay. Hopefully that was helpful. If it was like and subscribe.",
+  "srtContent": "1\n00:00:00,000 --> 00:00:04,140\nIf you see facial swelling in a neck vein engorgement, you should think of superior\n\n2\n00:00:04,140 --> 00:00:07,080\nvena cava syndrome from a mediastinal mass.\n\n3\n00:00:07,420 --> 00:00:10,760\nSo like small cell lung cancer, symmetrical face swelling.\n\n4\n00:00:11,840 --> 00:00:14,520\nThat's because you have the venous drainage that is blocked above the heart.\n\n5\n00:00:14,700 --> 00:00:17,760\nSo you get the dilated neck and also the chest veins.\n\n6\n00:00:18,080 --> 00:00:20,560\nAnd so the blood is going to be rerouted through the collateral system.\n\n7\n00:00:20,940 --> 00:00:24,460\nYou have conjunctival edema, headache, dyspnea that's due to the increased\n\n8\n00:00:24,460 --> 00:00:26,160\nintracranial and thoracic venous pressure.\n\n9\n00:00:26,240 --> 00:00:28,180\nSo it's all about that pressure buildup upstairs.\n\n10\n00:00:28,920 --> 00:00:32,520\nCompression of the superior vena cava and period drainage venous congestion.\n\n11\n00:00:33,800 --> 00:00:36,920\nSo think small cell, also non-hodgkin's lymphoma.\n\n12\n00:00:37,220 --> 00:00:40,200\nYou have a mediastinal structure kind of causing problems there.\n\n13\n00:00:40,300 --> 00:00:41,920\nThrobosis of catheters, pancreas, tumors.\n\n14\n00:00:43,420 --> 00:00:44,000\nRarely.\n\n15\n00:00:45,060 --> 00:00:46,920\nUsually be a horner syndrome for pancreas.\n\n16\n00:00:48,120 --> 00:00:50,440\nSo you have a tumor compressing the superior vena cava.\n\n17\n00:00:50,940 --> 00:00:52,660\nIf untreated, you have cerebral edema.\n\n18\n00:00:53,360 --> 00:00:55,280\nKey features, puffiness above the shoulders.\n\n19\n00:00:56,640 --> 00:00:57,380\nMediastinal mass.\n\n20\n00:00:57,640 --> 00:00:58,240\nHere's our practice question.\n\n21\n00:00:58,440 --> 00:01:02,480\n64, smoker, facial swelling, persistence of dry cough, headaches that\n\n22\n00:01:02,480 --> 00:01:03,400\nwere someone leaning forward.\n\n23\n00:01:07,800 --> 00:01:11,780\nExam shows periorbital edema and dilated veins on the upper chest.\n\n24\n00:01:12,760 --> 00:01:14,360\nChest imaging shows a higher mass.\n\n25\n00:01:14,740 --> 00:01:15,440\nWhat is the diagnosis?\n\n26\n00:01:16,540 --> 00:01:19,340\nNow it's going to be superior vena cava syndrome, obviously, because that's\n\n27\n00:01:19,340 --> 00:01:21,320\nher video for the day.\n\n28\n00:01:21,900 --> 00:01:24,820\nCushings, that'd be moon vases stuff, myosthenia gravis is going to be\n\n29\n00:01:24,820 --> 00:01:26,880\nfluctuating weakness, not facial edema.\n\n30\n00:01:27,460 --> 00:01:30,240\nBronchiectasis, that's like with a gross productive cough, irrelevant\n\n31\n00:01:30,240 --> 00:01:34,180\nto venous stuff and sarcoidosis is non-gaseous and granulomus asymptomatic\n\n32\n00:01:34,820 --> 00:01:36,060\nor lung infiltrate associated.\n\n33\n00:01:36,900 --> 00:01:37,020\nOkay.\n\n34\n00:01:37,100 --> 00:01:37,740\nHopefully that was helpful.\n\n35\n00:01:37,920 --> 00:01:39,460\nIf it was like and subscribe.\n\n",
+  "duration": 0,
+  "language": "en"
+}

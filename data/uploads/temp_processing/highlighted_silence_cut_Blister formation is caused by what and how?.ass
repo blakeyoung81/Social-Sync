@@ -1,0 +1,38 @@
+
+[Script Info]
+ScriptType: v4.00+
+ScaledBorderAndShadow: yes
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,55,&H00FFFFFF,&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,15,1
+Style: Highlight,Arial,62,&H0000FFFF,&H000000FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,2,2,2,10,10,15,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,000:00:00.00,000:00:03.36,Default,,0,0,0,,Let's see a question stem where you have a newborn; he's got a
+Dialogue: 0,000:00:03.36,000:00:06.40,Default,,0,0,0,,defect in his anchoring fibrils. This is going to be your type
+Dialogue: 0,000:00:06.40,000:00:09.52,Default,,0,0,0,,VII collagen, and they're going to ask you, "Hey, what's the skin finding?" The
+Dialogue: 0,000:00:09.52,000:00:12.48,Default,,0,0,0,,answer is going to be blisters. So anchoring fibrils should make you think of the
+Dialogue: 0,000:00:12.48,000:00:15.68,Default,,0,0,0,,hemidesmosomes. I don't know why, but I like to think of a little ladder.
+Dialogue: 0,000:00:15.68,000:00:19.12,Default,,0,0,0,,You know, a ladder kind of looks like this, and this looks like an "H," and I
+Dialogue: 0,000:00:19.12,000:00:23.28,Default,,0,0,0,,like to think of this as, at the very bottom, like an anchor. It'll tether your
+Dialogue: 0,000:00:23.28,000:00:27.12,Default,,0,0,0,,basal keratinocytes of the epidermis to the dermis. So there's your "H," your
+Dialogue: 0,000:00:28.08,000:00:31.04,Default,,0,0,0,,type VII collagen, and so the epidermis will
+Dialogue: 0,000:00:31.04,000:00:34.00,Default,,0,0,0,,separate from the dermis, and you get a blister. If you don't have that anchoring,
+Dialogue: 0,000:00:34.00,000:00:37.76,Highlight,,0,0,0,,if you don't have that, then that's what you get: mechanical fragility of that
+Dialogue: 0,000:00:37.76,000:00:41.44,Default,,0,0,0,,dermal-epidermal junction. Some trap answers that you might see would be like
+Dialogue: 0,000:00:41.44,000:00:45.28,Default,,0,0,0,,a rash; for that, you think of like Job's syndrome or atopic dermatitis,
+Dialogue: 0,000:00:45.28,000:00:48.56,Default,,0,0,0,,maybe even vasculitis. So that would be like your red patches, not your
+Dialogue: 0,000:00:48.56,000:00:52.32,Default,,0,0,0,,blisters from structural weakness. There'd also be no vesicle rupture,
+Dialogue: 0,000:00:52.32,000:00:55.76,Default,,0,0,0,,not easy bruising; that would make you think of like scurvy, vitamin C
+Dialogue: 0,000:00:55.76,000:01:01.36,Default,,0,0,0,,deficiency. They could say keratodermas or ichthyosis. "Ichthy" makes you think of
+Dialogue: 0,000:01:01.36,000:01:04.48,Default,,0,0,0,,like fish, little like fish skin. That's going to be your thickened skin that's
+Dialogue: 0,000:01:04.48,000:01:08.56,Default,,0,0,0,,due to this stratum corneum buildup. So that's just a different disease. Ulcers,
+Dialogue: 0,000:01:08.56,000:01:14.16,Default,,0,0,0,,that'd be full-thickness loss of your epidermis that exposes the dermis. So you'd see that in like
+Dialogue: 0,000:01:14.16,000:01:19.28,Default,,0,0,0,,lupus, for instance, but this is not that. We're looking at a structural defect here.
+Dialogue: 0,000:01:19.28,000:01:24.56,Highlight,,0,0,0,,So epidermolysis bullosa dystrophica. It's going to be a type VII collagen defect
+Dialogue: 0,000:01:24.56,000:01:29.12,Default,,0,0,0,,causing your blisters, especially through trauma or friction. Diagnosed on skin biopsy with
+Dialogue: 0,000:01:29.12,000:01:33.52,Default,,0,0,0,,immunofluorescence. There's your educational pearl for the day. We'll see you guys in the next video.

@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "highlights": [
+    {
+      "title": "Introduction to Aspergillus",
+      "description": "Overview of Aspergillus and its significance in health.",
+      "startTime": 0,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Key Characteristics of Aspergillus",
+      "description": "Details on sub-day branching and its implications.",
+      "startTime": 15,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Impact on Immunocompromised Patients",
+      "description": "Discusses necrosis and hemorrhagic infarcts in vulnerable patients.",
+      "startTime": 30,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Allergic Bronchopulmonary Aspergillosis",
+      "description": "Explains ABPA and its association with asthma and CF.",
+      "startTime": 50,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Pathophysiology of Aspergillus Infection",
+      "description": "Describes how Aspergillus invades and affects lung tissue.",
+      "startTime": 70,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Diagnosis of Aspergilloma",
+      "description": "Identifies key diagnostic features of Aspergilloma.",
+      "startTime": 100,
+      "endTime": null,
+      "importance": "high"
+    },
+    {
+      "title": "Clinical Implications of Aspergilloma",
+      "description": "Highlights potential symptoms and complications.",
+      "startTime": 130,
+      "endTime": null,
+      "importance": "medium"
+    },
+    {
+      "title": "Conclusion and Call to Action",
+      "description": "Encourages viewers to subscribe for more educational content.",
+      "startTime": 150,
+      "endTime": null,
+      "importance": "low"
+    }
+  ],
+  "totalHighlights": 8,
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,77 @@
+{
+  "success": true,
+  "segments": [
+    {
+      "id": 1,
+      "start": 21.3,
+      "end": 22.7,
+      "startTime": "00:00:21,300",
+      "endTime": "00:00:22,700",
+      "text": "you",
+      "confidence": -0.4978201985359192,
+      "words": [
+        {
+          "text": " you",
+          "start": 21.3,
+          "end": 22.7,
+          "confidence": 0.3526298701763153
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 51.300000000000004,
+      "end": 52.7,
+      "startTime": "00:00:51,300",
+      "endTime": "00:00:52,700",
+      "text": "you",
+      "confidence": -0.8436111807823181,
+      "words": [
+        {
+          "text": " you",
+          "start": 51.300000000000004,
+          "end": 52.7,
+          "confidence": 0.3526301681995392
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 81.3,
+      "end": 82.7,
+      "startTime": "00:01:21,300",
+      "endTime": "00:01:22,700",
+      "text": "you",
+      "confidence": -0.8757900595664978,
+      "words": [
+        {
+          "text": " you",
+          "start": 81.3,
+          "end": 82.7,
+          "confidence": 0.3526301681995392
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 108.05999999999999,
+      "end": 109.46,
+      "startTime": "00:01:48,060",
+      "endTime": "00:01:49,460",
+      "text": "you",
+      "confidence": -1.3740357160568237,
+      "words": [
+        {
+          "text": " you",
+          "start": 108.05999999999999,
+          "end": 109.46,
+          "confidence": 0.21375791728496552
+        }
+      ]
+    }
+  ],
+  "fullText": "you you you you",
+  "srtContent": "1\n00:00:21,300 --> 00:00:22,700\nyou\n\n2\n00:00:51,300 --> 00:00:52,700\nyou\n\n3\n00:01:21,300 --> 00:01:22,700\nyou\n\n4\n00:01:48,060 --> 00:01:49,460\nyou\n\n",
+  "duration": 0,
+  "language": "en"
+}

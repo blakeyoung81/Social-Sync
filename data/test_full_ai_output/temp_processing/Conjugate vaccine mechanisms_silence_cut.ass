@@ -1,0 +1,26 @@
+
+[Script Info]
+ScriptType: v4.00+
+ScaledBorderAndShadow: yes
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,55,&H00FFFFFF,&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,15,1
+Style: Highlight,Arial,62,&H0000FFFF,&H000000FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,2,2,2,10,10,15,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,000:00:00.00,000:00:04.16,Default,,0,0,0,,A 6-month-old infant receives a vaccine that includes a bacterial
+Dialogue: 0,000:00:04.48,000:00:09.36,Default,,0,0,0,,capsule polysaccharide conjugated to diphtheria toxoid. What is the immunological advantage
+Dialogue: 0,000:00:09.52,000:00:13.60,Default,,0,0,0,,conferred by this conjugation? It's going to be enhanced class switching through T helper cells.
+Dialogue: 0,000:00:13.84,000:00:18.88,Highlight,,0,0,0,,Infants under two years old can't mount a memory response to plain polysaccharide antigens;
+Dialogue: 0,000:00:19.04,000:00:20.00,Highlight,,0,0,0,,they just can't do it.
+Dialogue: 0,000:00:20.00,000:00:25.76,Highlight,,0,0,0,,But when you conjugate that capsule to a protein like tetanus toxoid, then it recruits T helper cells
+Dialogue: 0,000:00:26.08,000:00:31.92,Default,,0,0,0,,and enables class switching, affinity maturation, and immunological memory. So that's how conjugate
+Dialogue: 0,000:00:32.72,000:00:39.28,Default,,0,0,0,,vaccines work. It's not because of the toxoid, but because of that teamwork. It's because of that robust T cell-dependent immunity.
+Dialogue: 0,000:00:39.68,000:00:46.32,Default,,0,0,0,,So let's look at these trap answers. Mucosal IgA is induced by oral and intranasal vaccines and mucosal infections,
+Dialogue: 0,000:00:46.32,000:00:52.48,Default,,0,0,0,,not systemic conjugates. TLR4 recognizes your LPS, not capsular polysaccharides.
+Dialogue: 0,000:00:52.56,000:00:57.68,Highlight,,0,0,0,,Somatic hypermutation is the advantage of conjugation as T cell helpers, not diversification.
+Dialogue: 0,000:00:58.08,000:01:05.20,Default,,0,0,0,,M cells are involved in mucosal antigen sampling, unrelated to conjugate vaccines. Like and subscribe for a new question every day.
