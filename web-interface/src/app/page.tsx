@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { Upload, Settings, Wand2, Eye, CheckCircle2, AlertCircle, TrendingUp, Trash2, AlertTriangle, Copy, Zap, Shield, Calendar, Music } from 'lucide-react';
 import { ProcessingStatus, ProcessingStepsConfig, MultiPlatformManager, ProcessingConfiguration, VideoDiscoveryPanel, ChannelDataScanner, SmartSchedulingPreview } from '../components';
 import VideoPreview from '../components/VideoPreview';
@@ -16,6 +18,16 @@ import { calculateEstimatedCost } from '@/utils/costCalculation';
 
 export default function Home() {
   console.log('🏠 [PAGE] Home component rendering');
+
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.push('/login');
+    }
+  }, [status, router]);
 
   const [options, setOptions] = useState<ProcessingOptions>(DEFAULT_SETTINGS);
   const [processing, setProcessing] = useState(false);

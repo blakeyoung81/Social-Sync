@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { prisma } from '@/lib/prisma';
 
 // These should be environment variables
 const FACEBOOK_APP_ID = process.env.FACEBOOK_APP_ID;
@@ -7,6 +10,11 @@ const FACEBOOK_APP_SECRET = process.env.FACEBOOK_APP_SECRET;
 const FACEBOOK_REDIRECT_URI = process.env.FACEBOOK_REDIRECT_URI || 'http://localhost:3000/api/facebook/callback';
 
 export async function GET(request: Request) {
+  const session = await getServerSession(authOptions);
+  if (!session?.user?.id) {
+    return NextResponse.redirect(new URL('/login?error=not_authenticated', request.url));
+  }
+
   const url = new URL(request.url);
   const code = url.searchParams.get('code');
   const state = url.searchParams.get('state');
@@ -15,7 +23,7 @@ export async function GET(request: Request) {
   if (error) {
     console.error('Facebook OAuth Error:', error, url.searchParams.get('error_description'));
     return NextResponse.redirect(
-      new URL('/?error=facebook_auth_failed&message=' + encodeURIComponent(error), request.url)
+      new URL('/dashboard?facebook_error=' + encodeURIComponent(error), request.url)
     );
   }
 
@@ -109,14 +117,44 @@ export async function GET(request: Request) {
       console.error('Error fetching Facebook pages:', error);
     }
 
-    // Redirect back to the main application
-    const redirectUrl = new URL('/', request.url);
+    // Save connection to database
+    await prisma.socialConnection.upsert({
+      where: {
+        userId_platform: {
+          userId: session.user.id,
+          platform: 'facebook',
+        },
+      },
+      update: {
+        platformUserId: userInfo?.id,
+        platformUsername: userInfo?.name,
+        accessToken: finalAccessToken,
+        metadata: JSON.stringify({
+          name: userInfo?.name,
+          picture: userInfo?.picture?.data?.url,
+          pages: pages,
+        }),
+        updatedAt: new Date(),
+      },
+      create: {
+        userId: session.user.id,
+        platform: 'facebook',
+        platformUserId: userInfo?.id,
+        platformUsername: userInfo?.name,
+        accessToken: finalAccessToken,
+        metadata: JSON.stringify({
+          name: userInfo?.name,
+          picture: userInfo?.picture?.data?.url,
+          pages: pages,
+        }),
+      },
+    });
+
+    // Redirect back to dashboard
+    const redirectUrl = new URL('/dashboard', request.url);
     redirectUrl.searchParams.append('facebook_connected', 'true');
     if (userInfo?.name) {
       redirectUrl.searchParams.append('user_name', userInfo.name);
-    }
-    if (pages.length > 0) {
-      redirectUrl.searchParams.append('pages', pages.length.toString());
     }
 
     return NextResponse.redirect(redirectUrl.toString());

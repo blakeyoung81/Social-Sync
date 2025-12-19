@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { Footer } from "@/components/layout/Footer";
+import { SessionProvider } from "@/components/providers/SessionProvider";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,15 +31,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
-        <div className="flex min-h-screen flex-col">
-          <div className="flex flex-1">
-            <Sidebar />
-            <main className="flex-1 ml-64 p-8">
-              {children}
-            </main>
+        <SessionProvider>
+          <div className="flex min-h-screen flex-col">
+            <div className="flex flex-1">
+              <Sidebar />
+              <main className="flex-1 ml-64 p-8">
+                {children}
+              </main>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
+          <Toaster position="top-right" />
+        </SessionProvider>
       </body>
     </html>
   );

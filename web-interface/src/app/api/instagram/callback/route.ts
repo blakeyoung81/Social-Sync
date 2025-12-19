@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { prisma } from '@/lib/prisma';
 
 // Development mode flag
 const DEV_MODE = process.env.DEV_MODE === 'true' || false; // Default to false to use real API
@@ -10,6 +13,11 @@ const INSTAGRAM_APP_SECRET = process.env.INSTAGRAM_APP_SECRET || 'development_ap
 const INSTAGRAM_REDIRECT_URI = process.env.INSTAGRAM_REDIRECT_URI || 'http://localhost:3000/api/instagram/callback';
 
 export async function GET(request: Request) {
+  const session = await getServerSession(authOptions);
+  if (!session?.user?.id) {
+    return NextResponse.redirect(new URL('/login?error=not_authenticated', request.url));
+  }
+
   const url = new URL(request.url);
   const code = url.searchParams.get('code');
   const state = url.searchParams.get('state');
@@ -18,7 +26,7 @@ export async function GET(request: Request) {
   if (error) {
     console.error('Instagram OAuth Error:', error, url.searchParams.get('error_description'));
     return NextResponse.redirect(
-      new URL('/?error=instagram_auth_failed&message=' + encodeURIComponent(error), request.url).origin
+      new URL('/dashboard?instagram_error=' + encodeURIComponent(error), request.url)
     );
   }
 
@@ -116,9 +124,52 @@ export async function GET(request: Request) {
       console.error('Error fetching Instagram user info:', error);
     }
 
-    // Redirect back to the main application
+    // Get user info for database
+    let username = tokenData.user_id;
+    try {
+      const userInfoResponse = await fetch(`https://graph.instagram.com/me?fields=id,username&access_token=${tokenData.access_token}`);
+      const userInfo = await userInfoResponse.json();
+      if (userInfoResponse.ok && userInfo.username) {
+        username = userInfo.username;
+      }
+    } catch (error) {
+      console.error('Error fetching Instagram user info:', error);
+    }
+
+    // Save connection to database
+    await prisma.socialConnection.upsert({
+      where: {
+        userId_platform: {
+          userId: session.user.id,
+          platform: 'instagram',
+        },
+      },
+      update: {
+        platformUserId: tokenData.user_id,
+        platformUsername: username,
+        accessToken: tokenData.access_token,
+        metadata: JSON.stringify({
+          user_id: tokenData.user_id,
+          username: username,
+        }),
+        updatedAt: new Date(),
+      },
+      create: {
+        userId: session.user.id,
+        platform: 'instagram',
+        platformUserId: tokenData.user_id,
+        platformUsername: username,
+        accessToken: tokenData.access_token,
+        metadata: JSON.stringify({
+          user_id: tokenData.user_id,
+          username: username,
+        }),
+      },
+    });
+
+    // Redirect back to dashboard
     return NextResponse.redirect(
-      new URL('/?instagram_connected=true', request.url).origin
+      new URL('/dashboard?instagram_connected=true', request.url)
     );
   } catch (error) {
     console.error('Instagram token exchange error:', error);

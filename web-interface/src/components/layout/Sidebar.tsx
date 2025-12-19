@@ -3,7 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { UploadCloud, Scissors, FileVideo, LayoutDashboard } from 'lucide-react';
+import { useSession, signOut } from 'next-auth/react';
+import { UploadCloud, Scissors, FileVideo, LayoutDashboard, User, LogOut } from 'lucide-react';
 
 interface SidebarItemProps {
     icon: React.ElementType;
@@ -29,6 +30,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ icon: Icon, label, href, isAc
 
 export const Sidebar: React.FC = () => {
     const pathname = usePathname();
+    const { data: session } = useSession();
 
     const navItems = [
         {
@@ -71,11 +73,37 @@ export const Sidebar: React.FC = () => {
                 ))}
             </nav>
 
-            <div className="p-4 border-t border-gray-800">
-                <div className="px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-700/50">
-                    <p className="text-xs text-gray-500 mb-1">Current Workspace</p>
-                    <p className="text-sm font-medium text-gray-300">Default Project</p>
-                </div>
+            <div className="p-4 border-t border-gray-800 space-y-2">
+                {session ? (
+                    <>
+                        <Link
+                            href="/dashboard"
+                            className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 group ${
+                                pathname === '/dashboard'
+                                    ? 'bg-blue-600/10 text-blue-500'
+                                    : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                            }`}
+                        >
+                            <User className={`w-5 h-5 ${pathname === '/dashboard' ? 'text-blue-500' : 'text-gray-400 group-hover:text-white'}`} />
+                            <span className="font-medium">My Account</span>
+                        </Link>
+                        <button
+                            onClick={() => signOut({ callbackUrl: '/login' })}
+                            className="w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 text-gray-400 hover:text-white hover:bg-gray-800"
+                        >
+                            <LogOut className="w-5 h-5" />
+                            <span className="font-medium">Sign Out</span>
+                        </button>
+                    </>
+                ) : (
+                    <Link
+                        href="/login"
+                        className="flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 group text-gray-400 hover:text-white hover:bg-gray-800"
+                    >
+                        <User className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                        <span className="font-medium">Sign In</span>
+                    </Link>
+                )}
             </div>
         </aside>
     );

@@ -1,17 +1,19 @@
 import { NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import { getYouTubeService } from '@/lib/youtube-auth';
 
 export async function GET(request: Request) {
   try {
+    const session = await getServerSession(authOptions);
+    if (!session?.user?.id) {
+      return NextResponse.redirect(new URL('/login?error=not_authenticated', request.url));
+    }
+
     const { searchParams } = new URL(request.url);
     const forceNew = searchParams.get('force_new');
     
     const youtubeService = getYouTubeService();
-    
-    // If force_new is true, skip authentication check and force new account selection
-    if (!forceNew && youtubeService.isAuthenticated()) {
-      return NextResponse.redirect(new URL('/?youtube_connected=true', process.env.NEXTAUTH_URL || 'http://localhost:3000'));
-    }
     
     // Generate auth URL with appropriate prompt
     const authUrl = youtubeService.getAuthUrl(forceNew === 'true');

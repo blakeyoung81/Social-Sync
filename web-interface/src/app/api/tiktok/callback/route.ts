@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { prisma } from '@/lib/prisma';
 
 // Development mode flag
 const DEV_MODE = process.env.DEV_MODE === 'true' || false; // Default to false to use real API
@@ -10,6 +13,11 @@ const TIKTOK_CLIENT_SECRET = process.env.TIKTOK_CLIENT_SECRET || 'development_cl
 const TIKTOK_REDIRECT_URI = process.env.TIKTOK_REDIRECT_URI || 'http://localhost:3000/api/tiktok/callback';
 
 export async function GET(request: Request) {
+  const session = await getServerSession(authOptions);
+  if (!session?.user?.id) {
+    return NextResponse.redirect(new URL('/login?error=not_authenticated', request.url));
+  }
+
   const url = new URL(request.url);
   const code = url.searchParams.get('code');
   const state = url.searchParams.get('state');
@@ -18,7 +26,7 @@ export async function GET(request: Request) {
   if (error) {
     console.error('TikTok OAuth Error:', error, url.searchParams.get('error_description'));
     return NextResponse.redirect(
-      new URL('/?error=tiktok_auth_failed&message=' + encodeURIComponent(error), request.url).origin
+      new URL('/dashboard?tiktok_error=' + encodeURIComponent(error), request.url)
     );
   }
 
@@ -100,6 +108,8 @@ export async function GET(request: Request) {
     });
 
     // Get user information
+    let username = tokenData.open_id;
+    let displayName = null;
     try {
       const userInfoResponse = await fetch('https://open.tiktokapis.com/v2/user/info/', {
         method: 'POST',
@@ -116,6 +126,8 @@ export async function GET(request: Request) {
       
       if (userInfoResponse.ok && userInfoData.data) {
         const userInfo = userInfoData.data.user;
+        username = userInfo.username || tokenData.open_id;
+        displayName = userInfo.display_name;
         cookieStore.set('tiktok_user_info', JSON.stringify(userInfo), {
           path: '/',
           maxAge: tokenData.expires_in || 60 * 60 * 24 * 30,
@@ -127,9 +139,46 @@ export async function GET(request: Request) {
       console.error('Error fetching TikTok user info:', error);
     }
 
-    // Redirect back to the main application
+    // Save connection to database
+    await prisma.socialConnection.upsert({
+      where: {
+        userId_platform: {
+          userId: session.user.id,
+          platform: 'tiktok',
+        },
+      },
+      update: {
+        platformUserId: tokenData.open_id,
+        platformUsername: username,
+        accessToken: tokenData.access_token,
+        refreshToken: tokenData.refresh_token,
+        expiresAt: tokenData.expires_in ? new Date(Date.now() + tokenData.expires_in * 1000) : null,
+        metadata: JSON.stringify({
+          open_id: tokenData.open_id,
+          username: username,
+          display_name: displayName,
+        }),
+        updatedAt: new Date(),
+      },
+      create: {
+        userId: session.user.id,
+        platform: 'tiktok',
+        platformUserId: tokenData.open_id,
+        platformUsername: username,
+        accessToken: tokenData.access_token,
+        refreshToken: tokenData.refresh_token,
+        expiresAt: tokenData.expires_in ? new Date(Date.now() + tokenData.expires_in * 1000) : null,
+        metadata: JSON.stringify({
+          open_id: tokenData.open_id,
+          username: username,
+          display_name: displayName,
+        }),
+      },
+    });
+
+    // Redirect back to dashboard
     return NextResponse.redirect(
-      new URL('/?tiktok_connected=true', request.url).origin
+      new URL('/dashboard?tiktok_connected=true', request.url)
     );
 
   } catch (error) {

@@ -110,3 +110,11 @@ docs/build/
 
 # Node modules (global)
 node_modules/
+
+# Database
+web-interface/dev.db
+web-interface/dev.db-journal
+web-interface/prisma/dev.db
+web-interface/prisma/dev.db-journal
+*.db
+*.db-journal
