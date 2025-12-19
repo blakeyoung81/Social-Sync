@@ -3,25 +3,21 @@ import { NextResponse } from "next/server"
 
 export default withAuth(
   function middleware(req) {
-    // Add headers for better security
-    const response = NextResponse.next();
-    response.headers.set('X-Content-Type-Options', 'nosniff');
-    response.headers.set('X-Frame-Options', 'DENY');
-    response.headers.set('X-XSS-Protection', '1; mode=block');
-    return response;
+    return NextResponse.next()
   },
   {
     callbacks: {
       authorized: ({ token, req }) => {
         try {
-          // Public paths that don't require authentication
-          const publicPaths = [
-            '/login',
-            '/signup',
-            '/privacy-policy',
-            '/terms-of-service',
-            '/data-deletion',
-          ];
+        // Public paths that don't require authentication
+        const publicPaths = [
+          '/login',
+          '/signup',
+          '/forgot-password',
+          '/privacy-policy',
+          '/terms-of-service',
+          '/data-deletion',
+        ];
           
           const pathname = req.nextUrl.pathname;
           const isPublicPath = publicPaths.some(path => 
@@ -62,7 +58,7 @@ export const config = {
      * - auth pages (login, signup)
      * - static assets (images, etc.)
      */
-    '/((?!_next/static|_next/image|favicon.ico|login|signup|privacy-policy|terms-of-service|data-deletion|app-icon\\.png|app-icon\\.svg|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)',
+    '/((?!_next/static|_next/image|favicon.ico|login|signup|forgot-password|privacy-policy|terms-of-service|data-deletion|app-icon\\.png|app-icon\\.svg|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)',
   ],
 }
 
