@@ -56,8 +56,11 @@ data/temp/
 # Sensitive configuration
 config/token.json
 config/credentials.json
+config/client_secrets.json
+config/active_youtube_account.json
 *.key
 *.pem
+*.secret
 
 # Processing outputs
 data/uploads/*.mp4

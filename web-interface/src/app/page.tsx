@@ -16,7 +16,7 @@ import { calculateEstimatedCost } from '@/utils/costCalculation';
 
 export default function Home() {
   console.log('🏠 [PAGE] Home component rendering');
-  
+
   const [options, setOptions] = useState<ProcessingOptions>(DEFAULT_SETTINGS);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState('');
@@ -26,9 +26,9 @@ export default function Home() {
   const [uploadResults, setUploadResults] = useState<UploadResult[]>([]);
   const [currentStep, setCurrentStep] = useState<string>('');
   const [completedSteps, setCompletedSteps] = useState<string[]>([]);
-  const [batchProgress, setBatchProgress] = useState<{currentVideo: number, totalVideos: number, videoName: string} | null>(null);
+  const [batchProgress, setBatchProgress] = useState<{ currentVideo: number, totalVideos: number, videoName: string } | null>(null);
   const [progressPercentage, setProgressPercentage] = useState<number>(0);
-   const [silenceCutStats, setSilenceCutStats] = useState<{
+  const [silenceCutStats, setSilenceCutStats] = useState<{
     seconds_removed: number;
     percentage: number;
     original_duration: number;
@@ -45,7 +45,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState('processing');
 
   const isUsingAIFeatures = !options.skipImageGeneration || !options.skipMultimediaAnalysis;
-  
+
   console.log('🏠 [PAGE] State:', {
     hasInputFolder: !!options.inputFolder,
     processing,
@@ -59,28 +59,28 @@ export default function Home() {
       inputFolder: savedInputFolder,
       multiPlatformConfig: savedMultiPlatformConfig || DEFAULT_SETTINGS.multiPlatformConfig
     }));
-    
+
     // 🚀 [PERFORMANCE FIX] Only discover videos if folder exists and we're not in dry-run mode for smart scheduling
     if (savedInputFolder && savedMultiPlatformConfig) {
-        const processingMode = savedMultiPlatformConfig.general?.processingMode || 'dry-run';
-        console.log('🔧 [DEBUG] Initial video discovery - Processing Mode:', processingMode);
-        
-        discoverVideos(savedInputFolder, {
-          processingMode,
-          scheduleMode: processingMode === 'dry-run' ? 'standard' : 'smart', // Force standard for dry-run
-          conflictMode: 'basic'
-        });
+      const processingMode = savedMultiPlatformConfig.general?.processingMode || 'dry-run';
+      console.log('🔧 [DEBUG] Initial video discovery - Processing Mode:', processingMode);
+
+      discoverVideos(savedInputFolder, {
+        processingMode,
+        scheduleMode: processingMode === 'dry-run' ? 'standard' : 'smart', // Force standard for dry-run
+        conflictMode: 'basic'
+      });
     }
   }, [savedInputFolder, savedMultiPlatformConfig, discoverVideos]);
 
   const handleOptionChange = (key: keyof ProcessingOptions, value: any) => {
     setOptions(prev => ({ ...prev, [key]: value }));
   };
-  
+
   const handleInputFolderChange = (value: string) => {
     setOptions(prev => ({ ...prev, inputFolder: value }));
     setSavedInputFolder(value);
-    
+
     // Trigger video discovery with current configuration
     discoverVideosDebounced(value, {
       scheduleDate: options.multiPlatformConfig.general.schedule,
@@ -88,7 +88,7 @@ export default function Home() {
       conflictMode: 'smart-analysis',
       processingMode: options.multiPlatformConfig.general.processingMode
     });
-    
+
     // Also trigger smart scheduling preview if in smart mode
     if (options.multiPlatformConfig.general.scheduleMode === 'delayed' && value) {
       console.log('🔧 [DEBUG] Folder changed, triggering smart scheduling preview...');
@@ -108,7 +108,7 @@ export default function Home() {
     console.log('🔧 [DEBUG] Schedule mode changed to:', config.general.scheduleMode);
     setOptions(prev => ({ ...prev, multiPlatformConfig: config }));
     setSavedMultiPlatformConfig(config);
-    
+
     // Trigger scheduling preview when smart mode is enabled
     if (config.general.scheduleMode === 'delayed' && options.inputFolder) {
       console.log('🔧 [DEBUG] Triggering smart scheduling preview...');
@@ -121,7 +121,7 @@ export default function Home() {
         processingMode: config.general.processingMode
       });
     }
-    
+
     // Also trigger basic video discovery when changing folders or modes
     if (options.inputFolder) {
       console.log('🔧 [DEBUG] Triggering basic video discovery...');
@@ -145,7 +145,7 @@ export default function Home() {
     setProgressPercentage(0);
 
     // For single upload mode, only process the first video
-    const videosToProcess = options.multiPlatformConfig?.general?.processingMode === 'full-upload' 
+    const videosToProcess = options.multiPlatformConfig?.general?.processingMode === 'full-upload'
       ? (videoDiscovery?.files || []).slice(0, 1)
       : videoDiscovery?.files || [];
 
@@ -154,12 +154,12 @@ export default function Home() {
     console.log(`🎯 [SINGLE UPLOAD CHECK] Videos to process: ${videosToProcess.length}`);
 
     const response = await fetch('/api/process-videos-stream', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          files: videosToProcess, 
-          options 
-        }),
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        files: videosToProcess,
+        options
+      }),
     });
 
     if (response.status === 400) {
@@ -168,7 +168,7 @@ export default function Home() {
       setProcessing(false);
       return;
     }
-    
+
     if (!response.ok) {
       setError(`HTTP Error: ${response.status} ${response.statusText}`);
       setProcessing(false);
@@ -189,97 +189,97 @@ export default function Home() {
     setProcessingStatus(['🚀 Connecting to processing server...']);
 
     while (true) {
-        const { value, done } = await reader.read();
-        if (done) break;
-        
-        buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split('\n');
-        buffer = lines.pop() || '';
-        
-        for (const line of lines) {
-            if (line.trim()) {
-                try {
-                    // Check if it's a progress message from Python (PROGRESS:)
-                    if (line.startsWith('PROGRESS:')) {
-                        const progressData = JSON.parse(line.substring(9)); // Remove 'PROGRESS:' prefix
-                        console.log('📊 [PROGRESS] Received:', progressData);
-                        
-                        // Update current step and progress
-                        setCurrentStep(progressData.step);
-                        setProgressPercentage(progressData.percentage || 0);
-                        
-                        // Add to processing status log
-                        const timestamp = new Date().toLocaleTimeString();
-                        setProcessingStatus(prev => [...prev, `[${timestamp}] 📊 ${progressData.step}: ${progressData.message}`]);
-                        
-                        // Mark previous steps as completed if we're on a new step
-                        if (progressData.current_step > 1) {
-                            const previousStepIndex = progressData.current_step - 2; // -1 for 0-based, -1 for previous
-                            const processingStepNames = PROCESSING_STEPS.map(step => step.name);
-                            if (previousStepIndex >= 0 && previousStepIndex < processingStepNames.length) {
-                                const previousStepName = processingStepNames[previousStepIndex];
-                                setCompletedSteps(prev => {
-                                    if (!prev.includes(previousStepName)) {
-                                        return [...prev, previousStepName];
-                                    }
-                                    return prev;
-                                });
-                            }
-                        }
-                        continue;
+      const { value, done } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop() || '';
+
+      for (const line of lines) {
+        if (line.trim()) {
+          try {
+            // Check if it's a progress message from Python (PROGRESS:)
+            if (line.startsWith('PROGRESS:')) {
+              const progressData = JSON.parse(line.substring(9)); // Remove 'PROGRESS:' prefix
+              console.log('📊 [PROGRESS] Received:', progressData);
+
+              // Update current step and progress
+              setCurrentStep(progressData.step);
+              setProgressPercentage(progressData.percentage || 0);
+
+              // Add to processing status log
+              const timestamp = new Date().toLocaleTimeString();
+              setProcessingStatus(prev => [...prev, `[${timestamp}] 📊 ${progressData.step}: ${progressData.message}`]);
+
+              // Mark previous steps as completed if we're on a new step
+              if (progressData.current_step > 1) {
+                const previousStepIndex = progressData.current_step - 2; // -1 for 0-based, -1 for previous
+                const processingStepNames = PROCESSING_STEPS.map(step => step.name);
+                if (previousStepIndex >= 0 && previousStepIndex < processingStepNames.length) {
+                  const previousStepName = processingStepNames[previousStepIndex];
+                  setCompletedSteps(prev => {
+                    if (!prev.includes(previousStepName)) {
+                      return [...prev, previousStepName];
                     }
-                    
-                    const data = JSON.parse(line);
-                    console.log('📨 [STREAM] Received:', data.type, data.message?.substring(0, 100));
-                    
-                    switch(data.type) {
-                      case 'start':
-                        setProcessingStatus(prev => [...prev, `🚀 ${data.message}`]);
-                        break;
-                      case 'stdout':
-                      case 'stderr':
-                        const message = data.message;
-                        if (message && message.trim() && message !== 'undefined' && message !== 'null') {
-                          // Add timestamp and color coding
-                          const timestamp = new Date().toLocaleTimeString();
-                          const formattedMessage = `[${timestamp}] ${message}`;
-                          setProcessingStatus(prev => [...prev, formattedMessage]);
-                          console.log(`🔍 [${data.type.toUpperCase()}] ${message}`);
-                          console.log('Current processingStatus length:', processingStatus.length + 1);
-                          console.log('Current processingStatus length:', processingStatus.length + 1);
-                        }
-                        break;
-                      case 'close':
-                        setProcessing(false);
-                        setProcessingStatus(prev => [...prev, `✅ ${data.message}`]);
-                        // Mark final step as completed
-                        const finalStepName = PROCESSING_STEPS[PROCESSING_STEPS.length - 1]?.name;
-                        if (finalStepName && currentStep === finalStepName) {
-                            setCompletedSteps(prev => {
-                                if (!prev.includes(finalStepName)) {
-                                    return [...prev, finalStepName];
-                                }
-                                return prev;
-                            });
-                        }
-                        break;
-                       case 'error':
-                        setError(data.message);
-                        setProcessing(false);
-                        break;
-                      default:
-                        // Handle any other message types
-                        if (data.message) {
-                          setProcessingStatus(prev => [...prev, `📋 ${data.message}`]);
-                        }
-                        break;
-                    }
-                } catch (e) {
-                    console.error('❌ Stream parse error:', e, 'Line:', line);
-                    // Don't show parsing errors to user, just log them
+                    return prev;
+                  });
                 }
+              }
+              continue;
             }
+
+            const data = JSON.parse(line);
+            console.log('📨 [STREAM] Received:', data.type, data.message?.substring(0, 100));
+
+            switch (data.type) {
+              case 'start':
+                setProcessingStatus(prev => [...prev, `🚀 ${data.message}`]);
+                break;
+              case 'stdout':
+              case 'stderr':
+                const message = data.message;
+                if (message && message.trim() && message !== 'undefined' && message !== 'null') {
+                  // Add timestamp and color coding
+                  const timestamp = new Date().toLocaleTimeString();
+                  const formattedMessage = `[${timestamp}] ${message}`;
+                  setProcessingStatus(prev => [...prev, formattedMessage]);
+                  console.log(`🔍 [${data.type.toUpperCase()}] ${message}`);
+                  console.log('Current processingStatus length:', processingStatus.length + 1);
+                  console.log('Current processingStatus length:', processingStatus.length + 1);
+                }
+                break;
+              case 'close':
+                setProcessing(false);
+                setProcessingStatus(prev => [...prev, `✅ ${data.message}`]);
+                // Mark final step as completed
+                const finalStepName = PROCESSING_STEPS[PROCESSING_STEPS.length - 1]?.name;
+                if (finalStepName && currentStep === finalStepName) {
+                  setCompletedSteps(prev => {
+                    if (!prev.includes(finalStepName)) {
+                      return [...prev, finalStepName];
+                    }
+                    return prev;
+                  });
+                }
+                break;
+              case 'error':
+                setError(data.message);
+                setProcessing(false);
+                break;
+              default:
+                // Handle any other message types
+                if (data.message) {
+                  setProcessingStatus(prev => [...prev, `📋 ${data.message}`]);
+                }
+                break;
+            }
+          } catch (e) {
+            console.error('❌ Stream parse error:', e, 'Line:', line);
+            // Don't show parsing errors to user, just log them
+          }
         }
+      }
     }
     setProcessing(false);
   };
@@ -288,82 +288,39 @@ export default function Home() {
     <div className="main-page min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-4">
       <div className="max-w-7xl mx-auto">
         {/* Navigation */}
-        <nav className="mb-6">
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 px-6 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-6">
-                <div className="flex items-center gap-2">
-                  <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-full p-2">
-                    <Zap className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-xl font-bold text-gray-900">SocialSync Pro</span>
-                </div>
-                <div className="flex space-x-4">
-                  <a
-                    href="/"
-                    className="flex items-center space-x-2 px-3 py-2 text-blue-600 bg-blue-50 rounded-lg font-medium"
-                  >
-                    <Upload className="h-4 w-4" />
-                    <span>Process Videos</span>
-                  </a>
-                  <a
-                    href="/music"
-                    className="flex items-center space-x-2 px-3 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-                  >
-                    <Music className="h-4 w-4" />
-                    <span>Music Library</span>
-                  </a>
-                  <a
-                    href="/analysis"
-                    className="flex items-center space-x-2 px-3 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors"
-                  >
-                    <TrendingUp className="h-4 w-4" />
-                    <span>Analytics</span>
-                  </a>
-                  <a
-                    href="/editor"
-                    className="flex items-center space-x-2 px-3 py-2 text-gray-600 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors"
-                  >
-                    <Wand2 className="h-4 w-4" />
-                    <span>Video Editor</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
+        {/* Navigation Removed - moved to Sidebar */}
 
         <header className="text-center py-8">
-            <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-full p-3">
-                    <Zap className="w-8 h-8 text-white" />
-                </div>
-                <h1 className="text-4xl font-bold text-gray-900">SocialSync Pro</h1>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-full p-3">
+              <Zap className="w-8 h-8 text-white" />
             </div>
-            <p className="text-xl text-gray-600">Multi-platform content creation with intelligent automation</p>
+            <h1 className="text-4xl font-bold text-gray-900">Social Sync</h1>
+          </div>
+          <p className="text-xl text-gray-600">Multi-platform content creation with intelligent automation</p>
         </header>
 
         {/* Step 1: Video Selection & Core Settings */}
         <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
           <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2 mb-4">
-              <Upload className="text-blue-600" />
+            <Upload className="text-blue-600" />
             Step 1: Select Your Videos
-            </h2>
-             <div>
-                   <label className="block text-sm font-medium mb-2 text-gray-900">📁 Input Folder</label>
-                   <input type="text" value={options.inputFolder || ''} onChange={(e) => handleInputFolderChange(e.target.value)} className="w-full p-3 border border-gray-300 rounded-lg"/>
-                   <VideoDiscoveryPanel 
-                     videoDiscovery={videoDiscovery || {
-                       totalVideos: 0,
-                       totalSize: 0,
-                       estimatedDuration: 0,
-                       files: [],
-                       shortcuts: [],
-                       regularVideos: []
-                     }} 
-                     isDiscovering={isDiscovering} 
-                   />
-               </div>
+          </h2>
+          <div>
+            <label className="block text-sm font-medium mb-2 text-gray-900">📁 Input Folder</label>
+            <input type="text" value={options.inputFolder || ''} onChange={(e) => handleInputFolderChange(e.target.value)} className="w-full p-3 border border-gray-300 rounded-lg" />
+            <VideoDiscoveryPanel
+              videoDiscovery={videoDiscovery || {
+                totalVideos: 0,
+                totalSize: 0,
+                estimatedDuration: 0,
+                files: [],
+                shortcuts: [],
+                regularVideos: []
+              }}
+              isDiscovering={isDiscovering}
+            />
+          </div>
         </div>
 
         {/* Video Preview */}
@@ -384,68 +341,66 @@ export default function Home() {
 
         {/* Step 2: Processing Workflow */}
         <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              <Settings className="inline-block mr-2 text-purple-600" />
-              Step 2: Configure Processing
-            </h2>
-            
-            {/* Processing Mode Selection */}
-            <div className="mb-6">
-              <h3 className="text-lg font-bold text-gray-800 mb-4">Processing Mode</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {PROCESSING_MODES.map((mode) => (
-                  <div
-                    key={mode.mode}
-                    className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${
-                      options.multiPlatformConfig.general.processingMode === mode.mode
-                        ? 'border-purple-500 bg-purple-50'
-                        : 'border-gray-200 bg-gray-50 hover:border-purple-300 hover:bg-purple-25'
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <Settings className="inline-block mr-2 text-purple-600" />
+            Step 2: Configure Processing
+          </h2>
+
+          {/* Processing Mode Selection */}
+          <div className="mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-4">Processing Mode</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {PROCESSING_MODES.map((mode) => (
+                <div
+                  key={mode.mode}
+                  className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${options.multiPlatformConfig.general.processingMode === mode.mode
+                      ? 'border-purple-500 bg-purple-50'
+                      : 'border-gray-200 bg-gray-50 hover:border-purple-300 hover:bg-purple-25'
                     }`}
-                    onClick={() =>
-                      handleMultiPlatformConfigChange({
-                        ...options.multiPlatformConfig,
-                        general: {
-                          ...options.multiPlatformConfig.general,
-                          processingMode: mode.mode,
-                        },
-                      })
-                    }
-                  >
-                    <div className="text-lg font-bold mb-2">{mode.title}</div>
-                    <div className="text-sm text-gray-700 mb-2">{mode.description}</div>
-                    <div className="text-xs text-gray-600">{mode.detail}</div>
-                  </div>
-                ))}
-              </div>
+                  onClick={() =>
+                    handleMultiPlatformConfigChange({
+                      ...options.multiPlatformConfig,
+                      general: {
+                        ...options.multiPlatformConfig.general,
+                        processingMode: mode.mode,
+                      },
+                    })
+                  }
+                >
+                  <div className="text-lg font-bold mb-2">{mode.title}</div>
+                  <div className="text-sm text-gray-700 mb-2">{mode.description}</div>
+                  <div className="text-xs text-gray-600">{mode.detail}</div>
+                </div>
+              ))}
             </div>
+          </div>
 
-            <ProcessingStepsConfig
-                processingSteps={PROCESSING_STEPS}
-                options={options}
-                onOptionChange={handleOptionChange}
-                processing={processing}
-            />
+          <ProcessingStepsConfig
+            processingSteps={PROCESSING_STEPS}
+            options={options}
+            onOptionChange={handleOptionChange}
+            processing={processing}
+          />
 
-            {/* Advanced Scheduling Configuration for Batch/Single Upload */}
-            {(options.multiPlatformConfig.general.processingMode === 'batch-upload' || 
-              options.multiPlatformConfig.general.processingMode === 'full-upload') && (
+          {/* Advanced Scheduling Configuration for Batch/Single Upload */}
+          {(options.multiPlatformConfig.general.processingMode === 'batch-upload' ||
+            options.multiPlatformConfig.general.processingMode === 'full-upload') && (
               <div className="mt-6 bg-gradient-to-br from-purple-50 to-blue-50 border border-purple-200 rounded-lg p-6">
                 <h3 className="text-lg font-bold text-purple-900 mb-4 flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
                   📅 Advanced Scheduling Configuration
                 </h3>
-                
+
                 <div className="space-y-6">
                   {/* Scheduling Mode Selection */}
                   <div>
                     <h4 className="font-medium text-gray-900 mb-3">Scheduling Strategy</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div 
-                        className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${
-                          options.multiPlatformConfig.general.scheduleMode === 'custom' 
-                            ? 'border-purple-500 bg-purple-50' 
+                      <div
+                        className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${options.multiPlatformConfig.general.scheduleMode === 'custom'
+                            ? 'border-purple-500 bg-purple-50'
                             : 'border-gray-200 bg-gray-50 hover:border-purple-300'
-                        }`}
+                          }`}
                         onClick={() => handleMultiPlatformConfigChange({
                           ...options.multiPlatformConfig,
                           general: {
@@ -457,13 +412,12 @@ export default function Home() {
                         <div className="font-bold text-gray-900 mb-2">📅 Manual Date Selection</div>
                         <div className="text-sm text-gray-600">Choose specific dates and times for each video</div>
                       </div>
-                      
-                      <div 
-                        className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${
-                          options.multiPlatformConfig.general.scheduleMode === 'delayed' 
-                            ? 'border-purple-500 bg-purple-50' 
+
+                      <div
+                        className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${options.multiPlatformConfig.general.scheduleMode === 'delayed'
+                            ? 'border-purple-500 bg-purple-50'
                             : 'border-gray-200 bg-gray-50 hover:border-purple-300'
-                        }`}
+                          }`}
                         onClick={() => handleMultiPlatformConfigChange({
                           ...options.multiPlatformConfig,
                           general: {
@@ -482,15 +436,15 @@ export default function Home() {
                   {options.multiPlatformConfig.general.scheduleMode === 'delayed' && (
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                       <h4 className="font-medium text-blue-900 mb-3">🧠 Smart Scheduling Options</h4>
-                      
+
                       <div className="space-y-4">
                         <div>
                           <label className="block text-sm font-medium text-blue-900 mb-2">Time Slot Interval</label>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                             <label className="flex items-center gap-2 p-3 border border-blue-200 rounded-lg cursor-pointer hover:bg-blue-100">
-                              <input 
-                                type="radio" 
-                                name="timeSlotInterval" 
+                              <input
+                                type="radio"
+                                name="timeSlotInterval"
                                 value="8h"
                                 checked={options.multiPlatformConfig.general.slotInterval === '8h'}
                                 onChange={(e) => handleMultiPlatformConfigChange({
@@ -511,11 +465,11 @@ export default function Home() {
                                 <div className="text-xs text-blue-700">3× per day</div>
                               </div>
                             </label>
-                            
+
                             <label className="flex items-center gap-2 p-3 border border-blue-200 rounded-lg cursor-pointer hover:bg-blue-100">
-                              <input 
-                                type="radio" 
-                                name="timeSlotInterval" 
+                              <input
+                                type="radio"
+                                name="timeSlotInterval"
                                 value="12h"
                                 checked={options.multiPlatformConfig.general.slotInterval === '12h'}
                                 onChange={(e) => handleMultiPlatformConfigChange({
@@ -536,11 +490,11 @@ export default function Home() {
                                 <div className="text-xs text-blue-700">2× per day</div>
                               </div>
                             </label>
-                            
+
                             <label className="flex items-center gap-2 p-3 border border-blue-200 rounded-lg cursor-pointer hover:bg-blue-100">
-                              <input 
-                                type="radio" 
-                                name="timeSlotInterval" 
+                              <input
+                                type="radio"
+                                name="timeSlotInterval"
                                 value="24h"
                                 checked={options.multiPlatformConfig.general.slotInterval === '24h'}
                                 onChange={(e) => handleMultiPlatformConfigChange({
@@ -563,9 +517,9 @@ export default function Home() {
                             </label>
 
                             <label className="flex items-center gap-2 p-3 border border-blue-200 rounded-lg cursor-pointer hover:bg-blue-100">
-                              <input 
-                                type="radio" 
-                                name="timeSlotInterval" 
+                              <input
+                                type="radio"
+                                name="timeSlotInterval"
                                 value="48h"
                                 checked={options.multiPlatformConfig.general.slotInterval === '48h'}
                                 onChange={(e) => handleMultiPlatformConfigChange({
@@ -605,8 +559,8 @@ export default function Home() {
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div>
                               <label className="block text-xs text-blue-800 mb-1">Time</label>
-                              <input 
-                                type="time" 
+                              <input
+                                type="time"
                                 value={options.multiPlatformConfig.general.preferredTime}
                                 onChange={(e) => handleMultiPlatformConfigChange({
                                   ...options.multiPlatformConfig,
@@ -625,7 +579,7 @@ export default function Home() {
                                   const interval = options.multiPlatformConfig.general.slotInterval || '24h';
                                   const startTime = options.multiPlatformConfig.general.preferredTime || '07:00';
                                   const startHour = parseInt(startTime.split(':')[0]);
-                                  
+
                                   if (interval === '8h') {
                                     const slot1 = `${startHour.toString().padStart(2, '0')}:00`;
                                     const slot2 = `${((startHour + 8) % 24).toString().padStart(2, '0')}:00`;
@@ -671,8 +625,8 @@ export default function Home() {
                       <div className="space-y-4">
                         <div>
                           <label className="block text-sm font-medium text-purple-900 mb-2">Start Date</label>
-                          <input 
-                            type="date" 
+                          <input
+                            type="date"
                             value={options.multiPlatformConfig.general.schedule}
                             onChange={(e) => handleMultiPlatformConfigChange({
                               ...options.multiPlatformConfig,
@@ -686,8 +640,8 @@ export default function Home() {
                         </div>
                         <div>
                           <label className="block text-sm font-medium text-purple-900 mb-2">Default Time</label>
-                          <input 
-                            type="time" 
+                          <input
+                            type="time"
                             value={options.multiPlatformConfig.general.preferredTime}
                             onChange={(e) => handleMultiPlatformConfigChange({
                               ...options.multiPlatformConfig,
@@ -706,11 +660,11 @@ export default function Home() {
                   {/* Scheduling Preview - Show for Smart Mode */}
                   {options.multiPlatformConfig.general.scheduleMode === 'delayed' && (
                     <div className="mt-6">
-                      <SmartSchedulingPreview 
+                      <SmartSchedulingPreview
                         videoDiscovery={{
                           ...videoDiscovery || { files: [], totalVideos: 0, totalSize: 0, estimatedDuration: 0, shortcuts: [], regularVideos: [] },
                           // Filter files for single upload mode - only show first video
-                          files: options.multiPlatformConfig?.general?.processingMode === 'full-upload' 
+                          files: options.multiPlatformConfig?.general?.processingMode === 'full-upload'
                             ? (videoDiscovery?.files || []).slice(0, 1)
                             : videoDiscovery?.files || []
                         }}
@@ -762,7 +716,7 @@ export default function Home() {
               </div>
             )}
         </div>
-        
+
         {/* Step 3: Platforms & Scheduling */}
         <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -770,14 +724,14 @@ export default function Home() {
             Step 3: Platforms & Scheduling
           </h2>
           <MultiPlatformManager
-              config={options.multiPlatformConfig}
-              onConfigChange={handleMultiPlatformConfigChange}
-              results={[]}
-              disabled={processing}
-              apiKey={options.openaiKey}
+            config={options.multiPlatformConfig}
+            onConfigChange={handleMultiPlatformConfigChange}
+            results={[]}
+            disabled={processing}
+            apiKey={options.openaiKey}
           />
         </div>
-        
+
         {/* Step 4: Execute */}
         <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -792,10 +746,9 @@ export default function Home() {
             processing={processing}
           />
 
-          <button onClick={handleProcessVideos} disabled={processing || !options.inputFolder} className={`w-full py-4 px-6 rounded-xl font-bold text-lg transition-all duration-200 flex items-center justify-center gap-3 ${
-              processing 
-                ? 'bg-gray-400 cursor-not-allowed' 
-                : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg'
+          <button onClick={handleProcessVideos} disabled={processing || !options.inputFolder} className={`w-full py-4 px-6 rounded-xl font-bold text-lg transition-all duration-200 flex items-center justify-center gap-3 ${processing
+              ? 'bg-gray-400 cursor-not-allowed'
+              : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg'
             }`}>
             {processing ? 'Processing...' : 'Start Processing'}
           </button>
@@ -803,14 +756,14 @@ export default function Home() {
 
         {/* Admin & Maintenance Section */}
         <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                <Shield className="inline-block mr-2 text-gray-600" />
-                Admin & Maintenance
-            </h2>
-            <div className="space-y-6">
-                <ChannelDataScanner selectedChannelId={options.multiPlatformConfig.youtube?.selectedChannelId} disabled={processing} />
-                <DuplicateManager />
-            </div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <Shield className="inline-block mr-2 text-gray-600" />
+            Admin & Maintenance
+          </h2>
+          <div className="space-y-6">
+            <ChannelDataScanner selectedChannelId={options.multiPlatformConfig.youtube?.selectedChannelId} disabled={processing} />
+            <DuplicateManager />
+          </div>
         </div>
 
         <ProcessingStatus
@@ -825,7 +778,7 @@ export default function Home() {
           silenceCutStats={silenceCutStats}
           options={options}
         />
-        
+
         {(output || error) && (
           <div className="mt-8 bg-white rounded-xl shadow-lg p-6">
             <h2 className="text-2xl font-bold mb-4 text-black">Output</h2>

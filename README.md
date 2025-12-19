@@ -1,122 +1,188 @@
-# SocialSync Pro - YouTube Uploader & Multi-Platform Manager
+# Social Sync
 
-## 📁 Project Structure
+**Multi-platform content creation with intelligent automation**
 
-This project has been organized into a clean, logical folder structure:
+Social Sync is a powerful social media management platform that helps content creators process videos, schedule posts, and publish across multiple platforms including YouTube, Facebook, Instagram, TikTok, and more.
 
-### 🎯 Core Application
-- **`web-interface/`** - Next.js web application with modern UI
-  - Real-time analytics dashboard
-  - Multi-platform upload management
-  - Video processing workflow
-  - OpenAI integration for content optimization
+## ✨ Features
 
-### 🛠️ Scripts
-- **`scripts/youtube_management/`** - YouTube-specific operations
-  - `delete_and_restore_recent_videos.py` - Smart deletion with preview
-  - `delete_recent_videos.py` - Remove recent uploads
-  - `restore_videos.py` - Restore deleted content
-  - And more management utilities
-
-- **`scripts/duplicate_cleanup/`** - Duplicate detection and cleanup
-  - `youtube_duplicate_finder.py` - AI-powered duplicate detection
-  - `cleanup_duplicates.py` - Automated cleanup workflow
-  - `show_real_duplicates.py` - Review duplicate candidates
-
-- **`scripts/data_analysis/`** - Data analysis and insights
-  - `analyze_similar_titles.py` - Title similarity analysis
-  - `check_data.py` - Data validation utilities
-
-### 📚 Documentation
-- **`docs/`** - All project documentation
-  - `README.md` - Main project documentation
-  - `COST_BREAKDOWN.md` - OpenAI API cost analysis
-  - `FACEBOOK_INSTAGRAM_SETUP.md` - Social media platform setup
-  - `MULTI_PLATFORM_GUIDE.md` - Multi-platform deployment guide
-
-### ⚙️ Configuration
-- **`config/`** - Configuration files
-  - `client_secrets.json` - Google API credentials
-  - `token.json` - OAuth tokens
-  - `active_youtube_account.json` - Active account settings
-  - Next.js and TypeScript configuration files
-
-### 💾 Data & Cache
-- **`cache/`** - Cache files for performance
-  - `playlists_cache.json` - YouTube playlist cache
-  - `youtube_duplicates.json` - Duplicate detection cache
-
-- **`data/`** - Input and output data
-  - Video files and processing results
-
-### 🗄️ Archive
-- **`archive/`** - Historical files and temporary data
-  - Deletion plans, temporary files, and legacy content
-
-- **`cleanup_archive/`** - Old versions and deprecated code
-  - Legacy Python scripts and outdated source code
+- 🎬 **Video Processing**: AI-powered video editing, transcription, and enhancement
+- 📅 **Smart Scheduling**: Intelligent content scheduling with conflict detection
+- 🌐 **Multi-Platform**: Manage YouTube, Facebook, Instagram, TikTok, and more
+- 🤖 **AI-Powered**: OpenAI integration for content optimization and generation
+- 📊 **Analytics**: Real-time tracking and performance insights
+- 🎨 **Modern UI**: Beautiful, responsive web interface built with Next.js
 
 ## 🚀 Quick Start
 
-1. **Install Dependencies**
+### Prerequisites
+
+- Node.js 18+ and npm
+- Python 3.9+ with venv
+- API keys (OpenAI, Pexels, Pixabay)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/social-sync.git
+   cd social-sync
+   ```
+
+2. **Install Python dependencies**
    ```bash
    pip install -r requirements.txt
-   cd web-interface && npm install
    ```
 
-2. **Configure API Keys** (Single Source of Truth: root `.env`)
-   
-   Edit the `.env` file in the root `YoutubeUploader/` directory:
+3. **Install Node.js dependencies**
    ```bash
-   # Environment variables for Python scripts
-   # Add your actual API keys here
-   
-   OPENAI_API_KEY=sk-proj-...
-   PEXELS_API_KEY=...
-   PIXABAY_API_KEY=...
+   cd web-interface
+   npm install
    ```
+
+4. **Configure environment variables**
    
-   Optional: For social media features, add:
+   Create a `.env` file in the root directory:
    ```bash
-   FACEBOOK_APP_ID=...
-   FACEBOOK_APP_SECRET=...
-   INSTAGRAM_APP_ID=...
-   INSTAGRAM_APP_SECRET=...
+   OPENAI_API_KEY=your_openai_key_here
+   PEXELS_API_KEY=your_pexels_key_here
+   PIXABAY_API_KEY=your_pixabay_key_here
    ```
-   
-   **Note:** The web interface automatically reads from this root `.env` file via `next.config.ts`. No need for a separate `.env.local` file.
 
-3. **Set Up Google API Credentials**
-   - Place your Google API credentials in `config/client_secrets.json`
-   - Run the YouTube authentication flow when prompted
-
-4. **Start the Application**
+5. **Start the development server**
    ```bash
-   cd web-interface && npm run dev
+   cd web-interface
+   npm run dev
    ```
 
-5. **Access the Dashboard**
-   - Open http://localhost:3000
-   - Navigate to Analytics for performance insights
-   - Use the upload interface for video processing
+6. **Open your browser**
+   
+   Navigate to `http://localhost:3000`
 
-## 🔧 Key Features
+## 📁 Project Structure
 
-- **Smart Analytics**: Real-time tracking of uploads vs processing
-- **Preview Mode**: See what will be deleted before taking action
-- **Multi-Platform**: YouTube, Instagram, Facebook, TikTok support
-- **AI-Powered**: OpenAI integration for content optimization
-- **Efficient Caching**: Ultra-fast API quota management
-- **Modern UI**: Beautiful, responsive web interface
+```
+social-sync/
+├── web-interface/          # Next.js web application
+│   ├── src/
+│   │   ├── app/          # Next.js App Router pages
+│   │   ├── components/   # React components
+│   │   ├── api/         # API routes
+│   │   └── ...
+│   └── package.json
+├── src/                  # Python backend
+│   ├── core/            # Core functionality
+│   ├── workflows/       # Processing workflows
+│   └── ...
+├── scripts/             # Utility scripts
+├── config/              # Configuration files
+├── data/                # Data storage
+└── README.md
+```
 
-## 📈 Recent Updates
+## 🔧 Configuration
 
-- Fixed analytics to properly distinguish uploaded vs processed videos
-- Enhanced preview functionality with detailed operation insights
-- Improved folder organization for better maintainability
-- Added comprehensive processing mode breakdowns
-- Enhanced UI with rich metadata display
+### Environment Variables
+
+All environment variables are configured in the root `.env` file:
+
+```bash
+# Required
+OPENAI_API_KEY=sk-proj-...
+PEXELS_API_KEY=...
+PIXABAY_API_KEY=...
+
+# Optional - Social Media Platforms
+FACEBOOK_APP_ID=...
+FACEBOOK_APP_SECRET=...
+INSTAGRAM_APP_ID=...
+INSTAGRAM_APP_SECRET=...
+```
+
+### Google API Setup
+
+1. Place your Google API credentials in `config/client_secrets.json`
+2. Run the YouTube authentication flow when prompted
+
+## 📚 Documentation
+
+- **[Deployment Guide](./web-interface/DEPLOYMENT.md)** - Deploy to Vercel or other platforms
+- **[Facebook App Setup](./web-interface/FACEBOOK_APP_SETUP.md)** - Configure Facebook/Instagram integration
+- **[Quick Start Guide](./QUICK_START.md)** - Detailed setup instructions
+- **[Architecture](./web-interface/ARCHITECTURE.md)** - System design and architecture
+
+## 🛠️ Development
+
+### Running Locally
+
+```bash
+# Start Python backend (if needed)
+source venv/bin/activate
+python src/workflows/youtube_uploader.py
+
+# Start Next.js frontend
+cd web-interface
+npm run dev
+```
+
+### Building for Production
+
+```bash
+cd web-interface
+npm run build
+npm start
+```
+
+## 🚢 Deployment
+
+### Vercel (Recommended)
+
+```bash
+cd web-interface
+vercel
+```
+
+See [DEPLOYMENT.md](./web-interface/DEPLOYMENT.md) for detailed instructions.
+
+### Docker
+
+```bash
+docker build -t social-sync ./web-interface
+docker run -p 3000:3000 --env-file .env social-sync
+```
+
+## 🔒 Security
+
+- All API keys are stored in environment variables (never committed)
+- OAuth tokens are securely stored
+- Privacy Policy, Terms of Service, and Data Deletion pages included
+- GDPR compliant data handling
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📞 Support
+
+- **Email:** blake@ivytutoring.net
+- **Issues:** [GitHub Issues](https://github.com/yourusername/social-sync/issues)
+
+## 🙏 Acknowledgments
+
+- OpenAI for AI capabilities
+- Next.js for the amazing framework
+- All the open-source libraries that make this possible
 
 ---
 
-For detailed setup instructions and platform-specific guides, see the documentation in the `docs/` folder. 
+Made with ❤️ by the Social Sync team

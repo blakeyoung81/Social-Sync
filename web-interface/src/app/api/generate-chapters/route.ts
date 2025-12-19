@@ -3,9 +3,15 @@ import OpenAI from 'openai';
 import path from 'path';
 import fs from 'fs';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Lazy initialization to avoid build-time errors
+function getOpenAIClient() {
+  if (!process.env.OPENAI_API_KEY) {
+    throw new Error('OPENAI_API_KEY is not configured');
+  }
+  return new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -93,6 +99,7 @@ Make sure:
 - Each chapter has a brief description`;
 
     try {
+      const openai = getOpenAIClient();
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [

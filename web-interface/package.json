@@ -1,7 +1,13 @@
 {
-  "name": "web-interface",
-  "version": "0.1.0",
+  "name": "social-sync-web",
+  "version": "1.0.0",
   "private": true,
+  "description": "Social Sync - Multi-platform content creation with intelligent automation",
+  "author": "Social Sync Team",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/social-sync.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

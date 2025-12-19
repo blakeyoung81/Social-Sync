@@ -1,0 +1,28 @@
+# Exclude large directories from Vercel deployment
+public/thumbnails/
+public/thumbnails 2/
+node_modules/
+.next/
+.vercel/
+*.log
+.DS_Store
+temp/
+cache/
+data/
+audio_cache/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.aac
+*.mp3
+tests/
+archive/
+venv/
+__pycache__/
+*.pyc
+.env*
+*.backup
+*.bak
+

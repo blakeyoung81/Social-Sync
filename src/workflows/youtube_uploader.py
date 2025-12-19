@@ -914,6 +914,113 @@ Return ONLY the cleaned text, nothing else. Keep it natural but polished."""
             logger.error(f"Error creating subtitle filter: {e}")
             return f"subtitles={srt_path}"
 
+    def upload_video_to_youtube(self, video_path: Path, title: str, description: str, tags: List[str], 
+                              privacy_status: str = 'private', schedule_date: Optional[str] = None, 
+                              thumbnail_path: Optional[Path] = None, playlist_ids: List[str] = None) -> Optional[str]:
+        """
+        Uploads a video to YouTube with metadata, thumbnail, and playlist.
+        """
+        try:
+            logger.info(f"🚀 Starting YouTube upload for: {video_path.name}")
+            
+            body = {
+                'snippet': {
+                    'title': title,
+                    'description': description,
+                    'tags': tags or [],
+                    'categoryId': '22'  # People & Blogs
+                },
+                'status': {
+                    'privacyStatus': privacy_status,
+                    'selfDeclaredMadeForKids': False
+                }
+            }
+
+            if schedule_date:
+                body['status']['publishAt'] = schedule_date
+                logger.info(f"📅 Scheduled for: {schedule_date}")
+
+            # Define media upload
+            media = MediaFileUpload(str(video_path), chunksize=1024*1024, resumable=True)
+
+            # Insert video request
+            request = self.youtube.videos().insert(
+                part=','.join(body.keys()),
+                body=body,
+                media_body=media
+            )
+
+            response = None
+            while response is None:
+                status, response = request.next_chunk()
+                if status:
+                    progress = int(status.progress() * 100)
+                    logger.info(f"⏳ Upload progress: {progress}%")
+                    send_progress("uploading", progress, 100, f"Uploading to YouTube: {progress}%")
+
+            video_id = response.get('id')
+            logger.info(f"✅ Upload Complete! Video ID: {video_id}")
+            
+            # Upload Thumbnail
+            if thumbnail_path and thumbnail_path.exists():
+                logger.info(f"🖼 Uploading thumbnail: {thumbnail_path.name}")
+                self.youtube.thumbnails().set(
+                    videoId=video_id,
+                    media_body=MediaFileUpload(str(thumbnail_path))
+                ).execute()
+                logger.info("✅ Thumbnail uploaded.")
+
+            # Add to Playlists
+            if playlist_ids:
+                logger.info(f"📂 Adding to playlists: {playlist_ids}")
+                self.add_video_to_playlists(video_id, playlist_ids)
+
+            return video_id
+
+        except Exception as e:
+            logger.error(f"❌ YouTube Upload Failed: {e}", exc_info=True)
+            return None
+
+    def post_to_social_platforms(self, multi_platform_config: Dict, title: str, description: str, 
+                               video_path: Path, thumbnail_path: Optional[Path] = None, 
+                               youtube_video_id: Optional[str] = None, schedule_date_iso: Optional[str] = None):
+        """
+        Posts the video to other social platforms using Ayrshare.
+        """
+        if not self.ayrshare_client:
+            logger.warning("⚠️ Ayrshare client not initialized. Skipping multi-platform post.")
+            return
+
+        platforms = multi_platform_config.get('platforms', [])
+        if not platforms:
+            logger.info("ℹ️ No extra social platforms selected.")
+            return
+
+        logger.info(f"🌍 Posting to social platforms: {platforms}")
+        
+        youtube_url = f"https://www.youtube.com/watch?v={youtube_video_id}" if youtube_video_id else None
+        
+        # Prepare platform specific configs if any (e.g. from UI args)
+        # For now we use the generic description/title
+        
+        results = self.ayrshare_client.post_to_multiple_platforms(
+            platforms=platforms,
+            title=title,
+            description=description,
+            youtube_url=youtube_url,
+            video_path=video_path,
+            thumbnail_path=thumbnail_path,
+            schedule_date=schedule_date_iso,
+            platform_configs=multi_platform_config  # Pass the whole config as it might contain platform specific overrides
+        )
+        
+        for platform, res in results.items():
+            if res.get('status') == 'success':
+                logger.info(f"✅ Posted to {platform}: {res.get('id')}")
+            else:
+                logger.error(f"❌ Failed to post to {platform}: {res.get('errors')}")
+
+
     def process_video(self, video_path: Path, output_dir: Path, args: argparse.Namespace) -> Optional[Dict]:
         """Process video using the core video processing pipeline with topic card support."""
         try:
@@ -1206,10 +1313,64 @@ def main():
             args=args
         )
 
-        if result and args.mode != 'process-only':
-            # This is where the upload logic would go
-            logger.info(f"Video ready for upload: {result['processed_file']}")
-            # uploader.upload_video(...)
+        if result and args.mode in ['full-upload', 'batch-upload']:
+            processed_file = result['processed_file']
+            logger.info(f"✅ Processing complete. Starting upload for: {processed_file.name}")
+            
+            # Use arguments for metadata or fallbacks
+            final_title = args.title or processed_file.stem
+            final_description = args.description or f"Uploaded by Social Sync: {final_title}"
+            final_tags = args.tags or ["SocialSync"]
+            
+            # Construct schedule time
+            final_schedule = None
+            if args.schedule:
+                # Default time to 12:00 PM UTC if not specified
+                time_str = args.preferred_time or "12:00"
+                if len(time_str) == 5: # HH:MM
+                    time_str += ":00"
+                final_schedule = f"{args.schedule}T{time_str}Z"
+
+            # Find generated thumbnail
+            thumbnail_to_use = None
+            if not args.skip_thumbnail:
+                # Look for thumbnail with same stem in produced directory
+                potential_thumb = PRODUCED_THUMBNAILS_DIR / f"{processed_file.stem}.jpg"
+                if potential_thumb.exists():
+                     thumbnail_to_use = potential_thumb
+                     logger.info(f"🎯 Found generated thumbnail: {thumbnail_to_use}")
+                else:
+                    # Try png
+                    potential_thumb = PRODUCED_THUMBNAILS_DIR / f"{processed_file.stem}.png"
+                    if potential_thumb.exists():
+                         thumbnail_to_use = potential_thumb
+            
+            # 1. Upload to YouTube
+            video_id = uploader.upload_video_to_youtube(
+                video_path=processed_file,
+                title=final_title,
+                description=final_description,
+                tags=final_tags,
+                privacy_status='private',
+                schedule_date=final_schedule if args.schedule_mode == 'standard' else None,
+                thumbnail_path=thumbnail_to_use, 
+                playlist_ids=None 
+            )
+            
+            if video_id:
+                # 2. Post to Social Platforms (Ayrshare)
+                # Ayrshare expects ISO 8601, final_schedule is already compatible
+                uploader.post_to_social_platforms(
+                    multi_platform_config=multi_platform_config,
+                    title=final_title,
+                    description=final_description,
+                    video_path=processed_file,
+                    thumbnail_path=thumbnail_to_use,
+                    youtube_video_id=video_id,
+                    schedule_date_iso=final_schedule
+                )
+
+
         elif not result:
             logger.error(f"Processing failed for {video_path.name}")
 

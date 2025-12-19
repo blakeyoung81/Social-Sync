@@ -463,6 +463,48 @@ Example format: #MedicalEducation #USMLE #Step1 #Cardiology
         
         return previews
     
+    def upload_media(self, file_path: Path) -> Optional[str]:
+        """Uploads a local media file to Ayrshare and returns the URL."""
+        if not file_path.exists():
+            logger.error(f"❌ File not found: {file_path}")
+            return None
+
+        try:
+            logger.info(f"📤 Uploading media to Ayrshare: {file_path.name}")
+            
+            with open(file_path, 'rb') as f:
+                files = {'file': f}
+                # Use a separate session or request for upload as it is multipart/form-data
+                # and incompatible with the default JSON headers
+                headers = {'Authorization': self.headers['Authorization']} 
+                
+                response = requests.post(
+                    f"{self.base_url}/media/upload",
+                    headers=headers,
+                    files=files,
+                    timeout=120 # Larger timeout for uploads
+                )
+            
+            response.raise_for_status()
+            result = response.json()
+            
+            if result.get("status") == "success" or result.get("url"):
+                media_url = result.get("url") # Ayrshare usually returns 'url' directly or inside data
+                # Handle different key names just in case
+                if not media_url and 'data' in result:
+                    media_url = result['data'].get('url')
+                
+                if media_url:
+                    logger.info(f"✅ Media upload successful: {media_url}")
+                    return media_url
+            
+            logger.error(f"❌ Media upload failed: {result}")
+            return None
+
+        except Exception as e:
+            logger.error(f"❌ Media upload exception: {e}")
+            return None
+
     def post_to_multiple_platforms(
         self, 
         platforms: List[str],
@@ -479,6 +521,19 @@ Example format: #MedicalEducation #USMLE #Step1 #Cardiology
         results = {}
         platform_configs = platform_configs or {}
         
+        # Upload media if provided and needed
+        media_urls = []
+        if video_path and video_path.exists():
+            # For native video platforms (TikTok, Instagram, etc), we need to upload the video
+            # For others, we might prefer YouTube link, but native video is better for engagement
+            uploaded_url = self.upload_media(video_path)
+            if uploaded_url:
+                media_urls.append(uploaded_url)
+        elif thumbnail_path and thumbnail_path.exists():
+             uploaded_url = self.upload_media(thumbnail_path)
+             if uploaded_url:
+                media_urls.append(uploaded_url)
+
         # Update analytics
         self.analytics["posts_created"] += len(platforms)
         self.analytics["last_post_time"] = datetime.now(timezone.utc).isoformat()
@@ -513,16 +568,23 @@ Example format: #MedicalEducation #USMLE #Step1 #Cardiology
                     "platforms": [platform]
                 }
                 
-                # Add YouTube link if available
-                if youtube_url:
-                    post_data["post"] += f"\n\n🎥 Watch the full video: {youtube_url}"
+                # Determine what media/link to use for this platform
+                use_native_video = platform in ['tiktok', 'instagram', 'facebook'] 
                 
-                # Add media if available and supported
-                if video_path and video_path.exists():
-                    post_data["mediaUrls"] = [str(video_path)]
-                elif thumbnail_path and thumbnail_path.exists():
-                    post_data["mediaUrls"] = [str(thumbnail_path)]
-                
+                if use_native_video and media_urls:
+                    post_data["mediaUrls"] = media_urls
+                    # TikTok/Instagram shouldn't have YouTube link in body usually if native video is present
+                    # But Facebook can have both.
+                    # For now, if native video, we suppress YouTube link to avoid link preview overriding video
+                else:
+                     # Add YouTube link if available and not using native video
+                    if youtube_url:
+                        post_data["post"] += f"\n\n🎥 Watch the full video: {youtube_url}"
+                    # Use thumbnail if video not available/native not used, but mediaUrls wanted? 
+                    # Actually if not using native video, we rely on link preview of YouTube URL.
+                    # But if no YouTube URL, we might want to attach thumbnail + link?
+                    pass
+
                 # Add scheduling if specified
                 if schedule_date:
                     post_data["scheduleDate"] = schedule_date

@@ -1,336 +1,77 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import VideoSelector from '../../components/VideoSelector';
-import VideoSetupScreen from '@/components/VideoSetupScreen';
-import VideoEditor from '@/components/VideoEditor';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Play, Pause, ArrowLeft, HelpCircle, Undo, Download, Files, Edit, Sliders, 
-  Search, Split, Gauge, MoreHorizontal, Folder, FileText, Scissors, Zap, 
-  RotateCcw, Video, Image, Subtitles, Sparkles, X, Maximize2, MessageCircle, Trash2, 
-  Plus, Type, FolderOpen, Loader, CheckCircle, Hourglass, Settings, BrainCircuit 
-} from 'lucide-react';
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-
-interface Video {
-  name: string;
-  path: string;
-  duration?: string;
-  size?: string;
-}
-
-interface ProcessingOptions {
-  cutSilences: boolean;
-  cutBadTakes: boolean;
-  removeFiller: boolean;
-  addSmartCaptions: boolean;
-  likeSubscribeButton: boolean;
-  jumpCutZoom: boolean;
-  enhanceAudio: boolean;
-  aiBackground: boolean;
-}
-
-type EditorStep = 'select' | 'setup' | 'processing' | 'edit';
+import React from 'react';
+import { FileVideo, Play, SkipBack, SkipForward, Layers, Settings2 } from 'lucide-react';
 
 export default function EditorPage() {
-  const [currentStep, setCurrentStep] = useState<EditorStep>('select');
-  const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
-  const [processingOptions, setProcessingOptions] = useState<ProcessingOptions | null>(null);
-  const [processingProgress, setProcessingProgress] = useState<string[]>([]);
-  const [isProcessingComplete, setIsProcessingComplete] = useState(false);
-
-  // Define processing steps with status
-  const initialProcessingSteps = [
-    { name: 'Video Analysis', status: 'pending', icon: <Settings size={18} /> },
-    { name: 'Silence Detection', status: 'pending', icon: <Zap size={18} /> },
-    { name: 'Transcription', status: 'pending', icon: <FileText size={18} /> },
-    { name: 'Smart Captions', status: 'pending', icon: <Sparkles size={18} /> },
-    { name: 'AI B-Roll Selection', status: 'pending', icon: <BrainCircuit size={18} /> }
-  ];
-  const [processingSteps, setProcessingSteps] = useState(initialProcessingSteps);
-
-  const handleVideoSelect = (video: Video) => {
-    setSelectedVideo(video);
-    setCurrentStep('setup');
-  };
-
-  const handleProcessAndEdit = async (options: ProcessingOptions) => {
-    if (!selectedVideo) return;
-    
-    setProcessingOptions(options);
-    setCurrentStep('processing');
-    setProcessingProgress([]);
-    setIsProcessingComplete(false);
-
-    try {
-      // Background processing pipeline
-      await runBackgroundProcessing(selectedVideo, options);
-      setIsProcessingComplete(true);
-      
-      // Small delay to show completion, then move to editor
-      setTimeout(() => {
-        setCurrentStep('edit');
-      }, 1500);
-    } catch (error) {
-      console.error('Processing failed:', error);
-      // Could add error handling here
-    }
-  };
-
-  const runBackgroundProcessing = async (video: Video, options: ProcessingOptions) => {
-    try {
-      setProcessingSteps(initialProcessingSteps); // Reset steps to initial state
-      setProcessingProgress(['🚀 Initializing processing pipeline...']);
-      
-      const steps = [];
-      
-      // Build processing steps based on options
-      if (options.addSmartCaptions) {
-        steps.push({
-          name: 'Smart captions generation',
-          api: '/api/transcribe-video',
-          payload: { videoPath: video.path }
-        });
-      }
-      
-      if (options.cutSilences) {
-        steps.push({
-          name: 'Silence analysis',
-          api: '/api/analyze-silence',
-          payload: { videoPath: video.path }
-        });
-      }
-      
-      if (options.removeFiller) {
-        steps.push({
-          name: 'AI highlights detection',
-          api: '/api/detect-highlights',
-          payload: { videoPath: video.path, checkExisting: true }
-        });
-      }
-
-      // Execute each step with data flow
-      let transcriptData: any = null;
-      
-      for (const step of steps) {
-        setProcessingSteps(prev => prev.map(s => s.name === step.name ? { ...s, status: 'processing' } : s));
-        
-        try {
-          // Modify payload based on step type and available data
-          let payload: any = { ...step.payload };
-          
-          if (step.name === 'AI highlights detection' && transcriptData) {
-            // If we have transcript data, use it for highlights detection
-            payload = {
-              transcript: transcriptData.fullText,
-              segments: transcriptData.segments,
-              videoTitle: video.name,
-              videoDuration: video.duration || 0,
-              videoPath: video.path,
-              checkExisting: false // Force processing since we have transcript
-            };
-          }
-          
-          const response: Response = await fetch(step.api, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-
-          if (!response.ok) {
-            throw new Error(`${step.name} failed`);
-          }
-
-          const result: any = await response.json();
-          
-          if (result.success) {
-            // Store transcript data for subsequent steps
-            if (step.name === 'Smart captions generation' && result.segments) {
-              transcriptData = result;
-            }
-            
-            setProcessingSteps(prev => prev.map(s => s.name === step.name ? { ...s, status: 'completed' } : s));
-          } else {
-            throw new Error(result.error || `${step.name} failed`);
-          }
-          
-          // Add small delay for UX
-          await new Promise(resolve => setTimeout(resolve, 500));
-          
-        } catch (error) {
-          setProcessingSteps(prev => prev.map(s => s.name === step.name ? { ...s, status: 'failed' } : s));
-          throw error;
-        }
-      }
-
-      /*
-      // Apply GPT correction if captions were generated
-      if (options.addSmartCaptions) {
-        setProcessingProgress(prev => [...prev, '⏳ Applying GPT corrections...']);
-        
-        try {
-          const response = await fetch('/api/gpt-correct-transcript', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ videoPath: video.path })
-          });
-
-          if (response.ok) {
-            const result = await response.json();
-            if (result.success) {
-              setProcessingProgress(prev => {
-                const newProgress = [...prev];
-                newProgress[newProgress.length - 1] = '✅ GPT corrections applied';
-                return newProgress;
-              });
-            }
-          }
-        } catch (error) {
-          console.error('GPT correction failed:', error);
-          setProcessingProgress(prev => {
-            const newProgress = [...prev];
-            newProgress[newProgress.length - 1] = '⚠️ GPT corrections skipped';
-            return newProgress;
-          });
-        }
-      }
-      */
-
-      setProcessingProgress(prev => [...prev, '🎉 Processing complete!']);
-      
-    } catch (error) {
-      setProcessingProgress(prev => [...prev, `❌ Processing failed: ${error instanceof Error ? error.message : 'Unknown error'}`]);
-      throw error;
-    }
-  };
-
-  const handleBackToSelect = () => {
-    setCurrentStep('select');
-    setSelectedVideo(null);
-    setProcessingOptions(null);
-    setProcessingProgress([]);
-    setIsProcessingComplete(false);
-  };
-
-  const handleBackToSetup = () => {
-    setCurrentStep('setup');
-    setProcessingProgress([]);
-    setIsProcessingComplete(false);
-  };
-
-  if (currentStep === 'select') {
-    return (
-      <div className="min-h-screen bg-slate-900 text-white p-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <span className="text-2xl">🎬</span>
-              <h1 className="text-3xl font-bold text-white">Video Editor</h1>
-            </div>
-            <p className="text-gray-300">Select a video to enhance and edit</p>
-          </div>
-          
-          <VideoSelector onVideoSelect={handleVideoSelect} />
-          
-          <div className="mt-8 text-center">
-            <Button 
-              variant="outline" 
-              onClick={() => window.location.href = '/'}
-              className="bg-slate-800 border-slate-600 text-white hover:bg-slate-700"
-            >
-              ← Back to Bulk Processor
-            </Button>
-          </div>
-        </div>
+  return (
+    <div className="space-y-6 h-[calc(100vh-8rem)] flex flex-col">
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold text-gray-100 flex items-center gap-3">
+          <FileVideo className="w-6 h-6 text-blue-500" />
+          Single Video Editor
+        </h1>
+        <button className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-medium transition-colors">
+          Export Video
+        </button>
       </div>
-    );
-  }
 
-  if (currentStep === 'setup' && selectedVideo) {
-    return (
-      <VideoSetupScreen 
-        selectedVideo={selectedVideo}
-        onProcessAndEdit={handleProcessAndEdit}
-        onBack={handleBackToSelect}
-      />
-    );
-  }
-
-  if (currentStep === 'processing' && selectedVideo && processingOptions) {
-    return (
-      <div className="min-h-screen bg-slate-900 text-white p-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="w-8 h-8 border-2 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
-              <h1 className="text-2xl font-bold text-white">Processing Your Video</h1>
-            </div>
-            <p className="text-gray-300">Applying selected enhancements in the background...</p>
-          </div>
-
-          <div className="bg-slate-800/50 border border-slate-700 rounded-lg shadow-sm mb-6">
-            <div className="px-6 py-4 border-b border-slate-700">
-              <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                🎬 {selectedVideo.name}
-              </h3>
-            </div>
-            <div className="px-6 py-4">
-              <div className="space-y-3">
-                {processingSteps.map((step, index) => (
-                  <div key={index} className="flex items-center gap-3 text-white">
-                    <div className="w-5 h-5 flex items-center justify-center">
-                      {step.status === 'pending' && <Hourglass size={18} className="text-gray-400" />}
-                      {step.status === 'processing' && <Loader size={18} className="text-blue-400 animate-spin" />}
-                      {step.status === 'completed' && <CheckCircle size={18} className="text-green-400" />}
-                      {step.status === 'failed' && <X size={18} className="text-red-400" />}
-                    </div>
-                    <span className={
-                      step.status === 'completed' ? 'text-green-400' : 
-                      step.status === 'failed' ? 'text-red-400' : 'text-white'
-                    }>
-                      {step.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
+      <div className="flex-1 grid grid-cols-12 gap-6 min-h-0">
+        {/* Preview Area */}
+        <div className="col-span-12 lg:col-span-8 bg-gray-900 rounded-xl border border-gray-800 flex items-center justify-center relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 pointer-events-none"></div>
           <div className="text-center">
-            <Button 
-              variant="outline" 
-              onClick={handleBackToSetup}
-              className="bg-slate-800 border-slate-600 text-white hover:bg-slate-700"
-            >
-              Cancel Processing
-            </Button>
+            <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform cursor-pointer">
+              <Play className="w-6 h-6 text-blue-400 ml-1" />
+            </div>
+            <p className="text-gray-500">No video loaded</p>
+          </div>
+        </div>
+
+        {/* Sidebar / Properties */}
+        <div className="col-span-12 lg:col-span-4 bg-gray-900 rounded-xl border border-gray-800 p-4 overflow-y-auto">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="font-semibold text-gray-300">Properties</h2>
+            <Settings2 className="w-4 h-4 text-gray-500" />
+          </div>
+
+          <div className="space-y-4">
+            <div className="p-3 bg-gray-800/50 rounded-lg border border-gray-700/50">
+              <p className="text-xs text-gray-500 mb-1">Resolution</p>
+              <p className="text-sm font-medium">1920 x 1080</p>
+            </div>
+            <div className="p-3 bg-gray-800/50 rounded-lg border border-gray-700/50">
+              <p className="text-xs text-gray-500 mb-1">Frame Rate</p>
+              <p className="text-sm font-medium">60 FPS</p>
+            </div>
           </div>
         </div>
       </div>
-    );
-  }
 
-  if (currentStep === 'edit' && selectedVideo) {
-    return (
-      <div className="min-h-screen bg-slate-900 text-white p-4">
-        <VideoEditor 
-          video={{
-            id: selectedVideo.name,
-            name: selectedVideo.name,
-            path: selectedVideo.path,
-            duration: 0, // Will be loaded by the editor
-            size: 0, // Will be loaded by the editor
-            extension: selectedVideo.path.split('.').pop() || 'mp4',
-            sizeFormatted: '0 MB',
-            isSupported: true,
-            warnings: [],
-          }}
-        />
+      {/* Timeline Placeholder */}
+      <div className="h-48 bg-gray-900 rounded-xl border border-gray-800 p-4 flex flex-col">
+        <div className="flex items-center gap-4 mb-4 border-b border-gray-800 pb-2">
+          <button className="text-gray-400 hover:text-white"><SkipBack className="w-4 h-4" /></button>
+          <button className="text-gray-400 hover:text-white"><Play className="w-4 h-4" /></button>
+          <button className="text-gray-400 hover:text-white"><SkipForward className="w-4 h-4" /></button>
+          <div className="h-4 w-[1px] bg-gray-800"></div>
+          <span className="text-xs text-gray-500 font-mono">00:00:00:00</span>
+        </div>
+        <div className="flex-1 relative">
+          <div className="absolute top-0 bottom-0 left-0 w-full flex flex-col gap-2">
+            <div className="h-8 bg-blue-500/10 border border-blue-500/30 rounded flex items-center px-4">
+              <span className="text-xs text-blue-400 flex items-center gap-2"><Layers className="w-3 h-3" /> Video Track 1</span>
+            </div>
+            <div className="h-8 bg-purple-500/10 border border-purple-500/30 rounded flex items-center px-4">
+              <span className="text-xs text-purple-400 flex items-center gap-2"><Layers className="w-3 h-3" /> Audio Track 1</span>
+            </div>
+          </div>
+          {/* Playhead */}
+          <div className="absolute top-0 bottom-0 left-1/4 w-[1px] bg-red-500 z-10">
+            <div className="absolute -top-1 -translate-x-1/2 text-red-500">▼</div>
+          </div>
+        </div>
       </div>
-    );
-  }
-
-  return null;
-} 
+    </div>
+  );
+}

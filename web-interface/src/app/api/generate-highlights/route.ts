@@ -1,9 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Lazy initialization to avoid build-time errors
+function getOpenAIClient() {
+  if (!process.env.OPENAI_API_KEY) {
+    throw new Error('OPENAI_API_KEY is not configured');
+  }
+  return new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -20,6 +26,7 @@ export async function POST(req: NextRequest) {
     
     const userPrompt = `Transcript:\n\n${fullText}\n\nIdentify the highlight segments.`;
 
+    const openai = getOpenAIClient();
     const response = await openai.chat.completions.create({
       model: "gpt-4-turbo",
       response_format: { type: "json_object" },

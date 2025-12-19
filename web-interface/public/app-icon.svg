@@ -1,0 +1,31 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="#6366f1" rx="200"/>
+  
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#grad)" rx="200"/>
+  
+  <!-- Sync/Arrow icon -->
+  <g transform="translate(512, 512)">
+    <!-- Circular arrows representing sync -->
+    <path d="M 200 0 A 200 200 0 0 1 0 200 L 0 150 A 150 150 0 0 0 150 0 Z" fill="white" opacity="0.9"/>
+    <path d="M -200 0 A 200 200 0 0 1 0 -200 L 0 -150 A 150 150 0 0 0 -150 0 Z" fill="white" opacity="0.9"/>
+    
+    <!-- Center circle -->
+    <circle cx="0" cy="0" r="80" fill="white" opacity="0.95"/>
+    
+    <!-- Step indicator lines -->
+    <line x1="-100" y1="0" x2="-60" y2="0" stroke="white" stroke-width="20" stroke-linecap="round" opacity="0.8"/>
+    <line x1="60" y1="0" x2="100" y2="0" stroke="white" stroke-width="20" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  
+  <!-- Text "SS" for Step Sync -->
+  <text x="512" y="700" font-family="Arial, sans-serif" font-size="180" font-weight="bold" fill="white" text-anchor="middle" opacity="0.95">SS</text>
+</svg>
+
