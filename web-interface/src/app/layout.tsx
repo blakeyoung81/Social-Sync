@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "@/components/layout/Sidebar";
-import { Footer } from "@/components/layout/Footer";
+import { ConditionalLayout } from "@/components/layout/ConditionalLayout";
 import { SessionProvider } from "@/components/providers/SessionProvider";
 import { Toaster } from "react-hot-toast";
 
@@ -32,15 +31,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 text-gray-900`}
       >
         <SessionProvider>
-          <div className="flex min-h-screen flex-col">
-            <div className="flex flex-1">
-              <Sidebar />
-              <main className="flex-1 ml-64 p-8 min-h-screen">
-                {children}
-              </main>
-            </div>
-            <Footer />
-          </div>
+          <ConditionalLayout>
+            {children}
+          </ConditionalLayout>
           <Toaster 
             position="top-right"
             toastOptions={{

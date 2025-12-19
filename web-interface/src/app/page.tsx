@@ -323,9 +323,11 @@ export default function Home() {
         </header>
 
         {/* Step 1: Video Selection & Core Settings */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2 mb-4">
-            <Upload className="text-blue-600" />
+        <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl border border-white/20 p-8 mb-6 transition-all hover:shadow-2xl">
+          <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3 mb-6">
+            <div className="p-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg">
+              <Upload className="text-white w-6 h-6" />
+            </div>
             Step 1: Select Your Videos
           </h2>
           <div>
