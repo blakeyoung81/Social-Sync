@@ -133,11 +133,18 @@ export default function DashboardPage() {
         {/* Header */}
         <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                Welcome back, {session.user?.name || session.user?.email}!
-              </h1>
-              <p className="text-gray-600">Manage your social media connections</p>
+            <div className="flex items-center gap-4">
+              <img 
+                src="/social-sync-logo.png" 
+                alt="Social Sync Logo" 
+                className="h-12 w-auto"
+              />
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                  Welcome back, {session.user?.name || session.user?.email}!
+                </h1>
+                <p className="text-gray-600">Manage your social media connections</p>
+              </div>
             </div>
             <div className="flex items-center gap-4">
               <button

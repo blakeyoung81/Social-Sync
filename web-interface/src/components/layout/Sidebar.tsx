@@ -52,13 +52,20 @@ export const Sidebar: React.FC = () => {
 
     return (
         <aside className="fixed left-0 top-0 h-screen w-64 bg-gray-900 border-r border-gray-800 flex flex-col z-50">
-            <div className="p-6 border-b border-gray-800 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                    <LayoutDashboard className="w-5 h-5 text-white" />
-                </div>
-                <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-                    Social Sync
-                </h1>
+            <div className="p-6 border-b border-gray-800">
+                <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                    <Image 
+                        src="/social-sync-logo.png" 
+                        alt="Social Sync Logo" 
+                        width={40}
+                        height={40}
+                        className="h-10 w-auto"
+                        priority
+                    />
+                    <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                        Social Sync
+                    </h1>
+                </Link>
             </div>
 
             <nav className="flex-1 p-4 space-y-2">

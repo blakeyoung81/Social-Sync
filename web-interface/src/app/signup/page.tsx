@@ -61,13 +61,17 @@ export default function SignupPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8">
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-full p-3">
-              <UserPlus className="w-8 h-8 text-white" />
+          <div className="flex flex-col items-center justify-center gap-4 mb-4">
+            <img 
+              src="/social-sync-logo.png" 
+              alt="Social Sync Logo" 
+              className="h-20 w-auto"
+            />
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900">Social Sync</h1>
+              <p className="text-gray-600 mt-1">Create your account</p>
             </div>
-            <h1 className="text-3xl font-bold text-gray-900">Social Sync</h1>
           </div>
-          <p className="text-gray-600">Create your account</p>
         </div>
 
         {error && (

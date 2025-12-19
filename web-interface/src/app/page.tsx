@@ -303,13 +303,17 @@ export default function Home() {
         {/* Navigation Removed - moved to Sidebar */}
 
         <header className="text-center py-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-full p-3">
-              <Zap className="w-8 h-8 text-white" />
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <img 
+              src="/social-sync-logo.png" 
+              alt="Social Sync Logo" 
+              className="h-16 w-auto"
+            />
+            <div>
+              <h1 className="text-4xl font-bold text-gray-900">Social Sync</h1>
+              <p className="text-lg text-gray-600 mt-1">Automated Media Flow</p>
             </div>
-            <h1 className="text-4xl font-bold text-gray-900">Social Sync</h1>
           </div>
-          <p className="text-xl text-gray-600">Multi-platform content creation with intelligent automation</p>
         </header>
 
         {/* Step 1: Video Selection & Core Settings */}
