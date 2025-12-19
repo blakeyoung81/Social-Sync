@@ -302,16 +302,22 @@ export default function Home() {
         {/* Navigation */}
         {/* Navigation Removed - moved to Sidebar */}
 
-        <header className="text-center py-8">
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <img 
-              src="/social-sync-logo.png" 
-              alt="Social Sync Logo" 
-              className="h-16 w-auto"
-            />
-            <div>
-              <h1 className="text-4xl font-bold text-gray-900">Social Sync</h1>
-              <p className="text-lg text-gray-600 mt-1">Automated Media Flow</p>
+        <header className="text-center py-8 mb-8">
+          <div className="flex flex-col items-center justify-center gap-4">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur-2xl opacity-30"></div>
+              <img 
+                src="/social-sync-logo.png" 
+                alt="Social Sync Logo" 
+                className="h-20 w-auto relative z-10 drop-shadow-2xl"
+              />
+            </div>
+            <div className="space-y-2">
+              <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Social Sync
+              </h1>
+              <p className="text-xl text-gray-600 font-medium">Automated Media Flow</p>
+              <p className="text-sm text-gray-500">Multi-platform content creation with intelligent automation</p>
             </div>
           </div>
         </header>

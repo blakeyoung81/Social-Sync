@@ -29,19 +29,44 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 text-gray-900`}
       >
         <SessionProvider>
           <div className="flex min-h-screen flex-col">
             <div className="flex flex-1">
               <Sidebar />
-              <main className="flex-1 ml-64 p-8">
+              <main className="flex-1 ml-64 p-8 min-h-screen">
                 {children}
               </main>
             </div>
             <Footer />
           </div>
-          <Toaster position="top-right" />
+          <Toaster 
+            position="top-right"
+            toastOptions={{
+              style: {
+                background: 'rgba(255, 255, 255, 0.95)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                color: '#1f2937',
+                borderRadius: '12px',
+                padding: '16px',
+                boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
+              },
+              success: {
+                iconTheme: {
+                  primary: '#10b981',
+                  secondary: '#fff',
+                },
+              },
+              error: {
+                iconTheme: {
+                  primary: '#ef4444',
+                  secondary: '#fff',
+                },
+              },
+            }}
+          />
         </SessionProvider>
       </body>
     </html>

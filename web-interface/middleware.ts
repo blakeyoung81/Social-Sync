@@ -3,7 +3,12 @@ import { NextResponse } from "next/server"
 
 export default withAuth(
   function middleware(req) {
-    return NextResponse.next()
+    // Add headers for better security
+    const response = NextResponse.next();
+    response.headers.set('X-Content-Type-Options', 'nosniff');
+    response.headers.set('X-Frame-Options', 'DENY');
+    response.headers.set('X-XSS-Protection', '1; mode=block');
+    return response;
   },
   {
     callbacks: {
