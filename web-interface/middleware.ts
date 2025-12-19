@@ -3,41 +3,44 @@ import { NextResponse } from "next/server"
 
 export default withAuth(
   function middleware(req) {
-    // This function runs after authorization check
-    // Public paths are already allowed by the authorized callback
     return NextResponse.next()
   },
   {
     callbacks: {
       authorized: ({ token, req }) => {
-        // Public paths that don't require authentication
-        const publicPaths = [
-          '/login',
-          '/signup',
-          '/privacy-policy',
-          '/terms-of-service',
-          '/data-deletion',
-          '/app-icon.png',
-          '/app-icon.svg',
-        ];
-        
-        const isPublicPath = publicPaths.some(path => 
-          req.nextUrl.pathname === path || req.nextUrl.pathname.startsWith(path)
-        );
-        
-        // Allow public paths, API routes, and static files
-        if (
-          isPublicPath ||
-          req.nextUrl.pathname.startsWith('/api') ||
-          req.nextUrl.pathname.startsWith('/_next') ||
-          req.nextUrl.pathname.startsWith('/favicon.ico') ||
-          req.nextUrl.pathname.match(/\.(png|jpg|jpeg|gif|svg|ico|webp)$/)
-        ) {
-          return true; // Allow access
+        try {
+          // Public paths that don't require authentication
+          const publicPaths = [
+            '/login',
+            '/signup',
+            '/privacy-policy',
+            '/terms-of-service',
+            '/data-deletion',
+          ];
+          
+          const pathname = req.nextUrl.pathname;
+          const isPublicPath = publicPaths.some(path => 
+            pathname === path || pathname.startsWith(path)
+          );
+          
+          // Allow public paths, API routes, and static files
+          if (
+            isPublicPath ||
+            pathname.startsWith('/api') ||
+            pathname.startsWith('/_next') ||
+            pathname.startsWith('/favicon.ico') ||
+            /\.(png|jpg|jpeg|gif|svg|ico|webp)$/.test(pathname)
+          ) {
+            return true; // Allow access
+          }
+          
+          // Require token for protected paths
+          return !!token;
+        } catch (error) {
+          console.error('Middleware error:', error);
+          // Allow access on error to prevent blocking
+          return true;
         }
-        
-        // Require token for protected paths
-        return !!token;
       },
     },
   }

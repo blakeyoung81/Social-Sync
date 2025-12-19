@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { auth } from '@/app/api/auth/[...nextauth]/route';
+
 import { prisma } from '@/lib/prisma';
 
 // Development mode flag
@@ -13,7 +13,7 @@ const INSTAGRAM_APP_SECRET = process.env.INSTAGRAM_APP_SECRET || 'development_ap
 const INSTAGRAM_REDIRECT_URI = process.env.INSTAGRAM_REDIRECT_URI || 'http://localhost:3000/api/instagram/callback';
 
 export async function GET(request: Request) {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
   if (!session?.user?.id) {
     return NextResponse.redirect(new URL('/login?error=not_authenticated', request.url));
   }

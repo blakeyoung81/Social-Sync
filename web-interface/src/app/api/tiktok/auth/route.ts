@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { auth } from '@/app/api/auth/[...nextauth]/route';
+
 
 // Development mode flag
 const DEV_MODE = process.env.DEV_MODE === 'true' || true; // Default to true if not set
@@ -17,7 +17,7 @@ const TIKTOK_REDIRECT_URI = process.env.TIKTOK_REDIRECT_URI || 'http://localhost
 const TIKTOK_SCOPES = 'user.info.basic,video.upload'; // Add other scopes as needed, comma-separated
 
 export async function GET(request: Request) {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
   if (!session?.user?.id) {
     return NextResponse.redirect(new URL('/login?error=not_authenticated', request.url));
   }
