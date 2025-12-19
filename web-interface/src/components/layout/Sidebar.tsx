@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useSession, signOut } from 'next-auth/react';
-import { UploadCloud, Scissors, FileVideo, LayoutDashboard, User, LogOut } from 'lucide-react';
+import { UploadCloud, Scissors, FileVideo, User, LogOut } from 'lucide-react';
 
 interface SidebarItemProps {
     icon: React.ElementType;
